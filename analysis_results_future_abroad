@@ -1,0 +1,79 @@
+# Project Analysis: MyFutureAbroad & AI Backend
+
+This document contains a comprehensive analysis of the existing codebase (`futureabroad-master`) and the new AI service (`ai-backend`) to start a new pair-programming session.
+
+---
+
+## 1. High-Level Overview
+
+The application **MyFutureAbroad** helps users plan and manage their relocation process abroad. It comprises three primary logical folders/projects:
+
+1. **`futureabroad-master/frontend`**: A Vite + React application styled with TailwindCSS, utilizing Radix UI / Shadcn primitives.
+2. **`futureabroad-master/backend`**: An Express + TypeScript backend that integrates with Supabase, Stripe, DeepL, and Resend. It also features a streaming agentic chatbot using OpenAI (`gpt-4o-mini`) and Model Context Protocol (MCP) tool bindings.
+3. **`ai-backend`**: A standalone Python + FastAPI service dedicated to integrating Google Gemini (`gemini-2.5-flash` and `gemini-2.5-pro` via `google-genai` SDK) to handle structured information extraction and specialized chatbot routines with search grounding.
+
+---
+
+## 2. Directory Structures
+
+### A. Frontend (`futureabroad-master/frontend`)
+*   **Routing & UI**: Standard SPA routing configured in `src/main.tsx` and custom React pages inside `src/pages`.
+*   **Proxy Configuration**: Vite (`vite.config.ts`) proxies `/api` requests to the Express backend (`http://localhost:3001`).
+*   **Key Pages**:
+    *   `VisaFinderPageContent.tsx`: Interactive chat view matching visa candidates.
+    *   `ChatsPageContent.tsx`: SSE streaming message UI for general platform chat.
+    *   `BudgetsPage.tsx` / `BudgetProfileContent.tsx`: Expense and budget tracking.
+    *   `CheckListsPage.tsx` / `CheckListProfile.tsx`: User checklist management.
+    *   `CountryPageContent.tsx` / `VisaPage.tsx`: Dynamic profile pages fetching stats and rules.
+
+### B. Express Backend (`futureabroad-master/backend`)
+*   **Server Core** (`src/server.ts`): Express server exposing REST and SSE endpoints at port `3001`.
+*   **MCP Server** (`src/mcp/mcpServer.ts`): Registers database-backed functions (e.g. `get_countries`, `create_checklist`, `update_budget`) as tools conforming to the Model Context Protocol (MCP).
+*   **Streaming Chat Router** (`src/routes/chat.ts`): Exposes `POST /api/chat/message` which initiates an OpenAI `gpt-4o-mini` streaming loop. The LLM invokes local MCP tools in-process via `mcpServer.ts` to perform database modifications dynamically on behalf of the user.
+
+### C. Python AI Backend (`ai-backend`)
+*   **FastAPI Core** (`app/main.py`): Non-blocking API endpoints utilizing async database sessions.
+*   **Gemini Service** (`app/services/gemini.py`): Interacts with `google-genai` client, handles JSON parsing cleanup, safety filters, and implements robust fallback mechanisms when API quotas are reached.
+*   **Routers** (`app/routers/`):
+    *   `visa_pages.py`: Generates visa information via Gemini with Google Search grounding and stores details in a PostgreSQL cache.
+    *   `country_pages.py`: Pulls expat data for countries (cost of living, taxes, residency timelines) using search grounding.
+    *   `visa_finder.py` / `budget.py` / `checklist.py` / `chatbot.py`: Multi-turn conversational interfaces driving specific relocation tasks.
+
+---
+
+## 3. Database Architecture & Schema Integration
+
+### Supabase Database (`futureabroad-master`)
+Accessed in TypeScript via `@supabase/supabase-js`. The main operational tables are:
+*   `countries`: Directory of supported nations.
+*   `visas`: Stored visa requirements, fees, processing limits.
+*   `services`: Professional packages offered by providers.
+*   `checklists` / `checklist_items`: To-do lists mapping relocation phases.
+*   `budgets` / `budget_items`: Relocation expenses.
+*   `ai_chat_sessions` / `ai_chat_messages`: Platform chat history.
+
+### AI PostgreSQL Database (`ai-backend`)
+Defined inside the Python codebase using SQLAlchemy ORM and managed via Alembic:
+*   `chat_sessions` / `chat_messages`: Internal chat tracking for AI tools (Visa Finder, Budget, Checklist, Chatbot).
+*   `content_cache`: Fast-lookup metadata store for generated visa/country info. Integrates field-level TTL expiration (`expires_at = created_at + CACHE_TTL_SECONDS`).
+
+---
+
+## 4. AI & Tool Orchestration Comparison
+
+| Feature | Express Backend (`futureabroad-master/backend`) | Python AI Backend (`ai-backend`) |
+| :--- | :--- | :--- |
+| **Model Used** | OpenAI `gpt-4o-mini` | Google Gemini `gemini-2.5-flash` / `gemini-2.5-pro` |
+| **API Client** | `openai` npm SDK | `google-genai` python SDK |
+| **Execution Style** | Streaming agentic loop (Server-Sent Events) | Streaming (`chatbot.py`) & Structured JSON responses |
+| **Search Grounding** | None | Enabled (Google Search Grounding config) |
+| **Tool Execution** | In-process MCP server calling local database tools | Conversational stages validating values in backend schemas |
+
+---
+
+## 5. Integration Strategy
+
+To tie the Python `ai-backend` into the active `futureabroad-master` application, we have two primary options:
+
+1. **Vite Proxy Delegation**: Route specific requests (e.g. `/api/ai-visas/*` or `/api/visa-finder/*`) to `http://localhost:8000` (FastAPI backend) while keeping the original API endpoints routed to `http://localhost:3001` (Express backend).
+2. **Express-to-FastAPI Gateway**: Let the Express backend act as the API gateway. When Express receives a request targeting an AI feature, it forwards the call to the FastAPI server internally, merges the response payload, and passes it back to the client. This maintains the single backend source of truth for auth, cookies, and middleware.

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@uiw/react-md-editor/markdown-editor.css";
+@import "@uiw/react-markdown-preview/markdown.css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Olive light theme — no dark mode */
+:root {
+  --radius: 0.5rem;
+
+  --background:           oklch(0.965 0.022 93);
+  --foreground:           oklch(0.22  0.042 104);
+
+  --card:                 oklch(0.985 0.012 92);
+  --card-foreground:      oklch(0.22  0.042 104);
+
+  --popover:              oklch(0.985 0.012 92);
+  --popover-foreground:   oklch(0.22  0.042 104);
+
+  --primary:              oklch(0.43  0.100 120);
+  --primary-foreground:   oklch(0.98  0.005  90);
+
+  --secondary:            oklch(0.925 0.028  91);
+  --secondary-foreground: oklch(0.30  0.050 104);
+
+  --muted:                oklch(0.925 0.028  91);
+  --muted-foreground:     oklch(0.50  0.050  93);
+
+  --accent:               oklch(0.905 0.040 105);
+  --accent-foreground:    oklch(0.28  0.060 110);
+
+  --destructive:          oklch(0.55  0.200  25);
+  --destructive-foreground: oklch(0.98 0.005  90);
+
+  --border:               oklch(0.87  0.037  88);
+  --input:                oklch(0.87  0.037  88);
+  --ring:                 oklch(0.43  0.100 120);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-color: var(--color-border);
+  outline-color: var(--color-ring);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button:not(:disabled),
+[role="tab"],
+[role="option"],
+[role="checkbox"],
+[role="combobox"],
+[role="menuitem"],
+label[for],
+label:has(input) {
+  cursor: pointer;
+}
