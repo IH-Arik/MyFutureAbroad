@@ -4501,58 +4501,58 @@ update providers set join_code = 'ITXA0004' where id = '44444444-4444-4444-4444-
 -- Email: provider@test.com  Password: provider123
 -- Owns Global Visa Solutions
 -- ============================================================
--- insert into auth.users (
---   id,
---   instance_id,
---   email,
---   encrypted_password,
---   email_confirmed_at,
---   raw_user_meta_data,
---   created_at,
---   updated_at,
---   aud,
---   role
--- )
--- values (
---   'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
---   '00000000-0000-0000-0000-000000000000',
---   'provider@test.com',
---   crypt('provider123', gen_salt('bf')),
---   now(),
---   '{"role": "provider"}'::jsonb,
---   now(),
---   now(),
---   'authenticated',
---   'authenticated'
--- )
--- on conflict (id) do nothing;
+insert into auth.users (
+  id,
+  instance_id,
+  email,
+  encrypted_password,
+  email_confirmed_at,
+  raw_user_meta_data,
+  created_at,
+  updated_at,
+  aud,
+  role
+)
+values (
+  'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+  '00000000-0000-0000-0000-000000000000',
+  'provider@test.com',
+  crypt('provider123', gen_salt('bf')),
+  now(),
+  '{"role": "provider"}'::jsonb,
+  now(),
+  now(),
+  'authenticated',
+  'authenticated'
+)
+on conflict (id) do nothing;
 
--- -- Profile for test provider user
--- insert into public.profiles (id, role, provider_id)
--- values ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'provider', '11111111-1111-1111-1111-111111111111')
--- on conflict (id) do update set role = 'provider', provider_id = '11111111-1111-1111-1111-111111111111';
+-- Profile for test provider user
+insert into public.profiles (id, role, provider_id)
+values ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'provider', '11111111-1111-1111-1111-111111111111')
+on conflict (id) do update set role = 'provider', provider_id = '11111111-1111-1111-1111-111111111111';
 
--- -- Membership: test user owns Global Visa Solutions
--- insert into public.provider_members (user_id, provider_id, role)
--- values ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', 'owner')
--- on conflict (user_id, provider_id) do nothing;
+-- Membership: test user owns Global Visa Solutions
+insert into public.provider_members (user_id, provider_id, role)
+values ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', '11111111-1111-1111-1111-111111111111', 'owner')
+on conflict (user_id, provider_id) do nothing;
 
--- -- Seed Resources
--- insert into resources (title, type, excerpt, content, author, cover_image, tags, reading_time_minutes, published, featured)
--- values
--- (
---     'Moving to Spain? Here is what you need to know',
---     'guide',
---     'Spain has long been a favourite destination for expats, families, and professionals seeking a high quality of life in the heart of Europe. With vibrant cities, rich cultural heritage, a country that blends old-world elegance with modern convenience.',
---     E'Spain has long been a **favourite destination for expats**, families, and professionals seeking a high quality of life in the heart of Europe. With vibrant cities, rich cultural heritage, a country that blends old-world elegance with modern convenience. Whether you dream of Barcelona''s cosmopolitan energy, Madrid''s cultural richness, or Valencia''s perfect seaside lifestyle, Spain offers something for everyone.\n\nThis guide covers everything you need to know about moving to Spain, from visa options to finding a home and settling in.',
---     'MyFutureAbroad Team',
---     'https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=80',
---     array['Spain','Relocation Guide','Europe','Expat Life','Cost of Living'],
---     12,
---     true,
---     true
--- )
--- on conflict do nothing;
+-- Seed Resources
+insert into resources (title, type, excerpt, content, author, cover_image, tags, reading_time_minutes, published, featured)
+values
+(
+    'Moving to Spain? Here is what you need to know',
+    'guide',
+    'Spain has long been a favourite destination for expats, families, and professionals seeking a high quality of life in the heart of Europe. With vibrant cities, rich cultural heritage, a country that blends old-world elegance with modern convenience.',
+    E'Spain has long been a **favourite destination for expats**, families, and professionals seeking a high quality of life in the heart of Europe. With vibrant cities, rich cultural heritage, a country that blends old-world elegance with modern convenience. Whether you dream of Barcelona''s cosmopolitan energy, Madrid''s cultural richness, or Valencia''s perfect seaside lifestyle, Spain offers something for everyone.\n\nThis guide covers everything you need to know about moving to Spain, from visa options to finding a home and settling in.',
+    'MyFutureAbroad Team',
+    'https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=1200&q=80',
+    array['Spain','Relocation Guide','Europe','Expat Life','Cost of Living'],
+    12,
+    true,
+    true
+)
+on conflict do nothing;
 
 -- Populate normalized service_countries table from any applicable_countries arrays
 insert into service_countries (service_id, country_id)
