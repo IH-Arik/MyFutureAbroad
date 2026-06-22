@@ -4415,7 +4415,6 @@ values
 
 -- Ensure all service types exist
 begin;
-delete from service_types;
 insert into service_types (id, name, icon, tagline, description) values
 ('visa_application', 'Visa Application', 'file-text', 'Full application support', 'Complete end-to-end assistance with your visa application.'),
 ('legal_consultation', 'Legal Consultation', 'scale', 'Expert legal advice', 'Consult with certified immigration lawyers.'),
@@ -4424,7 +4423,8 @@ insert into service_types (id, name, icon, tagline, description) values
 ('consultation', 'Consultation', 'users', 'Expert advice', 'One-on-one sessions with experts.'),
 ('tax_planning', 'Tax Planning', 'calculator', 'Optimize taxes', 'Financial and tax residency planning.'),
 ('document_preparation', 'Document Prep', 'file-text', 'Paperwork sorted', 'Assistance with gathering and formatting documents.'),
-('document_translation', 'Document Translation', 'file-text', 'Professional translation', 'Certified document translation for immigration purposes.');
+('document_translation', 'Document Translation', 'file-text', 'Professional translation', 'Certified document translation for immigration purposes.')
+on conflict (id) do nothing;
 commit;
 
 -- Seed Providers

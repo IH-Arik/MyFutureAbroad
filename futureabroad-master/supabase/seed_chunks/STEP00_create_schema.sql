@@ -1,0 +1,248 @@
+-- ============================================================
+-- STEP 0: CREATE ALL TABLES (Run this FIRST)
+-- Paste this entire file into Supabase SQL Editor and click Run
+-- ============================================================
+
+-- ── 1. SEQUENCES ────────────────────────────────────────────
+CREATE SEQUENCE IF NOT EXISTS "public"."countries_id_seq";
+CREATE SEQUENCE IF NOT EXISTS "public"."visas_id_seq";
+
+-- ── 2. COUNTRIES TABLE ───────────────────────────────────────
+CREATE TABLE IF NOT EXISTS "public"."countries" (
+  "id"                      integer NOT NULL DEFAULT nextval('public.countries_id_seq'::regclass),
+  "continent"               text NOT NULL,
+  "name"                    text NOT NULL,
+  "iso_code"                character(2),
+  "flag_url"                text,
+  "highlight_img_url"       text,
+  "description"             text,
+  "longdescription"         text,
+  "citizenship_requirements" jsonb,
+  "tax_advice"              text,
+  "local_tips"              text,
+  "extra_info"              text,
+  "created_at"              timestamp with time zone DEFAULT now()
+);
+
+ALTER SEQUENCE "public"."countries_id_seq" OWNED BY "public"."countries"."id";
+
+-- Primary key and indexes
+ALTER TABLE "public"."countries" DROP CONSTRAINT IF EXISTS countries_pkey;
+CREATE UNIQUE INDEX IF NOT EXISTS countries_pkey ON public.countries USING btree (id);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_countries_name ON public.countries USING btree (name);
+ALTER TABLE "public"."countries" ADD CONSTRAINT "countries_pkey" PRIMARY KEY USING INDEX "countries_pkey";
+
+-- ── 3. VISAS TABLE (final restructured schema) ───────────────
+CREATE TABLE IF NOT EXISTS "public"."visas" (
+  "id"                          serial PRIMARY KEY,
+  "name"                        text NOT NULL,
+  "visa_type"                   text,
+  "country_id"                  int NOT NULL REFERENCES countries(id) ON DELETE CASCADE,
+  "description"                 text,
+  "benefits"                    text[],
+  "min_age"                     int,
+  "max_age"                     int,
+  "min_income"                  numeric(14,2),
+  "min_income_currency"         text,
+  "min_savings"                 numeric(14,2),
+  "min_savings_currency"        text,
+  "required_skills"             text[],
+  "eligible_nationalities"      text[],
+  "excluded_nationalities"      text[],
+  "requires_health_insurance"   boolean DEFAULT false,
+  "requires_clean_criminal_record" boolean DEFAULT false,
+  "processing_time_days"        int,
+  "validity_months"             int,
+  "renewable"                   boolean DEFAULT false,
+  "has_path_to_residency"       boolean DEFAULT false,
+  "path_to_residency_description" text,
+  "application_fee_usd"         numeric(12,2),
+  "application_fee_currency"    text,
+  "required_documents"          text[],
+  "official_link"               text,
+  "image_url"                   text,
+  "additional_info"             jsonb,
+  "created_at"                  timestamptz DEFAULT now(),
+  "updated_at"                  timestamptz DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS idx_visas_name        ON visas (name);
+CREATE INDEX IF NOT EXISTS idx_visas_country     ON visas (country_id);
+CREATE INDEX IF NOT EXISTS idx_visas_visa_type   ON visas (visa_type);
+CREATE INDEX IF NOT EXISTS idx_visas_country_name ON visas (country_id, name);
+
+-- Trigger: auto-set min_income_currency
+CREATE OR REPLACE FUNCTION set_min_income_currency()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF NEW.min_income IS NOT NULL AND NEW.min_income_currency IS NULL THEN
+    NEW.min_income_currency := NEW.application_fee_currency;
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_set_min_income_currency ON visas;
+CREATE TRIGGER trg_set_min_income_currency
+  BEFORE INSERT OR UPDATE ON visas
+  FOR EACH ROW EXECUTE FUNCTION set_min_income_currency();
+
+-- Trigger: auto-set min_savings_currency
+CREATE OR REPLACE FUNCTION set_min_savings_currency()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF NEW.min_savings IS NOT NULL AND NEW.min_savings_currency IS NULL THEN
+    NEW.min_savings_currency := NEW.application_fee_currency;
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_set_min_savings_currency ON visas;
+CREATE TRIGGER trg_set_min_savings_currency
+  BEFORE INSERT OR UPDATE ON visas
+  FOR EACH ROW EXECUTE FUNCTION set_min_savings_currency();
+
+-- Trigger: updated_at
+CREATE OR REPLACE FUNCTION update_visas_updated_at()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.updated_at := now();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+DROP TRIGGER IF EXISTS trg_update_visas_updated_at ON visas;
+CREATE TRIGGER trg_update_visas_updated_at
+  BEFORE UPDATE ON visas
+  FOR EACH ROW EXECUTE FUNCTION update_visas_updated_at();
+
+-- ── 4. RESOURCES TABLE ───────────────────────────────────────
+CREATE TABLE IF NOT EXISTS "public"."resources" (
+  "id"                    bigint GENERATED BY DEFAULT AS IDENTITY NOT NULL,
+  "created_at"            timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  "title"                 text NOT NULL,
+  "type"                  text NOT NULL,
+  "excerpt"               text,
+  "content"               text,
+  "author"                text DEFAULT 'MyFutureAbroad Team'::text,
+  "cover_image"           text,
+  "tags"                  text[],
+  "reading_time_minutes"  integer,
+  "published"             boolean DEFAULT false,
+  "featured"              boolean DEFAULT false
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS resources_pkey ON public.resources USING btree (id);
+ALTER TABLE "public"."resources" DROP CONSTRAINT IF EXISTS resources_pkey;
+ALTER TABLE "public"."resources" ADD CONSTRAINT "resources_pkey" PRIMARY KEY USING INDEX "resources_pkey";
+
+-- ── 5. PROVIDERS TABLE ───────────────────────────────────────
+CREATE TABLE IF NOT EXISTS "public"."providers" (
+  "id"                    uuid NOT NULL DEFAULT gen_random_uuid(),
+  "user_id"               uuid,
+  "company_name"          text NOT NULL,
+  "logo_url"              text,
+  "description"           text,
+  "provider_type"         text,
+  "countries_served"      integer[],
+  "languages"             text[],
+  "rating"                numeric(3,2) DEFAULT 0,
+  "review_count"          integer DEFAULT 0,
+  "verified"              boolean DEFAULT false,
+  "response_time_hours"   integer,
+  "contact_email"         text,
+  "website"               text,
+  "status"                text DEFAULT 'active'::text,
+  "currency"              text DEFAULT 'USD'::text,
+  "created_at"            timestamp with time zone DEFAULT now(),
+  "updated_at"            timestamp with time zone DEFAULT now()
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS providers_pkey ON public.providers USING btree (id);
+ALTER TABLE "public"."providers" DROP CONSTRAINT IF EXISTS providers_pkey;
+ALTER TABLE "public"."providers" ADD CONSTRAINT "providers_pkey" PRIMARY KEY USING INDEX "providers_pkey";
+
+-- ── 6. SERVICE_TYPES TABLE ───────────────────────────────────
+CREATE TABLE IF NOT EXISTS "public"."service_types" (
+  "id"          text NOT NULL,
+  "name"        text NOT NULL,
+  "icon"        text,
+  "tagline"     text,
+  "description" text,
+  "created_at"  timestamp with time zone DEFAULT now()
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS service_types_pkey ON public.service_types USING btree (id);
+ALTER TABLE "public"."service_types" DROP CONSTRAINT IF EXISTS service_types_pkey;
+ALTER TABLE "public"."service_types" ADD CONSTRAINT "service_types_pkey" PRIMARY KEY USING INDEX "service_types_pkey";
+
+-- ── 7. SERVICES TABLE ────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS "public"."services" (
+  "id"                    uuid NOT NULL DEFAULT gen_random_uuid(),
+  "provider_id"           uuid NOT NULL,
+  "title"                 text NOT NULL,
+  "description"           text,
+  "service_type"          text NOT NULL,
+  "applicable_visas"      integer[],
+  "applicable_countries"  integer[],
+  "price_usd"             numeric(12,2),
+  "price_type"            text,
+  "delivery_days"         integer,
+  "includes"              text[],
+  "requirements"          text[],
+  "image_url"             text,
+  "active"                boolean DEFAULT true,
+  "currency"              text DEFAULT 'USD'::text,
+  "offered_languages"     text[],
+  "created_at"            timestamp with time zone DEFAULT now(),
+  "updated_at"            timestamp with time zone DEFAULT now()
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS services_pkey ON public.services USING btree (id);
+ALTER TABLE "public"."services" DROP CONSTRAINT IF EXISTS services_pkey;
+ALTER TABLE "public"."services" ADD CONSTRAINT "services_pkey" PRIMARY KEY USING INDEX "services_pkey";
+
+-- ── 8. SERVICE_COUNTRIES JOIN TABLE ──────────────────────────
+CREATE TABLE IF NOT EXISTS "public"."service_countries" (
+  "service_id"  uuid NOT NULL REFERENCES public.services(id) ON DELETE CASCADE,
+  "country_id"  integer NOT NULL REFERENCES public.countries(id) ON DELETE CASCADE,
+  PRIMARY KEY (service_id, country_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_service_countries_service ON public.service_countries (service_id);
+CREATE INDEX IF NOT EXISTS idx_service_countries_country ON public.service_countries (country_id);
+
+-- ── 9. GRANTS ─────────────────────────────────────────────────
+-- Countries
+GRANT SELECT, INSERT, UPDATE, DELETE ON "public"."countries" TO anon, authenticated, service_role;
+-- Visas
+GRANT SELECT, INSERT, UPDATE, DELETE ON "public"."visas" TO anon, authenticated, service_role;
+-- Resources
+GRANT SELECT, INSERT, UPDATE, DELETE ON "public"."resources" TO anon, authenticated, service_role;
+-- Providers
+GRANT SELECT, INSERT, UPDATE, DELETE ON "public"."providers" TO anon, authenticated, service_role;
+-- Service types
+GRANT SELECT, INSERT, UPDATE, DELETE ON "public"."service_types" TO anon, authenticated, service_role;
+-- Services
+GRANT SELECT, INSERT, UPDATE, DELETE ON "public"."services" TO anon, authenticated, service_role;
+-- Service countries
+GRANT SELECT, INSERT, UPDATE, DELETE ON "public"."service_countries" TO anon, authenticated, service_role;
+
+-- ── 10. RLS (disabled initially for seeding) ──────────────────
+ALTER TABLE "public"."countries"        DISABLE ROW LEVEL SECURITY;
+ALTER TABLE "public"."visas"            DISABLE ROW LEVEL SECURITY;
+ALTER TABLE "public"."resources"        DISABLE ROW LEVEL SECURITY;
+ALTER TABLE "public"."providers"        DISABLE ROW LEVEL SECURITY;
+ALTER TABLE "public"."service_types"    DISABLE ROW LEVEL SECURITY;
+ALTER TABLE "public"."services"         DISABLE ROW LEVEL SECURITY;
+ALTER TABLE "public"."service_countries" DISABLE ROW LEVEL SECURITY;
+
+-- ── DONE ──────────────────────────────────────────────────────
+-- Now run the data chunks in order:
+-- STEP02_chunk.sql  → countries data
+-- STEP03_chunk.sql  → visa data part 1
+-- STEP04_chunk.sql  → visa data part 2
+-- STEP05_chunk.sql  → citizenship requirements
+-- STEP06_chunk.sql  → tax advice
+-- Then run 99_FINAL_enable_rls.sql last

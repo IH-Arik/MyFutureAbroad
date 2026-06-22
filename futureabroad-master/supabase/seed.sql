@@ -624,7 +624,7 @@ values
 	(select id from countries where name = 'Portugal'),
 	'work',
 	'Portugal''s Tech Visa is designed for highly qualified non-EU professionals in technology and innovation who have a job offer from a certified Tech Visa company in Portugal.',
-	array['Fast-track to Portuguese residency','Work in Portugal''''s growing tech sector','Path to permanent residency','Schengen Area travel','Family reunification eligible'],
+	array['Fast-track to Portuguese residency','Work in Portugal''s growing tech sector','Path to permanent residency','Schengen Area travel','Family reunification eligible'],
 	NULL,
 	NULL,
 	1500.00,
@@ -662,7 +662,7 @@ values
 	(select id from countries where name = 'Portugal'),
 	'startup',
 	'Portugal''s Startup Visa (D2) for non-EU entrepreneurs who want to develop an innovative startup project in Portugal, requiring endorsement from a certified incubator.',
-	array['Access to Portugal''''s startup ecosystem','Path to permanent residency','Schengen Area travel','Family reunification eligible','Affordable operational costs'],
+	array['Access to Portugal''s startup ecosystem','Path to permanent residency','Schengen Area travel','Family reunification eligible','Affordable operational costs'],
 	NULL,
 	NULL,
 	0.00,
@@ -2676,7 +2676,7 @@ values
 	(select id from countries where name = 'Germany'),
 	'work',
 	'Germany''s points-based Opportunity Card (Chancenkarte) allows qualified non-EU nationals to enter Germany for up to one year to search for work or test the job market, without a prior job offer.',
-	array['Enter Germany without a prior job offer','Work up to 20hrs/week whilst job seeking','Access to Germany''''s labour market','Convert to work permit when employed','Schengen Area travel'],
+	array['Enter Germany without a prior job offer','Work up to 20hrs/week whilst job seeking','Access to Germany''s labour market','Convert to work permit when employed','Schengen Area travel'],
 	NULL,
 	NULL,
 	0.00,
@@ -2714,7 +2714,7 @@ values
 	(select id from countries where name = 'Germany'),
 	'work',
 	'Germany''s job seeker visa allows highly qualified non-EU professionals with a recognised degree to enter Germany for up to six months to look for work matching their qualifications.',
-	array['Search for work in Germany in person','Network directly with German employers','Convert to work visa when employed','Schengen Area travel','Access to Germany''''s thriving economy'],
+	array['Search for work in Germany in person','Network directly with German employers','Convert to work visa when employed','Schengen Area travel','Access to Germany''s thriving economy'],
 	NULL,
 	NULL,
 	0.00,
@@ -3474,7 +3474,7 @@ values
 	(select id from countries where name = 'Finland'),
 	'work',
 	'Finland''s specialist work permit for non-EU/EEA nationals who have been offered a specialist or expert role by a Finnish employer, allowing long-term residence and employment in Finland.',
-	array['Work in Finland''''s thriving tech economy','Path to permanent residency','Strong work-life balance','Family can join','Schengen Area travel'],
+	array['Work in Finland''s thriving tech economy','Path to permanent residency','Strong work-life balance','Family can join','Schengen Area travel'],
 	NULL,
 	NULL,
 	3000.00,
@@ -4415,7 +4415,6 @@ values
 
 -- Ensure all service types exist
 begin;
-delete from service_types;
 insert into service_types (id, name, icon, tagline, description) values
 ('visa_application', 'Visa Application', 'file-text', 'Full application support', 'Complete end-to-end assistance with your visa application.'),
 ('legal_consultation', 'Legal Consultation', 'scale', 'Expert legal advice', 'Consult with certified immigration lawyers.'),
@@ -4424,7 +4423,8 @@ insert into service_types (id, name, icon, tagline, description) values
 ('consultation', 'Consultation', 'users', 'Expert advice', 'One-on-one sessions with experts.'),
 ('tax_planning', 'Tax Planning', 'calculator', 'Optimize taxes', 'Financial and tax residency planning.'),
 ('document_preparation', 'Document Prep', 'file-text', 'Paperwork sorted', 'Assistance with gathering and formatting documents.'),
-('document_translation', 'Document Translation', 'file-text', 'Professional translation', 'Certified document translation for immigration purposes.');
+('document_translation', 'Document Translation', 'file-text', 'Professional translation', 'Certified document translation for immigration purposes.')
+on conflict (id) do nothing;
 commit;
 
 -- Seed Providers
@@ -5112,106 +5112,106 @@ UPDATE countries SET citizenship_requirements = '{
 
 -- Seed tax_advice for all 28 countries
 
-UPDATE countries SET tax_advice = $$- Malta has a favorable tax treaty network with 70+ countries
+UPDATE countries SET tax_advice = '- Malta has a favorable tax treaty network with 70+ countries
 - Corporate tax rate is 35%, but can be reduced with tax credits
 - Individuals receive a personal allowance of €8,500 annually
 - VAT rate is 18% (reduced rates of 5% and 0% apply to certain goods/services)
 - Non-resident individuals only taxed on Malta-sourced income
 - Capital gains are generally not taxable in Malta
 - Dividend withholding tax is 6/7 (effectively 0% for domestic dividends)
-- Foreign tax credits available for taxes paid abroad$$ WHERE name = 'Malta';
+- Foreign tax credits available for taxes paid abroad' WHERE name = 'Malta';
 
-UPDATE countries SET tax_advice = $$- No VAT or sales tax on products and services
+UPDATE countries SET tax_advice = '- No VAT or sales tax on products and services
 - Personal income tax ranges from 8.93% to 20.87%
 - Corporate tax is a flat 20% on net profits
 - Iceland has competitive withholding tax rates on dividends (6% if conditions met)
 - Pension contributions are tax-deductible
 - Foreign-sourced income may be exempt if criteria met
 - Health insurance contributions are deductible
-- Use tax residency carefully to optimize tax filing status$$ WHERE name = 'Iceland';
+- Use tax residency carefully to optimize tax filing status' WHERE name = 'Iceland';
 
-UPDATE countries SET tax_advice = $$- Germany has progressive income tax rates (0% to 42%)
+UPDATE countries SET tax_advice = '- Germany has progressive income tax rates (0% to 42%)
 - Corporate tax (Körperschaftsteuer) is 30% plus trade tax
 - VAT at 19% (reduced rates of 7% and 0% on essentials)
 - Dual income taxation system between federal and state level
 - Significant tax deductions available for business expenses
 - Retirement and insurance contributions are tax-deductible
 - Church tax of 8-9% applies if church member
-- Wealth tax abolished, but inheritance tax applies$$ WHERE name = 'Germany';
+- Wealth tax abolished, but inheritance tax applies' WHERE name = 'Germany';
 
-UPDATE countries SET tax_advice = $$- Peru offers a tiered income tax system (up to 30%)
+UPDATE countries SET tax_advice = '- Peru offers a tiered income tax system (up to 30%)
 - Corporate tax rate is 27%, but lower rates available for certain sectors
 - VAT is 18% with some exemptions for essentials
 - Non-residents taxed only on Peruvian-sourced income
 - Foreign remittances to Peru can benefit from reduced tax treatment
 - Export income may qualify for tax incentives
 - Retirement contributions are tax-deductible
-- Regional tax incentives available for businesses in designated zones$$ WHERE name = 'Peru';
+- Regional tax incentives available for businesses in designated zones' WHERE name = 'Peru';
 
-UPDATE countries SET tax_advice = $$- Chile has a progressive tax system (up to 37%)
+UPDATE countries SET tax_advice = '- Chile has a progressive tax system (up to 37%)
 - Corporate tax (impuesto a la renta) is a flat 27% on profits
 - VAT at 19% (standard rate applies to most goods/services)
 - Foreign-source income only taxed if remitted to Chile
 - Generous tax deductions for personal expenses and business costs
 - Pension contributions (up to 10%) are mandatory and tax-deductible
 - Capital gains can be taxable depending on holding period and circumstances
-- Mining industry receives special tax treatment and incentives$$ WHERE name = 'Chile';
+- Mining industry receives special tax treatment and incentives' WHERE name = 'Chile';
 
-UPDATE countries SET tax_advice = $$- Morocco has income tax rates ranging from 0% to 38%
+UPDATE countries SET tax_advice = '- Morocco has income tax rates ranging from 0% to 38%
 - Corporate tax rate is 30%, with preferential rates for certain activities
 - VAT at 20% (reduced rates of 14%, 10%, 7%, and 0% on essentials)
 - Non-residents taxed at flat 13% on investment income
 - Foreign remittances are tax-exempt if formalized through official channels
 - Business startups in technology receive tax holidays
 - Regional free zones (Tangier) offer significant tax incentives
-- Pension contributions and life insurance are tax-deductible$$ WHERE name = 'Morocco';
+- Pension contributions and life insurance are tax-deductible' WHERE name = 'Morocco';
 
-UPDATE countries SET tax_advice = $$- Indonesia uses a progressive income tax system (up to 30%)
+UPDATE countries SET tax_advice = '- Indonesia uses a progressive income tax system (up to 30%)
 - Corporate tax rate is 22% (reduced to 17% for certain taxpayers)
 - VAT at 10% with exemptions for essentials and financial services
 - Foreign residents taxed on worldwide income if physically present 183+ days
 - Tax amnesty programs periodically available for undeclared assets
 - Capital gains generally not taxed if reinvested within 1 year
 - R&D expenses receive enhanced deductions (150% for certain activities)
-- Export-oriented businesses receive various tax incentives$$ WHERE name = 'Indonesia';
+- Export-oriented businesses receive various tax incentives' WHERE name = 'Indonesia';
 
-UPDATE countries SET tax_advice = $$- UK income tax: 0% to 45% (depending on taxable income bracket)
+UPDATE countries SET tax_advice = '- UK income tax: 0% to 45% (depending on taxable income bracket)
 - Corporation tax at 25% (lower rate of 19% for profits under £50k)
 - VAT at 20% (reduced rates of 5% and 0% on essentials)
 - Non-residents: only UK-sourced income is taxable
 - Capital gains: annual exemption of £3,000, then 10-20% depending on asset type
 - Dividend allowance of £500 per year for basic rate taxpayers
 - ISAs allow up to £20,000 tax-free investment
-- Tax residence status critical to determine tax liability$$ WHERE name = 'United Kingdom';
+- Tax residence status critical to determine tax liability' WHERE name = 'United Kingdom';
 
-UPDATE countries SET tax_advice = $$- Portugal has progressive income tax rates (14.5% to 48%)
+UPDATE countries SET tax_advice = '- Portugal has progressive income tax rates (14.5% to 48%)
 - Corporate tax rate is 19% (15% for companies with turnover <25m euros)
 - VAT at 23% (reduced rates of 13%, 6%, and 0%)
 - Non-Habitual Resident (NHR) regime offers 10-year tax exemption on foreign income
 - Golden Visa holders can benefit from NHR provisions
 - Capital gains generally taxed at 28%
 - Real estate property transfer tax at varying rates (0.8%-8%)
-- Tax residency established if in Portugal 183+ days or have permanent home$$ WHERE name = 'Portugal';
+- Tax residency established if in Portugal 183+ days or have permanent home' WHERE name = 'Portugal';
 
-UPDATE countries SET tax_advice = $$- Spain uses progressive income tax (19% to 45%)
+UPDATE countries SET tax_advice = '- Spain uses progressive income tax (19% to 45%)
 - Corporate tax rate is 25% (reduced rates for startups)
 - VAT at 21% (reduced rates of 10%, 4%, and 0%)
 - Expat tax relief (Beckham Law) offers 6-year tax break for certain income types
 - Non-residents taxed at flat 19% on Spanish-sourced income
 - Capital gains: 19% to 23% depending on holding period
 - Wealth tax abolished in 2008, replaced with increased VAT
-- Regional variations exist (Canary Islands, Balearic Islands offer incentives)$$ WHERE name = 'Spain';
+- Regional variations exist (Canary Islands, Balearic Islands offer incentives)' WHERE name = 'Spain';
 
-UPDATE countries SET tax_advice = $$- Estonia has unique digital-first tax system (20% corporate rate)
+UPDATE countries SET tax_advice = '- Estonia has unique digital-first tax system (20% corporate rate)
 - Profits distributed are taxed; retained earnings tax-free
 - Income tax for residents: 8% to 20% depending on bracket
 - VAT at 20% (reduced rates of 9% and 0%)
 - Non-residents taxed on Estonia-source income only
 - Capital gains from securities exempt from tax
 - Dividend tax deferred until withdrawal (encouraging reinvestment)
-- E-Residency provides online tax filing and digital solutions$$ WHERE name = 'Estonia';
+- E-Residency provides online tax filing and digital solutions' WHERE name = 'Estonia';
 
-UPDATE countries SET tax_advice = $$- Thailand has income tax rates from 0% to 37%
+UPDATE countries SET tax_advice = '- Thailand has income tax rates from 0% to 37%
 - Corporate tax rate is 20% with deductions available
 - VAT at 7% (exemptions for essentials)
 - Foreign nationals taxed on Thailand-source income only
@@ -5219,18 +5219,18 @@ UPDATE countries SET tax_advice = $$- Thailand has income tax rates from 0% to 3
 - Tax treaty benefits with 60+ countries available
 - Retirement income can receive preferential tax treatment
 - No capital gains tax on stock exchanges
-- Investment incentive: Board of Investment (BOI) offers significant tax holidays$$ WHERE name = 'Thailand';
+- Investment incentive: Board of Investment (BOI) offers significant tax holidays' WHERE name = 'Thailand';
 
-UPDATE countries SET tax_advice = $$- Mexico has progressive income tax (1.92% to 35%)
+UPDATE countries SET tax_advice = '- Mexico has progressive income tax (1.92% to 35%)
 - Corporate tax rate is 30% with deductions
 - VAT at 16% (reduced rates of 0% and 8% in border regions)
 - Non-residents taxed on Mexico-source income only
 - Capital gains taxed at same rate as ordinary income
 - Foreign tax credits available for taxes paid abroad
-- Temporary resident status doesn't automatically grant residency for tax purposes
-- Export-oriented businesses receive various incentives$$ WHERE name = 'Mexico';
+- Temporary resident status doesn''t automatically grant residency for tax purposes
+- Export-oriented businesses receive various incentives' WHERE name = 'Mexico';
 
-UPDATE countries SET tax_advice = $$- Switzerland has one of the lowest tax rates in Europe
+UPDATE countries SET tax_advice = '- Switzerland has one of the lowest tax rates in Europe
 - Federal income tax: 0% to 11.5% (plus cantonal/municipal taxes)
 - Corporate tax varies significantly by canton (11% to 21.6% effective)
 - VAT at 8.1% (reduced rates of 3.8%, 2.5%, and 0%)
@@ -5238,108 +5238,108 @@ UPDATE countries SET tax_advice = $$- Switzerland has one of the lowest tax rate
 - Foreign account tax compliance required
 - Wealth tax exists in some cantons (not federal)
 - Tax planning by canton selection is legitimate and common
-- Capital gains generally not taxed at federal level$$ WHERE name = 'Switzerland';
+- Capital gains generally not taxed at federal level' WHERE name = 'Switzerland';
 
-UPDATE countries SET tax_advice = $$- Italy has progressive income tax (23% to 43%)
+UPDATE countries SET tax_advice = '- Italy has progressive income tax (23% to 43%)
 - Corporate tax rate is 24% (lower rates available in special zones)
 - VAT at 22% (reduced rates of 10%, 5%, and 4%)
 - Non-residents taxed on Italy-source income only
 - Capital gains: 26% flat tax for some assets, ordinary rates for others
 - Property tax (IMU) based on cadastral value, varies by region
 - Foreign tax credits available for taxes paid abroad
-- Incentives for repatriated capital and foreign business income$$ WHERE name = 'Italy';
+- Incentives for repatriated capital and foreign business income' WHERE name = 'Italy';
 
-UPDATE countries SET tax_advice = $$- Netherlands has progressive income tax (19.55% to 49.5%)
+UPDATE countries SET tax_advice = '- Netherlands has progressive income tax (19.55% to 49.5%)
 - Corporate tax rate is 23% (19% for profits up to €200k for small entities)
 - VAT at 21% (reduced rates of 9%, 6%, and 0%)
 - Non-residents taxed on Dutch-source income and worldwide Dutch-originating income
 - Ruling system (APA/RULING) allows advance tax agreements
 - Capital gains from regular investments may be exempt
 - Substance requirements critical for tax residency determination
-- Employer and employee social contributions required$$ WHERE name = 'Netherlands';
+- Employer and employee social contributions required' WHERE name = 'Netherlands';
 
-UPDATE countries SET tax_advice = $$- Ireland has favorable 12.5% corporate tax rate (R&D tax credit added benefit)
+UPDATE countries SET tax_advice = '- Ireland has favorable 12.5% corporate tax rate (R&D tax credit added benefit)
 - Personal income tax: 20% and 40% rates with credits
 - VAT at 23% (reduced rates of 13.5%, 9%, and 0%)
 - Extensive tax treaty network (70+ countries)
 - Non-residents taxed on Ireland-source income only
 - Capital gains: 33% tax rate with annual exemption of €1,270
 - Double taxation relief available
-- IP holding companies and R&D activities heavily incentivized$$ WHERE name = 'Ireland';
+- IP holding companies and R&D activities heavily incentivized' WHERE name = 'Ireland';
 
-UPDATE countries SET tax_advice = $$- Greece has progressive income tax (9% to 44%)
+UPDATE countries SET tax_advice = '- Greece has progressive income tax (9% to 44%)
 - Corporate tax rate is 22% (reduced rates available for certain sectors)
 - VAT at 24% (reduced rates of 13%, 6%, and 0%)
 - Non-residents taxed on Greece-source income only
 - Golden Visa holders (€250k property purchase) receive residency without restrictions
 - Capital gains taxed at 15% (under certain conditions)
 - Foreign tax credits available
-- Special incentive zones offer reduced corporate tax rates$$ WHERE name = 'Greece';
+- Special incentive zones offer reduced corporate tax rates' WHERE name = 'Greece';
 
-UPDATE countries SET tax_advice = $$- Belgium has progressive income tax (up to 50%)
+UPDATE countries SET tax_advice = '- Belgium has progressive income tax (up to 50%)
 - Corporate tax rate is 25% (reduced rate of 20.9% for small enterprises)
 - VAT at 21% (reduced rates of 12%, 6%, and 0%)
 - Non-residents taxed on Belgium-source income only
 - Patent box: 80% deduction on IP income (effective 6.25% tax rate)
 - Ruling system (Advanced Pricing Agreements) available
 - Capital gains taxed at ordinary rates or 16.5% depending on circumstances
-- Higher earner withheld tax (précompte mobilier) requires careful planning$$ WHERE name = 'Belgium';
+- Higher earner withheld tax (précompte mobilier) requires careful planning' WHERE name = 'Belgium';
 
-UPDATE countries SET tax_advice = $$- Poland has personal income tax at 17% and 32%
+UPDATE countries SET tax_advice = '- Poland has personal income tax at 17% and 32%
 - Corporate tax rate is 19% (reduced to 9% for small companies)
 - VAT at 23% (reduced rates of 8%, 5%, and 0%)
 - Non-residents taxed on Poland-source income only
 - Capital gains can be partially tax-exempt (50% exemption available)
 - CIT exemption available for reinvested profits (certain conditions)
 - Foreign tax credits available
-- IP box: preferential tax treatment for certain innovation income$$ WHERE name = 'Poland';
+- IP box: preferential tax treatment for certain innovation income' WHERE name = 'Poland';
 
-UPDATE countries SET tax_advice = $$- Austria has progressive income tax (0% to 55%)
+UPDATE countries SET tax_advice = '- Austria has progressive income tax (0% to 55%)
 - Corporate tax rate is 24%
 - VAT at 20% (reduced rates of 10%, 5%, and 0%)
 - Non-residents taxed on Austria-source income only
 - Capital gains: 27.5% flat tax (for securities/real property)
 - Tax ruling system available for certainty on tax treatment
 - Collective investment funds receive favorable treatment
-- Substantial real estate held by non-residents triggers annual property tax$$ WHERE name = 'Austria';
+- Substantial real estate held by non-residents triggers annual property tax' WHERE name = 'Austria';
 
-UPDATE countries SET tax_advice = $$- Turkey has progressive income tax (up to 40%)
+UPDATE countries SET tax_advice = '- Turkey has progressive income tax (up to 40%)
 - Corporate tax rate is 22% (reduced rates available for certain sectors)
 - VAT at 18% (reduced rates of 8%, 1%, and 0%)
 - Non-residents taxed on Turkey-source income and foreign income from Turkish business
 - Capital gains from security transactions exempt if held 1+ years
 - Real estate held 1+ year can exempt 50% of gain
 - Special economic zones offer significantly reduced tax rates
-- Tax residency established after 1 year of residence$$ WHERE name = 'Turkey';
+- Tax residency established after 1 year of residence' WHERE name = 'Turkey';
 
-UPDATE countries SET tax_advice = $$- Denmark has progressive income tax (rates up to 55.8%)
+UPDATE countries SET tax_advice = '- Denmark has progressive income tax (rates up to 55.8%)
 - Corporate tax rate is 22%
 - VAT at 25% (no reduced rates, only exemptions for essentials)
 - Non-residents taxed on Denmark-source income only
 - Capital gains on shares and securities exempt if certain conditions met
 - High tax burden offset by excellent public services
 - Tax deductions available for mortgage interest, pension contributions
-- Significant employment tax credits available for certain employees$$ WHERE name = 'Denmark';
+- Significant employment tax credits available for certain employees' WHERE name = 'Denmark';
 
-UPDATE countries SET tax_advice = $$- Sweden has progressive income tax (up to 56.6%)
+UPDATE countries SET tax_advice = '- Sweden has progressive income tax (up to 56.6%)
 - Corporate tax rate is 20.6%
 - VAT at 25% (reduced rates of 12% and 6%)
 - Non-residents taxed on Sweden-source income only
 - Capital gains: 30% flat tax (lower for primary residence - often exempt)
 - Wealth tax abolished in 2007
 - Tax deductions for mortgage interest and pension contributions
-- Dividend tax: 30% for standard rate (varies for retirement accounts)$$ WHERE name = 'Sweden';
+- Dividend tax: 30% for standard rate (varies for retirement accounts)' WHERE name = 'Sweden';
 
-UPDATE countries SET tax_advice = $$- Finland has progressive income tax (up to 56.95%)
+UPDATE countries SET tax_advice = '- Finland has progressive income tax (up to 56.95%)
 - Corporate tax rate is 20.8%
 - VAT at 24% (reduced rates of 14%, 10%, and 0%)
 - Non-residents taxed on Finland-source income only
 - Capital gains on shares and securities taxed at 30%
 - Significant deductions for mortgage interest and pension contributions
 - Tax-exempt income includes dividends from certain conditions
-- Dividend taxation: varies by account type and residency status$$ WHERE name = 'Finland';
+- Dividend taxation: varies by account type and residency status' WHERE name = 'Finland';
 
-UPDATE countries SET tax_advice = $$- Norway has progressive income tax (22% average, rates up to 48.84%)
+UPDATE countries SET tax_advice = '- Norway has progressive income tax (22% average, rates up to 48.84%)
 - Corporate tax rate is 22%
 - VAT at 25% (reduced rates of 15%, 11.1%, and 0%)
 - Non-residents taxed on Norway-source income only
@@ -5347,9 +5347,9 @@ UPDATE countries SET tax_advice = $$- Norway has progressive income tax (22% ave
 - Oil and energy sector has special tax regime
 - Pensions and insurance contributions are tax-deductible
 - Tax residency requires personal presence or economic ties
-- Foreign tax credits available for taxes paid abroad$$ WHERE name = 'Norway';
+- Foreign tax credits available for taxes paid abroad' WHERE name = 'Norway';
 
-UPDATE countries SET tax_advice = $$- Cyprus has one of the lowest corporate tax rates in EU (0% for certain income)
+UPDATE countries SET tax_advice = '- Cyprus has one of the lowest corporate tax rates in EU (0% for certain income)
 - Regular corporate tax rate is 12.5%
 - Personal income tax: 0% to 35% progressive
 - VAT at 19% (reduced rates of 9%, 5%, and 0%)
@@ -5357,9 +5357,9 @@ UPDATE countries SET tax_advice = $$- Cyprus has one of the lowest corporate tax
 - Dividends received can be exempt from taxation (participation exemption)
 - Capital gains: 0% on shares (with holding requirements), 20% on real estate
 - IP holding companies receive preferential treatment
-- Non-dom individuals don't pay tax on foreign income$$ WHERE name = 'Cyprus';
+- Non-dom individuals don''t pay tax on foreign income' WHERE name = 'Cyprus';
 
-UPDATE countries SET tax_advice = $$- France has progressive income tax (0% to 45%)
+UPDATE countries SET tax_advice = '- France has progressive income tax (0% to 45%)
 - Corporate tax rate is 25% (reduced to 15% for small/medium enterprises)
 - VAT at 20% (reduced rates of 10%, 5.5%, and 2.1%)
 - Non-residents taxed on France-source income only
@@ -5367,238 +5367,238 @@ UPDATE countries SET tax_advice = $$- France has progressive income tax (0% to 4
 - Extensive use of tax rulings to determine favorable treatment
 - New France requirement: substantial economic activity needed for residency
 - French residents required to file worldwide assets (declaration of foreign accounts)
-- Wealth tax (ISF) applies to certain high-net-worth individuals$$ WHERE name = 'France';
+- Wealth tax (ISF) applies to certain high-net-worth individuals' WHERE name = 'France';
 
 
 -- Seed local_tips for all 28 countries
 
-UPDATE countries SET local_tips = $$- Learn basic Maltese and English are both official languages
+UPDATE countries SET local_tips = '- Learn basic Maltese and English are both official languages
 - Apply for residency before 60 days if staying longer than 90 days
 - Healthcare: Private insurance recommended; public system available for residents
 - Cost of living highest in EU capitals; budget €1,500-2,000/month for comfortable living
 - Buy property early if considering Golden Visa; prices rising quickly
 - Network through local expat groups; tight community makes integration easier
-- Public transport is cheap but limited; car recommended outside Valletta$$ WHERE name = 'Malta';
+- Public transport is cheap but limited; car recommended outside Valletta' WHERE name = 'Malta';
 
-UPDATE countries SET local_tips = $$- Embrace "hygge" culture - slow living and candlelit evenings are essential
+UPDATE countries SET local_tips = '- Embrace "hygge" culture - slow living and candlelit evenings are essential
 - Winter is long and dark; prepare mentally and invest in quality outerwear
 - High cost of living (food, alcohol, housing) but excellent public services justify it
 - Learn Icelandic if staying long-term; English widely spoken but appreciated
 - Rental market very competitive; start searching 2-3 months before move
 - Expat communities in Reykjavík can help with bureaucratic processes
-- Geothermal heating makes energy costs manageable$$ WHERE name = 'Iceland';
+- Geothermal heating makes energy costs manageable' WHERE name = 'Iceland';
 
-UPDATE countries SET local_tips = $$- German bureaucracy is efficient but thorough; keep all documents organized
+UPDATE countries SET local_tips = '- German bureaucracy is efficient but thorough; keep all documents organized
 - Register with local government (Anmeldung) within 2 weeks of arrival
 - Healthcare system excellent; mandatory public or private insurance required
 - Learn German quickly; English common but German essential for integration
 - Apprenticeship and vocational training (Ausbildung) widely available
 - Punctuality and directness highly valued in German culture
-- Recycling is mandatory with strict sorting requirements$$ WHERE name = 'Germany';
+- Recycling is mandatory with strict sorting requirements' WHERE name = 'Germany';
 
-UPDATE countries SET local_tips = $$- Spanish (not Portuguese) is primary language; learn regional dialects
+UPDATE countries SET local_tips = '- Spanish (not Portuguese) is primary language; learn regional dialects
 - Bureaucracy can be slow; patience and connections essential
 - Siesta culture still strong outside major cities; adjust schedule accordingly
 - Healthcare: Public system (IMSS) good value; register quickly after arrival
 - Visa runs to Bolivia/Chile easy if needed for long-term stays
 - Cost of living reasonable outside Lima and major tourist zones
-- Join local clubs/sports groups to build community quickly$$ WHERE name = 'Peru';
+- Join local clubs/sports groups to build community quickly' WHERE name = 'Peru';
 
-UPDATE countries SET local_tips = $$- Spanish is essential; English limited outside Santiago and tourist areas
+UPDATE countries SET local_tips = '- Spanish is essential; English limited outside Santiago and tourist areas
 - Healthcare excellent public system; FONASA registration recommended
 - High internet speeds and tech-forward infrastructure
 - Cost of living rising rapidly; budget accordingly for Santiago
 - Visa requirements can be navigated with tourism loop if needed
 - Strong wine culture; explore local vineyards in Central Valley
-- Weather varies dramatically by region; choose location carefully$$ WHERE name = 'Chile';
+- Weather varies dramatically by region; choose location carefully' WHERE name = 'Chile';
 
-UPDATE countries SET local_tips = $$- Arabic (Darija dialect) spoken; French also very useful, English limited
+UPDATE countries SET local_tips = '- Arabic (Darija dialect) spoken; French also very useful, English limited
 - Bureaucracy can be slow and require connections; patience essential
 - Ramadan significantly affects business hours and social life
 - Healthcare: Private clinics better quality than public system
 - Haggling expected in markets; good opportunity to practice language
 - Cost of living very reasonable; budget €600-800/month comfortably
-- Expat communities in Marrakech and Tangier well-established$$ WHERE name = 'Morocco';
+- Expat communities in Marrakech and Tangier well-established' WHERE name = 'Morocco';
 
-UPDATE countries SET local_tips = $$- Indonesian (Bahasa) easier than it seems; locals appreciate effort to learn
+UPDATE countries SET local_tips = '- Indonesian (Bahasa) easier than it seems; locals appreciate effort to learn
 - Bureaucracy requires patience and local knowledge; hire visa agent if needed
 - Healthcare: Stick to private clinics in cities; international insurance recommended
 - Cost of living very reasonable; expat lifestyle affordable on modest budget
 - Visas often require visa runs; neighboring countries easily accessible
 - Traffic in Jakarta chaotic; consider location carefully before moving
-- Rainy season (November-March) affects daily life and infrastructure$$ WHERE name = 'Indonesia';
+- Rainy season (November-March) affects daily life and infrastructure' WHERE name = 'Indonesia';
 
-UPDATE countries SET local_tips = $$- English widely spoken; no pressure to learn English but appreciated
+UPDATE countries SET local_tips = '- English widely spoken; no pressure to learn English but appreciated
 - NHS (National Health Service) free; register with GP immediately after arrival
 - Visa sponsorship essential for most work visas; plan well ahead
 - Cost of living very high in London; consider regional alternatives
 - Council tax, utilities, and council registration required; budget accordingly
 - Driving left-hand side cars; international license required
-- Weather grey and rainy; invest in good waterproof gear$$ WHERE name = 'United Kingdom';
+- Weather grey and rainy; invest in good waterproof gear' WHERE name = 'United Kingdom';
 
-UPDATE countries SET local_tips = $$- Portuguese easy to learn if you know Spanish; locals appreciate effort
+UPDATE countries SET local_tips = '- Portuguese easy to learn if you know Spanish; locals appreciate effort
 - NHR (Non-Habitual Resident) tax regime available for first 10 years
 - Healthcare: Private insurance recommended though public system acceptable
 - Cost of living reasonable outside Lisbon and Porto; rural areas very affordable
 - Bureaucracy: Register with local authorities (junta de freguesia) immediately
 - Golden Visa program well-established and widely understood
-- Weather excellent; mild winters in most of country$$ WHERE name = 'Portugal';
+- Weather excellent; mild winters in most of country' WHERE name = 'Portugal';
 
-UPDATE countries SET local_tips = $$- Spanish essential; regional languages (Catalan, Basque) matter in some regions
+UPDATE countries SET local_tips = '- Spanish essential; regional languages (Catalan, Basque) matter in some regions
 - Bureaucracy less efficient than Germany but improving; patience required
 - Healthcare excellent and affordable; register with local centro de salud
 - Visa sponsorship needed for work; digital nomad visa available
 - Siesta culture stronger south; adjust business schedule accordingly
 - Labor market competitive; network heavily before moving
-- Quality of life exceptionally high; integration easier than expected$$ WHERE name = 'Spain';
+- Quality of life exceptionally high; integration easier than expected' WHERE name = 'Spain';
 
-UPDATE countries SET local_tips = $$- Estonian widely spoken; English very common among younger generations
+UPDATE countries SET local_tips = '- Estonian widely spoken; English very common among younger generations
 - E-governance system excellent; most bureaucracy done online
 - Cost of living reasonable outside Tallinn; budget €800-1,200/month
 - Healthcare: Register with family doctor; system efficient and affordable
 - Tech industry booming; e-residency useful for business formation
 - Sauna culture important; explore traditional saunas for integration
-- Winter dark and long but manageable; outdoor activities year-round$$ WHERE name = 'Estonia';
+- Winter dark and long but manageable; outdoor activities year-round' WHERE name = 'Estonia';
 
-UPDATE countries SET local_tips = $$- Thai language helpful but English common in tourist/expat areas
+UPDATE countries SET local_tips = '- Thai language helpful but English common in tourist/expat areas
 - Visa runs to Laos/Malaysia standard for extending stays
 - Healthcare: Bangkok private hospitals world-class; affordable even without insurance
 - Cost of living very low; comfortable expat lifestyle €500-800/month
 - Thai culture values respect and formality; learn key etiquette
 - Muay Thai gyms excellent for fitness and community building
-- Monsoon season (May-October) affects weather; plan indoor activities$$ WHERE name = 'Thailand';
+- Monsoon season (May-October) affects weather; plan indoor activities' WHERE name = 'Thailand';
 
-UPDATE countries SET local_tips = $$- Spanish essential; English limited outside tourist areas and Mexico City
+UPDATE countries SET local_tips = '- Spanish essential; English limited outside tourist areas and Mexico City
 - Visa sponsorship needed for work; temporary resident visa renewable
 - Healthcare: Private insurance recommended; IMSS public system adequate
 - Cost of living very low outside Mexico City; budget €600-900/month
 - Residency visa (temporary) renewable annually for several years
 - Bureaucracy improving but still can be complicated; hire gestoria if needed
-- Security situation varies dramatically by location; choose carefully$$ WHERE name = 'Mexico';
+- Security situation varies dramatically by location; choose carefully' WHERE name = 'Mexico';
 
-UPDATE countries SET local_tips = $$- French helpful but German/Italian/Romansh also spoken regionally
+UPDATE countries SET local_tips = '- French helpful but German/Italian/Romansh also spoken regionally
 - Bureaucracy efficient and well-organized; keep documents meticulously
 - Extreme cost of living: budget CHF 4,000-6,000/month for comfortable living
 - Healthcare mandatory; excellent quality but very expensive
 - Cantons have significant autonomy; tax situation varies by location
 - Integration requires effort; Swiss culture is reserved but respectful
-- Public transport excellent; car optional in cities$$ WHERE name = 'Switzerland';
+- Public transport excellent; car optional in cities' WHERE name = 'Switzerland';
 
-UPDATE countries SET local_tips = $$- Italian essential; dialects vary significantly by region
+UPDATE countries SET local_tips = '- Italian essential; dialects vary significantly by region
 - Bureaucracy can be slow; relationships and connections help significantly
 - Healthcare excellent; register with local ASL (health authority)
 - Cost of living reasonable outside major cities; north more expensive than south
 - Regional differences dramatic; research specific region before moving
 - Visa sponsorship needed for work; understand visa type carefully
-- Labor market competitive; networking crucial for employment$$ WHERE name = 'Italy';
+- Labor market competitive; networking crucial for employment' WHERE name = 'Italy';
 
-UPDATE countries SET local_tips = $$- Dutch very widely spoken; English nearly universal but Dutch appreciated
+UPDATE countries SET local_tips = '- Dutch very widely spoken; English nearly universal but Dutch appreciated
 - Bureaucracy efficient; register with gemeente (municipality) immediately
 - Cycling culture dominant; invest in good bike and follow traffic laws
 - Cost of living high but reasonable for quality of life; budget €1,500-2,000/month
 - Rental market competitive; start searching early through established sites
 - Healthcare: Mandatory insurance; deductible system common
-- Weather cool and grey; embrace cycling and indoor culture$$ WHERE name = 'Netherlands';
+- Weather cool and grey; embrace cycling and indoor culture' WHERE name = 'Netherlands';
 
-UPDATE countries SET local_tips = $$- English nearly universal; Irish accent takes time to understand
+UPDATE countries SET local_tips = '- English nearly universal; Irish accent takes time to understand
 - Bureaucracy improving; PPS number (Personal Public Service) essential
 - Healthcare: Private insurance recommended though public system available
 - Cost of living high, especially Dublin; consider regional cities
 - Tax rate low; double taxation treaties with many countries
 - Visa sponsorship available for skilled workers; Critical Skills Employment Permit
-- Weather rainy and cool; embrace pub culture for social integration$$ WHERE name = 'Ireland';
+- Weather rainy and cool; embrace pub culture for social integration' WHERE name = 'Ireland';
 
-UPDATE countries SET local_tips = $$- Greek helpful but English widely spoken in expat/tourist areas
+UPDATE countries SET local_tips = '- Greek helpful but English widely spoken in expat/tourist areas
 - Bureaucracy can be slow; relationships matter; be patient
 - Healthcare acceptable in major cities; private insurance recommended
 - Cost of living very reasonable; budget €800-1,200/month comfortable
 - Golden Visa program well-known; property investment pathway clear
 - Island-specific regulations; research specific island before moving
-- Summer extremely hot; adapt schedule to late nights and siestas$$ WHERE name = 'Greece';
+- Summer extremely hot; adapt schedule to late nights and siestas' WHERE name = 'Greece';
 
-UPDATE countries SET local_tips = $$- French or Dutch essential depending on region (Brussels, Flanders, Wallonia)
+UPDATE countries SET local_tips = '- French or Dutch essential depending on region (Brussels, Flanders, Wallonia)
 - Bureaucracy complex due to regional differences; hire relocation specialist if possible
 - Cost of living reasonable outside Brussels; budget €1,200-1,800/month
 - Healthcare excellent; mandatory registration with mutuellе (health fund)
 - Regional integration important; learn local language of region
 - Tax brackets complicated; professional advice recommended
-- Cycling infrastructure excellent especially in Flanders$$ WHERE name = 'Belgium';
+- Cycling infrastructure excellent especially in Flanders' WHERE name = 'Belgium';
 
-UPDATE countries SET local_tips = $$- Polish increasingly spoken among younger people; English growing
+UPDATE countries SET local_tips = '- Polish increasingly spoken among younger people; English growing
 - Bureaucracy improving rapidly; digitalization making processes easier
 - Cost of living low; budget €700-1,000/month comfortably
 - Healthcare functional but slower than Western Europe; consider private insurance
 - Job market improving for skilled workers; networking essential
 - Visa sponsorship available for key specialists
-- Weather cold winters (minus 10-15°C common); prepare appropriately$$ WHERE name = 'Poland';
+- Weather cold winters (minus 10-15°C common); prepare appropriately' WHERE name = 'Poland';
 
-UPDATE countries SET local_tips = $$- German essential, especially outside Vienna; English spoken but limited
+UPDATE countries SET local_tips = '- German essential, especially outside Vienna; English spoken but limited
 - Bureaucracy efficient; Austrians appreciate order and punctuality
 - Cost of living reasonable; budget €1,400-1,800/month
 - Healthcare excellent; mandatory insurance; register immediately
-- Vienna's music/culture scene world-class; integrate through cultural activities
+- Vienna''s music/culture scene world-class; integrate through cultural activities
 - Skiing and outdoor activities central to lifestyle; embrace them
-- Coffee culture strong; embrace Viennese coffee house tradition$$ WHERE name = 'Austria';
+- Coffee culture strong; embrace Viennese coffee house tradition' WHERE name = 'Austria';
 
-UPDATE countries SET local_tips = $$- Turkish essential; English common in Istanbul but limited elsewhere
+UPDATE countries SET local_tips = '- Turkish essential; English common in Istanbul but limited elsewhere
 - Bureaucracy can be unpredictable; connections and flexibility important
 - Healthcare: Private insurance recommended; good clinics in major cities
 - Cost of living very low; budget €700-900/month for comfortable expat lifestyle
 - Visa runs to nearby countries standard practice
 - Entrepreneurship and business formation relatively straightforward
-- Weather hot and dry in summer; prepare for significant heat$$ WHERE name = 'Turkey';
+- Weather hot and dry in summer; prepare for significant heat' WHERE name = 'Turkey';
 
-UPDATE countries SET local_tips = $$- Danish useful but English nearly universal; Danes speak English very well
+UPDATE countries SET local_tips = '- Danish useful but English nearly universal; Danes speak English very well
 - Extreme cost of living; budget DKK 15,000-18,000/month (€2,000-2,400)
 - "Hygge" and work-life balance central to Danish culture; embrace it
 - Healthcare excellent; mandatory registration; efficient system
 - Bureaucracy well-organized; CPR number essential (like SSN)
 - Salary expectations high but cost of living absorbs most gains
-- Cycling culture dominant; learn cycling etiquette$$ WHERE name = 'Denmark';
+- Cycling culture dominant; learn cycling etiquette' WHERE name = 'Denmark';
 
-UPDATE countries SET local_tips = $$- Swedish helpful but English universal among younger generations
+UPDATE countries SET local_tips = '- Swedish helpful but English universal among younger generations
 - Cost of living very high; Stockholm especially expensive; budget SEK 20,000-25,000/month
 - "Fika" (coffee break) culture important; embrace social/work integration
-- Healthcare excellent; mandatory registration with region's healthcare service
+- Healthcare excellent; mandatory registration with region''s healthcare service
 - Bureaucracy efficient; personnummer (personal ID number) essential
 - Excellent work-life balance and parental leave; generous social benefits
 - Winter long and dark; seasonal depression common; prepare mentally
-- Outdoor culture strong year-round; invest in proper cold weather gear$$ WHERE name = 'Sweden';
+- Outdoor culture strong year-round; invest in proper cold weather gear' WHERE name = 'Sweden';
 
-UPDATE countries SET local_tips = $$- Finnish helpful but English widely spoken; less critical than Scandinavian countries
+UPDATE countries SET local_tips = '- Finnish helpful but English widely spoken; less critical than Scandinavian countries
 - Cost of living high; budget €1,800-2,200/month
 - Sauna culture essential to Finnish identity; participate actively
 - Healthcare excellent; mandatory register with public system
 - Winter dark 6+ months; seasonal affective disorder common; prepare
 - Education system world-class; relevant for families
 - Bureaucracy efficient; language support available for expats
-- Outdoor activities (lakes, forests, skiing) central to lifestyle$$ WHERE name = 'Finland';
+- Outdoor activities (lakes, forests, skiing) central to lifestyle' WHERE name = 'Finland';
 
-UPDATE countries SET local_tips = $$- Norwegian helpful but English very widely spoken; Norwegians fluent
+UPDATE countries SET local_tips = '- Norwegian helpful but English very widely spoken; Norwegians fluent
 - Extreme cost of living; highest in Nordic region; budget NOK 20,000-25,000/month
 - Work-life balance and outdoor culture core to Norwegian identity
 - Healthcare excellent; mandatory registration; very efficient system
 - Bureaucracy well-organized; get D-number immediately (temporary ID)
 - Outdoor activities (hiking, skiing, fishing) define lifestyle
 - Winter involves significant darkness; embrace hygge and prepare mentally
-- Wages high; compensate for extreme living costs$$ WHERE name = 'Norway';
+- Wages high; compensate for extreme living costs' WHERE name = 'Norway';
 
-UPDATE countries SET local_tips = $$- Greek essential; English common among younger people and expat community
+UPDATE countries SET local_tips = '- Greek essential; English common among younger people and expat community
 - Cost of living very reasonable; budget €800-1,000/month comfortably
 - Residency straightforward; UK pension holders popular demographic
 - Healthcare adequate; private insurance recommended; EU coverage helps
 - Bureaucratic processes slow; patience and connections valuable
 - Island lifestyle: choose between quiet/developed depending on preference
 - Community strong; join local groups quickly for integration
-- Prepare for summer heat and variable winter weather$$ WHERE name = 'Cyprus';
+- Prepare for summer heat and variable winter weather' WHERE name = 'Cyprus';
 
-UPDATE countries SET local_tips = $$- French essential outside Paris; English limited outside major cities/expat areas
+UPDATE countries SET local_tips = '- French essential outside Paris; English limited outside major cities/expat areas
 - Bureaucracy complex and slow; French love of paperwork real; patience critical
 - Cost of living reasonable outside Paris; Paris very expensive; budget €1,500-2,000/month Paris
 - Healthcare excellent; mandatory registration; Sécurité Sociale system complex
 - Work visa sponsorship required; freelancer status available for self-employed
 - French culture values pessimism and critical thinking; learn to appreciate it
-- Regional integration important; Paris expats can live expat bubble if not careful$$ WHERE name = 'France';
+- Regional integration important; Paris expats can live expat bubble if not careful' WHERE name = 'France';
 -- =============================================================================
 -- Additional countries (see migration 20260429000000_add_more_countries.sql)
 -- =============================================================================-- Migration: add_more_countries
@@ -6892,79 +6892,79 @@ UPDATE countries SET citizenship_requirements = '{
 -- Tax Advice
 -- =============================================================================
 
-UPDATE countries SET tax_advice = $$- Hungary has a flat personal income tax rate of 15% — one of the EU''s lowest
+UPDATE countries SET tax_advice = '- Hungary has a flat personal income tax rate of 15% — one of the EU''s lowest
 - Corporate tax rate is 9%, the lowest flat corporate tax rate in the EU
 - VAT rate is 27%, the highest in the EU (reduced rates of 18% and 5%)
 - Non-residents taxed only on Hungary-sourced income
 - Social security contributions total approximately 18.5% for employees
 - Capital gains taxed at 15% flat rate for most assets
 - No inheritance tax between direct family members
-- SZÉP card system provides tax-advantaged employee benefits for leisure$$ WHERE name = 'Hungary';
+- SZÉP card system provides tax-advantaged employee benefits for leisure' WHERE name = 'Hungary';
 
-UPDATE countries SET tax_advice = $$- Croatia has progressive income tax rates (23.6% and 35.4%)
+UPDATE countries SET tax_advice = '- Croatia has progressive income tax rates (23.6% and 35.4%)
 - Corporate tax is 18% (10% for annual revenues under HRK 7.5 million)
 - VAT at 25% (reduced rates of 13%, 5%, and 0%)
 - Extensive bilateral tax treaties reduce withholding taxes
 - Digital nomads with approved status may benefit from simplified tax treatment
 - Property transfer tax at 3%
 - Non-residents taxed on Croatian-source income only
-- Croatian Kuna replaced by Euro in 2023, simplifying cross-border financial planning$$ WHERE name = 'Croatia';
+- Croatian Kuna replaced by Euro in 2023, simplifying cross-border financial planning' WHERE name = 'Croatia';
 
-UPDATE countries SET tax_advice = $$- US has progressive federal income tax (10% to 37%) plus state income taxes (0% to 13.3%)
+UPDATE countries SET tax_advice = '- US has progressive federal income tax (10% to 37%) plus state income taxes (0% to 13.3%)
 - Corporate tax rate is 21% at federal level; state taxes vary
 - Capital gains rates of 0%, 15%, or 20% depending on income
 - US taxes citizens and permanent residents on worldwide income regardless of residence
 - FBAR and FATCA require reporting of foreign bank accounts and assets
 - Foreign Earned Income Exclusion (FEIE) allows up to ~$120k exclusion for abroad residents
 - Sales tax varies by state (0% to over 10%); no federal sales tax
-- Estate tax applies to estates over $13+ million; gift tax rules apply$$ WHERE name = 'United States';
+- Estate tax applies to estates over $13+ million; gift tax rules apply' WHERE name = 'United States';
 
-UPDATE countries SET tax_advice = $$- Japan has progressive income tax (5% to 45%) plus 10% local inhabitant tax
+UPDATE countries SET tax_advice = '- Japan has progressive income tax (5% to 45%) plus 10% local inhabitant tax
 - Corporate tax effective rate approximately 30-34% including local taxes
 - Consumption tax (VAT equivalent) at 10% (8% for food/beverages)
 - Residents taxed on worldwide income; non-residents on Japan-source income only
 - Capital gains on securities taxed at flat 20.315% (income + special restoration surtax)
 - No inheritance tax exemption for non-residents inheriting from Japanese residents
 - Japan-US tax treaty reduces double taxation for American expats
-- Social insurance contributions mandatory; employer and employee split costs$$ WHERE name = 'Japan';
+- Social insurance contributions mandatory; employer and employee split costs' WHERE name = 'Japan';
 
-UPDATE countries SET tax_advice = $$- Korea has progressive income tax (6% to 45%)
+UPDATE countries SET tax_advice = '- Korea has progressive income tax (6% to 45%)
 - Corporate tax 9%-24% depending on size and income
 - VAT at 10% (one flat rate, minimal exemptions)
 - Residents taxed on worldwide income; non-residents on Korea-source income only
 - Capital gains on real estate can be taxed at up to 70% for short-term holdings
 - Foreign tax credits available for taxes paid abroad
 - National health insurance and pension contributions mandatory
-- Cryptocurrency gains taxed as miscellaneous income at 20% over KRW 2.5 million$$ WHERE name = 'South Korea';
+- Cryptocurrency gains taxed as miscellaneous income at 20% over KRW 2.5 million' WHERE name = 'South Korea';
 
-UPDATE countries SET tax_advice = $$- UAE has zero personal income tax — none on salary, investments, or capital gains
+UPDATE countries SET tax_advice = '- UAE has zero personal income tax — none on salary, investments, or capital gains
 - Corporate tax introduced in 2023 at 9% (0% for profits under AED 375,000)
 - VAT at 5% (introduced 2018; limited in scope compared to other countries)
 - No withholding tax on dividends or interest paid to individuals
 - Free Zone companies may be exempt from corporate tax under certain conditions
 - No inheritance tax or wealth tax
 - Social security only mandatory for UAE national employees
-- Non-residents employed in UAE pay no income tax; only social contributions if applicable$$ WHERE name = 'United Arab Emirates';
+- Non-residents employed in UAE pay no income tax; only social contributions if applicable' WHERE name = 'United Arab Emirates';
 
-UPDATE countries SET tax_advice = $$- Canada has progressive federal income tax (15% to 33%) plus provincial taxes (5% to 21%)
+UPDATE countries SET tax_advice = '- Canada has progressive federal income tax (15% to 33%) plus provincial taxes (5% to 21%)
 - Corporate tax at 26.5% combined federal/provincial (small business rate of 9%)
 - GST/HST (goods and services/harmonized sales tax) 5%-15% depending on province
 - Capital gains: 50% inclusion rate means half of capital gains added to income
 - TFSA (Tax-Free Savings Account) and RRSP allow tax-advantaged saving
 - Non-residents taxed at 25% withholding tax on Canadian income
 - Foreign tax credits available for taxes paid abroad
-- Provincial taxes vary significantly; Alberta has no provincial sales tax$$ WHERE name = 'Canada';
+- Provincial taxes vary significantly; Alberta has no provincial sales tax' WHERE name = 'Canada';
 
-UPDATE countries SET tax_advice = $$- Australia has progressive income tax (0% to 45%) plus 2% Medicare levy
+UPDATE countries SET tax_advice = '- Australia has progressive income tax (0% to 45%) plus 2% Medicare levy
 - Corporate tax at 30% (25% for companies with turnover under AUD 50 million)
 - GST (goods and services tax) at 10% flat
 - Capital gains taxed at income tax rates; 50% discount for assets held 12+ months
 - Superannuation (pension) contributions mandatory at 11%+ of salary
 - Non-residents taxed at flat 32.5% on first AUD 120,000 (no tax-free threshold)
 - PAYG withholding system for employment income
-- Foreign residents may be exempt from capital gains on most assets$$ WHERE name = 'Australia';
+- Foreign residents may be exempt from capital gains on most assets' WHERE name = 'Australia';
 
-UPDATE countries SET tax_advice = $$- New Zealand has progressive income tax (10.5% to 39%)
+UPDATE countries SET tax_advice = '- New Zealand has progressive income tax (10.5% to 39%)
 - Corporate tax at 28%
 - GST (goods and services tax) at 15%
 - No capital gains tax (with some exceptions for property speculation)
@@ -6972,153 +6972,153 @@ UPDATE countries SET tax_advice = $$- New Zealand has progressive income tax (10
 - KiwiSaver voluntary superannuation scheme with government contributions
 - Non-residents taxed on NZ-source income only
 - Foreign Investment Fund (FIF) rules apply to foreign investments above NZD 50,000
-- Resident foreign trusts have complex disclosure requirements$$ WHERE name = 'New Zealand';
+- Resident foreign trusts have complex disclosure requirements' WHERE name = 'New Zealand';
 
-UPDATE countries SET tax_advice = $$- Singapore has progressive personal income tax (0% to 24%)
+UPDATE countries SET tax_advice = '- Singapore has progressive personal income tax (0% to 24%)
 - Corporate tax at 17% flat (effective rate often lower with exemptions for startups)
 - GST (goods and services tax) at 9% (increased from 8% in 2024)
 - No capital gains tax, inheritance tax, or wealth tax
 - Dividends from Singapore companies are tax-exempt for individuals
 - Foreign income not remitted to Singapore is generally not taxable for residents
 - Startup Tax Exemption: new companies pay 0% on first SGD 100,000 profit
-- Social security (CPF) mandatory for Singapore citizens and PRs only$$ WHERE name = 'Singapore';
+- Social security (CPF) mandatory for Singapore citizens and PRs only' WHERE name = 'Singapore';
 
-UPDATE countries SET tax_advice = $$- Hong Kong has low salaries tax (2% to 17%, capped at 16% of net income)
+UPDATE countries SET tax_advice = '- Hong Kong has low salaries tax (2% to 17%, capped at 16% of net income)
 - Corporate profits tax at 16.5% (8.25% on first HKD 2 million for qualifying companies)
 - No VAT, GST, sales tax, or capital gains tax
 - No withholding tax on dividends or interest
 - Source-based taxation: only income arising in or derived from HK is taxable
 - Territorial tax system: foreign-source income exempt from HK tax
 - Property rates (tax on rental value) instead of property purchase tax
-- Stamp duty applies to stock and property transactions$$ WHERE name = 'Hong Kong';
+- Stamp duty applies to stock and property transactions' WHERE name = 'Hong Kong';
 
-UPDATE countries SET tax_advice = $$- Czechia has 15% personal income tax (23% above 4× average salary)
+UPDATE countries SET tax_advice = '- Czechia has 15% personal income tax (23% above 4× average salary)
 - Corporate tax at 19%
 - VAT at 21% (reduced rates of 12% and 0%)
 - Non-residents taxed on Czech-source income only
 - Social security contributions significant (~34% employer + ~11% employee)
 - Capital gains from securities held 3+ years exempt from tax
 - Dividend withholding tax of 15% (reduced under treaties)
-- Czech Koruna (CZK) not in Eurozone; currency exposure for Euro earners$$ WHERE name = 'Czechia';
+- Czech Koruna (CZK) not in Eurozone; currency exposure for Euro earners' WHERE name = 'Czechia';
 
-UPDATE countries SET tax_advice = $$- Slovakia has 19% personal income tax (25% above 3× average wage threshold)
+UPDATE countries SET tax_advice = '- Slovakia has 19% personal income tax (25% above 3× average wage threshold)
 - Corporate tax at 21%
 - VAT at 20% (reduced rate of 10%)
 - Part of Eurozone since 2009 — no currency conversion needed for Euro earners
 - Social security contributions approximately 44% total (split employer/employee)
 - Capital gains generally taxed as ordinary income
 - Tax residency established after 183 days or main center of life
-- R&D tax super-deduction of 200% available for qualifying businesses$$ WHERE name = 'Slovakia';
+- R&D tax super-deduction of 200% available for qualifying businesses' WHERE name = 'Slovakia';
 
-UPDATE countries SET tax_advice = $$- Bulgaria has a flat 10% personal income tax — lowest in the EU
+UPDATE countries SET tax_advice = '- Bulgaria has a flat 10% personal income tax — lowest in the EU
 - Corporate tax at 10% flat — also lowest in the EU
 - VAT at 20% (reduced rates of 9% and 0%)
 - Non-residents taxed on Bulgaria-source income only
 - Capital gains from sale of personal property (one per year) may be exempt
 - Dividend withholding tax of 5%
 - No inheritance tax between direct family members
-- Bulgaria is not in Schengen or Eurozone (uses Bulgarian Lev pegged to Euro)$$ WHERE name = 'Bulgaria';
+- Bulgaria is not in Schengen or Eurozone (uses Bulgarian Lev pegged to Euro)' WHERE name = 'Bulgaria';
 
-UPDATE countries SET tax_advice = $$- Romania has progressive income tax of 10% flat for most income
+UPDATE countries SET tax_advice = '- Romania has progressive income tax of 10% flat for most income
 - Corporate tax at 16% (micro-enterprise revenue tax of 1-3% as alternative)
 - VAT at 19% (reduced rates of 9%, 5%, and 0%)
 - Non-residents taxed on Romania-source income only
 - Social security contributions approximately 35% total
 - Capital gains taxed at 10% for listed securities
 - IT sector employees under 26 with software certifications are exempt from income tax
-- Romania uses its own currency (Romanian Leu) — not in Eurozone yet$$ WHERE name = 'Romania';
+- Romania uses its own currency (Romanian Leu) — not in Eurozone yet' WHERE name = 'Romania';
 
-UPDATE countries SET tax_advice = $$- Luxembourg has progressive income tax (0% to 42%) plus solidarity surtax
+UPDATE countries SET tax_advice = '- Luxembourg has progressive income tax (0% to 42%) plus solidarity surtax
 - Corporate tax approximately 24.94% combined (15% CIT + 7% solidarity + 6.75% municipal)
 - VAT at 17% (lowest standard rate in the EU), reduced rates of 14%, 8%, and 3%
 - Participation exemption: dividends and capital gains from qualifying subsidiaries exempt
 - Luxembourg investment vehicles (UCITS, SICAVs) widely used for EU fund management
 - No wealth tax on individuals
 - Significant double tax treaty network (80+ countries)
-- Highly favorable for holding companies and EU fund structures$$ WHERE name = 'Luxembourg';
+- Highly favorable for holding companies and EU fund structures' WHERE name = 'Luxembourg';
 
-UPDATE countries SET tax_advice = $$- South Africa has progressive income tax (18% to 45%)
+UPDATE countries SET tax_advice = '- South Africa has progressive income tax (18% to 45%)
 - Corporate tax at 27%
 - VAT at 15% (one of Africa''s lower standard rates)
 - South African residents taxed on worldwide income
 - Foreign income exemption available for those working abroad 183+ days (with some limits)
 - Capital gains tax at effective rate of up to 18% for individuals
 - Dividends withholding tax of 20%
-- Estate duty of 20% on estates above ZAR 3.5 million (30% above ZAR 30 million)$$ WHERE name = 'South Africa';
+- Estate duty of 20% on estates above ZAR 3.5 million (30% above ZAR 30 million)' WHERE name = 'South Africa';
 
-UPDATE countries SET tax_advice = $$- Slovenia has progressive income tax (16% to 50%)
+UPDATE countries SET tax_advice = '- Slovenia has progressive income tax (16% to 50%)
 - Corporate tax at 19%
 - VAT at 22% (reduced rates of 9.5% and 5%)
 - Part of Eurozone since 2007 — no currency conversion needed
 - Capital gains taxed at 25% (reducing to 0% after 20 years of ownership)
 - Dividend withholding tax of 27.5%
 - Non-residents taxed on Slovenia-source income only
-- Social contributions approximately 38% total (split employer/employee)$$ WHERE name = 'Slovenia';
+- Social contributions approximately 38% total (split employer/employee)' WHERE name = 'Slovenia';
 
-UPDATE countries SET tax_advice = $$- Latvia has progressive income tax (20% to 31%)
+UPDATE countries SET tax_advice = '- Latvia has progressive income tax (20% to 31%)
 - Corporate tax at 20% on distributed profits (undistributed profits not taxed)
 - VAT at 21% (reduced rates of 12% and 5%)
 - Part of Eurozone since 2014
 - Capital gains generally taxed as ordinary income
 - No inheritance tax between direct family members
 - Microenterprise tax regime (15%) available for small businesses
-- Latvia''s distributed profit tax model (similar to Estonia) encourages reinvestment$$ WHERE name = 'Latvia';
+- Latvia''s distributed profit tax model (similar to Estonia) encourages reinvestment' WHERE name = 'Latvia';
 
-UPDATE countries SET tax_advice = $$- Lithuania has progressive income tax (20% and 32%)
+UPDATE countries SET tax_advice = '- Lithuania has progressive income tax (20% and 32%)
 - Corporate tax at 15% (5% for small companies and startups)
 - VAT at 21% (reduced rates of 9% and 5%)
 - Part of Eurozone since 2015
 - Capital gains taxed at 15% flat for individuals
 - No inheritance tax between direct family members
 - Fintech businesses benefit from Bank of Lithuania regulatory sandbox
-- Social insurance contributions approximately 30% total (split employer/employee)$$ WHERE name = 'Lithuania';
+- Social insurance contributions approximately 30% total (split employer/employee)' WHERE name = 'Lithuania';
 
-UPDATE countries SET tax_advice = $$- China has progressive income tax (3% to 45%) for residents
+UPDATE countries SET tax_advice = '- China has progressive income tax (3% to 45%) for residents
 - Corporate tax at 25% (15% for high-tech enterprises)
 - VAT at 13% for goods, 9% for key sectors, 6% for services
 - Non-residents taxed on China-source income only (with treaty benefits)
 - Capital gains from listed securities generally exempt
 - Real estate transfer gains taxed as income at up to 30%
 - Annual individual tax return required for income above CNY 120,000
-- China''s tax residency rules require 183+ days presence; long-term residents taxed on worldwide income$$ WHERE name = 'China';
+- China''s tax residency rules require 183+ days presence; long-term residents taxed on worldwide income' WHERE name = 'China';
 
-UPDATE countries SET tax_advice = $$- Mongolia has progressive income tax (10% to 25%)
+UPDATE countries SET tax_advice = '- Mongolia has progressive income tax (10% to 25%)
 - Corporate tax at 10% (for income below MNT 6 billion) or 25% above threshold
 - VAT at 10%
 - Non-residents taxed on Mongolia-source income only
 - Mining sector has special royalty and tax regimes
 - Capital gains from securities taxed at flat 10%
 - Withholding tax of 20% on dividends paid to non-residents
-- Double tax treaty network limited; check applicable treaties before investing$$ WHERE name = 'Mongolia';
+- Double tax treaty network limited; check applicable treaties before investing' WHERE name = 'Mongolia';
 
-UPDATE countries SET tax_advice = $$- Liechtenstein has very low income tax (1.2% to 8% cantonal/communal rates + national tax)
+UPDATE countries SET tax_advice = '- Liechtenstein has very low income tax (1.2% to 8% cantonal/communal rates + national tax)
 - Effective combined income tax rate rarely exceeds 20% even for high earners
 - Corporate tax at approximately 12.5% effective rate
 - VAT at 7.7% (same as Switzerland, part of Swiss customs union)
 - No inheritance tax for direct family members; modest rates for others
 - No wealth tax exceeding modest annual base
 - Participation exemption for qualifying dividends and capital gains at holding level
-- High-net-worth individuals may negotiate lump-sum taxation agreements$$ WHERE name = 'Liechtenstein';
+- High-net-worth individuals may negotiate lump-sum taxation agreements' WHERE name = 'Liechtenstein';
 
-UPDATE countries SET tax_advice = $$- Saudi Arabia has zero personal income tax for Saudi nationals and foreign employees
+UPDATE countries SET tax_advice = '- Saudi Arabia has zero personal income tax for Saudi nationals and foreign employees
 - Corporate income tax at 20% for foreign entities (Zakat — Islamic tax at 2.5% for Saudi entities)
 - VAT at 15% (raised from 5% in 2020 to address oil revenue shortfall)
 - No capital gains tax for individuals on most assets
 - Withholding tax of 5-20% on payments to non-residents depending on type
 - Real estate transaction tax of 5%
 - GOSI (General Organization for Social Insurance) contributions for Saudi nationals
-- Vision 2030 creating new economic activity and business registration opportunities$$ WHERE name = 'Saudi Arabia';
+- Vision 2030 creating new economic activity and business registration opportunities' WHERE name = 'Saudi Arabia';
 
-UPDATE countries SET tax_advice = $$- Vietnam has progressive personal income tax (5% to 35%)
+UPDATE countries SET tax_advice = '- Vietnam has progressive personal income tax (5% to 35%)
 - Corporate tax at 20% (10% for certain high-tech and social enterprises)
 - VAT at 10% (5% for essentials, 0% for exports)
 - Non-residents taxed at flat 20% on Vietnam-source income
 - Capital gains from securities taxed at 0.1% on gross proceeds or 20% on net gain
 - Real estate transfer taxed at 2% of transfer price
 - Withholding tax on dividends at 5% for individuals
-- Vietnam-US tax treaty and extensive treaty network available$$ WHERE name = 'Vietnam';
+- Vietnam-US tax treaty and extensive treaty network available' WHERE name = 'Vietnam';
 
-UPDATE countries SET tax_advice = $$- Argentina has progressive income tax (5% to 35%)
+UPDATE countries SET tax_advice = '- Argentina has progressive income tax (5% to 35%)
 - Corporate tax at 35%
 - VAT at 21% (reduced rates of 10.5% and 0%)
 - Extraordinary inflation means real-terms calculations are complex
@@ -7126,36 +7126,36 @@ UPDATE countries SET tax_advice = $$- Argentina has progressive income tax (5% t
 - Wealth/assets tax (Bienes Personales) at 0.5-1.5% annually
 - High effective tax burden for businesses but enforcement variable
 - Official and informal exchange rates differ significantly; tax planning complex
-- Digital nomads may qualify for special income tax treatment on foreign earnings$$ WHERE name = 'Argentina';
+- Digital nomads may qualify for special income tax treatment on foreign earnings' WHERE name = 'Argentina';
 
-UPDATE countries SET tax_advice = $$- Brazil has progressive income tax (7.5% to 27.5%) for residents
+UPDATE countries SET tax_advice = '- Brazil has progressive income tax (7.5% to 27.5%) for residents
 - Corporate tax at 15% (25% above BRL 20,000/month) plus 9% social contribution
 - ICMS (state VAT) at 12-25%; federal taxes (PIS/COFINS) also apply; total tax burden on goods can exceed 40%
 - Non-residents taxed at flat 25% on Brazil-source income
 - Capital gains on assets held abroad taxed at 15-22.5%
 - IOF (financial operations tax) applies to currency exchange and some financial transactions
 - Brazil has a Digital Nomad Visa allowing tax-favorable treatment on foreign income
-- Brazil''s complex tax system often requires local professional advice$$ WHERE name = 'Brazil';
+- Brazil''s complex tax system often requires local professional advice' WHERE name = 'Brazil';
 
-UPDATE countries SET tax_advice = $$- India has progressive income tax (0% to 30%) under new or old regime
+UPDATE countries SET tax_advice = '- India has progressive income tax (0% to 30%) under new or old regime
 - Corporate tax at 22% (new regime) or 25-30% (domestic companies old regime)
 - GST at 5%, 12%, 18%, or 28% depending on goods/services
 - Non-residents taxed on India-source income only
 - Capital gains: STCG at 15% on listed equities (held <1 year); LTCG at 10% above INR 1 lakh
 - TDS (Tax Deducted at Source) system means most income is pre-taxed
 - India''s tax treaty network with 90+ countries
-- Remote workers earning abroad while resident in India must declare worldwide income$$ WHERE name = 'India';
+- Remote workers earning abroad while resident in India must declare worldwide income' WHERE name = 'India';
 
-UPDATE countries SET tax_advice = $$- Malaysia has progressive income tax (1% to 30%)
+UPDATE countries SET tax_advice = '- Malaysia has progressive income tax (1% to 30%)
 - Corporate tax at 24% (17% for SMEs on first MYR 600,000)
 - GST abolished in 2018; replaced by SST (Sales and Services Tax) at 5-10%
 - Non-residents taxed at flat 30% on Malaysia-source income
 - Capital gains on shares generally exempt; RPGT applies to property (5-30% depending on holding period)
 - Dividends from Malaysian companies received by individuals are tax-exempt (single-tier system)
 - MM2H participants enjoy some preferential tax treatment on foreign pension income
-- Double tax treaty with 70+ countries$$ WHERE name = 'Malaysia';
+- Double tax treaty with 70+ countries' WHERE name = 'Malaysia';
 
-UPDATE countries SET tax_advice = $$- Moldova has flat 12% personal income tax
+UPDATE countries SET tax_advice = '- Moldova has flat 12% personal income tax
 - Corporate tax at 12%
 - VAT at 20% (reduced rates of 12%, 8%, and 0%)
 - Non-residents taxed on Moldova-source income only
@@ -7163,27 +7163,27 @@ UPDATE countries SET tax_advice = $$- Moldova has flat 12% personal income tax
 - No inheritance tax between direct family members
 - Moldova has limited double tax treaty network
 - EU association agreement provides some harmonization of tax rules
-- Wine export sector receives certain preferential fiscal treatments$$ WHERE name = 'Moldova';
+- Wine export sector receives certain preferential fiscal treatments' WHERE name = 'Moldova';
 
-UPDATE countries SET tax_advice = $$- Albania has flat 23% personal income tax (0% on income below ALL 30,000/month)
+UPDATE countries SET tax_advice = '- Albania has flat 23% personal income tax (0% on income below ALL 30,000/month)
 - Corporate tax at 15% (0% for agricultural businesses and SMEs under ALL 14 million)
 - VAT at 20% (6% for tourism sector)
 - Non-residents taxed on Albanian-source income only
 - Capital gains at 15% flat rate
 - Withholding tax of 15% on dividends
 - Albania is not in the EU; different trade and customs rules apply
-- Digital nomad-friendly visa available; income earned abroad may have favorable tax treatment$$ WHERE name = 'Albania';
+- Digital nomad-friendly visa available; income earned abroad may have favorable tax treatment' WHERE name = 'Albania';
 
-UPDATE countries SET tax_advice = $$- Georgia has a flat 20% personal income tax (one of Europe''s simplest and lowest)
+UPDATE countries SET tax_advice = '- Georgia has a flat 20% personal income tax (one of Europe''s simplest and lowest)
 - Corporate tax at 15% (20% on distributed profits in Estonia-style system)
 - VAT at 18%
 - Non-residents taxed on Georgia-source income only
 - Virtual Zone Company (IT businesses) pay 0% corporate tax on foreign-source revenue
 - No capital gains tax for individuals on securities held in qualifying accounts
 - Free Industrial Zones offer further tax incentives for manufacturers
-- Territorial tax system: foreign income of Georgia-resident companies not taxable if not Georgia-sourced$$ WHERE name = 'Georgia';
+- Territorial tax system: foreign income of Georgia-resident companies not taxable if not Georgia-sourced' WHERE name = 'Georgia';
 
-UPDATE countries SET tax_advice = $$- Israel has progressive income tax (10% to 50%)
+UPDATE countries SET tax_advice = '- Israel has progressive income tax (10% to 50%)
 - Corporate tax at 23%
 - VAT at 17%
 - New immigrants (Olim) receive 10-year tax holiday on foreign-source income
@@ -7191,18 +7191,18 @@ UPDATE countries SET tax_advice = $$- Israel has progressive income tax (10% to 
 - Capital gains on listed securities at 25% (or 30% for substantial shareholders)
 - Non-residents taxed on Israel-source income only
 - Dividend withholding tax of 25% (reduced to 15% for qualifying situations)
-- National Insurance (Bituach Leumi) contributions mandatory for residents$$ WHERE name = 'Israel';
+- National Insurance (Bituach Leumi) contributions mandatory for residents' WHERE name = 'Israel';
 
-UPDATE countries SET tax_advice = $$- The Bahamas has zero personal income tax, zero capital gains tax, zero inheritance tax
+UPDATE countries SET tax_advice = '- The Bahamas has zero personal income tax, zero capital gains tax, zero inheritance tax
 - No corporate income tax (businesses pay annual license fees instead)
 - VAT at 10% (introduced 2015)
 - No payroll tax for employers; National Insurance contribution of 3.9% employee + 5.9% employer
 - Real property tax based on market value of land and improvements
 - Business license fee typically 0.5-1.5% of annual turnover
 - Stamp duty on real estate transactions at 2.5-10% depending on value
-- No double tax treaties with major economies; US citizens still taxed on worldwide income$$ WHERE name = 'Bahamas';
+- No double tax treaties with major economies; US citizens still taxed on worldwide income' WHERE name = 'Bahamas';
 
-UPDATE countries SET tax_advice = $$- Pakistan has progressive income tax (5% to 35% for salaried, higher for business income)
+UPDATE countries SET tax_advice = '- Pakistan has progressive income tax (5% to 35% for salaried, higher for business income)
 - Corporate tax at 29% (reducing to 27% under ongoing reforms)
 - GST at 17% (varies by province and category)
 - Non-residents taxed on Pakistan-source income only
@@ -7210,27 +7210,27 @@ UPDATE countries SET tax_advice = $$- Pakistan has progressive income tax (5% to
 - Withholding tax system (advance tax) prevalent
 - Super tax of 10% on high-income companies
 - Pakistan-UK, Pakistan-US, and various other double tax treaties available
-- Real estate gains taxed at 3-10% depending on holding period$$ WHERE name = 'Pakistan';
+- Real estate gains taxed at 3-10% depending on holding period' WHERE name = 'Pakistan';
 
-UPDATE countries SET tax_advice = $$- Qatar has zero personal income tax — no taxes on individual salaries, dividends, or capital gains
+UPDATE countries SET tax_advice = '- Qatar has zero personal income tax — no taxes on individual salaries, dividends, or capital gains
 - Corporate tax at 10% for non-Qatari entities (Qatari and GCC entities may be exempt)
 - VAT not yet implemented (planned but not enacted as of 2026)
 - No inheritance tax, wealth tax, or gift tax
 - Withholding tax of 5% on services paid to non-residents
 - Free Zone entities may be fully exempt from corporate tax
 - Social security only for Qatari nationals
-- Proof of legitimate income needed for residency but not taxed$$ WHERE name = 'Qatar';
+- Proof of legitimate income needed for residency but not taxed' WHERE name = 'Qatar';
 
-UPDATE countries SET tax_advice = $$- Bosnia and Herzegovina has flat 10% personal income tax (varies slightly by entity)
+UPDATE countries SET tax_advice = '- Bosnia and Herzegovina has flat 10% personal income tax (varies slightly by entity)
 - Corporate tax at 10% (Federation BiH) or 10% (Republika Srpska)
 - VAT at 17% (uniform across country — administered by Indirect Taxation Authority)
 - Non-residents taxed on BiH-source income only
 - Capital gains integrated into income tax base
 - Social security contributions approximately 41.5% total (split employer/employee)
 - Withholding tax on dividends at 5%
-- Complex dual-entity system (Federation and Republika Srpska have separate tax administrations)$$ WHERE name = 'Bosnia and Herzegovina';
+- Complex dual-entity system (Federation and Republika Srpska have separate tax administrations)' WHERE name = 'Bosnia and Herzegovina';
 
-UPDATE countries SET tax_advice = $$- Egypt has progressive income tax (0% to 25%)
+UPDATE countries SET tax_advice = '- Egypt has progressive income tax (0% to 25%)
 - Corporate tax at 22.5%
 - VAT at 14%
 - Non-residents taxed on Egypt-source income only
@@ -7238,407 +7238,407 @@ UPDATE countries SET tax_advice = $$- Egypt has progressive income tax (0% to 25
 - Dividend withholding tax of 10% for individuals
 - Real estate transaction tax of 2.5%
 - Free zone entities may be exempt from corporate tax
-- Egypt-US and extensive treaty network available$$ WHERE name = 'Egypt';
+- Egypt-US and extensive treaty network available' WHERE name = 'Egypt';
 
-UPDATE countries SET tax_advice = $$- Maldives has no personal income tax for individuals
+UPDATE countries SET tax_advice = '- Maldives has no personal income tax for individuals
 - Business Profit Tax (BPT) at 15% for businesses with revenue over MVR 1 million
 - GST at 6% for tourism sector (16% for tourist establishments under GST Act)
 - No capital gains tax, inheritance tax, or wealth tax
 - Tourism Goods and Services Tax (TGST) is the primary revenue source
 - Resort operators pay significant lease fees to the government
 - Work permit fees apply for expatriate employees
-- No double tax treaty network of significance$$ WHERE name = 'Maldives';
+- No double tax treaty network of significance' WHERE name = 'Maldives';
 
-UPDATE countries SET tax_advice = $$- Monaco has zero personal income tax for residents (except French citizens)
+UPDATE countries SET tax_advice = '- Monaco has zero personal income tax for residents (except French citizens)
 - No corporate income tax for most businesses (except financial activities)
 - VAT at 20% (same rate as France under customs union)
 - No capital gains tax, no inheritance tax between direct heirs, no wealth tax
 - French citizens living in Monaco are subject to French income tax under the 1963 Franco-Monégasque Treaty
 - Residency requires proof of financial means and accommodation
 - Residency is not automatic even without tax considerations; must apply and qualify
-- Monaco''s CRS (Common Reporting Standard) membership means financial info shared internationally$$ WHERE name = 'Monaco';
+- Monaco''s CRS (Common Reporting Standard) membership means financial info shared internationally' WHERE name = 'Monaco';
 
-UPDATE countries SET tax_advice = $$- Seychelles has progressive income tax (0% to 15%) under Social Security Act
+UPDATE countries SET tax_advice = '- Seychelles has progressive income tax (0% to 15%) under Social Security Act
 - Corporate tax at 25% (15% for companies in International Business Companies regime)
 - GST at 15%
 - International Business Companies (IBCs) can be structured for low/zero tax on non-Seychelles income
 - Capital gains generally not taxed for individuals
 - Withholding tax of 15% on dividends for residents
 - No inheritance tax
-- Seychelles is a significant offshore financial center with special IBC and foundation legislation$$ WHERE name = 'Seychelles';
+- Seychelles is a significant offshore financial center with special IBC and foundation legislation' WHERE name = 'Seychelles';
 
 -- =============================================================================
 -- Local Tips
 -- =============================================================================
 
-UPDATE countries SET local_tips = $$- Hungarian (Magyar) is unique and difficult; learning basics shows respect but English is widely spoken among younger people
+UPDATE countries SET local_tips = '- Hungarian (Magyar) is unique and difficult; learning basics shows respect but English is widely spoken among younger people
 - Bureaucracy efficient but can be document-heavy; keep all paperwork organized
 - Healthcare good quality; mandatory National Health Insurance (OEP) required for residents
 - Cost of living low by EU standards; budget €800-1,200/month comfortably in Budapest
 - Budapest neighborhood choice matters: Pest districts 5, 6, 7 central and vibrant; Buda quieter
 - Thermal baths are a social institution; visit regularly to integrate into local culture
 - Hungarian cuisine hearty and affordable; explore market halls (Nagyvásárcsarnok) for local produce
-- Winters can be cold and grey; embrace the ruin bar and cafe culture during colder months$$ WHERE name = 'Hungary';
+- Winters can be cold and grey; embrace the ruin bar and cafe culture during colder months' WHERE name = 'Hungary';
 
-UPDATE countries SET local_tips = $$- Croatian is the official language; English very common in cities and tourist areas
+UPDATE countries SET local_tips = '- Croatian is the official language; English very common in cities and tourist areas
 - Healthcare: register with chosen family doctor (izabrani liječnik) within 30 days of residency
 - Cost of living rising in Dalmatia; budget €900-1,400/month in Split or Dubrovnik
 - Seasonal economy: summer coastal towns crowded and expensive; off-season much quieter
 - Digital nomad visa gives one year renewable stay with work-from-abroad income
 - Bureaucracy improving but can be slow; get OIB number (tax ID) first on arrival
 - Driving cars with foreign plates: rules around long-term use vary; seek local advice
-- Adriatic food culture exceptional; fresh fish and local wine are genuinely world-class$$ WHERE name = 'Croatia';
+- Adriatic food culture exceptional; fresh fish and local wine are genuinely world-class' WHERE name = 'Croatia';
 
-UPDATE countries SET local_tips = $$- English is the primary language but dialects, accents, and slang vary enormously by region
+UPDATE countries SET local_tips = '- English is the primary language but dialects, accents, and slang vary enormously by region
 - Healthcare expensive and insurance critical; marketplace plans available for non-employer coverage
 - Social Security Number (SSN) essential for banking, employment, and tax filing
 - Cost of living varies dramatically: NYC/SF very expensive; midwest/south much more affordable
 - US visa system complex; work with an immigration attorney for best outcomes
 - Tipping culture expected: 18-25% at restaurants, 15-20% for taxis/Uber, $1-2/bag for hotel
 - Credit score system important; build it carefully from arrival using secured cards
-- State varies enormously in laws, taxes, climate, culture; research specific state before choosing where to live$$ WHERE name = 'United States';
+- State varies enormously in laws, taxes, climate, culture; research specific state before choosing where to live' WHERE name = 'United States';
 
-UPDATE countries SET local_tips = $$- Japanese language essential for daily life outside major tourist areas; even N4 level helps significantly
+UPDATE countries SET local_tips = '- Japanese language essential for daily life outside major tourist areas; even N4 level helps significantly
 - Bureaucracy organized but requires My Number card registration within 14 days of arrival
 - Healthcare: National health insurance mandatory; register at ward office immediately
 - Cost of living manageable in regional cities; Tokyo expensive especially for housing
 - Punctuality absolute; being even 1 minute late is considered rude in professional settings
 - IC card (Suica/Pasmo) essential for transportation; buy at any train station
 - Garbage sorting rules strict and taken very seriously; learn your ward''s system
-- Japanese people indirect in communication; learn to read between the lines and avoid direct confrontation$$ WHERE name = 'Japan';
+- Japanese people indirect in communication; learn to read between the lines and avoid direct confrontation' WHERE name = 'Japan';
 
-UPDATE countries SET local_tips = $$- Korean language helpful but English increasingly spoken in Seoul among younger generations
+UPDATE countries SET local_tips = '- Korean language helpful but English increasingly spoken in Seoul among younger generations
 - Alien Registration Card (ARC) required within 90 days; register at immigration office
 - Healthcare excellent and affordable with National Health Insurance
 - Internet fastest in the world; expect 1Gbps fiber connections standard
 - Hierarchy and age-based respect central to social and professional interactions
 - Download KakaoTalk app immediately; it''s the dominant communication platform
 - Cost of living high in Seoul; consider Busan or Incheon for more affordable options
-- Banking: open account with IBK or KEB Hana as foreigner-friendly options$$ WHERE name = 'South Korea';
+- Banking: open account with IBK or KEB Hana as foreigner-friendly options' WHERE name = 'South Korea';
 
-UPDATE countries SET local_tips = $$- Arabic language not required for expats; English and Hindi widely used in business and daily life
+UPDATE countries SET local_tips = '- Arabic language not required for expats; English and Hindi widely used in business and daily life
 - Emirates ID required within 30 days of visa stamping; process through ICA (ICP)
 - Healthcare excellent at private hospitals; medical insurance mandatory for residents
 - Cost of living high, especially housing; budget AED 120,000+/year for comfortable expat life
 - Ramadan affects business hours, restaurants, and social behavior; dress modestly and be respectful
 - Alcohol available in licensed venues only; not sold in general supermarkets
 - Summer (June-August) extreme heat (45°C+); most activity moves indoors or to cooler regions
-- Summer electric bills high due to air conditioning; factor into budget$$ WHERE name = 'United Arab Emirates';
+- Summer electric bills high due to air conditioning; factor into budget' WHERE name = 'United Arab Emirates';
 
-UPDATE countries SET local_tips = $$- English and French official; French required in Quebec; learn basic French for courtesy nationwide
+UPDATE countries SET local_tips = '- English and French official; French required in Quebec; learn basic French for courtesy nationwide
 - SIN (Social Insurance Number) required immediately; apply at Service Canada center
 - Healthcare provincial; wait times for specialists can be long; private clinics emerging
 - Housing costs very high in Toronto and Vancouver; consider secondary cities
 - Weather extreme by region; proper winter gear essential (especially outside BC coast)
 - Tap water excellent and safe everywhere; save on bottled water
 - Tim Hortons is more than a coffee shop — it''s a cultural institution
-- PR process: maintain residency obligations carefully to protect permanent resident status$$ WHERE name = 'Canada';
+- PR process: maintain residency obligations carefully to protect permanent resident status' WHERE name = 'Canada';
 
-UPDATE countries SET local_tips = $$- English primary language; most bureaucracy, healthcare, and services in English
+UPDATE countries SET local_tips = '- English primary language; most bureaucracy, healthcare, and services in English
 - Tax File Number (TFN) required for employment and banking; apply through ATO website
 - Medicare (universal healthcare) available to residents; bulk billing eliminates out-of-pocket costs
 - Housing crisis in Sydney and Melbourne; consider Brisbane, Adelaide, or Perth
 - Skin cancer risk real; SPF 50 sunscreen and UV protective clothing strongly recommended
 - Driving on left side; international driver''s license convertible to Australian license
 - Public transport varies dramatically by city; car often needed outside major CBDs
-- Bushfire and flood awareness essential; check local emergency alerts for your region$$ WHERE name = 'Australia';
+- Bushfire and flood awareness essential; check local emergency alerts for your region' WHERE name = 'Australia';
 
-UPDATE countries SET local_tips = $$- English primary language; Māori (te reo) increasingly present in public life
+UPDATE countries SET local_tips = '- English primary language; Māori (te reo) increasingly present in public life
 - IRD number (tax ID) required before starting work; apply online immediately
 - Healthcare good; enroll with a GP practice as soon as possible
 - Housing expensive in Auckland and Wellington; consider Hamilton, Christchurch, or regional towns
 - Car essential outside Auckland and Wellington; public transport limited in most areas
 - Earthquakes common; register for civil defense alerts and know what to do
 - Outdoor culture central: hiking (tramping), camping, and sport expected activities
-- Kiwi culture values modesty and a fair go; avoid bragging or being seen to think you''re better$$ WHERE name = 'New Zealand';
+- Kiwi culture values modesty and a fair go; avoid bragging or being seen to think you''re better' WHERE name = 'New Zealand';
 
-UPDATE countries SET local_tips = $$- English one of four official languages; communication generally easy for anglophones
+UPDATE countries SET local_tips = '- English one of four official languages; communication generally easy for anglophones
 - MyInfo/Singpass digital ID required for all government and many private services; set up first
 - Healthcare world-class at public and private hospitals; Medishield Life insurance provided for PRs
 - Housing expensive; HDB public flats affordable but requires PR/citizen status; private rentals steep
 - Heat and humidity year-round; stay hydrated and wear breathable clothing
 - Fine-heavy laws: no chewing gum (imported), no jaywalking, no littering; obey strictly
 - Hawker centers and food courts offer extraordinary cuisine for SGD 3-5/meal
-- ERP electronic road pricing discourages driving; MRT and bus system world-class$$ WHERE name = 'Singapore';
+- ERP electronic road pricing discourages driving; MRT and bus system world-class' WHERE name = 'Singapore';
 
-UPDATE countries SET local_tips = $$- Cantonese primary language; Mandarin increasingly useful; English in business/official contexts
+UPDATE countries SET local_tips = '- Cantonese primary language; Mandarin increasingly useful; English in business/official contexts
 - Registration with Immigration Department required for long-term visa holders
 - Healthcare excellent at public hospitals (subsidized for visa holders) and private facilities
 - Housing extremely expensive; be prepared for very small living spaces even at high cost
 - MTR (Mass Transit Railway) world-class and covers city efficiently; Octopus card essential
 - Dim sum culture: Sunday yum cha with family is a cherished social institution
 - Political situation fluid since 2020; follow news on visa policy and legal environment
-- Air quality variable; check AQI daily and have N95 masks available during pollution spikes$$ WHERE name = 'Hong Kong';
+- Air quality variable; check AQI daily and have N95 masks available during pollution spikes' WHERE name = 'Hong Kong';
 
-UPDATE countries SET local_tips = $$- Czech language helpful but English very common in Prague among professionals and younger people
+UPDATE countries SET local_tips = '- Czech language helpful but English very common in Prague among professionals and younger people
 - Residence registration required within 30 days at local Foreign Police (Cizinecká policie)
 - Healthcare free for those contributing to Czech health insurance; register with health fund
 - Cost of living low by EU standards; budget €800-1,100/month in Prague
 - Beer culture ubiquitous: Czech pub (hospoda) central to social life; learn basic etiquette
 - Czech koruna (CZK) not Euro; currency conversion needed for Euro-area travel
 - Prague tourist areas saturated in summer; explore local neighborhoods (Žižkov, Vinohrady)
-- Drivers and cyclists have different road priorities than UK/US; learn local traffic rules$$ WHERE name = 'Czechia';
+- Drivers and cyclists have different road priorities than UK/US; learn local traffic rules' WHERE name = 'Czechia';
 
-UPDATE countries SET local_tips = $$- Slovak language helpful; English widespread especially in Bratislava among young professionals
+UPDATE countries SET local_tips = '- Slovak language helpful; English widespread especially in Bratislava among young professionals
 - Registration with Foreign Police required within 3 days for non-EU citizens
 - Healthcare adequate; register with health insurance fund (VšZP, Dôvera, or Union)
 - Cost of living lowest in Eurozone; budget €600-900/month comfortably in Bratislava
 - Bratislava perfectly positioned between Vienna (45 min) and Budapest (1 hour by bus/train)
 - Mountains very close; skiing in Jasná and Low Tatras accessible for weekend trips
 - Slovak cuisine hearty and cheap; try bryndzové halušky (potato dumplings with sheep cheese)
-- Expat community small but growing; coworking spaces concentrated in downtown Bratislava$$ WHERE name = 'Slovakia';
+- Expat community small but growing; coworking spaces concentrated in downtown Bratislava' WHERE name = 'Slovakia';
 
-UPDATE countries SET local_tips = $$- Bulgarian language uses Cyrillic script; learning alphabet helps navigation significantly
+UPDATE countries SET local_tips = '- Bulgarian language uses Cyrillic script; learning alphabet helps navigation significantly
 - Registration required within 3 months at local municipality for EU citizens, sooner for others
 - Healthcare variable quality; supplement public system with private insurance
 - Cost of living among EU''s lowest; budget €600-800/month in Sofia
 - Bansko excellent ski resort town and growing digital nomad hub with low costs
 - Headshaking means yes, head nodding means no — opposite of most cultures; memorize this
 - Black Sea resorts crowded in July-August; shoulder seasons (May-June, Sept) ideal
-- Sofia growing tech scene; monthly startup events and networking worth attending$$ WHERE name = 'Bulgaria';
+- Sofia growing tech scene; monthly startup events and networking worth attending' WHERE name = 'Bulgaria';
 
-UPDATE countries SET local_tips = $$- Romanian language is Romance-based; Spanish or Italian speakers adapt quickly
+UPDATE countries SET local_tips = '- Romanian language is Romance-based; Spanish or Italian speakers adapt quickly
 - Registration with Population Records within 15 days of arrival (EU citizens: within 3 months)
 - Healthcare improving but slow in public system; private insurance recommended
 - Internet fastest in Europe; remote work infrastructure excellent
 - Cost of living very low; budget €600-900/month in Bucharest or Brașov
 - Transylvania and Carpathians easily accessible for weekend adventures
 - Bucharest growing fast; gentrifying neighborhoods (Floreasca, Dorobanți, Pantelimon) worth exploring
-- Tap water safe in Bucharest but bottled often preferred; check by city/town$$ WHERE name = 'Romania';
+- Tap water safe in Bucharest but bottled often preferred; check by city/town' WHERE name = 'Romania';
 
-UPDATE countries SET local_tips = $$- Luxembourgish, French, and German all used in daily life; English essential in business
+UPDATE countries SET local_tips = '- Luxembourgish, French, and German all used in daily life; English essential in business
 - Registration with commune required within 3 months; get official residence certificate
 - Healthcare excellent and mandatory insurance (CNS) required for all residents
 - Extremely high cost of living; housing shortage severe; budget €2,500+/month
 - Cross-border commuters (from France, Germany, Belgium) very common; understand commute options
 - Free public transport (buses, trains, trams) for all since 2020 — a world first
 - International expat community large; English-speaking social networks very established
-- Luxembourg City small but culturally rich; proximity to surrounding countries unparalleled$$ WHERE name = 'Luxembourg';
+- Luxembourg City small but culturally rich; proximity to surrounding countries unparalleled' WHERE name = 'Luxembourg';
 
-UPDATE countries SET local_tips = $$- English widely spoken in Cape Town and Johannesburg; Afrikaans and Zulu also common
+UPDATE countries SET local_tips = '- English widely spoken in Cape Town and Johannesburg; Afrikaans and Zulu also common
 - Smart ID and green barcoded ID book required; foreign residents need valid permit always on person
 - Healthcare: private hospitals excellent (Discovery, Netcare); public system strained — get private insurance
 - Load shedding (scheduled power cuts) affects daily life; invest in backup power/battery
 - Personal security awareness important; avoid displaying valuables and research safe neighborhoods
 - Cost of living very low by global standards; budget ZAR 15,000-25,000/month for comfortable life
 - Wildlife within reach of Johannesburg and Cape Town; regular safari weekends possible
-- South African food scene underrated: braai culture, Cape Malay cuisine, and Durban curry all exceptional$$ WHERE name = 'South Africa';
+- South African food scene underrated: braai culture, Cape Malay cuisine, and Durban curry all exceptional' WHERE name = 'South Africa';
 
-UPDATE countries SET local_tips = $$- Slovenian language similar to Croatian/Serbian; English very widespread especially in Ljubljana
+UPDATE countries SET local_tips = '- Slovenian language similar to Croatian/Serbian; English very widespread especially in Ljubljana
 - Registration with Administrative Unit required within 8 days for non-EU citizens
 - Healthcare excellent; mandatory health insurance registration on arrival
 - Cost of living moderate by EU standards; budget €900-1,200/month in Ljubljana
 - Lake Bled just 1 hour from Ljubljana; easily accessible for regular escapes
 - Triglav National Park UNESCO World Heritage site; hiking and outdoor culture central to Slovenian identity
 - Ljubljana car-free center; cycling very popular and infrastructure excellent
-- Very safe and clean; consistently ranked top European country for quality of life$$ WHERE name = 'Slovenia';
+- Very safe and clean; consistently ranked top European country for quality of life' WHERE name = 'Slovenia';
 
-UPDATE countries SET local_tips = $$- Latvian and Russian both widely spoken; English very common especially in Riga
+UPDATE countries SET local_tips = '- Latvian and Russian both widely spoken; English very common especially in Riga
 - Register with PMLP (Office of Citizenship and Migration Affairs) within 3 months
 - Healthcare: register with family doctor; health insurance for non-EU residents recommended
 - Cost of living low by EU standards; budget €700-1,000/month in Riga
 - Riga Art Nouveau district genuinely world-class; best explored on foot
 - Baltic summers short but beautiful; make the most of June-August outdoor season
 - Jurmala (seaside resort 30 min from Riga) excellent for beach days
-- Growing fintech sector; networking in startup and finance community productive$$ WHERE name = 'Latvia';
+- Growing fintech sector; networking in startup and finance community productive' WHERE name = 'Latvia';
 
-UPDATE countries SET local_tips = $$- Lithuanian and Russian both spoken; English widespread among professionals and younger people
+UPDATE countries SET local_tips = '- Lithuanian and Russian both spoken; English widespread among professionals and younger people
 - Register at Migration Department within 3 months (EU) or within residency visa conditions
 - Healthcare: register with State Patient Fund (VPSP); private clinics also excellent and affordable
 - Cost of living low by Eurozone standards; budget €700-1,000/month in Vilnius
 - Vilnius tech and fintech ecosystem growing fast; attend Vilnius Tech Park and LOGIN events
 - Curonian Spit accessible for weekend trips from Vilnius; unique natural landscape
 - Vilnius Old Town among Europe''s best preserved and least crowded; explore thoroughly
-- Lithuanian amber considered world''s finest; great authentic souvenirs$$ WHERE name = 'Lithuania';
+- Lithuanian amber considered world''s finest; great authentic souvenirs' WHERE name = 'Lithuania';
 
-UPDATE countries SET local_tips = $$- Mandarin Chinese (Putonghua) official and essential for daily life; regional dialects also common
+UPDATE countries SET local_tips = '- Mandarin Chinese (Putonghua) official and essential for daily life; regional dialects also common
 - Residence permits required within 30 days of arrival; register at local Public Security Bureau
 - VPN essential for accessing Google, Gmail, WhatsApp, Facebook, Instagram, and most Western sites
 - Healthcare: large cities excellent private hospitals; expat health insurance strongly recommended
 - WeChat is everything: payments, maps, ordering, messaging, and social life — set up immediately
 - High-speed rail network extraordinary; travel between cities by HSR much faster than flying
 - Cost of living very affordable outside Shanghai and Beijing; budget ¥8,000-15,000/month
-- Air quality varies; check real-time AQI and use N95 masks during high pollution days$$ WHERE name = 'China';
+- Air quality varies; check real-time AQI and use N95 masks during high pollution days' WHERE name = 'China';
 
-UPDATE countries SET local_tips = $$- Mongolian language Cyrillic-based; Russian and English basic phrases very helpful in Ulaanbaatar
+UPDATE countries SET local_tips = '- Mongolian language Cyrillic-based; Russian and English basic phrases very helpful in Ulaanbaatar
 - Extreme climate: prepare for -40°C winters and +35°C summers; appropriate gear essential
 - Healthcare: private hospitals in Ulaanbaatar adequate; evacuate to Seoul or Tokyo for serious conditions
 - Cost of living very low; budget ₮500,000-800,000/month for comfortable expat life
 - Air pollution severe in Ulaanbaatar winter due to coal heating; N95 masks essential
 - Nomadic hospitality rules: always accept offered food and drink (especially airag/fermented mare''s milk)
 - Naadam festival (July) national celebration — extraordinary cultural experience for newcomers
-- Travel in rural areas requires guide, spare tires, extra fuel; roads minimal outside cities$$ WHERE name = 'Mongolia';
+- Travel in rural areas requires guide, spare tires, extra fuel; roads minimal outside cities' WHERE name = 'Mongolia';
 
-UPDATE countries SET local_tips = $$- German official language; English spoken in business but everyday German essential
+UPDATE countries SET local_tips = '- German official language; English spoken in business but everyday German essential
 - Residency permit application through Ausländeramt; requires appointment booked in advance
 - Healthcare mandatory Swiss insurance (Grundversicherung) required within 3 months; very expensive
 - Extremely high cost of living; budget CHF 4,000-6,000+/month even outside Zurich/Geneva
 - Rhine Valley location very scenic; hiking and cycling from Vaduz excellent
 - Swiss cross-border shopping common; residents regularly shop in Austria and Switzerland for staples
 - Very small community; everyone knows everyone; discretion and respect for neighbors important
-- Train connections to Zurich (1 hour) and Innsbruck easy for wider European travel$$ WHERE name = 'Liechtenstein';
+- Train connections to Zurich (1 hour) and Innsbruck easy for wider European travel' WHERE name = 'Liechtenstein';
 
-UPDATE countries SET local_tips = $$- Arabic essential in daily life; English widely spoken in business and major cities
+UPDATE countries SET local_tips = '- Arabic essential in daily life; English widely spoken in business and major cities
 - Iqama (residency permit) required for employment; sponsor/employer manages process
 - Healthcare: excellent private hospitals (King Faisal, Johns Hopkins Arabia); mandatory health insurance
 - Heat extreme in summer (50°C+); move outdoors to evenings only May-September
 - Dress modestly; abaya required in some traditional areas; check current regulations
 - Avoid all criticism of government, royal family, or religion; legal consequences severe
 - Halal food only; alcohol completely prohibited throughout the Kingdom
-- Vision 2030 creating rapid cultural shifts; entertainment, sports, and tourism expanding fast$$ WHERE name = 'Saudi Arabia';
+- Vision 2030 creating rapid cultural shifts; entertainment, sports, and tourism expanding fast' WHERE name = 'Saudi Arabia';
 
-UPDATE countries SET local_tips = $$- Vietnamese language tonal and challenging; English increasingly common in cities and tourist areas
+UPDATE countries SET local_tips = '- Vietnamese language tonal and challenging; English increasingly common in cities and tourist areas
 - Temporary residence registration required within 1 month at local police station
 - Healthcare: private international hospitals (Vinmec, FV Hospital) excellent; health insurance recommended
 - Cost of living extraordinary value; budget $500-800/month for comfortable expat lifestyle
 - Motorbike culture dominates; traffic rules informal; hire experienced driver initially or take taxis
 - Da Nang, Hoi An, and Ho Chi Minh City main digital nomad hubs with excellent coworking
 - Cash dominant outside major cities; carry dong and USD for rural areas
-- Rainy/typhoon season (October-December in north and centre) affects travel; plan accordingly$$ WHERE name = 'Vietnam';
+- Rainy/typhoon season (October-December in north and centre) affects travel; plan accordingly' WHERE name = 'Vietnam';
 
-UPDATE countries SET local_tips = $$- Spanish official; Argentine Spanish distinct with vos usage and Italian-influenced accent
+UPDATE countries SET local_tips = '- Spanish official; Argentine Spanish distinct with vos usage and Italian-influenced accent
 - DNI (national identity document) or cedula required; for long-term residents, obtain CUIL/CUIT
 - Healthcare: private clinics excellent in Buenos Aires; OSDE insurance recommended
 - Currency situation complex; blue dollar (informal) rate much better than official; seek local advice
 - Cost of living very low in USD/EUR terms despite high local inflation
 - Buenos Aires: research neighborhoods (Palermo, Belgrano, Recoleta) for best expat fit
 - Safety variable by neighborhood and city; research before going to unfamiliar areas
-- Argentines eat dinner very late (10pm-midnight); social life starts extremely late by most standards$$ WHERE name = 'Argentina';
+- Argentines eat dinner very late (10pm-midnight); social life starts extremely late by most standards' WHERE name = 'Argentina';
 
-UPDATE countries SET local_tips = $$- Portuguese (Brazilian dialect) official; different from European Portuguese in accent and vocabulary
+UPDATE countries SET local_tips = '- Portuguese (Brazilian dialect) official; different from European Portuguese in accent and vocabulary
 - CPF (Cadastro de Pessoas Físicas) number essential for banking, contracts, and tax — obtain first
 - Healthcare: SUS public system free but often overcrowded; private insurance strongly recommended
 - Cost of living varies dramatically; São Paulo expensive by South American standards; smaller cities affordable
 - Safety awareness critical in major cities; research neighborhoods and apply common-sense precautions
 - Traffic culture aggressive; Uber widely available and preferred over driving initially
 - Digital nomad visa available; requires minimum $1,500/month income proof
-- Brazilians very warm and social; participating in churrasco and futebol culture accelerates integration$$ WHERE name = 'Brazil';
+- Brazilians very warm and social; participating in churrasco and futebol culture accelerates integration' WHERE name = 'Brazil';
 
-UPDATE countries SET local_tips = $$- English widely spoken in business, education, and urban India; regional languages helpful
+UPDATE countries SET local_tips = '- English widely spoken in business, education, and urban India; regional languages helpful
 - FRRO (Foreign Regional Registration Office) registration required within 14 days for most visas
 - Healthcare: international hospitals (Apollo, Fortis, Manipal) excellent in major cities; insurance essential
 - Extreme climate variation: monsoon (June-September), intense heat in plains, cold in mountains
 - Cost of living very low; budget ₹50,000-80,000/month for comfortable expat life in major cities
 - Traffic chaotic in all major cities; hire local driver initially rather than driving yourself
 - Chai culture important social lubricant; participate genuinely in social customs
-- India moves on relationship (jugaad) basis; building trust and personal connections essential for business$$ WHERE name = 'India';
+- India moves on relationship (jugaad) basis; building trust and personal connections essential for business' WHERE name = 'India';
 
-UPDATE countries SET local_tips = $$- Malay official language; English widely used in business and daily life — genuinely accessible
+UPDATE countries SET local_tips = '- Malay official language; English widely used in business and daily life — genuinely accessible
 - Visa/residence permit through Immigration Department; MM2H requires financial proof and approvals
 - Healthcare excellent at private hospitals (Prince Court, Pantai); Medic medical insurance recommended
 - Cost of living very reasonable; budget RM 4,000-6,000/month for comfortable expat life
 - Islamic customs respected; dress modestly at mosques and religious sites
 - Heat and humidity year-round; air conditioning essential and universally available
 - Grab app (like Uber) essential for transport; MRT excellent in KL
-- Hawker food culture extraordinary; Jalan Alor, Chow Kit, and Chinatown food streets legendary$$ WHERE name = 'Malaysia';
+- Hawker food culture extraordinary; Jalan Alor, Chow Kit, and Chinatown food streets legendary' WHERE name = 'Malaysia';
 
-UPDATE countries SET local_tips = $$- Romanian/Moldovan is the official language; Russian widely spoken by minorities
+UPDATE countries SET local_tips = '- Romanian/Moldovan is the official language; Russian widely spoken by minorities
 - Registration required within 30 days at local Civil Records Office
 - Healthcare: private clinics in Chișinău adequate; medical insurance for serious conditions needed
 - Cost of living among Europe''s lowest; budget €400-600/month comfortably
 - Wine experience genuinely extraordinary; Cricova winery tours world-class
 - Power outages historically common; have backup solutions especially in winter
 - Transnistria region interesting day trip from Chișinău; carry passport and be aware of unusual rules
-- Romanian citizenship option widely pursued by eligible Moldovans for EU freedom of movement$$ WHERE name = 'Moldova';
+- Romanian citizenship option widely pursued by eligible Moldovans for EU freedom of movement' WHERE name = 'Moldova';
 
-UPDATE countries SET local_tips = $$- Albanian is the official language; Italian widely understood; English growing rapidly
+UPDATE countries SET local_tips = '- Albanian is the official language; Italian widely understood; English growing rapidly
 - Registration at local Civil Registration Office required within 30 days of residency
 - Healthcare: private clinics in Tirana adequate for most needs; international insurance for serious conditions
 - Cost of living among Europe''s absolute lowest; budget €400-600/month comfortably
 - Tirana''s transformation rapid; Blloku district coffee culture excellent and trendy
 - Albanian Riviera accessible by furgon (shared minibus) from Tirana; car hire more flexible
 - Driving can be challenging; traffic rules loosely observed especially in cities
-- Expat and digital nomad community growing quickly; Tirana ranked as emerging nomad hub$$ WHERE name = 'Albania';
+- Expat and digital nomad community growing quickly; Tirana ranked as emerging nomad hub' WHERE name = 'Albania';
 
-UPDATE countries SET local_tips = $$- Georgian language uses unique script (Mkhedruli); learn to recognize it but English widespread in Tbilisi
+UPDATE countries SET local_tips = '- Georgian language uses unique script (Mkhedruli); learn to recognize it but English widespread in Tbilisi
 - Registration not required for up to 1-year stays; for longer, apply for residence permit
 - Healthcare: private clinics in Tbilisi excellent and very affordable; international standard
 - Cost of living very low; budget €600-900/month very comfortably in Tbilisi
 - Wine culture pervasive; natural and qvevri wines fundamental to social life
 - Supras (feasts) can last for hours with multiple toasts; pace yourself with the chacha (grape brandy)
 - Tbilisi nightlife (especially techno scene) world-renowned; Bassiani and Khidi venues legendary
-- Kazbegi mountain road stunning but sometimes closed in winter; check conditions before driving$$ WHERE name = 'Georgia';
+- Kazbegi mountain road stunning but sometimes closed in winter; check conditions before driving' WHERE name = 'Georgia';
 
-UPDATE countries SET local_tips = $$- Hebrew and Arabic official languages; English widely spoken especially in Tel Aviv and tech sector
+UPDATE countries SET local_tips = '- Hebrew and Arabic official languages; English widely spoken especially in Tel Aviv and tech sector
 - Population Registry (Ministry of Interior) registration required; Olim have dedicated Aliyah process
 - Healthcare: universal Kupat Holim system excellent; join one of four health funds immediately
 - Cost of living in Tel Aviv very high; one of world''s most expensive cities for housing
 - Shabbat (Friday sunset to Saturday night) affects most services and transport — plan around it
 - Security situation awareness important; follow government advisories and be aware of surroundings
 - Startup ecosystem world-class; attend TechTLV, HUB:TLV events for networking
-- Israeli directness (chutzpah) can feel abrasive; it is cultural, not personal — respond in kind$$ WHERE name = 'Israel';
+- Israeli directness (chutzpah) can feel abrasive; it is cultural, not personal — respond in kind' WHERE name = 'Israel';
 
-UPDATE countries SET local_tips = $$- English official language; Bahamian Creole spoken socially; very accessible for English speakers
+UPDATE countries SET local_tips = '- English official language; Bahamian Creole spoken socially; very accessible for English speakers
 - Immigration registration at Department of Immigration; carry visa documentation always
 - Healthcare: Princess Margaret Hospital public; Doctors Hospital private and high quality; insurance essential
 - Cost of living high; budget BSD 3,000-4,500/month for comfortable expat life
 - Hurricane season June-November; hurricane shutters/preparedness essential; monitor weather closely
 - Alcohol available but expensive; local Sands and Kalik beers most affordable
 - Water activity culture central: sailing, diving, snorkeling key to social integration
-- Banking: Nassau has international banking options; US banking also often maintained$$ WHERE name = 'Bahamas';
+- Banking: Nassau has international banking options; US banking also often maintained' WHERE name = 'Bahamas';
 
-UPDATE countries SET local_tips = $$- Urdu national language; English has official status and widely used in business and education
+UPDATE countries SET local_tips = '- Urdu national language; English has official status and widely used in business and education
 - NADRA registration and Pakistan Origin Card (POC) or National Identity Card for Overseas Pakistanis
 - Healthcare: private hospitals in Islamabad and Karachi excellent (Shifa, Aga Khan); insurance recommended
 - Cost of living very low; budget PKR 80,000-120,000/month very comfortably in major cities
 - Northern areas (Gilgit-Baltistan, Hunza) extraordinarily beautiful and safe; highly recommended
 - Security situation varies by region; research specific areas; avoid conflict zones near Afghan border
 - Pakistani hospitality legendary; accept home invitations and participate in meals enthusiastically
-- Mobile data excellent in cities; remote mountain areas limited connectivity$$ WHERE name = 'Pakistan';
+- Mobile data excellent in cities; remote mountain areas limited connectivity' WHERE name = 'Pakistan';
 
-UPDATE countries SET local_tips = $$- Arabic official language; English widely used in business and hospitality sectors
+UPDATE countries SET local_tips = '- Arabic official language; English widely used in business and hospitality sectors
 - Residency permit (RP) required; employer typically manages for work visa holders
 - Healthcare: Hamad Medical Corporation excellent public healthcare for residents
 - Heat extremely intense May-September; outdoor activities only possible in evenings
 - Alcohol available only in licensed hotels and restaurants; not widely available
 - Islamic customs respected; dress modestly especially outside resort areas
 - Qatar Foundation and Doha Institute offer excellent cultural programming in English
-- Corniche waterfront and Katara cultural village excellent for outdoor activities in cooler months$$ WHERE name = 'Qatar';
+- Corniche waterfront and Katara cultural village excellent for outdoor activities in cooler months' WHERE name = 'Qatar';
 
-UPDATE countries SET local_tips = $$- Bosnian/Croatian/Serbian mutually intelligible; English growing especially in Sarajevo and among younger people
+UPDATE countries SET local_tips = '- Bosnian/Croatian/Serbian mutually intelligible; English growing especially in Sarajevo and among younger people
 - Registration at Ministry of Civil Affairs required; process can be slow
 - Healthcare: private clinics in Sarajevo adequate; insurance for serious conditions recommended
 - Cost of living among Europe''s very lowest; budget €400-700/month comfortably
 - Sarajevo food culture extraordinary; cevapi (grilled meat) and baklava iconic
 - Warm hospitality culture; invitations to coffee (kafa) important social rituals
 - Driving between entities requires attention; road quality varies; watch speed cameras
-- Mostar day trip from Sarajevo (2.5 hours) absolutely worth it for the iconic bridge$$ WHERE name = 'Bosnia and Herzegovina';
+- Mostar day trip from Sarajevo (2.5 hours) absolutely worth it for the iconic bridge' WHERE name = 'Bosnia and Herzegovina';
 
-UPDATE countries SET local_tips = $$- Arabic (Egyptian dialect) most widely understood Arabic in the world due to media influence
+UPDATE countries SET local_tips = '- Arabic (Egyptian dialect) most widely understood Arabic in the world due to media influence
 - Registration with CAPMAS (immigration authorities) required; process varies by visa type
 - Healthcare: private hospitals excellent in Cairo (Cairo American Medical Center); insurance strongly recommended
 - Extremely hot April-September; avoid midday sun and schedule activities for morning/evening
 - Traffic chaotic in Cairo; Uber/Careem safer than hailing taxis; metro efficient for city travel
 - Cost of living very low; budget EGP 15,000-25,000/month for comfortable life
 - Islamic hospitality culture; accepting tea/coffee offers important for building relationships
-- Nile cruises between Luxor and Aswan (2-3 days) among world''s great travel experiences$$ WHERE name = 'Egypt';
+- Nile cruises between Luxor and Aswan (2-3 days) among world''s great travel experiences' WHERE name = 'Egypt';
 
-UPDATE countries SET local_tips = $$- Dhivehi (Maldivian) official; English universally spoken in tourism sectors
+UPDATE countries SET local_tips = '- Dhivehi (Maldivian) official; English universally spoken in tourism sectors
 - Work permit and residency through employer (resort) manages all documentation
 - Healthcare: Malé has limited hospital (ADK Hospital); serious cases evacuated to Sri Lanka or India
 - Heat year-round (29-31°C) but cooling ocean breeze; sun protection critical (UV intensity extreme)
 - Alcohol only on resort islands; local islands strictly dry; check policies before booking non-resort stays
 - Muslim culture on local islands; dress modestly when visiting non-resort communities
 - Speedboat or seaplane transfers between Malé airport and resorts; book in advance
-- Coral bleaching a growing concern; check reef health at specific atolls before diving trips$$ WHERE name = 'Maldives';
+- Coral bleaching a growing concern; check reef health at specific atolls before diving trips' WHERE name = 'Maldives';
 
-UPDATE countries SET local_tips = $$- French official language; widely spoken; English in business and international community
+UPDATE countries SET local_tips = '- French official language; widely spoken; English in business and international community
 - Residency requires application to Direction de la Sûreté Publique; significant documentation required
 - Healthcare: CHPG hospital public; private clinics also excellent; French health system accessible for some residents
 - Extremely high cost of living; housing among world''s most expensive; parking spaces cost more than flats elsewhere
 - Walking everywhere practical; Monaco is tiny (2km²) and very walkable with excellent elevator/escalator infrastructure
 - Casino etiquette: dress code applies; Monégasques cannot enter Casino de Monte-Carlo
 - Grand Prix week (May) transforms the principality; book far ahead and expect massive crowds
-- Excellent train access to Nice (25 min), Cannes (50 min), and Italian Riviera for daily escapes$$ WHERE name = 'Monaco';
+- Excellent train access to Nice (25 min), Cannes (50 min), and Italian Riviera for daily escapes' WHERE name = 'Monaco';
 
-UPDATE countries SET local_tips = $$- Seychellois Creole (Kreol Seselwa), English, and French all official languages; English most practical
+UPDATE countries SET local_tips = '- Seychellois Creole (Kreol Seselwa), English, and French all official languages; English most practical
 - Visitor Permit issued on arrival; register with Immigration for longer stays
 - Healthcare: Victoria Hospital public; private clinics available; evacuation insurance recommended for serious conditions
 - Heat year-round (27-30°C); sun protection essential — UV very intense at Indian Ocean latitude
 - Car hire on Mahé and Praslin essential as taxis expensive; drive on left (British colonial legacy)
 - Cost of living high for groceries and imported goods; local fruit and fish affordable
 - Boat charters from Mahé to inner islands essential for island-hopping; book in advance
-- Cyclone season January-April; monitor warnings though Seychelles relatively well-protected geographically$$ WHERE name = 'Seychelles';
+- Cyclone season January-April; monitor warnings though Seychelles relatively well-protected geographically' WHERE name = 'Seychelles';
 
 -- Seed test security keys for provider signup validation
 INSERT INTO provider_security_keys (key, description, active)
