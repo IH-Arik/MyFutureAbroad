@@ -15,6 +15,7 @@ import { HomePage } from "@/pages/HomePage.tsx";
 import { VisasPage } from "@/pages/VisasPage.tsx";
 import { VisaPage } from "@/pages/VisaPage.tsx";
 import { CountryPage } from "@/pages/CountryPage.tsx";
+import { CountriesPage } from "@/pages/CountriesPage.tsx";
 import { ServicesPage } from "@/pages/ServicesPage.tsx";
 import { ServiceCategory } from "@/pages/ServiceCategory.tsx";
 import { ServicePage } from "@/pages/Service.tsx";
@@ -72,6 +73,7 @@ createRoot(document.getElementById("root")!).render(
               <Route path="/mondly" element={<MondlyPage />} />
               <Route path="/resources" element={<ResourcesPage />} />
               <Route path="/resources/:id" element={<ResourcePage />} />
+              <Route path="/countries" element={<CountriesPage />} />
               <Route path="/countries/:countryId" element={<CountryPage />} />
               <Route path="/support" element={<SupportPage />} />
               <Route path="/travel" element={<TravelPage />} />

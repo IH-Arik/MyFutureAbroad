@@ -1,5 +1,5 @@
 import type React from "react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -24,6 +24,16 @@ import { useTheme } from "@/components/theme-provider";
 import { signOut } from "@/lib/auth";
 import NotificationsBell from "@/components/NotificationsBell";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { supabase } from "@/lib/supabase";
+import { motion, AnimatePresence } from "framer-motion";
+
+interface NavbarCountry {
+  id: number;
+  name: string;
+  iso_code: string;
+  continent: string;
+  flag_url: string;
+}
 
 export const Navbar: React.FC = () => {
   const location = useLocation();
@@ -33,9 +43,44 @@ export const Navbar: React.FC = () => {
   const [signingOut, setSigningOut] = useState(false);
   const { t } = useTranslation();
 
+  // Dropdown & countries state
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [countries, setCountries] = useState<NavbarCountry[]>([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const timeoutRef = useRef<any>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 150);
+  };
+
+  useEffect(() => {
+    supabase
+      .from("countries")
+      .select("id, name, flag_url, iso_code, continent")
+      .order("name", { ascending: true })
+      .then(({ data }) => {
+        if (data) {
+          setCountries(data as NavbarCountry[]);
+        }
+      });
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
   const NAV_LINKS = [
     { label: t("nav.home"), to: "/" },
-    { label: t("nav.visas"), to: "/visas" },
+    { label: t("nav.countries", "Countries"), to: "/countries" },
     { label: t("nav.services"), to: "/services" },
     { label: t("nav.resources"), to: "/resources" },
     { label: t("nav.travel"), to: "/travel" },
@@ -84,7 +129,42 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center">
             <div className="flex items-center gap-0.5 lg:gap-1 rounded-full border border-border/40 bg-white dark:bg-[#1f1f1f]/90 px-1.5 lg:px-2 xl:px-3 py-1 xl:py-1.5 shadow-sm backdrop-blur-sm">
               {NAV_LINKS.map((link) => {
-                const active = location.pathname === link.to;
+                const active = location.pathname === link.to || (link.to === "/countries" && location.pathname.startsWith("/countries"));
+                if (link.to === "/countries") {
+                  return (
+                    <div
+                      key={link.to}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                      className="relative"
+                    >
+                      <Link
+                        to={link.to}
+                        className={cn(
+                          "whitespace-nowrap rounded-full px-2.5 lg:px-3 xl:px-4 2xl:px-5 py-1 xl:py-1.5 text-xs lg:text-sm xl:text-sm 2xl:text-base font-medium transition-all duration-200 flex items-center gap-1 cursor-pointer",
+                          active || isDropdownOpen
+                            ? "bg-muted text-foreground shadow-sm dark:bg-white/10"
+                            : "text-muted-foreground hover:bg-muted/60 hover:text-foreground dark:hover:bg-white/5"
+                        )}
+                      >
+                        {link.label}
+                        <svg 
+                          className={cn("size-3 opacity-60 transition-transform duration-200", isDropdownOpen && "rotate-180")} 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          viewBox="0 0 24 24" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2.5" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </Link>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.to}
@@ -386,6 +466,203 @@ export const Navbar: React.FC = () => {
             </Link>
           )}
         </div>
+
+        {/* Mega Menu Dropdown */}
+        <AnimatePresence>
+          {isDropdownOpen && (
+            <motion.div
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              initial={{ opacity: 0, y: 12, scale: 0.99 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 8, scale: 0.99 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+              className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-full max-w-5xl z-50 bg-white dark:bg-[#0c0c0d] border border-slate-200 dark:border-white/10 p-6 rounded-2xl shadow-xl dark:shadow-2xl text-slate-900 dark:text-white overflow-hidden"
+            >
+              {/* Search box */}
+              <div className="relative mb-5">
+                <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                  <svg className="size-4 text-slate-400 dark:text-white/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  placeholder={`Search ${countries.length || 122} countries...`}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-slate-50 dark:bg-[#171719] text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-white/40 border border-slate-200 dark:border-white/5 rounded-xl py-2.5 pl-10 pr-4 text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-white/20 transition-colors"
+                />
+              </div>
+
+              {/* Popular section */}
+              {(!searchQuery || "popular".includes(searchQuery.toLowerCase())) && (
+                <div className="mb-6">
+                  <span className="text-[10px] font-bold tracking-wider text-slate-400 dark:text-white/40 uppercase block mb-2.5">Popular</span>
+                  <div className="flex flex-wrap gap-2">
+                    {(() => {
+                      const POPULAR_ISOS = ["PT", "TH", "ES", "MX", "IT", "DE", "ID", "GB"];
+                      const populars = POPULAR_ISOS.map(iso => 
+                        countries.find(c => c.iso_code?.toUpperCase() === iso)
+                      ).filter(Boolean) as NavbarCountry[];
+                      
+                      return populars.map((c) => (
+                        <Link
+                          key={c.id}
+                          to={`/countries/${c.id}`}
+                          onClick={() => setIsDropdownOpen(false)}
+                          className="flex items-center gap-2 bg-slate-100 dark:bg-[#171719] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/20 rounded-full px-3.5 py-1.5 text-xs font-semibold text-slate-800 dark:text-white transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                        >
+                          <span className="text-[9px] font-bold text-slate-500 dark:text-white/40 bg-slate-200/50 dark:bg-white/5 rounded px-1.5 py-0.5">{c.iso_code}</span>
+                          <span>{c.name === "Indonesia" ? "Bali / Indonesia" : c.name}</span>
+                        </Link>
+                      ));
+                    })()}
+                  </div>
+                </div>
+              )}
+
+              {/* Columns */}
+              <div className="grid grid-cols-5 gap-6 text-left">
+                {(() => {
+                  const getCountryRegion = (iso: string, continent: string) => {
+                    const code = iso?.toUpperCase() || "";
+                    const cont = continent?.toLowerCase() || "";
+                    
+                    const westernEurope = ["PT", "ES", "FR", "IT", "DE", "GR", "NL", "GB", "BE", "DK", "FI", "IE", "LU", "MC", "NO", "SE", "CH", "IS", "LI", "AT"];
+                    const centralEasternEurope = ["CZ", "HR", "HU", "PL", "RO", "BG", "RS", "SI", "AL", "BA", "CY", "EE", "GE", "LV", "LT", "MD", "ME", "MK", "SK", "TR", "UA", "BY", "RU", "UZ", "KZ", "KG", "TJ", "TM"];
+                    
+                    if (westernEurope.includes(code)) return "WESTERN EUROPE";
+                    if (centralEasternEurope.includes(code)) return "CENTRAL & EASTERN EUROPE";
+                    if (cont.includes("europe")) return "WESTERN EUROPE";
+                    
+                    if (cont.includes("asia") || ["AE", "QA", "SA", "OM", "KW", "JO", "IL", "LB", "BH"].includes(code)) {
+                      return "ASIA & MIDDLE EAST";
+                    }
+                    if (cont.includes("america") || cont.includes("caribbean")) {
+                      return "AMERICAS";
+                    }
+                    if (cont.includes("oceania") || cont.includes("africa")) {
+                      return "OCEANIA & AFRICA";
+                    }
+                    return "WESTERN EUROPE";
+                  };
+
+                  const REGION_TAB_MAP: Record<string, string> = {
+                    "WESTERN EUROPE": "europe",
+                    "CENTRAL & EASTERN EUROPE": "europe",
+                    "ASIA & MIDDLE EAST": "asia-pacific",
+                    "AMERICAS": "americas",
+                    "OCEANIA & AFRICA": "middle-east-africa"
+                  };
+
+                  const filtered = countries.filter(c => {
+                    const normQuery = searchQuery.toLowerCase().trim();
+                    if (!normQuery) return true;
+                    
+                    const name = c.name.toLowerCase();
+                    const iso = (c.iso_code || "").toLowerCase();
+                    
+                    if (name.includes(normQuery) || iso.includes(normQuery)) return true;
+                    
+                    if (normQuery === "uae" && name === "united arab emirates") return true;
+                    if (normQuery === "uk" && name === "united kingdom") return true;
+                    if ((normQuery === "czech republic" || normQuery === "czech") && name === "czechia") return true;
+                    if (normQuery === "lichtenstein" && name === "liechtenstein") return true;
+                    if (normQuery === "krygyzstan" && name === "kyrgyzstan") return true;
+                    
+                    return false;
+                  });
+
+                  const REGIONS = [
+                    "WESTERN EUROPE",
+                    "CENTRAL & EASTERN EUROPE",
+                    "ASIA & MIDDLE EAST",
+                    "AMERICAS",
+                    "OCEANIA & AFRICA"
+                  ];
+
+                  const grouped: Record<string, NavbarCountry[]> = {
+                    "WESTERN EUROPE": [],
+                    "CENTRAL & EASTERN EUROPE": [],
+                    "ASIA & MIDDLE EAST": [],
+                    "AMERICAS": [],
+                    "OCEANIA & AFRICA": []
+                  };
+
+                  filtered.forEach(c => {
+                    const reg = getCountryRegion(c.iso_code, c.continent);
+                    if (grouped[reg]) {
+                      grouped[reg].push(c);
+                    }
+                  });
+
+                  return REGIONS.map((region) => {
+                    const list = grouped[region] || [];
+                    const displayCount = searchQuery ? list.length : 8;
+                    const items = list.slice(0, displayCount);
+                    const remaining = list.length - displayCount;
+
+                    return (
+                      <div key={region} className="flex flex-col">
+                        <Link 
+                          to={`/countries?tab=${REGION_TAB_MAP[region]}`}
+                          onClick={() => setIsDropdownOpen(false)}
+                          className="text-[10px] font-bold tracking-wider text-slate-400 dark:text-white/40 uppercase mb-3 hover:text-slate-800 dark:hover:text-white/80 transition-colors"
+                        >
+                          {region}
+                        </Link>
+                        <div className="flex flex-col gap-1.5">
+                          {items.map((c) => (
+                            <Link
+                              key={c.id}
+                              to={`/countries/${c.id}`}
+                              onClick={() => setIsDropdownOpen(false)}
+                              className="flex items-center gap-1.5 group/item text-[13px] font-medium text-slate-600 hover:text-slate-900 dark:text-white/70 dark:hover:text-white transition-colors py-0.5"
+                            >
+                              <span className="text-[10px] font-bold text-slate-400 dark:text-white/30 group-hover/item:text-slate-600 dark:group-hover/item:text-white/50 transition-colors w-5 shrink-0 uppercase">{c.iso_code}</span>
+                              <span className="truncate">{c.name}</span>
+                            </Link>
+                          ))}
+                          {!searchQuery && remaining > 0 && (
+                            <Link
+                              to={`/countries?tab=${REGION_TAB_MAP[region]}`}
+                              onClick={() => setIsDropdownOpen(false)}
+                              className="text-[12px] font-semibold text-slate-500 dark:text-white/40 hover:text-slate-800 dark:hover:text-white transition-colors mt-1 pl-6"
+                            >
+                              +{remaining} more
+                            </Link>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  });
+                })()}
+              </div>
+
+              {/* Bottom footer */}
+              <div className="border-t border-slate-100 dark:border-white/10 mt-6 pt-4 flex items-center justify-between">
+                <Link
+                  to="/countries"
+                  onClick={() => setIsDropdownOpen(false)}
+                  className="flex items-center gap-2 text-xs font-semibold text-slate-500 hover:text-slate-800 dark:text-white/50 dark:hover:text-white transition-colors cursor-pointer"
+                >
+                  <svg className="size-4 text-emerald-500 dark:text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 12h2v7H3v-7zm4-5h2v12H7V7zm4 8h2v4h-2v-4zm4-10h2v14h-2V5zm4 6h2v8h-2v-8z" />
+                  </svg>
+                  Compare Countries
+                </Link>
+                <Link
+                  to="/countries"
+                  onClick={() => setIsDropdownOpen(false)}
+                  className="flex items-center gap-1 text-xs font-bold text-slate-800 dark:text-white hover:opacity-80 transition-opacity cursor-pointer"
+                >
+                  View all {countries.length || 122} countries →
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
