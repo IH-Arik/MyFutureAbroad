@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Luxembourg",
+  "iso_code": "LU",
+  "flag_url": "https://flagcdn.com/lu.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1548430395-ec39eaf2aa1a?auto=format&fit=crop&w=800&q=80",
+  "description": "Europe's wealthiest nation per capita, Luxembourg punches far above its weight as a global financial center and EU institutional hub. This tiny Grand Duchy offers exceptional salaries, trilingual culture, and unparalleled access to the heart of Europe.\n\n## Key Highlights\n- Highest GDP per capita in the European Union\n- Major global financial center and EU institutional hub\n- Multilingual culture (Luxembourgish, French, German)",
+  "longdescription": "Luxembourg is one of the world's smallest and wealthiest nations, a Grand Duchy nestled between Belgium, France, and Germany in the heart of Western Europe. Luxembourg City, the capital, is a UNESCO World Heritage site built atop dramatic sandstone cliffs, featuring medieval fortifications alongside modern glass banking towers. The country boasts the highest GDP per capita in the EU, driven by its position as a leading European financial center hosting major banks, investment funds, and fintech companies. Luxembourg hosts several key European Union institutions, including the European Court of Justice and the European Court of Auditors, making it a hub for EU policy. The country is officially trilingual, with Luxembourgish, French, and German all recognized, and English very widely spoken in business. Luxembourg's small size makes it extremely convenient to live and work, with excellent public transportation and connectivity to neighboring countries. The country's tax policies have historically attracted international businesses, though regulations have tightened in response to EU directives. Despite high salaries, the cost of living — particularly housing — is extremely expensive. The country's multicultural population (nearly half are non-Luxembourgish) creates a highly international environment. Luxembourg's exceptional connectivity to Brussels, Paris, and Frankfurt makes it ideal for those working in European business and finance.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Luxembourgish citizens automatically acquire citizenship. Ancestors who lost citizenship due to WWII-era laws may be eligible for re-acquisition."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence, Luxembourgish language A2 level (or French/German B1), civics test, integration contract.\n\n**Processing:** Through Ministry of Justice, 12-24 months."
+    },
+    "Dual Citizenship": {
+      "icon": "🇱🇺",
+      "desc": "Luxembourg permits dual/multiple citizenship. In 2008, Luxembourg changed its law to allow dual citizenship, making it possible to maintain existing nationality."
+    },
+    "Ancestral Recovery": {
+      "icon": "⭐",
+      "desc": "Persons of Luxembourg descent who lost citizenship or whose ancestors were deprived of citizenship under Nazi occupation may apply for citizenship recovery."
+    }
+  },
+  "tax_advice": "- Luxembourg has progressive income tax (0% to 42%) plus solidarity surtax\n- Corporate tax approximately 24.94% combined (15% CIT + 7% solidarity + 6.75% municipal)\n- VAT at 17% (lowest standard rate in the EU), reduced rates of 14%, 8%, and 3%\n- Participation exemption: dividends and capital gains from qualifying subsidiaries exempt\n- Luxembourg investment vehicles (UCITS, SICAVs) widely used for EU fund management\n- No wealth tax on individuals\n- Significant double tax treaty network (80+ countries)\n- Highly favorable for holding companies and EU fund structures",
+  "local_tips": "- Luxembourgish, French, and German all used in daily life; English essential in business\n- Registration with commune required within 3 months; get official residence certificate\n- Healthcare excellent and mandatory insurance (CNS) required for all residents\n- Extremely high cost of living; housing shortage severe; budget €2,500+/month\n- Cross-border commuters (from France, Germany, Belgium) very common; understand commute options\n- Free public transport (buses, trains, trams) for all since 2020 — a world first\n- International expat community large; English-speaking social networks very established\n- Luxembourg City small but culturally rich; proximity to surrounding countries unparalleled"
+}

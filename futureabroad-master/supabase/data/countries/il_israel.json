@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Israel",
+  "iso_code": "IL",
+  "flag_url": "https://flagcdn.com/il.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1544948982-5aabd0a81ce4?auto=format&fit=crop&w=800&q=80",
+  "description": "The \"Startup Nation\" is one of the world's most innovative countries, punching far above its weight in technology, biotech, and venture capital. Israel offers ancient holy sites, Mediterranean beaches, and a dynamic society shaped by extraordinary cultural convergence.\n\n## Key Highlights\n- World-leading startup ecosystem and innovation culture\n- Ancient holy sites sacred to three world religions\n- Mediterranean beaches alongside vibrant modern Tel Aviv",
+  "longdescription": "Israel is a small Middle Eastern nation on the eastern Mediterranean coast, occupying one of the world's most historically and religiously significant territories. Jerusalem, home to the Western Wall, Church of the Holy Sepulchre, and al-Aqsa Mosque, is sacred to Judaism, Christianity, and Islam simultaneously. Tel Aviv, the modern commercial capital, is a sun-drenched Mediterranean city with excellent beaches, world-class restaurants, vibrant nightlife, and one of the world's most dynamic startup ecosystems. Israel is nicknamed the \"Startup Nation\" for its extraordinarily high concentration of technology startups and venture capital investment relative to its size, with particular strengths in cybersecurity, agriculture technology, medical devices, and artificial intelligence. The country's mandatory military service for most citizens creates a culture of resourcefulness and leadership that contributes to entrepreneurial success. Hebrew is the official language alongside Arabic; English is widely spoken in business and urban environments. The cost of living in Tel Aviv is among the world's highest, particularly for housing. Israel's geopolitical situation in the Middle East requires awareness of security considerations and regional dynamics. The country has excellent universities, world-class healthcare, and a high standard of living. Israeli society is diverse, comprising Jewish Israelis from many national backgrounds, Arab Israelis, and various religious communities, creating a uniquely complex and vibrant culture shaped by the world's most ancient histories.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent (Aliyah)": {
+      "icon": "⭐",
+      "desc": "Under the Law of Return, any Jew, their spouse, children, and grandchildren (and their spouses) have the right to immigrate to Israel and acquire citizenship. This is one of the world's broadest descent/return citizenship programs."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 3 years residence as immigrant (with declared intention to settle), Hebrew language, renunciation of previous citizenship in most cases, declaration of loyalty.\n\n**Processing:** Through Population and Immigration Authority, 6-18 months."
+    },
+    "Birthright Citizenship": {
+      "icon": "🇮🇱",
+      "desc": "Israel has limited jus soli citizenship. Children born in Israel to Israeli citizens acquire citizenship. Children of non-citizen parents must apply through other channels."
+    },
+    "Dual Citizenship": {
+      "icon": "🌍",
+      "desc": "Israel permits dual citizenship in many cases, particularly for those who acquire Israeli citizenship through the Law of Return while maintaining their original nationality."
+    }
+  },
+  "tax_advice": "- Israel has progressive income tax (10% to 50%)\n- Corporate tax at 23%\n- VAT at 17%\n- New immigrants (Olim) receive 10-year tax holiday on foreign-source income\n- Long-term returnees (living abroad 6+ years) may also receive partial tax exemptions\n- Capital gains on listed securities at 25% (or 30% for substantial shareholders)\n- Non-residents taxed on Israel-source income only\n- Dividend withholding tax of 25% (reduced to 15% for qualifying situations)\n- National Insurance (Bituach Leumi) contributions mandatory for residents",
+  "local_tips": "- Hebrew and Arabic official languages; English widely spoken especially in Tel Aviv and tech sector\n- Population Registry (Ministry of Interior) registration required; Olim have dedicated Aliyah process\n- Healthcare: universal Kupat Holim system excellent; join one of four health funds immediately\n- Cost of living in Tel Aviv very high; one of world's most expensive cities for housing\n- Shabbat (Friday sunset to Saturday night) affects most services and transport — plan around it\n- Security situation awareness important; follow government advisories and be aware of surroundings\n- Startup ecosystem world-class; attend TechTLV, HUB:TLV events for networking\n- Israeli directness (chutzpah) can feel abrasive; it is cultural, not personal — respond in kind"
+}

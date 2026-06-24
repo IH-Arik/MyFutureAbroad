@@ -1,0 +1,163 @@
+{
+  "continent": "Europe",
+  "name": "Finland",
+  "iso_code": "FI",
+  "flag_url": "https://flagcdn.com/fi.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1531737212413-667205e1cda7?auto=format&fit=crop&w=800&q=80",
+  "description": "The land of a thousand lakes and Northern lights, Finland excels in education and technology. Helsinki is a modern, sustainable capital with innovative companies and excellent quality of life.\n\n## Key Highlights\n- Thousand lakes and magical Northern Lights\n- World's best education system and innovation\n- Modern, sustainable capital with high quality of life",
+  "longdescription": "Finland is a Nordic nation known for its thousand lakes, vast forests, Northern Lights, and world-leading education system. Helsinki, the capital, is a modern, design-forward city with innovative architecture and vibrant culture. Finland consistently ranks among the world's happiest countries and has the world's best education system, with no standardized tests and emphasis on play-based learning. The tech industry is globally significant, with Nokia, Supercell, Remedy Games, and thousands of startups originating here. Finland's education-to-innovation pipeline is renowned. The country is a world leader in renewable energy and environmental sustainability. Finnish design and architecture are celebrated globally. The cost of living is moderate to high, particularly in Helsinki. Finland offers excellent healthcare. The language is Finnish, quite distinct from other Nordic languages, though English is widely spoken. The country experiences extreme seasons: brief, bright summers and long, dark winters with Northern Lights opportunities. Sauna culture is central to Finnish life. Work-life balance is excellent. Snow, lakes, and forests provide outdoor recreation. Finland offers visas for skilled workers and entrepreneurs. Challenges include weather, cost of living, and a somewhat reserved culture. Finland combines educational excellence, tech innovation, Nordic quality of life, natural beauty, sustainability commitment, and unique culture, making it attractive for tech professionals, educators, and those seeking Nordic living.",
+  "visas": [
+    {
+      "name": "Residence permit for (Finland)",
+      "visa_type": "startup",
+      "description": "Residence permit for startup founders who want to build their innovative business in Finland.",
+      "benefits": [
+        "Strong startup ecosystem",
+        "High quality of life",
+        "Excellent education",
+        "Family inclusion",
+        "Schengen access"
+      ],
+      "min_income": 0,
+      "min_income_currency": "USD",
+      "min_savings": 15000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 24,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 500,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.businessfinland.fi/en/do-business-with-finland/startup-in-finland/startup-permit",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Finland Student Residence Permit",
+      "visa_type": "student",
+      "description": "Finland's student residence permit for non-EU/EEA nationals enrolled in a full-time degree programme at a Finnish university or university of applied sciences.",
+      "benefits": [
+        "Study at Finnish universities (often tuition-free for EU students)",
+        "Part-time work permitted",
+        "High quality education system",
+        "Path to post-study work permit",
+        "Schengen Area travel"
+      ],
+      "min_income": 0,
+      "min_income_currency": "EUR",
+      "min_savings": 6720,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 380,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://migri.fi/en/student",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Finland Family Reunification Permit",
+      "visa_type": "work",
+      "description": "Finland's family reunification permit allows the spouses, registered partners, and minor children of Finnish residents or citizens to join them in Finland, provided the sponsor can support the family financially.",
+      "benefits": [
+        "Family unity in Finland",
+        "Right to work",
+        "Path to permanent residency",
+        "Strong social security",
+        "Schengen Area travel"
+      ],
+      "min_income": 1300,
+      "min_income_currency": "EUR",
+      "min_savings": 0,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 470,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://migri.fi/en/family-member-of-a-person-living-in-finland",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Finland Specialist Work Permit",
+      "visa_type": "work",
+      "description": "Finland's specialist work permit for non-EU/EEA nationals who have been offered a specialist or expert role by a Finnish employer, allowing long-term residence and employment in Finland.",
+      "benefits": [
+        "Work in Finland's thriving tech economy",
+        "Path to permanent residency",
+        "Strong work-life balance",
+        "Family can join",
+        "Schengen Area travel"
+      ],
+      "min_income": 3000,
+      "min_income_currency": "EUR",
+      "min_savings": 0,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 500,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://migri.fi/en/employee",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Finnish citizen parent(s) acquire Finnish citizenship automatically at birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 6 years legal residence (EU/EEA: 4 years), Finnish/Swedish language, stable income, security clearance.\n\n**Processing:** Through Immigration Service, 6-12 months."
+    },
+    "EU/EEA Citizens": {
+      "icon": "🇪🇺",
+      "desc": "EU/EEA citizens have preferential treatment and can naturalize after 4 years residence."
+    },
+    "Birthright Citizenship": {
+      "icon": "🇫🇮",
+      "desc": "Children born in Finland to Finnish parent(s) acquire citizenship automatically."
+    }
+  },
+  "tax_advice": "- Finland has progressive income tax (up to 56.95%)\n- Corporate tax rate is 20.8%\n- VAT at 24% (reduced rates of 14%, 10%, and 0%)\n- Non-residents taxed on Finland-source income only\n- Capital gains on shares and securities taxed at 30%\n- Significant deductions for mortgage interest and pension contributions\n- Tax-exempt income includes dividends from certain conditions\n- Dividend taxation: varies by account type and residency status",
+  "local_tips": "- Finnish helpful but English widely spoken; less critical than Scandinavian countries\n- Cost of living high; budget €1,800-2,200/month\n- Sauna culture essential to Finnish identity; participate actively\n- Healthcare excellent; mandatory register with public system\n- Winter dark 6+ months; seasonal affective disorder common; prepare\n- Education system world-class; relevant for families\n- Bureaucracy efficient; language support available for expats\n- Outdoor activities (lakes, forests, skiing) central to lifestyle"
+}

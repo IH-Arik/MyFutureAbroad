@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Pakistan",
+  "iso_code": "PK",
+  "flag_url": "https://flagcdn.com/pk.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1591871937573-74dbba515c4c?auto=format&fit=crop&w=800&q=80",
+  "description": "A South Asian nation of extraordinary contrasts — from the ancient ruins of Mohenjo-daro to the world's highest mountain ranges. Pakistan offers remarkable landscapes, genuine hospitality, and K2's dramatic peaks attracting mountaineers worldwide.\n\n## Key Highlights\n- K2 and the world's greatest concentration of high mountains\n- Ancient Indus Valley civilization sites (Mohenjo-daro, Harappa)\n- Extraordinary hospitality and very affordable living costs",
+  "longdescription": "Pakistan is a South Asian country of approximately 230 million people, the world's fifth most populous nation, sharing borders with India, Afghanistan, Iran, and China. Islamabad, the planned capital, sits in a natural bowl between the Margalla Hills, while Lahore is the cultural heart of Punjab with extraordinary Mughal architecture including the Badshahi Mosque and Lahore Fort. Karachi on the Arabian Sea is the commercial and financial capital. Pakistan encompasses some of the world's highest mountains — the Karakoram range includes K2 (the world's second highest peak) alongside over 60 other peaks exceeding 7,000 meters, making it a premier destination for serious mountaineers. The Hunza Valley and Gilgit-Baltistan region offer some of the most spectacular mountain scenery on Earth. Pakistan's history spans some of the earliest human civilizations, including Mohenjo-daro and Harappa, ancient cities of the Indus Valley Civilization dating to 3,000 BCE. The country faces significant challenges including political instability and variable infrastructure. However, the Pakistani people are extraordinarily hospitable, and travel in the northern mountain regions is considered safe and rewarding. The cost of living is very low by international standards. Urdu is the national language, though English has official status and is used in government, education, and business. Pakistan's extraordinary natural landscapes remain among the world's most undervisited and spectacular.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Pakistani citizens automatically acquire citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence, Urdu or regional language proficiency, good character, financial stability, renunciation of previous citizenship.\n\n**Processing:** Through NADRA/Ministry of Interior, 6-18 months."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏔️",
+      "desc": "Children born in Pakistan to at least one Pakistani parent acquire citizenship. Foundlings (children of unknown parents) found in Pakistan are also considered citizens."
+    },
+    "Overseas Pakistanis": {
+      "icon": "🌍",
+      "desc": "Pakistan has made significant efforts to maintain connections with its diaspora. NICOP (National Identity Card for Overseas Pakistanis) allows dual nationals to access government services."
+    }
+  },
+  "tax_advice": "- Pakistan has progressive income tax (5% to 35% for salaried, higher for business income)\n- Corporate tax at 29% (reducing to 27% under ongoing reforms)\n- GST at 17% (varies by province and category)\n- Non-residents taxed on Pakistan-source income only\n- Capital gains on securities at 12.5-15% depending on holding period\n- Withholding tax system (advance tax) prevalent\n- Super tax of 10% on high-income companies\n- Pakistan-UK, Pakistan-US, and various other double tax treaties available\n- Real estate gains taxed at 3-10% depending on holding period",
+  "local_tips": "- Urdu national language; English has official status and widely used in business and education\n- NADRA registration and Pakistan Origin Card (POC) or National Identity Card for Overseas Pakistanis\n- Healthcare: private hospitals in Islamabad and Karachi excellent (Shifa, Aga Khan); insurance recommended\n- Cost of living very low; budget PKR 80,000-120,000/month very comfortably in major cities\n- Northern areas (Gilgit-Baltistan, Hunza) extraordinarily beautiful and safe; highly recommended\n- Security situation varies by region; research specific areas; avoid conflict zones near Afghan border\n- Pakistani hospitality legendary; accept home invitations and participate in meals enthusiastically\n- Mobile data excellent in cities; remote mountain areas limited connectivity"
+}

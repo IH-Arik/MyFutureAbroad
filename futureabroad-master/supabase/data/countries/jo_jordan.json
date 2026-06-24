@@ -1,0 +1,101 @@
+{
+  "continent": "Asia",
+  "name": "Jordan",
+  "iso_code": "JO",
+  "flag_url": "https://flagcdn.com/jo.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+  "description": "Home to the ancient rose-red city of Petra and the Dead Sea, Jordan is a politically stable Middle Eastern nation with a welcoming culture, English widely spoken, and a growing expat community in Amman.\n\n## Key Highlights\n- Petra — one of the Seven Wonders of the World\n- Most politically stable country in the Middle East\n- Growing expat hub in Amman with excellent services",
+  "longdescription": "Jordan is a small Middle Eastern kingdom with an outsized reputation for political stability, historical richness, and hospitality. Amman, the capital, is a modern, cosmopolitan city that serves as a regional hub for business, diplomacy, and NGO operations. Jordan's most famous attraction is Petra — the ancient Nabataean city carved into rose-red sandstone cliffs, named one of the New Seven Wonders of the World. The Dead Sea, the world's lowest point, offers unique floating experiences on its salt-dense waters. Wadi Rum's vast red desert has hosted countless film productions. English is widely spoken in business and urban areas. Jordan is home to a large expat community from Western countries, regional workers, and refugees. The cost of living is moderate. The country offers relative safety in an otherwise turbulent region, making it popular with expats, aid workers, and professionals working across the Middle East.",
+  "visas": [
+    {
+      "name": "Jordan Work Permit",
+      "visa_type": "work",
+      "description": "Employment permit for foreign workers in Jordan, typically sponsored by a Jordanian employer. Jordan is a stable regional hub for NGOs, diplomacy, and international business.",
+      "benefits": [
+        "Regional stability",
+        "English widely spoken",
+        "Access to Middle East markets",
+        "Rich history and culture",
+        "World-class sites like Petra"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 21,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 100,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Employment contract",
+        "Medical certificate",
+        "Police clearance",
+        "Educational certificates"
+      ],
+      "official_link": "https://www.mol.gov.jo",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Jordan Retirement Visa",
+      "visa_type": "retirement",
+      "description": "Jordan offers residency for retirees who can demonstrate regular income or savings. Amman is one of the Middle East's most livable cities for expats.",
+      "benefits": [
+        "Moderate cost of living",
+        "English widely spoken",
+        "Excellent healthcare",
+        "Warm climate",
+        "Safe and stable environment"
+      ],
+      "min_income": 2000,
+      "min_income_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 200,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of retirement income or savings",
+        "Medical certificate",
+        "Police clearance",
+        "Passport photos"
+      ],
+      "official_link": "https://www.moi.gov.jo",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Work permits required for most employment\n- Aqaba Special Economic Zone offers business-friendly rules\n- Retirement visa available for those with regular income",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Jordanian fathers acquire citizenship automatically. Citizenship through Jordanian mothers is more restricted for children born to non-Jordanian fathers."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 15 years continuous lawful residence for non-Arabs; 4 years for Arab nationals. Arabic language, good conduct, financial independence, renunciation of previous nationality.\n\n**Processing:** Through Ministry of Interior, 12-24 months. Very selective."
+    },
+    "Spouse of Jordanian Citizen": {
+      "icon": "💍",
+      "desc": "Foreign wives of Jordanian men may apply after 5 years of marriage. Foreign husbands of Jordanian women face additional restrictions."
+    },
+    "Investment Citizenship": {
+      "icon": "💰",
+      "desc": "Investors meeting specific criteria may be eligible for accelerated residency through Ministry of Investment."
+    }
+  },
+  "tax_advice": "- Personal income tax: 7% to 20% progressive rates\n- Corporate tax: 20% standard; higher rates for banks and telecoms\n- GST (General Sales Tax) at 16%; essentials taxed at lower rates\n- Non-residents taxed on Jordan-sourced income only\n- No capital gains tax on most assets (real estate gains taxable)\n- Special economic zones (Aqaba) offer significant tax exemptions\n- Jordan has tax treaties with 30+ countries\n- Withholding tax on dividends: 10% for non-residents"
+}

@@ -1,0 +1,100 @@
+{
+  "continent": "Asia",
+  "name": "Bahrain",
+  "iso_code": "BH",
+  "flag_url": "https://flagcdn.com/bh.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80",
+  "description": "A small island kingdom in the Persian Gulf with a booming financial sector, no income tax, and a cosmopolitan lifestyle that blends modern skyscrapers with ancient souks.\n\n## Key Highlights\n- Zero personal income tax\n- Growing fintech and financial hub\n- Strategic gateway to Gulf markets",
+  "longdescription": "Bahrain is a small but prosperous island nation in the Persian Gulf, known for being one of the most open and business-friendly economies in the Middle East. It was the first Gulf state to discover oil in 1932, and has since diversified into finance, tourism, and technology. Manama, the capital, is a modern city with gleaming towers, luxury hotels, and a vibrant expat community. Bahrain offers a relatively liberal social environment compared to its neighbours, with alcohol available, mixed public spaces, and a thriving arts scene. There is no personal income tax, making it attractive for professionals and entrepreneurs. The country hosts Formula 1 races and major international events. The cost of living is moderate for the Gulf. Arabic is official but English is widely spoken. Bahrain is ideal for finance professionals, expats seeking Gulf lifestyle, and businesses targeting the GCC market.",
+  "visas": [
+    {
+      "name": "Bahrain Work Visa",
+      "visa_type": "work",
+      "description": "Standard employment visa for foreign nationals sponsored by a Bahraini employer. Allows residence and work for the duration of the employment contract.",
+      "benefits": [
+        "Legal right to work",
+        "Family sponsorship eligible",
+        "Access to public services",
+        "Renewable annually"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 14,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Long-term residents may apply for permanent residency after 10 years of continuous legal stay.",
+      "application_fee_usd": 100,
+      "application_fee_currency": "BHD",
+      "required_documents": [
+        "Valid passport (6+ months validity)",
+        "Employer sponsorship letter",
+        "Medical fitness certificate",
+        "Police clearance certificate",
+        "Passport photos"
+      ],
+      "official_link": "https://www.lmra.bh/portal/en/home",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Bahrain Investor Visa",
+      "visa_type": "investor",
+      "description": "Residence permit for foreign investors establishing or investing in a Bahraini business. Managed through the Bahrain Economic Development Board.",
+      "benefits": [
+        "Business ownership rights",
+        "No personal income tax",
+        "Family sponsorship",
+        "Gateway to GCC markets",
+        "Renewable residence"
+      ],
+      "min_income": 50000,
+      "min_income_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Investors with sustained business operations may apply for permanent residency.",
+      "application_fee_usd": 500,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Business registration documents",
+        "Proof of investment",
+        "Bank statements",
+        "Passport",
+        "Business plan"
+      ],
+      "official_link": "https://www.bahrainedb.com",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- No personal income tax for individuals\n- Work permits required for most employment roles\n- Golden Residence Permit available for investors",
+  "citizenship_requirements": {
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 25 years continuous legal residence for non-Arabs; 15 years for Arab nationals. Must renounce previous nationality, demonstrate Arabic language ability, and have no criminal record.\n\n**Processing:** Through Ministry of Interior, 12-24 months."
+    },
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Bahraini fathers automatically acquire citizenship. Citizenship through Bahraini mother is more restricted and requires special application."
+    },
+    "Spouse of Bahraini Citizen": {
+      "icon": "💍",
+      "desc": "Foreign wives of Bahraini men may apply after 7 years of marriage. Foreign husbands of Bahraini women face significantly higher hurdles."
+    },
+    "Investment / Special Merit": {
+      "icon": "⭐",
+      "desc": "The King may grant citizenship by royal decree to investors and individuals of exceptional merit or service to Bahrain."
+    }
+  },
+  "tax_advice": "- No personal income tax for individuals in Bahrain\n- Corporate tax applies only to oil companies (46% on oil profits)\n- VAT introduced at 10% (increased from 5% in 2022)\n- No capital gains tax, wealth tax, or inheritance tax\n- Social insurance contributions required for employed residents\n- Free trade agreements reduce import duties on many goods\n- Financial sector benefits from a favorable regulatory environment\n- Foreign companies may face withholding taxes on certain payments"
+}

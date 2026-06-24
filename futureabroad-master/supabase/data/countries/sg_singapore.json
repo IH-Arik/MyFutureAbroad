@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Singapore",
+  "iso_code": "SG",
+  "flag_url": "https://flagcdn.com/sg.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80",
+  "description": "Asia's premier financial hub and city-state, Singapore combines extraordinary efficiency, safety, and multicultural harmony. A global business gateway with world-class infrastructure and unparalleled strategic positioning between East and West.\n\n## Key Highlights\n- World-class financial hub with exceptional business environment\n- Extraordinary safety, cleanliness, and operational efficiency\n- Strategic location with multicultural English-speaking society",
+  "longdescription": "Singapore is a city-state island nation at the southern tip of the Malay Peninsula, ranking as one of the world's most efficient, prosperous, and livable places despite its tiny size. It serves as Asia's premier financial hub, hosting major banks, investment firms, and regional headquarters for multinational corporations alongside one of the world's busiest container ports. English is an official language alongside Malay, Mandarin Chinese, and Tamil, making it uniquely accessible for international professionals. Singapore consistently ranks at the top of global indices for ease of doing business, rule of law, and corruption-free governance. The country's multicultural society — comprising Chinese, Malay, Indian, and expatriate communities — creates a uniquely cosmopolitan Asian environment. Singapore's infrastructure is world-class, featuring an ultra-efficient MRT network, exceptional healthcare, and renowned educational institutions. The cost of living is among Asia's highest, particularly for housing. The country offers multiple immigration pathways for skilled professionals, entrepreneurs, and investors through Employment Passes and EntrePass programs. Singapore's strategic location as a hub between East and West makes it ideal for businesses serving both Asian and Western markets. The tiny country has almost no natural resources yet achieved extraordinary prosperity through human capital, smart governance, and strategic positioning.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Singapore citizens acquire citizenship at birth. Children of Singapore PRs may register for citizenship."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 2-6 years as Permanent Resident, economic contribution, community integration, language ability in an official language.\n\n**Processing:** Highly selective; economic contribution is a key factor. 1-2 years typically."
+    },
+    "Permanent Residency First": {
+      "icon": "🏙️",
+      "desc": "Employment Pass holders typically apply for PR after 2+ years. PR is required before citizenship. PR through Employment Pass (EP), S Pass, and Entrepreneur Pass."
+    },
+    "Dual Citizenship": {
+      "icon": "⚠️",
+      "desc": "Singapore does not permit dual citizenship. Citizens must renounce all other nationalities within one year of acquiring Singapore citizenship."
+    }
+  },
+  "tax_advice": "- Singapore has progressive personal income tax (0% to 24%)\n- Corporate tax at 17% flat (effective rate often lower with exemptions for startups)\n- GST (goods and services tax) at 9% (increased from 8% in 2024)\n- No capital gains tax, inheritance tax, or wealth tax\n- Dividends from Singapore companies are tax-exempt for individuals\n- Foreign income not remitted to Singapore is generally not taxable for residents\n- Startup Tax Exemption: new companies pay 0% on first SGD 100,000 profit\n- Social security (CPF) mandatory for Singapore citizens and PRs only",
+  "local_tips": "- English one of four official languages; communication generally easy for anglophones\n- MyInfo/Singpass digital ID required for all government and many private services; set up first\n- Healthcare world-class at public and private hospitals; Medishield Life insurance provided for PRs\n- Housing expensive; HDB public flats affordable but requires PR/citizen status; private rentals steep\n- Heat and humidity year-round; stay hydrated and wear breathable clothing\n- Fine-heavy laws: no chewing gum (imported), no jaywalking, no littering; obey strictly\n- Hawker centers and food courts offer extraordinary cuisine for SGD 3-5/meal\n- ERP electronic road pricing discourages driving; MRT and bus system world-class"
+}

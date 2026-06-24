@@ -1,0 +1,64 @@
+{
+  "continent": "Asia",
+  "name": "Kyrgyzstan",
+  "iso_code": "KG",
+  "flag_url": "https://flagcdn.com/kg.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1509233725247-49e657319192?auto=format&fit=crop&w=800&q=80",
+  "description": "A Central Asian hidden gem of breathtaking mountain landscapes, nomadic culture, and remarkably low costs. Kyrgyzstan offers visa-free access to many nationalities and an authentic adventure travel experience.\n\n## Key Highlights\n- Visa-free for 60+ countries (30-day entry)\n- Stunning Tian Shan mountains and nomadic heritage\n- One of the cheapest countries in the world to live in",
+  "longdescription": "Kyrgyzstan is a small, landlocked nation in Central Asia that is rapidly gaining a reputation among travelers and digital nomads for its extraordinary mountain scenery, nomadic cultural heritage, and very low cost of living. Bishkek, the capital, is an affordable, laid-back city with a Soviet-era grid layout, leafy boulevards, and a growing cafe and coworking scene. The country is dominated by the Tian Shan mountain range, offering world-class trekking, skiing, and horseback riding. Lake Issyk-Kul, the world's second-largest alpine lake, is a stunning summer destination. Kyrgyzstan allows visa-free entry for citizens of 60+ countries for 30 days, and longer stays can be arranged easily. Russian is widely spoken alongside Kyrgyz. The cost of living is extremely low. Kyrgyzstan is ideal for budget travelers, adventure seekers, and digital nomads looking for Central Asian authenticity.",
+  "visas": [
+    {
+      "name": "Kyrgyzstan Tourist Visa (Visa-Free)",
+      "visa_type": "tourist",
+      "description": "Citizens of 60+ countries can enter Kyrgyzstan visa-free for 30 days. Extensions available through OVIR. Ideal for budget travelers and digital nomads.",
+      "benefits": [
+        "Free entry for 60+ nationalities",
+        "Extendable at OVIR office",
+        "Extremely low cost of living",
+        "World-class trekking",
+        "Authentic nomadic culture"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 1,
+      "validity_months": 1,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 0,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Valid passport (6+ months)",
+        "Return ticket",
+        "Proof of funds"
+      ],
+      "official_link": "https://www.mfa.gov.kg",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Visa-free for 60+ nationalities (30 days)\n- Easy extension to 90 days available at OVIR office\n- Very low cost of living makes long stays very affordable",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Kyrgyzstani citizen parents acquire citizenship automatically at birth, regardless of country of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous lawful residence, Kyrgyz or Russian language ability, good conduct, renunciation of previous nationality.\n\n**Processing:** Through Ministry of Internal Affairs, 6-12 months."
+    },
+    "Former Soviet Citizens": {
+      "icon": "🤝",
+      "desc": "Citizens of former Soviet Union states may benefit from simplified naturalization procedures under existing bilateral agreements."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏔️",
+      "desc": "Children born in Kyrgyzstan to at least one Kyrgyzstani parent acquire citizenship automatically."
+    }
+  },
+  "tax_advice": "- Personal income tax: flat 10% rate on all income\n- Corporate tax: 10% flat rate (very competitive)\n- VAT at 12%; some essentials zero-rated\n- Non-residents taxed on Kyrgyzstan-sourced income only\n- No capital gains tax on securities\n- Very low tax burden overall — one of the lowest in Central Asia\n- Small business tax regimes available with even lower rates\n- Limited double taxation treaty network; check for your home country"
+}

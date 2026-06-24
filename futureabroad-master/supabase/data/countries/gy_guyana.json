@@ -1,0 +1,66 @@
+{
+  "continent": "South America",
+  "name": "Guyana",
+  "iso_code": "GY",
+  "flag_url": "https://flagcdn.com/gy.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80",
+  "description": "South America's only English-speaking country is experiencing a dramatic oil-fueled economic boom, with lush rainforests, the stunning Kaieteur Falls, and a rapidly developing Georgetown.\n\n## Key Highlights\n- Only English-speaking country in South America\n- Booming economy driven by offshore oil discoveries\n- Pristine rainforests and spectacular waterfalls",
+  "longdescription": "Guyana is a small nation on the northeastern coast of South America, the only country on the continent where English is the official language. Once overlooked, Guyana is now one of the world's fastest-growing economies following massive offshore oil discoveries since 2015. Georgetown, the capital, is a city of wooden colonial architecture, vibrant markets, and a diverse population of African, Indian, Amerindian, and mixed heritage. The interior is dominated by vast, largely untouched rainforests and spectacular natural attractions including Kaieteur Falls — one of the world's most powerful waterfalls. The oil boom is transforming the economy and infrastructure rapidly. The government is investing in roads, healthcare, and education. Guyana is an emerging destination for business people, adventurers, and those seeking opportunities in an economy on the rise.",
+  "visas": [
+    {
+      "name": "Guyana Work Permit",
+      "visa_type": "work",
+      "description": "Work permit for foreign nationals employed in Guyana. The booming oil sector is driving high demand for skilled workers in engineering, finance, and energy.",
+      "benefits": [
+        "Legal right to work",
+        "English-speaking country",
+        "Booming oil economy",
+        "High skilled worker demand",
+        "Pristine nature and wildlife"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 21,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 100,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Job offer letter",
+        "Educational certificates",
+        "Medical certificate",
+        "Police clearance"
+      ],
+      "official_link": "https://www.minfor.gov.gy",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Work permit required for foreign employment\n- Oil sector booming — skilled workers in high demand\n- English-speaking, making integration straightforward",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Guyanese citizen parents acquire citizenship at birth regardless of country of birth."
+    },
+    "Birthright Citizenship": {
+      "icon": "🌿",
+      "desc": "Children born in Guyana to at least one Guyanese parent acquire citizenship automatically."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years lawful residence, English language, good character, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of Home Affairs, 6-12 months."
+    },
+    "CARICOM Citizens": {
+      "icon": "🌍",
+      "desc": "Citizens of CARICOM member states enjoy freedom of movement within the Caribbean Community with simplified residency procedures."
+    }
+  },
+  "tax_advice": "- Personal income tax: 28% flat rate above the personal allowance\n- Corporate tax: 25% for non-oil companies; 55% for oil/gas companies\n- VAT at 14%; essential goods zero-rated\n- Booming oil sector: significant tax revenue being reinvested in infrastructure\n- Non-residents taxed on Guyana-sourced income only\n- No capital gains tax on most assets\n- Double taxation treaties with Canada, UK, and CARICOM members\n- Rapidly evolving tax framework as economy expands"
+}

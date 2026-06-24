@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Croatia",
+  "iso_code": "HR",
+  "flag_url": "https://flagcdn.com/hr.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1555990538-c0b0e91f4c8e?auto=format&fit=crop&w=800&q=80",
+  "description": "A stunning Adriatic jewel with medieval walled cities and over 1,200 crystalline islands. Croatia combines Mediterranean beauty with EU membership, affordable living, and a pioneering digital nomad visa program.\n\n## Key Highlights\n- Breathtaking Dalmatian coastline with crystal-clear Adriatic waters\n- UNESCO-listed medieval cities including iconic Dubrovnik\n- EU membership with one of Europe's first digital nomad visas",
+  "longdescription": "Croatia is a southeastern European country renowned for its stunning Adriatic coastline, featuring over 1,200 islands, medieval walled cities, and crystal-clear turquoise waters. Dubrovnik, the \"Pearl of the Adriatic,\" is one of the world's best-preserved medieval cities and a UNESCO World Heritage site, while Zagreb, the capital, offers Central European charm with excellent museums, cafe culture, and a growing tech scene. Croatia became an EU member in 2013 and adopted the Euro in 2023, cementing its integration into the European economic area. The country was a pioneer in digital nomad legislation, introducing one of Europe's first purpose-built digital nomad visas, attracting remote workers from around the world. National parks like Plitvice Lakes, with its terraced waterfalls and turquoise pools, are among Europe's most spectacular natural wonders. The country's cost of living, while rising in tourist areas, remains reasonable compared to Western Europe. Dalmatian cuisine features excellent seafood, olive oil, and local wines. Croatia's transformation from post-Yugoslav economic challenges to a popular EU member demonstrates remarkable resilience and development, and tourism has become a major economic driver supporting continued investment in infrastructure.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Croatian citizens automatically acquire Croatian citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 8 years continuous legal residence, Croatian language proficiency, knowledge of Croatian culture and constitution, clean criminal record, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of Interior, 6-12 months."
+    },
+    "Spouse of Croatian Citizen": {
+      "icon": "💍",
+      "desc": "Spouses may apply after 3 years of marriage with reduced residence requirements."
+    },
+    "EU Citizens": {
+      "icon": "🇪🇺",
+      "desc": "EU citizens have freedom of movement in Croatia but citizenship still requires meeting standard naturalization criteria."
+    }
+  },
+  "tax_advice": "- Croatia has progressive income tax rates (23.6% and 35.4%)\n- Corporate tax is 18% (10% for annual revenues under HRK 7.5 million)\n- VAT at 25% (reduced rates of 13%, 5%, and 0%)\n- Extensive bilateral tax treaties reduce withholding taxes\n- Digital nomads with approved status may benefit from simplified tax treatment\n- Property transfer tax at 3%\n- Non-residents taxed on Croatian-source income only\n- Croatian Kuna replaced by Euro in 2023, simplifying cross-border financial planning",
+  "local_tips": "- Croatian is the official language; English very common in cities and tourist areas\n- Healthcare: register with chosen family doctor (izabrani liječnik) within 30 days of residency\n- Cost of living rising in Dalmatia; budget €900-1,400/month in Split or Dubrovnik\n- Seasonal economy: summer coastal towns crowded and expensive; off-season much quieter\n- Digital nomad visa gives one year renewable stay with work-from-abroad income\n- Bureaucracy improving but can be slow; get OIB number (tax ID) first on arrival\n- Driving cars with foreign plates: rules around long-term use vary; seek local advice\n- Adriatic food culture exceptional; fresh fish and local wine are genuinely world-class"
+}

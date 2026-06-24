@@ -1,0 +1,30 @@
+{
+  "continent": "Africa",
+  "name": "Morocco",
+  "iso_code": "MA",
+  "flag_url": "https://flagcdn.com/ma.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1559586616-361e18714958?auto=format&fit=crop&w=800&q=80",
+  "description": "A North African gateway connecting Africa and Europe, featuring the Sahara Desert, Atlas Mountains, and vibrant medinas. Morocco blends ancient traditions with modern development.\n\n## Key Highlights\n- Gateway between Africa and Europe\n- Rich Berber and Arab cultural heritage\n- Growing tourism and trade opportunities",
+  "longdescription": "Morocco is a North African nation positioned as a bridge between Africa, Europe, and the Middle East, with a rich cultural heritage spanning Berber, Arab, and Islamic traditions. The country features diverse landscapes including the Sahara Desert, the snow-capped Atlas Mountains, and Atlantic and Mediterranean coastlines. Marrakech and Fez are known for their enchanting medinas, traditional souks, and centuries-old architecture. Rabat serves as the capital and administrative center, while Casablanca is the largest city and economic hub. Morocco's economy is increasingly diversified, with tourism, agriculture, phosphate mining, and manufacturing as major sectors. The country is investing heavily in renewable energy, particularly solar and wind power. Marrakech and other cities are attracting international business and tech professionals. The cost of living is significantly lower than Europe, making it attractive for digital nomads and retirees. Morocco offers rich cultural experiences, beautiful beaches, desert adventures, and mountain trekking. The country is modernizing its infrastructure and internet connectivity is improving in urban areas. French and Arabic are the official languages, though Amazigh (Berber) is increasingly recognized. Morocco's location near Europe makes it accessible while offering distinctly African and Middle Eastern experiences. Challenges include infrastructure gaps outside major cities and bureaucratic processes, but opportunities exist in tourism, renewable energy, agriculture, and creative industries. The government is working to attract foreign investment and talent.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Moroccan citizen fathers acquire citizenship automatically. Maternal descent requires father acknowledgment."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years legal residence, Moroccan language skills, renunciation of previous nationality, good moral character.\n\n**Special provisions:** Arabs, Amazighs (Berbers), and Muslims may have expedited processing."
+    },
+    "Spouse of Moroccan Citizen": {
+      "icon": "💍",
+      "desc": "Foreign spouses may apply after 2 years of marriage with reduced residence requirements."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏜️",
+      "desc": "Limited jus soli: Children born in Morocco to unknown parents acquire Moroccan citizenship."
+    }
+  },
+  "tax_advice": "- Morocco has income tax rates ranging from 0% to 38%\n- Corporate tax rate is 30%, with preferential rates for certain activities\n- VAT at 20% (reduced rates of 14%, 10%, 7%, and 0% on essentials)\n- Non-residents taxed at flat 13% on investment income\n- Foreign remittances are tax-exempt if formalized through official channels\n- Business startups in technology receive tax holidays\n- Regional free zones (Tangier) offer significant tax incentives\n- Pension contributions and life insurance are tax-deductible",
+  "local_tips": "- Arabic (Darija dialect) spoken; French also very useful, English limited\n- Bureaucracy can be slow and require connections; patience essential\n- Ramadan significantly affects business hours and social life\n- Healthcare: Private clinics better quality than public system\n- Haggling expected in markets; good opportunity to practice language\n- Cost of living very reasonable; budget €600-800/month comfortably\n- Expat communities in Marrakech and Tangier well-established"
+}

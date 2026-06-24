@@ -1,0 +1,30 @@
+{
+  "continent": "North America",
+  "name": "Bahamas",
+  "iso_code": "BS",
+  "flag_url": "https://flagcdn.com/bs.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=800&q=80",
+  "description": "A Caribbean paradise of 700 islands with crystal-clear waters and iconic pink sand beaches. The Bahamas offers zero income tax, an established offshore financial sector, and a luxury lifestyle just 50 miles from Miami.\n\n## Key Highlights\n- Crystal-clear turquoise waters and famous pink sand beaches\n- Zero income, capital gains, and wealth taxes\n- Strategic location just 50 miles from Florida with USD economy",
+  "longdescription": "The Bahamas is an archipelago nation of approximately 700 islands and 2,400 cays stretching 760 miles southeast from Florida, offering some of the Caribbean's most spectacular beaches and marine environments. Nassau, the capital on New Providence Island, is the commercial and financial hub, while Paradise Island hosts luxury resorts and Atlantis, one of the world's largest resort complexes. The Bahamas is well-established as a tax-advantaged jurisdiction, with no personal income tax, no capital gains tax, no wealth tax, and no inheritance tax, making it attractive to high-net-worth individuals and international businesses. The country has developed a strong financial services sector alongside tourism. The Bahamas Permanent Residency is available to those purchasing property above certain thresholds, providing a pathway to long-term stays. The Out Islands (Family Islands) offer extraordinary off-the-beaten-track experiences with pristine reefs and the famous swimming pigs of Big Major Cay. The climate is warm and sunny year-round, though hurricane season (June-November) poses risks. The cost of living is high, particularly for food and consumer goods, which are largely imported. English is the official language, making the Bahamas very accessible to American and British expatriates seeking a Caribbean lifestyle without language barriers. The proximity to Miami provides excellent air connectivity and easy access to major US services.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Bahamian citizens (or born in The Bahamas to at least one citizen parent) acquire citizenship at birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous lawful residence, English language, good character, no criminal record, financial stability.\n\n**Processing:** Through Department of Immigration, 12-24 months."
+    },
+    "Permanent Residency": {
+      "icon": "🏝️",
+      "desc": "Permanent Residency available through property investment (BSD $500,000+), accelerated consideration for BSD $1.5 million+. Does not automatically lead to citizenship."
+    },
+    "Birthright Citizenship (Limited)": {
+      "icon": "🌊",
+      "desc": "Children born in The Bahamas to non-citizen parents do not automatically acquire citizenship but may apply for registration upon reaching age 18."
+    }
+  },
+  "tax_advice": "- The Bahamas has zero personal income tax, zero capital gains tax, zero inheritance tax\n- No corporate income tax (businesses pay annual license fees instead)\n- VAT at 10% (introduced 2015)\n- No payroll tax for employers; National Insurance contribution of 3.9% employee + 5.9% employer\n- Real property tax based on market value of land and improvements\n- Business license fee typically 0.5-1.5% of annual turnover\n- Stamp duty on real estate transactions at 2.5-10% depending on value\n- No double tax treaties with major economies; US citizens still taxed on worldwide income",
+  "local_tips": "- English official language; Bahamian Creole spoken socially; very accessible for English speakers\n- Immigration registration at Department of Immigration; carry visa documentation always\n- Healthcare: Princess Margaret Hospital public; Doctors Hospital private and high quality; insurance essential\n- Cost of living high; budget BSD 3,000-4,500/month for comfortable expat life\n- Hurricane season June-November; hurricane shutters/preparedness essential; monitor weather closely\n- Alcohol available but expensive; local Sands and Kalik beers most affordable\n- Water activity culture central: sailing, diving, snorkeling key to social integration\n- Banking: Nassau has international banking options; US banking also often maintained"
+}

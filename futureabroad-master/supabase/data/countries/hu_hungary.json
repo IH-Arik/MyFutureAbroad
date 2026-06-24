@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Hungary",
+  "iso_code": "HU",
+  "flag_url": "https://flagcdn.com/hu.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1551867633-194f125bddfa?auto=format&fit=crop&w=800&q=80",
+  "description": "A Central European gem on the Danube, Hungary enchants with its ornate Parliament, healing thermal baths, and vibrant Budapest nightlife. EU membership combined with affordable living makes it a top destination for expats and digital nomads.\n\n## Key Highlights\n- Stunning Budapest architecture and world-renowned thermal bath culture\n- Affordable EU living with rich cultural heritage\n- Growing tech ecosystem and welcoming digital nomad community",
+  "longdescription": "Hungary is a Central European nation with a rich history spanning over a millennium, from the Magyar conquest of the Carpathian Basin to full European Union membership. Budapest, the capital, is consistently ranked among Europe's most beautiful cities, dramatically split by the Danube with the ornate Parliament building, iconic Chain Bridge, and hilltop Buda Castle. The city is celebrated for its thermal bath culture, vibrant ruin bars, and world-class culinary scene that blends Hungarian tradition with modern creativity. Hungary joined the EU in 2004, providing residents and businesses access to the single market and freedom of movement across Europe. The cost of living is significantly lower than Western Europe while maintaining a strong quality of life, making it increasingly popular among remote workers, retirees, and entrepreneurs. Budapest's startup ecosystem is growing rapidly, with coworking spaces and accelerators supporting innovation. English proficiency is growing rapidly among younger generations and professionals, though Hungarian — a famously unique Finno-Ugric language — remains dominant. Beyond Budapest, Hungary offers Lake Balaton (Central Europe's largest lake), rolling wine regions like Tokaj and Eger, and the vast Great Hungarian Plain. The country punches above its weight in science, culture, and innovation, having produced numerous Nobel laureates and world-renowned artists.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Hungarian citizens acquire citizenship automatically at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 8 years continuous residence, B1 Hungarian language proficiency, knowledge of Hungarian history and culture, clean criminal record, financial stability.\n\n**Processing:** Through Office of Immigration, typically 6-12 months."
+    },
+    "Spouse of Hungarian Citizen": {
+      "icon": "💍",
+      "desc": "Spouses may apply after 3 years of marriage and 2 years continuous residence in Hungary."
+    },
+    "Ethnic Hungarians": {
+      "icon": "🇭🇺",
+      "desc": "Ethnic Hungarians living outside Hungary (particularly in Romania, Slovakia, Ukraine) may apply for Hungarian citizenship through simplified procedure with no residence requirement."
+    }
+  },
+  "tax_advice": "- Hungary has a flat personal income tax rate of 15% — one of the EU's lowest\n- Corporate tax rate is 9%, the lowest flat corporate tax rate in the EU\n- VAT rate is 27%, the highest in the EU (reduced rates of 18% and 5%)\n- Non-residents taxed only on Hungary-sourced income\n- Social security contributions total approximately 18.5% for employees\n- Capital gains taxed at 15% flat rate for most assets\n- No inheritance tax between direct family members\n- SZÉP card system provides tax-advantaged employee benefits for leisure",
+  "local_tips": "- Hungarian (Magyar) is unique and difficult; learning basics shows respect but English is widely spoken among younger people\n- Bureaucracy efficient but can be document-heavy; keep all paperwork organized\n- Healthcare good quality; mandatory National Health Insurance (OEP) required for residents\n- Cost of living low by EU standards; budget €800-1,200/month comfortably in Budapest\n- Budapest neighborhood choice matters: Pest districts 5, 6, 7 central and vibrant; Buda quieter\n- Thermal baths are a social institution; visit regularly to integrate into local culture\n- Hungarian cuisine hearty and affordable; explore market halls (Nagyvásárcsarnok) for local produce\n- Winters can be cold and grey; embrace the ruin bar and cafe culture during colder months"
+}

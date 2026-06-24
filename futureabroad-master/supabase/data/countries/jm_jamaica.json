@@ -1,0 +1,66 @@
+{
+  "continent": "North America",
+  "name": "Jamaica",
+  "iso_code": "JM",
+  "flag_url": "https://flagcdn.com/jm.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1548574505-5e239809f769?auto=format&fit=crop&w=800&q=80",
+  "description": "The birthplace of reggae, Rastafari, and Bob Marley, Jamaica is a vibrant English-speaking Caribbean island known for its stunning beaches, Blue Mountains, jerk cuisine, and warm Jamaican spirit.\n\n## Key Highlights\n- English-speaking Caribbean with rich cultural identity\n- Global Work or Holiday visa for remote workers\n- World-famous music, food, and natural beauty",
+  "longdescription": "Jamaica is the third-largest island in the Caribbean and one of the most culturally influential nations on earth, having given the world reggae music, dancehall, Rastafarianism, and a distinctive culinary tradition centered around jerk cooking. Kingston is the capital and cultural heart, while Montego Bay and Negril are the main tourist hubs with stunning beaches and all-inclusive resorts. The Blue Mountains offer cooler temperatures, hiking, and some of the world's finest coffee. English is the official language, making Jamaica highly accessible for expats from English-speaking countries. The government launched the Global Work or Holiday program allowing remote workers to live in Jamaica for up to six months. The cost of living is moderate by Caribbean standards. Jamaica's people are known for their warmth, creativity, and resilience. It is popular with retirees, digital nomads, and tourists seeking authentic Caribbean culture.",
+  "visas": [
+    {
+      "name": "Jamaica Global Work or Holiday Permit",
+      "visa_type": "digital_nomad",
+      "description": "Jamaica's remote work visa allows digital nomads to live and work remotely from the island for up to 6 months. Perfect for those wanting Caribbean island life.",
+      "benefits": [
+        "Live in Jamaica for up to 6 months",
+        "English-speaking island",
+        "Beautiful beaches and mountains",
+        "Vibrant culture and music scene",
+        "No Jamaica tax on foreign income"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 7,
+      "validity_months": 6,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 0,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of employment or self-employment outside Jamaica",
+        "Health insurance",
+        "Return flight ticket",
+        "Hotel or accommodation booking"
+      ],
+      "official_link": "https://www.visitjamaica.com/global-work-holiday",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Global Work or Holiday visa: live remotely for up to 6 months\n- CARICOM freedom of movement applies for regional nationals\n- Retirement residency available with proof of income",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Jamaican citizen parents acquire citizenship automatically at birth regardless of country of birth."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏝️",
+      "desc": "Children born in Jamaica to at least one Jamaican parent acquire citizenship. Limited jus soli for children of non-citizens."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years lawful residence (3 years for CARICOM nationals), English language, good character, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of National Security, 6-12 months."
+    },
+    "CARICOM Citizens": {
+      "icon": "🌍",
+      "desc": "Citizens of CARICOM member states benefit from freedom of movement agreements with simplified residency and naturalization pathways."
+    }
+  },
+  "tax_advice": "- Personal income tax: 25% above the annual threshold (~JMD 1.5 million)\n- Corporate tax: 25% standard; 33% for regulated entities\n- GCT (General Consumption Tax) at 15%\n- Global Work or Holiday visa holders: foreign income not taxed in Jamaica\n- No capital gains tax in Jamaica\n- Special Economic Zones offer significant tax holidays for investors\n- Jamaica has tax treaties with several countries including UK, USA, Canada\n- Withholding tax on dividends: 15% for non-residents"
+}

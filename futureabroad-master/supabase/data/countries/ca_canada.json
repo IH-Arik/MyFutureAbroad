@@ -1,0 +1,30 @@
+{
+  "continent": "North America",
+  "name": "Canada",
+  "iso_code": "CA",
+  "flag_url": "https://flagcdn.com/ca.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=800&q=80",
+  "description": "One of the world's most welcoming countries for immigrants, Canada offers exceptional quality of life, vast natural beauty, and strong opportunities across technology, healthcare, and natural resources.\n\n## Key Highlights\n- World-leading immigration pathways and genuinely multicultural society\n- Exceptional quality of life with universal healthcare\n- Stunning natural landscapes from the Rockies to the Arctic",
+  "longdescription": "Canada is the world's second largest country by land area, stretching from the Atlantic to the Pacific and north to the Arctic, offering extraordinary natural diversity from the Rocky Mountains to boreal forests, prairie grasslands, and thousands of lakes. Toronto, Vancouver, and Montreal are cosmopolitan cities consistently ranked among the world's most livable, with strong economies, diverse populations, and excellent public services. Canada is widely regarded as having one of the world's most welcoming immigration systems, with points-based Express Entry and Provincial Nominee Programs attracting hundreds of thousands of skilled workers annually. The country offers universal healthcare, strong labor protections, and excellent public education, making it particularly attractive for families. Canadian society is fundamentally multicultural, with the country's identity built on diversity and inclusion. The technology sector is growing rapidly, with Toronto and Vancouver developing as major tech hubs attracting companies from Silicon Valley and beyond. Canada is bilingual at the federal level (English and French), with Quebec maintaining a distinct French-speaking culture. The natural environment is spectacular and easily accessible, with world-class ski resorts, hiking trails, and wildlife viewing opportunities. The cost of living varies dramatically by city, with Vancouver and Toronto expensive but other cities more affordable. Canada's stable political system, rule of law, and social safety net make it one of the world's most desirable migration destinations.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Canadian citizens born abroad automatically acquire citizenship, though second-generation born abroad may face limitations."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 1,095 days physical presence in Canada in the past 5 years (as PR), English or French language (CLB 4), Canadian citizenship test (knowledge of rights/responsibilities, history, values), no prohibitions.\n\n**Processing:** 12-24 months."
+    },
+    "Permanent Residency Pathways": {
+      "icon": "🍁",
+      "desc": "Express Entry (Federal Skilled Worker, Canadian Experience Class), Provincial Nominee Programs, Family Sponsorship, and Atlantic Immigration Program are primary PR pathways before naturalization."
+    },
+    "Dual Citizenship": {
+      "icon": "🇨🇦",
+      "desc": "Canada permits dual citizenship. Canadian citizens do not need to renounce their previous citizenship and can hold multiple passports simultaneously."
+    }
+  },
+  "tax_advice": "- Canada has progressive federal income tax (15% to 33%) plus provincial taxes (5% to 21%)\n- Corporate tax at 26.5% combined federal/provincial (small business rate of 9%)\n- GST/HST (goods and services/harmonized sales tax) 5%-15% depending on province\n- Capital gains: 50% inclusion rate means half of capital gains added to income\n- TFSA (Tax-Free Savings Account) and RRSP allow tax-advantaged saving\n- Non-residents taxed at 25% withholding tax on Canadian income\n- Foreign tax credits available for taxes paid abroad\n- Provincial taxes vary significantly; Alberta has no provincial sales tax",
+  "local_tips": "- English and French official; French required in Quebec; learn basic French for courtesy nationwide\n- SIN (Social Insurance Number) required immediately; apply at Service Canada center\n- Healthcare provincial; wait times for specialists can be long; private clinics emerging\n- Housing costs very high in Toronto and Vancouver; consider secondary cities\n- Weather extreme by region; proper winter gear essential (especially outside BC coast)\n- Tap water excellent and safe everywhere; save on bottled water\n- Tim Hortons is more than a coffee shop — it's a cultural institution\n- PR process: maintain residency obligations carefully to protect permanent resident status"
+}

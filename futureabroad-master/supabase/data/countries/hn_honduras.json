@@ -1,0 +1,66 @@
+{
+  "continent": "North America",
+  "name": "Honduras",
+  "iso_code": "HN",
+  "flag_url": "https://flagcdn.com/hn.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1566438480900-0609be27a4be?auto=format&fit=crop&w=800&q=80",
+  "description": "Central America's budget-friendly hidden gem, Honduras is home to the magnificent Maya ruins at Copán, the Bay Islands with world-class diving, and an affordable cost of living.\n\n## Key Highlights\n- Bay Islands: some of the cheapest scuba diving in the world\n- Copán: stunning Maya archaeological site\n- Very low cost of living in Central America",
+  "longdescription": "Honduras is a Central American nation that remains off the beaten path for most international travelers, yet offers remarkable diversity from Caribbean beaches to cloud forests and ancient Maya ruins. The Bay Islands — Roatán, Utila, and Guanaja — are world-renowned among divers for their pristine coral reefs and extremely affordable dive courses, making them a bucket-list destination for diving enthusiasts. Copán Ruinas in the western highlands contains some of the finest Maya sculpture and architecture in the world. Tegucigalpa is the capital. The cost of living is very low — Honduras is one of Central America's most affordable countries. Spanish is the official language. English is spoken on the Bay Islands. Honduras has struggled with security challenges in some urban areas, though tourist areas are generally safe. It is popular with budget travelers, divers, and those seeking Central American adventure.",
+  "visas": [
+    {
+      "name": "Honduras Retirement Visa",
+      "visa_type": "retirement",
+      "description": "Honduras residency for retirees with a pension or regular income. One of the most affordable retirement destinations in Central America with a Bay Islands expat community.",
+      "benefits": [
+        "Very low cost of living",
+        "Bay Islands diving and beaches",
+        "Year-round warm climate",
+        "Tax exemptions on imported goods",
+        "Renewable residence"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "After 3 years of legal residency, eligible to apply for permanent residency.",
+      "application_fee_usd": 200,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of income ($1,500+/month)",
+        "Birth certificate (apostilled)",
+        "Police clearance (apostilled)",
+        "Medical certificate"
+      ],
+      "official_link": "https://www.migracion.gob.hn",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Tourist visa on arrival available (30 days)\n- Work visa requires employer sponsorship\n- Bay Islands expat community is well-established",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Honduran citizen parents acquire citizenship automatically at birth regardless of country of birth."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏔️",
+      "desc": "All children born in Honduras acquire citizenship at birth, regardless of parents' nationality (strong jus soli)."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 3 years lawful residence (1 year for Central Americans and Spaniards), Spanish language ability, good conduct.\n\n**Processing:** Through General Directorate of Migration, 6-12 months."
+    },
+    "Spouse of Honduran Citizen": {
+      "icon": "💍",
+      "desc": "Foreign spouses may apply after 1 year of marriage with residence in Honduras."
+    }
+  },
+  "tax_advice": "- Personal income tax: 15% to 25% progressive rates\n- Corporate tax: 25% standard rate; 30% for financial institutions\n- VAT (ISV) at 15%; 18% on alcohol and tobacco\n- Non-residents taxed on Honduras-sourced income only\n- No capital gains tax on most assets\n- ZEDE (Special Development Zones) offer major tax incentives for investors\n- Bay Islands have special tax-free status for certain transactions\n- Double taxation treaties limited; check for your home country"
+}

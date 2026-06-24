@@ -1,0 +1,103 @@
+{
+  "continent": "North America",
+  "name": "Dominican Republic",
+  "iso_code": "DO",
+  "flag_url": "https://flagcdn.com/do.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1580541631950-7282082b53ce?auto=format&fit=crop&w=800&q=80",
+  "description": "The Caribbean's most visited destination, offering world-class beaches, vibrant culture, a growing economy, and one of Latin America's most attractive retirement and investment visa programs.\n\n## Key Highlights\n- World-famous beaches and all-inclusive resorts\n- Rentista and retirement visa with low income threshold\n- Fast-growing economy and real estate market",
+  "longdescription": "The Dominican Republic occupies the eastern two-thirds of Hispaniola island, sharing it with Haiti. It is the Caribbean's largest economy and most visited tourist destination. Santo Domingo, the capital, was the first permanent European settlement in the Americas and boasts a stunning Colonial Zone recognized as a UNESCO World Heritage Site. The country offers diverse landscapes from pristine beaches at Punta Cana and Samaná to mountainous interiors with coffee plantations. The cost of living is low, and the government actively encourages foreign residents through attractive visa programs. Spanish is the official language. The Dominican Republic is popular with retirees, real estate investors, and digital nomads seeking Caribbean island life at an affordable price. Infrastructure is developing rapidly, especially in tourist corridors.",
+  "visas": [
+    {
+      "name": "Dominican Republic Rentista Visa",
+      "visa_type": "retirement",
+      "description": "Residency for those with a regular passive income from investments, pensions, or other sources. One of the most accessible residency programs in the Caribbean.",
+      "benefits": [
+        "Legal residency",
+        "Low income threshold ($1,500/month)",
+        "Path to permanent residency",
+        "Tax incentives for retirees",
+        "Warm Caribbean climate"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 45,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "After 3 years of legal residency, eligible to apply for permanent residency.",
+      "application_fee_usd": 200,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of $1,500/month income",
+        "Birth certificate (apostilled)",
+        "Police clearance (apostilled)",
+        "Medical certificate",
+        "Passport photos"
+      ],
+      "official_link": "https://migracion.gob.do",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Dominican Republic Retirement Visa",
+      "visa_type": "retirement",
+      "description": "Special retirement residency (Law 171-07) offering significant tax benefits to foreign retirees including exemption from import duties on personal goods.",
+      "benefits": [
+        "Import vehicle duty-free",
+        "Import household goods duty-free",
+        "Property purchase assistance",
+        "Tax exemptions",
+        "Year-round warm weather"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 45,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Pathway to permanent residency after qualifying period.",
+      "application_fee_usd": 200,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of pension income ($1,500+/month)",
+        "Birth certificate",
+        "Police clearance",
+        "Medical exam",
+        "Passport photos"
+      ],
+      "official_link": "https://migracion.gob.do",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Rentista visa: proof of $1,500/month passive income\n- Retirement visa available with pension documentation\n- Real estate investment can qualify for residency",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Dominican citizen parents acquire citizenship automatically at birth regardless of country of birth."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏝️",
+      "desc": "All children born in the Dominican Republic to Dominican parents acquire citizenship automatically. Limited jus soli for children of non-citizens."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 2 years legal residency, Spanish language ability, good conduct, renunciation of previous nationality.\n\n**Processing:** Through Ministry of Interior, 6-12 months."
+    },
+    "Spouse of Dominican Citizen": {
+      "icon": "💍",
+      "desc": "Foreign spouses may apply after 2 years of marriage with continuous legal residence."
+    }
+  },
+  "tax_advice": "- Personal income tax: progressive rates from 0% to 25%\n- Corporate tax: flat 27% on net profits\n- VAT (ITBIS) at 18%; some essential goods exempt\n- Law 171-07: major tax exemptions for qualifying retirees\n- No capital gains tax on primary residence sales\n- Tax incentives for tourism zone investments (CONFOTUR law)\n- Foreign-sourced income generally not taxed for retirees\n- Property transfer tax at 3% applies on real estate purchases"
+}

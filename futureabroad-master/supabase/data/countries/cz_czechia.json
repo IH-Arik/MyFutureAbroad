@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Czechia",
+  "iso_code": "CZ",
+  "flag_url": "https://flagcdn.com/cz.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=800&q=80",
+  "description": "A Central European cultural gem centered on fairytale Prague, one of Europe's most beautiful cities. Czechia combines EU membership, affordable living, world-class beer culture, and a growing technology sector.\n\n## Key Highlights\n- Fairytale Prague with world-class medieval architecture\n- Affordable EU living with exceptional quality of life\n- World-renowned beer culture and growing startup ecosystem",
+  "longdescription": "Czechia (officially the Czech Republic) is a Central European nation landlocked between Germany, Austria, Slovakia, and Poland, with Prague as its capital and one of Europe's most architecturally magnificent cities. Prague's historic center, largely undamaged during World War II, features stunning Gothic, Baroque, and Art Nouveau architecture across its bridges, castles, and cobblestone old town. Czechia joined the EU in 2004, providing residents with access to the single market and freedom of movement, though the country retains its own currency (Czech Koruna). The cost of living is considerably lower than Western Europe, making it attractive for digital nomads and remote workers maintaining Western incomes. Czech beer is world-renowned as among the finest in the world, and the country has the highest per capita beer consumption globally. The economy is diversified with strong manufacturing, particularly automotive, alongside growing technology and startup sectors in Prague and Brno. Czech people are known for their directness, dry humor, and strong secular traditions. Learning Czech is helpful but English is widely spoken among younger generations and in business contexts. The country offers excellent public transportation, good healthcare, and a high quality of life relative to cost. Czechia's cultural richness, historical depth, and central European location make it an increasingly popular destination for expats and digital nomads seeking affordable EU living.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Czech citizens automatically acquire citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous residence (3 years for EU citizens), Czech language A2 level, knowledge of Czech culture/history/political system, clean criminal record.\n\n**Processing:** Through Ministry of Interior, 6-12 months."
+    },
+    "EU Citizens": {
+      "icon": "🇪🇺",
+      "desc": "EU/EEA citizens have freedom of movement and can live and work in Czechia without a visa. Citizenship still requires meeting standard naturalization criteria."
+    },
+    "Dual Citizenship": {
+      "icon": "🇨🇿",
+      "desc": "Dual citizenship is permitted in Czechia. Applicants for Czech citizenship are not required to renounce their previous nationality."
+    }
+  },
+  "tax_advice": "- Czechia has 15% personal income tax (23% above 4× average salary)\n- Corporate tax at 19%\n- VAT at 21% (reduced rates of 12% and 0%)\n- Non-residents taxed on Czech-source income only\n- Social security contributions significant (~34% employer + ~11% employee)\n- Capital gains from securities held 3+ years exempt from tax\n- Dividend withholding tax of 15% (reduced under treaties)\n- Czech Koruna (CZK) not in Eurozone; currency exposure for Euro earners",
+  "local_tips": "- Czech language helpful but English very common in Prague among professionals and younger people\n- Residence registration required within 30 days at local Foreign Police (Cizinecká policie)\n- Healthcare free for those contributing to Czech health insurance; register with health fund\n- Cost of living low by EU standards; budget €800-1,100/month in Prague\n- Beer culture ubiquitous: Czech pub (hospoda) central to social life; learn basic etiquette\n- Czech koruna (CZK) not Euro; currency conversion needed for Euro-area travel\n- Prague tourist areas saturated in summer; explore local neighborhoods (Žižkov, Vinohrady)\n- Drivers and cyclists have different road priorities than UK/US; learn local traffic rules"
+}

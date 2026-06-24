@@ -1,0 +1,130 @@
+{
+  "continent": "Europe",
+  "name": "Norway",
+  "iso_code": "NO",
+  "flag_url": "https://flagcdn.com/no.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1600256698889-61ff2cd73cd8?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "description": "A Scandinavian paradise of fjords, mountains, and natural beauty. Norway offers one of the world's highest standards of living, excellent salaries, and abundant opportunities in energy and technology sectors.\n\n## Key Highlights\n- Spectacular fjords and pristine natural beauty\n- One of world's highest standards of living\n- Excellent salaries and strong economy",
+  "longdescription": "Norway is a Scandinavian nation renowned for spectacular natural scenery: dramatic fjords, snow-capped mountains, Northern Lights, and vast forests. Oslo, the capital, is a vibrant city with modern architecture, museums, and cultural institutions. Norway consistently ranks among the world's highest in quality of life, with exceptional standards. The economy is strong and diversified, with oil wealth (sovereign wealth fund) enabling extensive public services. Salaries in Norway are among the world's highest, though so is the cost of living. The Norwegian welfare state provides exceptional healthcare, education, and social benefits. Norway is not an EU member but has close relationships. Norwegian is the official language, though English is very widely spoken. Norwegians value outdoor recreation and nature connection; hiking, skiing, and outdoor sports are central. The country leads in renewable energy and sustainability. English proficiency is nearly universal among younger people and professionals. Work-life balance is excellent. The weather features long, dark winters and brief, bright summers. The cost of living is among the world's highest. Immigration is selective, prioritizing skilled workers. Challenges include extreme costs, weather, and limited visa pathways. Norway combines natural beauty, exceptional quality of life, high salaries, Nordic values, outdoor lifestyle, and sustainability leadership, making it ideal for wealthy retirees, skilled workers, and those seeking Scandinavian living at any cost.",
+  "visas": [
+    {
+      "name": "Work permit for (Norway)",
+      "visa_type": "work",
+      "description": "Work permit for skilled workers with a concrete job offer from a Norwegian employer.",
+      "benefits": [
+        "High salaries",
+        "Beautiful nature",
+        "Strong welfare",
+        "Work-life balance",
+        "Family reunification"
+      ],
+      "min_income": 3500,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 36,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 600,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.udi.no/en/want-to-apply/work-immigration/skilled-workers/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Norway Student Residence Permit",
+      "visa_type": "student",
+      "description": "Norway's student residence permit for non-EU/EEA nationals enrolled at a Norwegian university or higher education institution for a full-time programme of study lasting more than 90 days.",
+      "benefits": [
+        "Study in Norway",
+        "Part-time work permitted",
+        "High quality of life",
+        "Post-study work permit option",
+        "Schengen Area travel"
+      ],
+      "min_income": 0,
+      "min_income_currency": "NOK",
+      "min_savings": 121980,
+      "min_savings_currency": "NOK",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 700,
+      "application_fee_currency": "NOK",
+      "required_documents": [],
+      "official_link": "https://www.udi.no/en/want-to-apply/studies/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Norway Family Immigration Permit",
+      "visa_type": "work",
+      "description": "Norway's family immigration permit allows spouses, cohabiting partners, and minor children of Norwegian residents to join them in Norway, subject to income and integration requirements.",
+      "benefits": [
+        "Family unity in Norway",
+        "Right to work",
+        "Path to permanent residency",
+        "Exceptional natural environment",
+        "Strong welfare system"
+      ],
+      "min_income": 3000,
+      "min_income_currency": "NOK",
+      "min_savings": 0,
+      "min_savings_currency": "NOK",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 600,
+      "application_fee_currency": "NOK",
+      "required_documents": [],
+      "official_link": "https://www.udi.no/en/want-to-apply/family-immigration/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Norwegian citizen parent(s) acquire Norwegian citizenship automatically at birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years legal residence (EU/EEA: 3-5 years depending on status), Norwegian language, integration, renunciation of previous nationality.\n\n**Processing:** Through Norwegian Directorate of Immigration, 8-12 months."
+    },
+    "Spouse of Norwegian Citizen": {
+      "icon": "💍",
+      "desc": "Spouses may apply after 2 years marriage with reduced residence requirements."
+    },
+    "EU/EEA Citizens": {
+      "icon": "🇪🇺",
+      "desc": "EEA citizens have special status; naturalization available after fulfilling language and integration requirements."
+    }
+  },
+  "tax_advice": "- Norway has progressive income tax (22% average, rates up to 48.84%)\n- Corporate tax rate is 22%\n- VAT at 25% (reduced rates of 15%, 11.1%, and 0%)\n- Non-residents taxed on Norway-source income only\n- Capital gains generally not taxed (with exceptions for real estate)\n- Oil and energy sector has special tax regime\n- Pensions and insurance contributions are tax-deductible\n- Tax residency requires personal presence or economic ties\n- Foreign tax credits available for taxes paid abroad",
+  "local_tips": "- Norwegian helpful but English very widely spoken; Norwegians fluent\n- Extreme cost of living; highest in Nordic region; budget NOK 20,000-25,000/month\n- Work-life balance and outdoor culture core to Norwegian identity\n- Healthcare excellent; mandatory registration; very efficient system\n- Bureaucracy well-organized; get D-number immediately (temporary ID)\n- Outdoor activities (hiking, skiing, fishing) define lifestyle\n- Winter involves significant darkness; embrace hygge and prepare mentally\n- Wages high; compensate for extreme living costs"
+}

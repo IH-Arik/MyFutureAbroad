@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Latvia",
+  "iso_code": "LV",
+  "flag_url": "https://flagcdn.com/lv.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1549614512-1a9fcb9a851b?auto=format&fit=crop&w=800&q=80",
+  "description": "The Baltic state with Europe's finest Art Nouveau architecture in Riga, surrounded by amber Baltic beaches and ancient forests. Latvia offers EU membership, affordable living, and a growing fintech and digital economy.\n\n## Key Highlights\n- Riga's UNESCO-listed Art Nouveau architecture quarter\n- Affordable Baltic living with EU membership\n- Growing fintech and IT sector",
+  "longdescription": "Latvia is a Baltic state on the eastern shore of the Baltic Sea, sharing borders with Estonia, Lithuania, Russia, and Belarus. Riga, the capital and the Baltic's largest city, is renowned for its extraordinary Art Nouveau architecture — with over 800 buildings in this style, one of the world's most concentrated collections — alongside a beautifully preserved medieval old town designated as a UNESCO World Heritage site. Latvia joined the EU and NATO in 2004 and adopted the Euro in 2014, fully integrating into the Western political and economic community. The country has developed a significant fintech and IT sector, particularly in Riga, with companies providing financial technology services across Europe. The Baltic coastline features beautiful sandy beaches and amber-producing shores that gave the Baltic Sea its name. Latvian forests cover nearly 60% of the country's territory, providing extraordinary natural environments. The cost of living is lower than Western Europe while maintaining solid quality of life. Latvian is the official language, though Russian is widely spoken by a significant minority population and English proficiency is high among younger generations. The country's small population (under 2 million) creates a tight-knit society where networking is highly effective. Latvia has made significant investments in digital infrastructure and education, making it competitive in the knowledge economy and increasingly attractive to tech talent from across the EU.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Latvian citizens automatically acquire citizenship regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years as permanent resident, Latvian language B1, knowledge of Latvian history and constitution, Latvian national anthem, loyalty oath, clean criminal record.\n\n**Processing:** Through Office of Citizenship and Migration Affairs, 6-12 months."
+    },
+    "Non-Citizens (Historical)": {
+      "icon": "⚠️",
+      "desc": "Latvia has a unique category of 'Non-Citizens' — former USSR citizens who settled during Soviet occupation and their descendants who did not qualify for automatic citizenship in 1991. They have special travel rights but are not citizens."
+    },
+    "Dual Citizenship (Limited)": {
+      "icon": "🇱🇻",
+      "desc": "Latvia permits dual citizenship only in limited cases: for citizens of EU/EEA/NATO countries and a few others. Generally requires renouncing previous citizenship."
+    }
+  },
+  "tax_advice": "- Latvia has progressive income tax (20% to 31%)\n- Corporate tax at 20% on distributed profits (undistributed profits not taxed)\n- VAT at 21% (reduced rates of 12% and 5%)\n- Part of Eurozone since 2014\n- Capital gains generally taxed as ordinary income\n- No inheritance tax between direct family members\n- Microenterprise tax regime (15%) available for small businesses\n- Latvia's distributed profit tax model (similar to Estonia) encourages reinvestment",
+  "local_tips": "- Latvian and Russian both widely spoken; English very common especially in Riga\n- Register with PMLP (Office of Citizenship and Migration Affairs) within 3 months\n- Healthcare: register with family doctor; health insurance for non-EU residents recommended\n- Cost of living low by EU standards; budget €700-1,000/month in Riga\n- Riga Art Nouveau district genuinely world-class; best explored on foot\n- Baltic summers short but beautiful; make the most of June-August outdoor season\n- Jurmala (seaside resort 30 min from Riga) excellent for beach days\n- Growing fintech sector; networking in startup and finance community productive"
+}

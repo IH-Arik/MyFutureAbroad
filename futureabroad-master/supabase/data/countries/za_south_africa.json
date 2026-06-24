@@ -1,0 +1,30 @@
+{
+  "continent": "Africa",
+  "name": "South Africa",
+  "iso_code": "ZA",
+  "flag_url": "https://flagcdn.com/za.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&w=800&q=80",
+  "description": "Africa's most developed economy combines Cape Town's stunning natural beauty, world-class safari experiences, and remarkable cultural diversity. South Africa offers extraordinary wildlife, vibrant cities, and some of Africa's best infrastructure.\n\n## Key Highlights\n- Iconic Cape Town beneath Table Mountain with vibrant culture\n- World-class safari destinations and diverse Big Five wildlife\n- Africa's most developed infrastructure and economy",
+  "longdescription": "South Africa is Africa's most industrially developed nation, located at the southernmost tip of the African continent where the Atlantic and Indian Oceans meet. Cape Town is one of the world's most dramatically beautiful cities, built below the iconic Table Mountain with stunning beaches and a vibrant cultural and culinary scene. Johannesburg is the economic powerhouse, while Pretoria serves as the administrative capital and Durban as the major coastal port city. South Africa is renowned for world-class safari experiences in Kruger National Park and numerous private game reserves offering encounters with the \"Big Five.\" The country has 11 official languages reflecting its extraordinary cultural diversity, and is often called the \"Rainbow Nation\" following its peaceful transition from apartheid to democracy under Nelson Mandela in 1994. The economy is the most diversified on the continent, with mining, finance, tourism, manufacturing, and agriculture all significant. The cost of living is generally low compared to developed nations, making South Africa attractive for retirees and remote workers earning in foreign currencies. The country faces significant challenges including high unemployment, economic inequality, and variable safety standards in some urban areas. Excellent wine regions, particularly in the Western Cape, produce world-class vintages at very affordable prices. South Africa's extraordinary natural beauty and cultural richness create an unparalleled quality of life for those who navigate its complexities.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of South African citizens acquire citizenship at birth regardless of birthplace, subject to registration requirements."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years as permanent resident, 1 year married to SA citizen or 5 years ordinary residence with PR, English or other official language ability, good character, renouncing previous citizenship.\n\n**Processing:** Through DHA, 12-24 months."
+    },
+    "Permanent Residency First": {
+      "icon": "🌍",
+      "desc": "General Work PR, Relatives PR, Retirement PR, and Business/Investment PR pathways lead to permanent residency before citizenship can be applied for."
+    },
+    "Dual Citizenship (Limited)": {
+      "icon": "⚠️",
+      "desc": "South Africa generally does not permit dual citizenship. Citizens who voluntarily acquire another nationality must apply for permission to retain SA citizenship, or they may lose it."
+    }
+  },
+  "tax_advice": "- South Africa has progressive income tax (18% to 45%)\n- Corporate tax at 27%\n- VAT at 15% (one of Africa's lower standard rates)\n- South African residents taxed on worldwide income\n- Foreign income exemption available for those working abroad 183+ days (with some limits)\n- Capital gains tax at effective rate of up to 18% for individuals\n- Dividends withholding tax of 20%\n- Estate duty of 20% on estates above ZAR 3.5 million (30% above ZAR 30 million)",
+  "local_tips": "- English widely spoken in Cape Town and Johannesburg; Afrikaans and Zulu also common\n- Smart ID and green barcoded ID book required; foreign residents need valid permit always on person\n- Healthcare: private hospitals excellent (Discovery, Netcare); public system strained — get private insurance\n- Load shedding (scheduled power cuts) affects daily life; invest in backup power/battery\n- Personal security awareness important; avoid displaying valuables and research safe neighborhoods\n- Cost of living very low by global standards; budget ZAR 15,000-25,000/month for comfortable life\n- Wildlife within reach of Johannesburg and Cape Town; regular safari weekends possible\n- South African food scene underrated: braai culture, Cape Malay cuisine, and Durban curry all exceptional"
+}

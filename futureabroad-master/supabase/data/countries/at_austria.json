@@ -1,0 +1,166 @@
+{
+  "continent": "Europe",
+  "name": "Austria",
+  "iso_code": "AT",
+  "flag_url": "https://flagcdn.com/at.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1520503922584-590e8f7a90d7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "description": "The home of classical music and imperial heritage, Austria offers elegance and culture in Vienna. Known for its high quality of life, pristine alpine scenery, and strong economy in engineering and technology.\n\n## Key Highlights\n- Home of classical music and imperial heritage\n- High quality of life with pristine Alpine scenery\n- Strong economy in engineering and technology",
+  "longdescription": "Austria is a Central European nation known for classical music, imperial history, and exceptional quality of life. Vienna, the capital, is a UNESCO World Heritage city renowned for music, architecture, museums, and coffee culture. Austria's connection to Mozart, Beethoven, and other classical composers profoundly shaped Western music. The Austro-Hungarian imperial heritage remains visible in Vienna's grand palaces, architecture, and cultural institutions. Austria combines Alpine natural beauty with urban culture. The economy is well-developed and diversified, with strengths in engineering, automotive, pharmaceuticals, and tourism. Austria offers excellent healthcare, education, and social services. The cost of living is moderate to high, particularly in Vienna. Work-life balance is valued, with strong labor protections. German is the official language; English is widely spoken in major cities and among younger professionals. Austria offers beautiful outdoor recreation: skiing, hiking, and mountain activities. Vienna is ranked among the world's most livable cities. The country is culturally sophisticated with excellent museums, concert halls, and theaters. Austria offers visa options for skilled workers, entrepreneurs, and investors. Challenges include German language importance and competition for jobs. Austria combines cultural sophistication, classical heritage, Alpine beauty, exceptional quality of life, strong economy, and European stability, making it attractive for those valuing culture, nature, and quality of life.",
+  "visas": [
+    {
+      "name": "Points-based immigration system (Austria)",
+      "visa_type": "work",
+      "description": "Points-based immigration system for skilled workers, graduates, and key workers in Austria.",
+      "benefits": [
+        "High quality of life",
+        "Strong economy",
+        "Family reunification",
+        "Path to permanent residency",
+        "Schengen access"
+      ],
+      "min_income": 3000,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 24,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 160,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/red-white-red-card/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Austria Student Visa (Aufenthaltsbewilligung)",
+      "visa_type": "student",
+      "description": "Austria's student visa (Aufenthaltsbewilligung � Studierender) for non-EU/EEA nationals enrolled in a full degree programme at an Austrian university or accredited higher education institution.",
+      "benefits": [
+        "Study at world-class Austrian institutions",
+        "Part-time work permitted",
+        "Schengen Area travel",
+        "High quality of life",
+        "Access to Austrian healthcare"
+      ],
+      "min_income": 0,
+      "min_income_currency": "EUR",
+      "min_savings": 10164,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 160,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://www.oead.at/en/study-in-austria/before-your-stay/visa-residence-permit/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Austria Family Reunification Permit",
+      "visa_type": "work",
+      "description": "Austria's family reunification permit allows non-EU/EEA spouses and minor children of Austrian residents to join their family member for long-term residence in Austria, subject to income and accommodation requirements.",
+      "benefits": [
+        "Family unity in Austria",
+        "Right to work",
+        "Path to permanent residency",
+        "Schengen Area travel",
+        "High quality of life and healthcare"
+      ],
+      "min_income": 1600,
+      "min_income_currency": "EUR",
+      "min_savings": 0,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 174,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/family-reunification/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Austria Red-White-Red Card for Startup Founders",
+      "visa_type": "startup",
+      "description": "Austria's Red-White-Red Card for Startup Founders is for non-EU entrepreneurs with an innovative business idea that contributes to the Austrian economy. Includes a points-based assessment of qualifications and business viability.",
+      "benefits": [
+        "Launch an innovative business in Austria",
+        "Path to permanent residency",
+        "Access to central European markets",
+        "Schengen Area travel",
+        "High quality of life"
+      ],
+      "min_income": 2000,
+      "min_income_currency": "EUR",
+      "min_savings": 20000,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 24,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 174,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://www.migration.gv.at/en/types-of-immigration/permanent-immigration/red-white-red-card/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Entrepreneurship",
+        "Innovation"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Austrian citizen parent(s) acquire Austrian citizenship automatically at birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years legal residence (EU/EEA: 6 years), German language B1 level, knowledge of Austrian constitution, renunciation of other citizenship.\n\n**Processing:** Through regional authorities, 8-12 months."
+    },
+    "Spouse Naturalization": {
+      "icon": "💍",
+      "desc": "Spouses of Austrian citizens may apply after 2 years marriage with reduced residence to 5 years."
+    },
+    "Special Provisions": {
+      "icon": "⭐",
+      "desc": "Reduced requirements for refugees and persons of Austrian descent."
+    }
+  },
+  "tax_advice": "- Austria has progressive income tax (0% to 55%)\n- Corporate tax rate is 24%\n- VAT at 20% (reduced rates of 10%, 5%, and 0%)\n- Non-residents taxed on Austria-source income only\n- Capital gains: 27.5% flat tax (for securities/real property)\n- Tax ruling system available for certainty on tax treatment\n- Collective investment funds receive favorable treatment\n- Substantial real estate held by non-residents triggers annual property tax",
+  "local_tips": "- German essential, especially outside Vienna; English spoken but limited\n- Bureaucracy efficient; Austrians appreciate order and punctuality\n- Cost of living reasonable; budget €1,400-1,800/month\n- Healthcare excellent; mandatory insurance; register immediately\n- Vienna's music/culture scene world-class; integrate through cultural activities\n- Skiing and outdoor activities central to lifestyle; embrace them\n- Coffee culture strong; embrace Viennese coffee house tradition"
+}

@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Vietnam",
+  "iso_code": "VN",
+  "flag_url": "https://flagcdn.com/vn.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80",
+  "description": "A Southeast Asian gem of extraordinary beauty — from Ha Long Bay's limestone karsts to the ancient streets of Hoi An. Vietnam offers unbeatable affordability, rich history, world-class street food, and one of Asia's most vibrant expat communities.\n\n## Key Highlights\n- Breathtaking Ha Long Bay and UNESCO-listed ancient town of Hoi An\n- Exceptional affordability making it a top digital nomad destination\n- Rich culture, delicious cuisine, and genuinely warm hospitality",
+  "longdescription": "Vietnam is a long, narrow Southeast Asian nation stretching 1,650 kilometers along the eastern edge of the Indochina Peninsula, offering extraordinary geographical diversity from the northern mountains and terraced rice fields of Sapa to the UNESCO-listed limestone karsts of Ha Long Bay, the ancient trading town of Hoi An, and the tropical beaches of Phu Quoc. Hanoi, the capital in the north, preserves colonial French architecture and ancient Old Quarter streets, while Ho Chi Minh City (Saigon) in the south is a bustling modern metropolis. Vietnam has undergone remarkable economic transformation since the Doi Moi reforms of 1986, emerging as one of Southeast Asia's fastest growing economies. The cost of living is extraordinarily low by international standards, making Vietnam one of the world's most popular digital nomad destinations, particularly Da Nang and Hoi An. Vietnamese cuisine is celebrated globally for its fresh herbs, complex broths, and regional diversity, with dishes like pho, banh mi, and fresh spring rolls having wide international recognition. The country offers excellent street food culture, vibrant cafe scenes, and a genuinely warm welcome to foreigners. Vietnamese is the official language, and English is growing especially in urban and tourist areas. Visa regulations have been easing, with e-visa available for many nationalities. Vietnam's combination of natural beauty, cultural depth, affordability, and dynamism makes it exceptional for both short visits and long-term stays.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Vietnamese citizens acquire citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence, Vietnamese language proficiency, knowledge of Vietnamese history/culture, financial stability, good character, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of Justice, 1-2 years."
+    },
+    "Exceptional Naturalization": {
+      "icon": "⭐",
+      "desc": "Individuals making significant contributions to Vietnam (investors, scientists, athletes, cultural figures) may be granted citizenship with reduced requirements by government decision."
+    },
+    "Overseas Vietnamese": {
+      "icon": "🇻🇳",
+      "desc": "Vietnamese overseas (Viet Kieu) who lost citizenship can re-apply for restoration. Vietnam has eased restrictions for diaspora seeking to reclaim roots and invest."
+    }
+  },
+  "tax_advice": "- Vietnam has progressive personal income tax (5% to 35%)\n- Corporate tax at 20% (10% for certain high-tech and social enterprises)\n- VAT at 10% (5% for essentials, 0% for exports)\n- Non-residents taxed at flat 20% on Vietnam-source income\n- Capital gains from securities taxed at 0.1% on gross proceeds or 20% on net gain\n- Real estate transfer taxed at 2% of transfer price\n- Withholding tax on dividends at 5% for individuals\n- Vietnam-US tax treaty and extensive treaty network available",
+  "local_tips": "- Vietnamese language tonal and challenging; English increasingly common in cities and tourist areas\n- Temporary residence registration required within 1 month at local police station\n- Healthcare: private international hospitals (Vinmec, FV Hospital) excellent; health insurance recommended\n- Cost of living extraordinary value; budget $500-800/month for comfortable expat lifestyle\n- Motorbike culture dominates; traffic rules informal; hire experienced driver initially or take taxis\n- Da Nang, Hoi An, and Ho Chi Minh City main digital nomad hubs with excellent coworking\n- Cash dominant outside major cities; carry dong and USD for rural areas\n- Rainy/typhoon season (October-December in north and centre) affects travel; plan accordingly"
+}

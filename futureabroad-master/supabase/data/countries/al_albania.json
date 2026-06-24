@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Albania",
+  "iso_code": "AL",
+  "flag_url": "https://flagcdn.com/al.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=800&q=80",
+  "description": "The Balkans' hidden gem is emerging from decades of isolation to reveal stunning Adriatic and Ionian coastlines, preserved Ottoman old towns, and Europe's most affordable lifestyle. Albania's natural beauty and authentic hospitality are extraordinary.\n\n## Key Highlights\n- Pristine Ionian and Adriatic beaches at a fraction of European prices\n- Preserved Ottoman old towns and dramatic mountain landscapes\n- EU candidate country with very affordable and authentic lifestyle",
+  "longdescription": "Albania is a small Southeastern European nation on the Balkan Peninsula, bordered by the Adriatic and Ionian Seas to the west, with a coastline increasingly recognized as one of Europe's most beautiful and undiscovered. Tirana, the capital, has transformed from a grey Communist-era city into a colorful, dynamic metropolis with excellent restaurants, vibrant nightlife, and a growing cafe culture. Albania's Riviera, stretching south along the Ionian coast, features crystal-clear turquoise waters, dramatic clifftop villages, and beaches that rival those of Croatia or Greece at a fraction of the cost. The country's interior conceals remarkable treasures: Gjirokastër's UNESCO-listed Ottoman old town, the ancient ruins of Butrint, and the Albanian Alps offering challenging trekking routes. Albania was one of the most isolated Communist states in the world until 1991 and is still working through its post-Communist transition, though progress has been significant. The country has EU candidate status, driving governance and institutional reforms. The cost of living is among Europe's lowest, making it very attractive for budget-conscious digital nomads — Albania has become an increasingly popular nomad destination. Albanians are known for their extraordinary hospitality: the concept of \"besa\" (sacred guest protection) remains central to cultural identity. Albanian is the official language; Italian and English are widely spoken in tourism areas. Albania's combination of beauty, affordability, and authenticity is genuinely exceptional.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Albanian citizens automatically acquire citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence, Albanian language A2 level, knowledge of Albanian history and culture, clean criminal record, financial means, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of Interior, 6-12 months."
+    },
+    "Exceptional Naturalization": {
+      "icon": "⭐",
+      "desc": "Individuals who have made exceptional contributions to Albania (scientists, artists, investors, athletes) may receive citizenship by presidential decree without meeting standard requirements."
+    },
+    "EU Aspirations": {
+      "icon": "🇪🇺",
+      "desc": "Albania has EU candidate status. Future EU accession would bring significant changes to freedom of movement and economic opportunity for Albanian citizens."
+    }
+  },
+  "tax_advice": "- Albania has flat 23% personal income tax (0% on income below ALL 30,000/month)\n- Corporate tax at 15% (0% for agricultural businesses and SMEs under ALL 14 million)\n- VAT at 20% (6% for tourism sector)\n- Non-residents taxed on Albanian-source income only\n- Capital gains at 15% flat rate\n- Withholding tax of 15% on dividends\n- Albania is not in the EU; different trade and customs rules apply\n- Digital nomad-friendly visa available; income earned abroad may have favorable tax treatment",
+  "local_tips": "- Albanian is the official language; Italian widely understood; English growing rapidly\n- Registration at local Civil Registration Office required within 30 days of residency\n- Healthcare: private clinics in Tirana adequate for most needs; international insurance for serious conditions\n- Cost of living among Europe's absolute lowest; budget €400-600/month comfortably\n- Tirana's transformation rapid; Blloku district coffee culture excellent and trendy\n- Albanian Riviera accessible by furgon (shared minibus) from Tirana; car hire more flexible\n- Driving can be challenging; traffic rules loosely observed especially in cities\n- Expat and digital nomad community growing quickly; Tirana ranked as emerging nomad hub"
+}

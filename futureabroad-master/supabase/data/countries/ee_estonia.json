@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Estonia",
+  "iso_code": "EE",
+  "flag_url": "https://flagcdn.com/ee.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1563720786963-c3c73400d5a3?auto=format&fit=crop&w=800&q=80",
+  "description": "A Baltic tech pioneer and digital leader in Northern Europe. Estonia combines medieval charm with cutting-edge innovation and a high standard of living with affordable housing.\n\n## Key Highlights\n- World's leading digital government and e-services\n- Tech hub with affordable housing costs\n- Medieval charm with modern innovation",
+  "longdescription": "Estonia is a Baltic nation that has emerged as a global leader in digital innovation and e-governance. The country has implemented one of the world's most advanced digital infrastructures, with e-voting, e-residency programs, and digital citizenship available to residents and entrepreneurs worldwide. Tallinn, the capital, features a beautifully preserved medieval old town contrasting with modern neighborhoods. Estonia ranks among Europe's most digitally advanced nations, making it attractive for tech entrepreneurs and IT professionals. The country offers excellent internet connectivity and has fostered a thriving startup ecosystem. Estonia's e-residency program allows foreigners to establish and manage companies entirely online, attracting entrepreneurs globally. The cost of living is lower than Western Europe, though housing prices in Tallinn have risen due to tech industry growth. Healthcare is modern and affordable. Estonian education is highly regarded, particularly in science and mathematics. English proficiency is high among younger generations and urban professionals. The country is small (approximately 1.3 million people), creating a tight-knit society. Estonia is environmentally conscious, with extensive forests and lakes. Challenges include a smaller job market outside tech and potential language barriers for non-English speakers. Estonia combines technological innovation, affordable living, English-friendly environment, and European stability, making it particularly attractive for tech professionals, digital nomads, and entrepreneurs seeking a digitally advanced society.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Estonian citizen parents acquire citizenship automatically at birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 2-8 years continuous residence (varies), B1 Estonian language competency, integration test, no security threats.\n\n**EU/EEA citizens:** Can naturalize after 2 years. Non-EEA citizens require longer residence."
+    },
+    "Digital Citizenship": {
+      "icon": "💻",
+      "desc": "E-residency program allows remote digital identity but does not confer citizenship or right of residence."
+    },
+    "Birthright Citizenship": {
+      "icon": "🇪🇪",
+      "desc": "Children born in Estonia to non-citizen parents acquire Estonian citizenship if no other citizenship acquired at birth."
+    }
+  },
+  "tax_advice": "- Estonia has unique digital-first tax system (20% corporate rate)\n- Profits distributed are taxed; retained earnings tax-free\n- Income tax for residents: 8% to 20% depending on bracket\n- VAT at 20% (reduced rates of 9% and 0%)\n- Non-residents taxed on Estonia-source income only\n- Capital gains from securities exempt from tax\n- Dividend tax deferred until withdrawal (encouraging reinvestment)\n- E-Residency provides online tax filing and digital solutions",
+  "local_tips": "- Estonian widely spoken; English very common among younger generations\n- E-governance system excellent; most bureaucracy done online\n- Cost of living reasonable outside Tallinn; budget €800-1,200/month\n- Healthcare: Register with family doctor; system efficient and affordable\n- Tech industry booming; e-residency useful for business formation\n- Sauna culture important; explore traditional saunas for integration\n- Winter dark and long but manageable; outdoor activities year-round"
+}

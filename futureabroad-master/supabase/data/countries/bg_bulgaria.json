@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Bulgaria",
+  "iso_code": "BG",
+  "flag_url": "https://flagcdn.com/bg.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&w=800&q=80",
+  "description": "The EU's most affordable country combines Black Sea beaches, ancient Thracian history, and Balkan mountain landscapes. Bulgaria offers some of Europe's lowest living costs alongside EU membership and a rapidly growing technology sector.\n\n## Key Highlights\n- EU's most affordable cost of living with flat 10% income tax\n- Beautiful Black Sea coastline and world-class ski resorts\n- Growing tech sector with strong IT talent pool",
+  "longdescription": "Bulgaria is a Southeastern European nation and EU member state bordering Romania, Serbia, North Macedonia, Greece, and Turkey, with significant Black Sea coastline. Sofia, the capital, is a pleasant mid-sized city with Roman ruins beneath its streets, an impressive Alexander Nevsky Cathedral, and a growing tech scene. Bulgaria holds the distinction of being the EU's most affordable country, with living costs dramatically lower than Western Europe, making it particularly attractive for retirees, remote workers, and entrepreneurs. The Black Sea coast features popular resort towns like Sunny Beach and Varna, attracting summer tourists from across Europe. The Balkan and Rila Mountains offer excellent skiing at world-class resorts, particularly Bansko, at a fraction of the cost of Western European alternatives. Bulgaria has a rapidly growing IT sector, with Sofia becoming an emerging tech hub with companies providing services across Europe. The country has a flat income tax rate of 10%, one of the lowest in the EU, and a flat corporate tax rate of 10%. Bulgarian is a South Slavic language using the Cyrillic alphabet, and English proficiency is growing rapidly among younger people in urban areas. Challenges include bureaucratic inefficiencies and variable service quality outside major cities. Bulgaria offers compelling value against a backdrop of Mediterranean-influenced climate and a rich cultural heritage from ancient Thracian, Greek, Roman, and Byzantine civilizations.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Bulgarian citizens automatically acquire citizenship regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous residence (3 years for EU citizens and spouses of Bulgarians), Bulgarian language A2 level, no criminal record, income stability.\n\n**Processing:** Through Ministry of Justice, 12-24 months."
+    },
+    "Investment Citizenship": {
+      "icon": "💰",
+      "desc": "Investment of BGN 2,000,000 (approx. €1,000,000) in Bulgarian businesses or government bonds can lead to accelerated permanent residency (not citizenship directly)."
+    },
+    "Bulgarian Descent": {
+      "icon": "🇧🇬",
+      "desc": "Persons of Bulgarian origin or descent may apply for citizenship through simplified procedures regardless of current residency."
+    }
+  },
+  "tax_advice": "- Bulgaria has a flat 10% personal income tax — lowest in the EU\n- Corporate tax at 10% flat — also lowest in the EU\n- VAT at 20% (reduced rates of 9% and 0%)\n- Non-residents taxed on Bulgaria-source income only\n- Capital gains from sale of personal property (one per year) may be exempt\n- Dividend withholding tax of 5%\n- No inheritance tax between direct family members\n- Bulgaria is not in Schengen or Eurozone (uses Bulgarian Lev pegged to Euro)",
+  "local_tips": "- Bulgarian language uses Cyrillic script; learning alphabet helps navigation significantly\n- Registration required within 3 months at local municipality for EU citizens, sooner for others\n- Healthcare variable quality; supplement public system with private insurance\n- Cost of living among EU's lowest; budget €600-800/month in Sofia\n- Bansko excellent ski resort town and growing digital nomad hub with low costs\n- Headshaking means yes, head nodding means no — opposite of most cultures; memorize this\n- Black Sea resorts crowded in July-August; shoulder seasons (May-June, Sept) ideal\n- Sofia growing tech scene; monthly startup events and networking worth attending"
+}

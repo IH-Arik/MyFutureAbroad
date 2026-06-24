@@ -1,0 +1,99 @@
+{
+  "continent": "Asia",
+  "name": "Laos",
+  "iso_code": "LA",
+  "flag_url": "https://flagcdn.com/la.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80",
+  "description": "Southeast Asia's most tranquil nation, Laos offers ancient temples, the Mekong River, lush jungle, French colonial architecture in Luang Prabang, and one of the region's most relaxed atmospheres.\n\n## Key Highlights\n- UNESCO-listed Luang Prabang — jewel of Southeast Asia\n- Extremely low cost of living\n- Peaceful, unhurried pace of life",
+  "longdescription": "Laos is a landlocked Southeast Asian nation often described as the region's most peaceful and unspoiled destination. While neighbors Thailand and Vietnam attract millions of tourists, Laos remains relatively tranquil — a quality many expats and long-stay travelers find deeply appealing. Luang Prabang, a UNESCO World Heritage City on the Mekong River, is a gem of French colonial architecture, gilded temples, and saffron-robed monks performing morning alms-giving rituals. Vientiane, the capital, is one of Southeast Asia's smallest and most laid-back capitals. The cost of living is extremely low. Lao PDR has a communist government but has been steadily opening to tourism and investment. Lao and French are used officially, but English is spoken in tourist areas. Laos is ideal for those seeking slow travel, spiritual retreats, and affordable Southeast Asian living away from the tourist crowds.",
+  "visas": [
+    {
+      "name": "Laos Tourist e-Visa",
+      "visa_type": "tourist",
+      "description": "Laos e-visa for tourism, available online prior to arrival. Valid for 30 days and extendable within the country. Gateway to the UNESCO-listed Luang Prabang.",
+      "benefits": [
+        "Easy online application",
+        "Extendable in-country",
+        "Very low cost of living",
+        "Stunning cultural sites",
+        "Peaceful travel experience"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 3,
+      "validity_months": 1,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 35,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport (6+ months validity)",
+        "Passport photo",
+        "Return ticket",
+        "Hotel booking confirmation"
+      ],
+      "official_link": "https://laoevisa.gov.la",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Laos Long-Term Visa (Business)",
+      "visa_type": "investor",
+      "description": "Business visa for investors and entrepreneurs operating in Laos. The government is actively encouraging foreign investment, especially in tourism and renewable energy.",
+      "benefits": [
+        "Long-term stay",
+        "Investment opportunities",
+        "Low operating costs",
+        "Access to Southeast Asian markets",
+        "Peaceful business environment"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 14,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 100,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Business registration documents",
+        "Proof of investment",
+        "Medical certificate"
+      ],
+      "official_link": "https://www.investlaos.gov.la",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Tourist e-visa: 30 days, extendable to 60 days\n- Business visa available for investors\n- Long-term stay requires working with immigration department",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Laotian citizen parents acquire citizenship automatically at birth, regardless of country of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous lawful residence, Lao language ability, good conduct, renunciation of previous citizenship, government approval.\n\n**Processing:** Through Ministry of Interior, 12-24 months. Rarely granted to Westerners."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏯",
+      "desc": "Children born in Laos to Laotian parents acquire citizenship automatically."
+    },
+    "Investment Considerations": {
+      "icon": "💰",
+      "desc": "Laos does not offer investment citizenship programs. Long-term residency through business investment is the most common route for foreign nationals."
+    }
+  },
+  "tax_advice": "- Personal income tax: 0% to 24% progressive rates\n- Corporate tax: 24% standard rate; 5% for qualifying investment projects\n- VAT at 10%; some essentials exempt\n- Non-residents taxed on Laos-sourced income only\n- No capital gains tax for individuals on most assets\n- Special Economic Zones offer 10-year corporate tax holidays\n- Limited double taxation treaties; check for your home country\n- Business environment improving but administrative processes can be slow"
+}

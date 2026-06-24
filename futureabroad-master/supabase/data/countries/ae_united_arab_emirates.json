@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "United Arab Emirates",
+  "iso_code": "AE",
+  "flag_url": "https://flagcdn.com/ae.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+  "description": "A gleaming Middle Eastern hub where ultramodern architecture meets ancient desert heritage. The UAE offers tax-free income, world-class infrastructure, and unmatched business opportunities as a strategic bridge connecting East and West.\n\n## Key Highlights\n- Zero personal income tax with business-friendly environment\n- World-class infrastructure, luxury lifestyle, and global connectivity\n- Strategic hub connecting Europe, Asia, and Africa",
+  "longdescription": "The United Arab Emirates is a federation of seven emirates on the Arabian Peninsula, transforming from a pearl-diving economy to one of the world's most modern and diversified economies in just a few decades. Dubai and Abu Dhabi are internationally recognized as global hubs for business, finance, tourism, and innovation, attracting millions of expatriates and tourists annually. The UAE offers zero personal income tax, making it highly attractive for high-earning professionals and entrepreneurs seeking to maximize their earnings while maintaining a luxurious lifestyle. Dubai's skyline, featuring the world's tallest building (Burj Khalifa), is a testament to the country's extraordinary ambition. Abu Dhabi manages the country's vast sovereign wealth fund through investments in renewable energy, culture, and technology. Expatriates make up approximately 88% of the UAE's population, creating one of the world's most international societies. The country has introduced various long-term residency options including Golden Visas for investors, entrepreneurs, and skilled professionals. Islamic law and conservative social norms apply, requiring expatriates to respect local customs. The desert climate features extreme summer heat, making outdoor activities largely seasonal. The UAE's strategic location between Europe and Asia makes it a major logistics and travel hub, and its world-class airports offer connections to virtually every major city globally.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of UAE citizens acquire citizenship. Citizenship through paternal line only; children of UAE mothers and foreign fathers do not automatically qualify."
+    },
+    "Naturalization (Rare)": {
+      "icon": "📋",
+      "desc": "**Requirements:** 30 years continuous residence for Arabs, 20 years for non-Arabs with Arabic language fluency. Rarely granted in practice.\n\n**Note:** The UAE naturalization process is extremely selective and largely discretionary."
+    },
+    "Golden Visa": {
+      "icon": "💰",
+      "desc": "10-year renewable Golden Visa available for investors (AED 2 million+), entrepreneurs, scientists, outstanding students, and humanitarian workers. Provides residency but not citizenship."
+    },
+    "Birthright": {
+      "icon": "🏙️",
+      "desc": "No birthright citizenship. Children born in the UAE to non-citizen parents do not acquire Emirati citizenship, regardless of length of stay."
+    }
+  },
+  "tax_advice": "- UAE has zero personal income tax — none on salary, investments, or capital gains\n- Corporate tax introduced in 2023 at 9% (0% for profits under AED 375,000)\n- VAT at 5% (introduced 2018; limited in scope compared to other countries)\n- No withholding tax on dividends or interest paid to individuals\n- Free Zone companies may be exempt from corporate tax under certain conditions\n- No inheritance tax or wealth tax\n- Social security only mandatory for UAE national employees\n- Non-residents employed in UAE pay no income tax; only social contributions if applicable",
+  "local_tips": "- Arabic language not required for expats; English and Hindi widely used in business and daily life\n- Emirates ID required within 30 days of visa stamping; process through ICA (ICP)\n- Healthcare excellent at private hospitals; medical insurance mandatory for residents\n- Cost of living high, especially housing; budget AED 120,000+/year for comfortable expat life\n- Ramadan affects business hours, restaurants, and social behavior; dress modestly and be respectful\n- Alcohol available in licensed venues only; not sold in general supermarkets\n- Summer (June-August) extreme heat (45°C+); most activity moves indoors or to cooler regions\n- Summer electric bills high due to air conditioning; factor into budget"
+}

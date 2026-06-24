@@ -1,0 +1,102 @@
+{
+  "continent": "Africa",
+  "name": "Kenya",
+  "iso_code": "KE",
+  "flag_url": "https://flagcdn.com/ke.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80",
+  "description": "East Africa's economic powerhouse and safari capital, Kenya is home to the Great Migration, Mount Kilimanjaro's foothills, pristine Indian Ocean beaches, and Nairobi's booming tech and startup scene.\n\n## Key Highlights\n- \"Silicon Savannah\" — Africa's leading tech hub\n- World-famous wildlife safaris and the Great Migration\n- English-speaking with a large expat community",
+  "longdescription": "Kenya is East Africa's largest economy and a regional hub for business, technology, and international organizations. Nairobi, the capital, has earned the nickname \"Silicon Savannah\" for its thriving tech startup ecosystem, international conferences, and presence of major global companies. The country is famous globally for its extraordinary wildlife — the Masai Mara is home to one of nature's greatest spectacles, the Great Wildebeest Migration. Kenya's coastline along the Indian Ocean offers beautiful beaches at Mombasa, Diani, and Lamu. English and Swahili are both official languages, making Kenya very accessible for English-speaking expats. The country hosts the UN Environment Programme headquarters and numerous NGOs. While some areas face security challenges, urban expat communities are well-established. The cost of living is moderate for East Africa, and Nairobi offers a good range of international amenities.",
+  "visas": [
+    {
+      "name": "Kenya Work Permit",
+      "visa_type": "work",
+      "description": "Class G work permit for foreign professionals employed by Kenyan companies. Nairobi is East Africa's largest tech and business hub.",
+      "benefits": [
+        "English-speaking country",
+        "Gateway to East Africa",
+        "Tech startup ecosystem",
+        "Safari and nature access",
+        "Renewable annually"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 2000,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Employment contract",
+        "Educational certificates",
+        "Medical certificate",
+        "Police clearance",
+        "Passport photos"
+      ],
+      "official_link": "https://www.ecitizen.go.ke",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Kenya Digital Nomad Visa",
+      "visa_type": "digital_nomad",
+      "description": "Kenya launched a digital nomad work permit allowing remote workers to live in Kenya while working for foreign employers, valid for up to 2 years.",
+      "benefits": [
+        "2-year permit",
+        "Nairobi tech community access",
+        "Safari and wildlife experiences",
+        "English-speaking country",
+        "East African travel base"
+      ],
+      "min_income": 1000,
+      "min_income_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 14,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 111,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of remote employment",
+        "Proof of income",
+        "Health insurance",
+        "Police clearance"
+      ],
+      "official_link": "https://www.ecitizen.go.ke",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Work permit required; employer-sponsored\n- East African Community: regional freedom of movement applies\n- Investment visa for those investing $100,000+ in Kenya",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Kenyan citizen parents acquire citizenship automatically at birth, regardless of country of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years continuous lawful residence, English or Swahili language, good conduct, renunciation of previous citizenship.\n\n**Processing:** Through Department of Immigration, 12-24 months."
+    },
+    "East African Community": {
+      "icon": "🌍",
+      "desc": "EAC partner state citizens (Uganda, Tanzania, Rwanda, Burundi, South Sudan, DRC) benefit from freedom of movement and may have simplified residency procedures."
+    },
+    "Investment Residency": {
+      "icon": "💰",
+      "desc": "Investors committing $100,000+ in Kenya may qualify for Class G permit, a pathway to long-term residence."
+    }
+  },
+  "tax_advice": "- Personal income tax: 10% to 30% progressive rates\n- Corporate tax: 30% standard; 15% for new manufacturers for first 5 years\n- VAT at 16%; essential goods zero-rated or exempt\n- Non-residents taxed on Kenya-sourced income only\n- Digital nomad visa holders: foreign income not taxed in Kenya\n- Capital gains tax at 15% on property and shares\n- Withholding tax on dividends: 15% for non-residents\n- Special Economic Zones offer significant tax incentives for qualifying investors"
+}

@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "South Korea",
+  "iso_code": "KR",
+  "flag_url": "https://flagcdn.com/kr.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&w=800&q=80",
+  "description": "A dynamic East Asian nation leading the world in technology, K-pop, and innovative culture. South Korea offers world-class infrastructure, a vibrant food scene, and growing opportunities for international talent in Seoul and beyond.\n\n## Key Highlights\n- Global leader in technology with Samsung, LG, and Hyundai\n- Vibrant K-pop and K-drama culture with world-class street food\n- Excellent infrastructure with strong career opportunities",
+  "longdescription": "South Korea is a technologically advanced East Asian nation that transformed from post-war poverty to one of the world's most dynamic economies within a single generation — an achievement known as the \"Miracle on the Han River.\" Seoul, the capital and home to half the country's population, is a sprawling ultramodern city with world-class infrastructure, excellent public transportation, and a vibrant cultural scene. South Korea is home to global technology and manufacturing giants including Samsung, LG, Hyundai, and SK, making it a significant innovation hub. The Korean Wave (Hallyu) has made Korean pop culture — K-pop, K-dramas, and Korean cinema — globally influential, bringing international attention to the language and culture. Korean cuisine is world-renowned for its bold flavors, fermentation techniques, and diverse street food culture including tteokbokki, Korean fried chicken, and bibimbap. South Korea offers excellent internet infrastructure (among the world's fastest), modern healthcare, and a strong social safety net. For skilled foreign workers, the country has several visa pathways, including E-Series work visas and the D-10 job seeker visa. Learning Korean significantly improves integration and career opportunities. The cost of living in Seoul is high compared to other Asian cities but comparable to Western European capitals. The country faces challenges including intense work culture and competitive academic pressure.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of South Korean citizens automatically acquire citizenship. Overseas Koreans (ethnic Koreans with foreign citizenship) have special repatriation pathways."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous residence (2 years if married to Korean citizen for 2+ years), Korean language proficiency, knowledge of Korean culture, financial stability.\n\n**Processing:** Through Ministry of Justice, 1-2 years."
+    },
+    "Special Naturalization": {
+      "icon": "⭐",
+      "desc": "Individuals with outstanding contributions to Korea may apply for special naturalization regardless of residence period. Overseas Koreans have expedited pathways."
+    },
+    "Dual Citizenship (Limited)": {
+      "icon": "🇰🇷",
+      "desc": "Limited dual citizenship permitted for those naturalized after age 65, spouses of Korean citizens in certain circumstances, and foreign nationals who become Korean citizens voluntarily."
+    }
+  },
+  "tax_advice": "- Korea has progressive income tax (6% to 45%)\n- Corporate tax 9%-24% depending on size and income\n- VAT at 10% (one flat rate, minimal exemptions)\n- Residents taxed on worldwide income; non-residents on Korea-source income only\n- Capital gains on real estate can be taxed at up to 70% for short-term holdings\n- Foreign tax credits available for taxes paid abroad\n- National health insurance and pension contributions mandatory\n- Cryptocurrency gains taxed as miscellaneous income at 20% over KRW 2.5 million",
+  "local_tips": "- Korean language helpful but English increasingly spoken in Seoul among younger generations\n- Alien Registration Card (ARC) required within 90 days; register at immigration office\n- Healthcare excellent and affordable with National Health Insurance\n- Internet fastest in the world; expect 1Gbps fiber connections standard\n- Hierarchy and age-based respect central to social and professional interactions\n- Download KakaoTalk app immediately; it's the dominant communication platform\n- Cost of living high in Seoul; consider Busan or Incheon for more affordable options\n- Banking: open account with IBK or KEB Hana as foreigner-friendly options"
+}

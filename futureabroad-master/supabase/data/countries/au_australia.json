@@ -1,0 +1,30 @@
+{
+  "continent": "Oceania",
+  "name": "Australia",
+  "iso_code": "AU",
+  "flag_url": "https://flagcdn.com/au.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=800&q=80",
+  "description": "A sun-drenched continent of extraordinary natural wonders, from the Great Barrier Reef to the ancient outback. Australia offers an enviable outdoor lifestyle, world-class cities, and competitive immigration pathways for skilled workers.\n\n## Key Highlights\n- Iconic natural wonders including the Great Barrier Reef and Uluru\n- High quality of life with year-round outdoor lifestyle\n- Competitive points-based immigration for skilled workers",
+  "longdescription": "Australia is a vast island continent in the southern hemisphere, offering a unique combination of world-class cities, extraordinary natural landscapes, and one of the highest standards of living globally. Sydney, Melbourne, Brisbane, and Perth are cosmopolitan cities with thriving economies, vibrant cultural scenes, and excellent infrastructure, while the vast outback contains ancient indigenous cultural sites, unique wildlife, and dramatic landscapes found nowhere else on Earth. The Great Barrier Reef, the world's largest coral reef system, is one of the planet's most irreplaceable natural wonders. Australia's economy is diverse and resilient, with strengths in mining, agriculture, financial services, and a growing technology sector. The country operates a points-based immigration system that actively recruits skilled workers from around the world, with various visa pathways for professionals, students, and investors. English is the primary language, making integration straightforward for English speakers. Australia's healthcare system combines universal coverage (Medicare) with private options. The cost of living, particularly in Sydney and Melbourne, is high, with housing being a major expense. Australian culture emphasizes outdoor living, sport, informality, and multiculturalism, creating a relaxed and welcoming society. The country's unique wildlife, including kangaroos, koalas, and diverse marine life, adds to its extraordinary appeal.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of at least one Australian citizen parent acquire citizenship automatically at birth, whether born in Australia or abroad."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 4 years as permanent resident (last 12 months continuously), good character, basic English, Australian values and pledged commitment.\n\n**Processing:** Through Department of Home Affairs, 12-24 months."
+    },
+    "Points-Based PR Pathways": {
+      "icon": "🦘",
+      "desc": "SkillSelect/EOI points-based system for General Skilled Migration, Employer Sponsored visas, Business Innovation visas, and Regional visas lead to PR and eventual citizenship."
+    },
+    "Dual Citizenship": {
+      "icon": "🇦🇺",
+      "desc": "Australia permits dual citizenship. Applicants for Australian citizenship are not required to renounce their previous citizenship."
+    }
+  },
+  "tax_advice": "- Australia has progressive income tax (0% to 45%) plus 2% Medicare levy\n- Corporate tax at 30% (25% for companies with turnover under AUD 50 million)\n- GST (goods and services tax) at 10% flat\n- Capital gains taxed at income tax rates; 50% discount for assets held 12+ months\n- Superannuation (pension) contributions mandatory at 11%+ of salary\n- Non-residents taxed at flat 32.5% on first AUD 120,000 (no tax-free threshold)\n- PAYG withholding system for employment income\n- Foreign residents may be exempt from capital gains on most assets",
+  "local_tips": "- English primary language; most bureaucracy, healthcare, and services in English\n- Tax File Number (TFN) required for employment and banking; apply through ATO website\n- Medicare (universal healthcare) available to residents; bulk billing eliminates out-of-pocket costs\n- Housing crisis in Sydney and Melbourne; consider Brisbane, Adelaide, or Perth\n- Skin cancer risk real; SPF 50 sunscreen and UV protective clothing strongly recommended\n- Driving on left side; international driver's license convertible to Australian license\n- Public transport varies dramatically by city; car often needed outside major CBDs\n- Bushfire and flood awareness essential; check local emergency alerts for your region"
+}

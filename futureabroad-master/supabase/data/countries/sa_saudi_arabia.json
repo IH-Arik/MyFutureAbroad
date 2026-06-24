@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Saudi Arabia",
+  "iso_code": "SA",
+  "flag_url": "https://flagcdn.com/sa.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?auto=format&fit=crop&w=800&q=80",
+  "description": "Rapidly transforming under Vision 2030, Saudi Arabia combines extraordinary ancient heritage with ultramodern development. The Kingdom offers tax-free income, world-class infrastructure investment, and an unprecedented national reinvention.\n\n## Key Highlights\n- Tax-free income with massive Vision 2030 infrastructure investment\n- Extraordinary ancient heritage including UNESCO-listed AlUla\n- Unprecedented modernization opening the Kingdom to the world",
+  "longdescription": "Saudi Arabia is the largest country in the Middle East, occupying the majority of the Arabian Peninsula, and holds the world's second largest proven oil reserves. Riyadh, the capital, is a modern metropolis undergoing rapid transformation under Crown Prince Mohammed bin Salman's Vision 2030 program, which seeks to diversify the economy beyond oil through tourism, entertainment, technology, and finance. The country has undertaken remarkable social reforms since 2017, including allowing women to drive, opening cinemas, and developing a tourism industry that was previously nonexistent. Saudi Arabia offers zero personal income tax, attracting skilled expatriate workers across energy, finance, healthcare, education, and construction sectors. The country is developing extraordinary projects including NEOM, a planned futuristic city in the northwest, and Red Sea tourism developments on pristine coastline. Ancient heritage sites including AlUla, home to Nabataean tombs comparable to Petra in Jordan, are becoming major international attractions. Islamic law and customs shape public life, requiring respectful observance by expatriates. The weather is extremely hot, particularly in summer, with inland temperatures regularly exceeding 45°C. The Kingdom's transformation from a largely closed society to one actively welcoming tourists and skilled workers represents one of the most significant changes in the region's modern history, creating genuine opportunities for those willing to adapt.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Saudi nationals acquire citizenship through patrilineal descent. Children of Saudi mothers and foreign fathers must apply through naturalization process."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence, Arabic language proficiency, good conduct, financial stability, renunciation of previous nationality, Council of Ministers approval.\n\n**Processing:** Highly selective; large numbers of long-term residents are denied. Political and royal connections influence outcomes."
+    },
+    "Premium Residency (New)": {
+      "icon": "💰",
+      "desc": "Saudi Premium Residency ('Green Card') launched in 2019: available through one-time fee (SAR 800,000 / ~$200k) or annual fee. Provides permanent residency with right to work, own business, and property — but not citizenship."
+    },
+    "No Dual Citizenship": {
+      "icon": "⚠️",
+      "desc": "Saudi Arabia does not recognize dual citizenship. Saudis who naturalize elsewhere lose Saudi citizenship, and foreign nationals naturalizing as Saudi must renounce previous nationality."
+    }
+  },
+  "tax_advice": "- Saudi Arabia has zero personal income tax for Saudi nationals and foreign employees\n- Corporate income tax at 20% for foreign entities (Zakat — Islamic tax at 2.5% for Saudi entities)\n- VAT at 15% (raised from 5% in 2020 to address oil revenue shortfall)\n- No capital gains tax for individuals on most assets\n- Withholding tax of 5-20% on payments to non-residents depending on type\n- Real estate transaction tax of 5%\n- GOSI (General Organization for Social Insurance) contributions for Saudi nationals\n- Vision 2030 creating new economic activity and business registration opportunities",
+  "local_tips": "- Arabic essential in daily life; English widely spoken in business and major cities\n- Iqama (residency permit) required for employment; sponsor/employer manages process\n- Healthcare: excellent private hospitals (King Faisal, Johns Hopkins Arabia); mandatory health insurance\n- Heat extreme in summer (50°C+); move outdoors to evenings only May-September\n- Dress modestly; abaya required in some traditional areas; check current regulations\n- Avoid all criticism of government, royal family, or religion; legal consequences severe\n- Halal food only; alcohol completely prohibited throughout the Kingdom\n- Vision 2030 creating rapid cultural shifts; entertainment, sports, and tourism expanding fast"
+}

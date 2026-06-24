@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Japan",
+  "iso_code": "JP",
+  "flag_url": "https://flagcdn.com/jp.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80",
+  "description": "An island nation where ancient tradition meets cutting-edge modernity, Japan captivates with its unique culture, world-renowned cuisine, and unmatched safety. Tokyo, Kyoto, and Osaka offer experiences unlike anywhere else on Earth.\n\n## Key Highlights\n- Unique blend of ancient culture and cutting-edge technology\n- World-renowned cuisine, exceptional safety, and precision\n- Extraordinary landscapes from Mount Fuji to sakura-lined streets",
+  "longdescription": "Japan is an East Asian island nation of extraordinary cultural depth and technological sophistication, occupying a unique position as one of the world's most ancient civilizations that has simultaneously embraced modernity completely. Tokyo, one of the world's most dynamic megacities, blends ultramodern skyscrapers with traditional temples and cherry blossom parks. Japan's economy is the third largest in the world, with global leadership in automotive, electronics, robotics, and manufacturing. Japanese culture emphasizes precision, craftsmanship, group harmony, and aesthetic beauty in everything from cuisine to architecture. The country offers extraordinary food culture, from world-class sushi and ramen to elaborate kaiseki dinners, with Tokyo having more Michelin-starred restaurants than any other city. Japan is exceptionally safe, efficient, and well-organized, with punctual public transportation, low crime, and immaculate public spaces. Learning Japanese is essential for long-term integration, as English proficiency outside tourist areas remains limited. Immigration has historically been strict, but recent years have seen expansion of work visas and a dedicated digital nomad visa program. The cost of living in Tokyo is high but manageable, while regional cities offer more affordable alternatives. Japan's aging population is creating new opportunities for skilled foreign workers in healthcare, technology, and education sectors.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of at least one Japanese citizen parent acquire citizenship at birth. Children born out of wedlock to Japanese father require legal recognition."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous residence, ability to support oneself financially, good conduct, renunciation of previous nationality (dual citizenship not officially recognized).\n\n**Processing:** Through Ministry of Justice, 1-2 years. Very selective."
+    },
+    "Special Naturalization": {
+      "icon": "⭐",
+      "desc": "Reduced residence requirements (3 years) for spouses of Japanese nationals married for 3+ years. Reduced for those born in Japan with Japanese parent."
+    },
+    "No Dual Citizenship": {
+      "icon": "⚠️",
+      "desc": "Japan does not officially recognize dual citizenship. Naturalized citizens must renounce previous citizenship. Children with dual citizenship must choose by age 22."
+    }
+  },
+  "tax_advice": "- Japan has progressive income tax (5% to 45%) plus 10% local inhabitant tax\n- Corporate tax effective rate approximately 30-34% including local taxes\n- Consumption tax (VAT equivalent) at 10% (8% for food/beverages)\n- Residents taxed on worldwide income; non-residents on Japan-source income only\n- Capital gains on securities taxed at flat 20.315% (income + special restoration surtax)\n- No inheritance tax exemption for non-residents inheriting from Japanese residents\n- Japan-US tax treaty reduces double taxation for American expats\n- Social insurance contributions mandatory; employer and employee split costs",
+  "local_tips": "- Japanese language essential for daily life outside major tourist areas; even N4 level helps significantly\n- Bureaucracy organized but requires My Number card registration within 14 days of arrival\n- Healthcare: National health insurance mandatory; register at ward office immediately\n- Cost of living manageable in regional cities; Tokyo expensive especially for housing\n- Punctuality absolute; being even 1 minute late is considered rude in professional settings\n- IC card (Suica/Pasmo) essential for transportation; buy at any train station\n- Garbage sorting rules strict and taken very seriously; learn your ward's system\n- Japanese people indirect in communication; learn to read between the lines and avoid direct confrontation"
+}

@@ -1,0 +1,130 @@
+{
+  "continent": "Europe",
+  "name": "Denmark",
+  "iso_code": "DK",
+  "flag_url": "https://flagcdn.com/dk.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "description": "A Scandinavian gem known for happiness and quality of life. Copenhagen is a progressive capital with excellent design, cycling culture, and strong job opportunities in tech and renewable energy.\n\n## Key Highlights\n- World's happiest countries with high quality of life\n- Progressive Copenhagen with excellent design culture\n- Strong opportunities in tech and renewable energy",
+  "longdescription": "Denmark is a Scandinavian nation consistently ranked among the world's happiest countries with exceptional quality of life. Copenhagen, the capital, is a progressive, vibrant city known for design culture, cycling infrastructure, and innovative restaurants. The city ranks among the world's best for livability. Danes are known for their egalitarian values, work-life balance emphasis, and cycling culture. The economy is strong and diversified, with strengths in renewable energy, wind power, pharmaceuticals, and shipping. Denmark is a global leader in wind energy, with substantial windfarms supplying electricity. Copenhagen's design schools are world-renowned, attracting creative professionals globally. The cost of living is among Europe's highest, with Copenhagen particularly expensive. Healthcare is excellent and publicly funded. The education system is highly regarded. Danish people are reserved initially but warm once acquainted. Danish is the official language, though English is widely spoken. Work-life balance is exceptional, with emphasis on personal time and family. The weather is cool and grey much of the year. Cycling is the primary transportation in Copenhagen. Denmark offers visa options for skilled workers. Challenges include high costs, weather, and homogeneous society. Denmark combines happiness indices, exceptional quality of life, design culture, renewable energy leadership, progressive values, and work-life balance, making it attractive for those prioritizing well-being, design, sustainability, and Nordic lifestyle.",
+  "visas": [
+    {
+      "name": "Simplified work permit (Denmark)",
+      "visa_type": "work",
+      "description": "Simplified work permit scheme for highly paid positions or certified companies in Denmark.",
+      "benefits": [
+        "High quality of life",
+        "Work-life balance",
+        "Strong welfare system",
+        "Family inclusion",
+        "Schengen access"
+      ],
+      "min_income": 5500,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 48,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 400,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Work/Fast-track",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Denmark Student Residence Permit",
+      "visa_type": "student",
+      "description": "Denmark's student residence permit for non-EU/EEA nationals enrolled in a full-time study programme at a Danish university or higher education institution lasting more than 3 months.",
+      "benefits": [
+        "Study in Denmark",
+        "Part-time work permitted (20hrs/week)",
+        "Post-study work permit option",
+        "High quality of life",
+        "Schengen Area travel"
+      ],
+      "min_income": 0,
+      "min_income_currency": "DKK",
+      "min_savings": 9136,
+      "min_savings_currency": "DKK",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 250,
+      "application_fee_currency": "DKK",
+      "required_documents": [],
+      "official_link": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Education/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Denmark Family Reunification Permit",
+      "visa_type": "work",
+      "description": "Denmark's family reunification permit allows spouses, registered partners, and minor children of Danish residents to join them in Denmark, subject to integration and attachment requirements.",
+      "benefits": [
+        "Family unity in Denmark",
+        "Right to work",
+        "Path to permanent residency",
+        "Strong welfare system",
+        "Schengen Area travel"
+      ],
+      "min_income": 3300,
+      "min_income_currency": "DKK",
+      "min_savings": 0,
+      "min_savings_currency": "DKK",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 2030,
+      "application_fee_currency": "DKK",
+      "required_documents": [],
+      "official_link": "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Danish citizen parent(s) acquire Danish citizenship automatically at birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 9 years legal residence (EU/EEA: 7 years), Danish language, integration, knowledge of Danish culture, renunciation of previous nationality.\n\n**Processing:** Through Directorate of Immigration, 12-24 months. Very selective."
+    },
+    "Spouse of Danish Citizen": {
+      "icon": "💍",
+      "desc": "Spouses may apply after 2 years marriage with continuous residence in Denmark."
+    },
+    "Birthright Citizenship": {
+      "icon": "🇩🇰",
+      "desc": "Very limited jus soli. Generally requires at least one Danish parent."
+    }
+  },
+  "tax_advice": "- Denmark has progressive income tax (rates up to 55.8%)\n- Corporate tax rate is 22%\n- VAT at 25% (no reduced rates, only exemptions for essentials)\n- Non-residents taxed on Denmark-source income only\n- Capital gains on shares and securities exempt if certain conditions met\n- High tax burden offset by excellent public services\n- Tax deductions available for mortgage interest, pension contributions\n- Significant employment tax credits available for certain employees",
+  "local_tips": "- Danish useful but English nearly universal; Danes speak English very well\n- Extreme cost of living; budget DKK 15,000-18,000/month (€2,000-2,400)\n- \"Hygge\" and work-life balance central to Danish culture; embrace it\n- Healthcare excellent; mandatory registration; efficient system\n- Bureaucracy well-organized; CPR number essential (like SSN)\n- Salary expectations high but cost of living absorbs most gains\n- Cycling culture dominant; learn cycling etiquette"
+}

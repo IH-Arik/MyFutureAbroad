@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Monaco",
+  "iso_code": "MC",
+  "flag_url": "https://flagcdn.com/mc.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&w=800&q=80",
+  "description": "The world's second smallest country is synonymous with wealth, glamour, and the Formula 1 Grand Prix. Monaco offers zero income tax, extraordinary Mediterranean scenery, and the world's highest concentration of millionaires.\n\n## Key Highlights\n- Zero personal income tax jurisdiction\n- Formula 1 Grand Prix and Casino Monte-Carlo glamour\n- Highest concentration of millionaires and billionaires globally",
+  "longdescription": "Monaco is a sovereign city-state on the French Riviera, covering just 2.02 square kilometers — the world's second smallest country — yet housing over 38,000 residents, making it the world's most densely populated sovereign state. The principality is ruled by the Grimaldi family, one of Europe's oldest royal dynasties. Monaco's global reputation for wealth and glamour stems from its zero income tax policy, which attracts wealthy residents from across Europe and beyond, creating the world's highest concentration of high-net-worth individuals per capita. The Casino Monte-Carlo, glamorized by James Bond and countless films, remains an active casino and iconic architectural landmark. The Formula 1 Monaco Grand Prix, held through the principality's streets each May, is one of motorsport's most prestigious and spectacular events. Monaco's coastline offers excellent Mediterranean swimming, a well-equipped marina hosting some of the world's most spectacular superyachts, and access to the broader Côte d'Azur region. Real estate is among the world's most expensive, with apartment prices regularly exceeding €100,000 per square meter in prime locations. Residency in Monaco requires demonstrating sufficient financial means and maintaining accommodation in the principality. French is the official language. Monaco's quality of life is exceptional, with low crime, excellent weather, world-class restaurants, and immediate access to the broader French and Italian Riviera.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Monégasque citizens acquire nationality. Nationality is transmitted through the paternal line; children of Monégasque mothers and foreign fathers require special application."
+    },
+    "Naturalization (Very Difficult)": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years of authorized residence with at least 5 continuous years immediately preceding application, adequate means of support, moral integrity, and willingness to integrate.\n\n**In Practice:** Extremely selective; the Prince of Monaco grants nationality by sovereign ordinance at his discretion."
+    },
+    "Marriage to Monégasque": {
+      "icon": "💍",
+      "desc": "Foreign nationals married to Monégasque citizens for at least 5 years may apply for nationality after 10 years of authorized residence, subject to approval by the Prince."
+    },
+    "Residency Requirements": {
+      "icon": "🏰",
+      "desc": "Residency in Monaco requires demonstrating sufficient financial means, proof of accommodation, and good character. The waiting list for residency itself can be significant due to limited space."
+    }
+  },
+  "tax_advice": "- Monaco has zero personal income tax for residents (except French citizens)\n- No corporate income tax for most businesses (except financial activities)\n- VAT at 20% (same rate as France under customs union)\n- No capital gains tax, no inheritance tax between direct heirs, no wealth tax\n- French citizens living in Monaco are subject to French income tax under the 1963 Franco-Monégasque Treaty\n- Residency requires proof of financial means and accommodation\n- Residency is not automatic even without tax considerations; must apply and qualify\n- Monaco's CRS (Common Reporting Standard) membership means financial info shared internationally",
+  "local_tips": "- French official language; widely spoken; English in business and international community\n- Residency requires application to Direction de la Sûreté Publique; significant documentation required\n- Healthcare: CHPG hospital public; private clinics also excellent; French health system accessible for some residents\n- Extremely high cost of living; housing among world's most expensive; parking spaces cost more than flats elsewhere\n- Walking everywhere practical; Monaco is tiny (2km²) and very walkable with excellent elevator/escalator infrastructure\n- Casino etiquette: dress code applies; Monégasques cannot enter Casino de Monte-Carlo\n- Grand Prix week (May) transforms the principality; book far ahead and expect massive crowds\n- Excellent train access to Nice (25 min), Cannes (50 min), and Italian Riviera for daily escapes"
+}

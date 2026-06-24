@@ -1,0 +1,163 @@
+{
+  "continent": "Asia",
+  "name": "Turkey",
+  "iso_code": "TR",
+  "flag_url": "https://flagcdn.com/tr.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=800&q=80",
+  "description": "Straddling Europe and Asia, Turkey blends ancient history with modern energy. Istanbul is a vibrant cultural hub, while the Aegean coast offers stunning beaches and affordable Mediterranean living.\n\n## Key Highlights\n- Bridge between Europe and Asia with rich history\n- Vibrant Istanbul and Mediterranean beaches\n- Affordable living with dynamic culture",
+  "longdescription": "Turkey is a transcontinental country straddling Europe and Asia, blending cultures, histories, and contemporary dynamism. Istanbul is a major international city hosting over 15 million people, spanning two continents across the Bosphorus Strait. The city is a cultural crossroads with stunning architecture, mosques, palaces, museums, and vibrant street life. Turkey's history spans numerous civilizations: ancient Greeks, Romans, Byzantines, and Ottomans. Archaeological sites include Troy and Ephesus. The Turkish economy is one of Europe's largest, diversified across manufacturing, services, agriculture, and tourism. The cost of living is affordable, particularly outside Istanbul and major tourist areas. Turkish cuisine is sophisticated and world-renowned, with regional specialties and kebab traditions. The Aegean and Mediterranean coasts offer beautiful beaches and vacation destinations. Turkish hospitality is legendary. Turkish is the official language; English proficiency varies by region and age. Healthcare is modern in major cities and more basic elsewhere. Turkey offers visa options for remote workers, investors, and retirees. Challenges include visa restrictions, political uncertainty, economic volatility, and currency fluctuations. Women travelers and residents should be aware of cultural differences. Turkey combines historical significance, cultural dynamism, affordability, geographical beauty, and Asian-European fusion, making it attractive for adventurous expats, budget travelers, and those seeking cultural immersion.",
+  "visas": [
+    {
+      "name": "Premium work permit (Turkey)",
+      "visa_type": "work",
+      "description": "Premium work permit for highly qualified foreigners, investors, and those making significant contributions to Turkey.",
+      "benefits": [
+        "Indefinite validity",
+        "Work flexibility",
+        "Family inclusion",
+        "Path to citizenship",
+        "Strategic location"
+      ],
+      "min_income": 3000,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 250,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.goc.gov.tr/turquoise-card",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Turkey Digital Nomad Visa",
+      "visa_type": "work",
+      "description": "Turkey's Digital Nomad Visa launched in April 2024, allowing remote workers aged 21-55 from 36 eligible countries to live in Turkey for up to one year while working for foreign employers or as self-employed professionals.",
+      "benefits": [
+        "Live and work remotely in Turkey",
+        "Tax-free income for stays under 183 days",
+        "Low cost of living",
+        "Rich culture and history",
+        "Family members can apply for dependent permits"
+      ],
+      "min_income": 3000,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 150,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.goturkiye.com/digital-nomad-visa",
+      "min_age": null,
+      "max_age": 55,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Turkey Family Residence Permit",
+      "visa_type": "work",
+      "description": "Turkey's family residence permit allows non-Turkish spouses and minor children of Turkish citizens or holders of valid Turkish residence permits to join them for long-term residence in Turkey.",
+      "benefits": [
+        "Family unity in Turkey",
+        "Right to work after switching permit",
+        "Low cost of living",
+        "Rich culture and history",
+        "Strategic location bridging Europe and Asia"
+      ],
+      "min_income": 1200,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 120,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.goc.gov.tr/aile-ikamet-izni",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Turkey Student Residence Permit",
+      "visa_type": "student",
+      "description": "Turkey's student residence permit for non-Turkish nationals enrolled at a Turkish university or higher education institution, granting them the right to live in Turkey for the duration of their studies.",
+      "benefits": [
+        "Study in Turkey",
+        "Affordable tuition fees",
+        "Rich cultural experience",
+        "Schengen-adjacent location",
+        "Part-time work option with work permit"
+      ],
+      "min_income": 0,
+      "min_income_currency": "USD",
+      "min_savings": 3000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 80,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.goc.gov.tr/ogrenci-ikamet-izni",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Turkish citizen parent(s) acquire Turkish citizenship automatically. Nationality acquired through father unless born outside wedlock."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous residence, Turkish language, loyalty to Turkish state, renunciation of previous nationality, no security issues.\n\n**Processing:** Through Ministry of Interior, 6-12 months."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏛️",
+      "desc": "Limited jus soli: Children born in Turkey to unknown parents or stateless persons may acquire Turkish citizenship."
+    },
+    "Special Programs": {
+      "icon": "💰",
+      "desc": "Property investment and business investment programs may facilitate naturalization."
+    }
+  },
+  "tax_advice": "- Turkey has progressive income tax (up to 40%)\n- Corporate tax rate is 22% (reduced rates available for certain sectors)\n- VAT at 18% (reduced rates of 8%, 1%, and 0%)\n- Non-residents taxed on Turkey-source income and foreign income from Turkish business\n- Capital gains from security transactions exempt if held 1+ years\n- Real estate held 1+ year can exempt 50% of gain\n- Special economic zones offer significantly reduced tax rates\n- Tax residency established after 1 year of residence",
+  "local_tips": "- Turkish essential; English common in Istanbul but limited elsewhere\n- Bureaucracy can be unpredictable; connections and flexibility important\n- Healthcare: Private insurance recommended; good clinics in major cities\n- Cost of living very low; budget €700-900/month for comfortable expat lifestyle\n- Visa runs to nearby countries standard practice\n- Entrepreneurship and business formation relatively straightforward\n- Weather hot and dry in summer; prepare for significant heat"
+}

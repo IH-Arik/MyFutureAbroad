@@ -1,0 +1,130 @@
+{
+  "continent": "Europe",
+  "name": "Poland",
+  "iso_code": "PL",
+  "flag_url": "https://flagcdn.com/pl.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?auto=format&fit=crop&w=800&q=80",
+  "description": "A dynamic Central European nation with rich history and a booming economy. Poland offers affordable living costs, growing tech opportunities, and a vibrant cultural scene centered in Warsaw and Krakow.\n\n## Key Highlights\n- Affordable living costs with booming economy\n- Growing tech and startup ecosystem\n- Rich history and vibrant cultural scene",
+  "longdescription": "Poland is a Central European nation with a rich, complex history and increasingly dynamic modern economy. Warsaw, the capital, has been rebuilt multiple times and now represents modern Polish ambition with contemporary architecture alongside historical sites. Krakow is known for its preserved medieval old town, cultural heritage, and thriving arts scene. Poland's economy is one of Europe's fastest-growing, driven by manufacturing, IT, finance, and consumer services. The country has developed a significant tech sector, with Krakow and Warsaw hosting growing startup ecosystems. The cost of living is lower than Western Europe, making Poland attractive for remote workers and digital nomads. Polish cuisine is hearty and flavorful, with strong traditions. Polish people are generally friendly and welcoming to foreigners, though learning some Polish is appreciated. Healthcare is adequate and affordable. The education system is improving and university education is affordable. English proficiency is increasing among younger people and urban professionals. Poland offers various visa options for remote workers, entrepreneurs, and investors. The country combines European EU membership with affordability and opportunities. Challenges include language barriers outside major cities, visa bureaucracy, and stereotypes. Poland's economy and opportunities are rapidly developing. Poland combines affordability, economic dynamism, tech opportunities, cultural richness, EU membership, and increasingly international character, making it attractive for those seeking Central European living with growth opportunities and low costs.",
+  "visas": [
+    {
+      "name": "Work and residence (Poland)",
+      "visa_type": "work",
+      "description": "Work and residence permit for non-EU citizens with employment in Poland.",
+      "benefits": [
+        "Low cost of living",
+        "Growing economy",
+        "Schengen access",
+        "Path to permanent residency",
+        "Central location"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 36,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 120,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://udsc.gov.pl/en/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Poland Family Reunification Visa",
+      "visa_type": "work",
+      "description": "Poland's family reunification visa allows non-EU spouses and minor children of legal Polish residents to join them in Poland, provided the sponsor meets accommodation and income requirements.",
+      "benefits": [
+        "Family unity in Poland",
+        "Right to work",
+        "Affordable cost of living",
+        "Central European location",
+        "Path to permanent residency"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "PLN",
+      "min_savings": 0,
+      "min_savings_currency": "PLN",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 80,
+      "application_fee_currency": "PLN",
+      "required_documents": [],
+      "official_link": "https://udsc.gov.pl/en/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Poland Student Visa",
+      "visa_type": "student",
+      "description": "Poland's student visa and residence permit for non-EU nationals enrolled in a full-time study programme at a Polish university or accredited educational institution.",
+      "benefits": [
+        "Study at Polish universities",
+        "Affordable tuition and living costs",
+        "Central European location",
+        "Part-time work permitted",
+        "Schengen Area travel"
+      ],
+      "min_income": 0,
+      "min_income_currency": "PLN",
+      "min_savings": 3600,
+      "min_savings_currency": "PLN",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 80,
+      "application_fee_currency": "PLN",
+      "required_documents": [],
+      "official_link": "https://udsc.gov.pl/en/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Polish citizen(s) acquire Polish citizenship automatically. Ancestry-based claims available through Ministry of Interior."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 3-5 years legal residence (EU/EEA: 2 years), Polish language, knowledge of Polish culture/constitution, renunciation of previous citizenship.\n\n**Processing:** Through local voivodeship office, 6-12 months."
+    },
+    "Spouse and Family": {
+      "icon": "💍",
+      "desc": "Spouses of Polish citizens and Polish diaspora may apply with simplified procedures and reduced residence requirements."
+    },
+    "EU Citizens": {
+      "icon": "🇪🇺",
+      "desc": "EU/EEA citizens enjoy preferential treatment and can naturalize faster."
+    }
+  },
+  "tax_advice": "- Poland has personal income tax at 17% and 32%\n- Corporate tax rate is 19% (reduced to 9% for small companies)\n- VAT at 23% (reduced rates of 8%, 5%, and 0%)\n- Non-residents taxed on Poland-source income only\n- Capital gains can be partially tax-exempt (50% exemption available)\n- CIT exemption available for reinvested profits (certain conditions)\n- Foreign tax credits available\n- IP box: preferential tax treatment for certain innovation income",
+  "local_tips": "- Polish increasingly spoken among younger people; English growing\n- Bureaucracy improving rapidly; digitalization making processes easier\n- Cost of living low; budget €700-1,000/month comfortably\n- Healthcare functional but slower than Western Europe; consider private insurance\n- Job market improving for skilled workers; networking essential\n- Visa sponsorship available for key specialists\n- Weather cold winters (minus 10-15°C common); prepare appropriately"
+}

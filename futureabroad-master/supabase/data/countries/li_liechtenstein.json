@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Liechtenstein",
+  "iso_code": "LI",
+  "flag_url": "https://flagcdn.com/li.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1476929884616-23e8d302bc89?auto=format&fit=crop&w=800&q=80",
+  "description": "The world's sixth smallest country, nestled between Switzerland and Austria in the Rhine Valley. Liechtenstein is a prosperous Alpine principality with a surprising industrial base, low tax rates, and stunning mountain scenery.\n\n## Key Highlights\n- Scenic Alpine principality with medieval Vaduz Castle\n- Among Europe's wealthiest nations per capita\n- Low-tax environment with strong manufacturing and financial sector",
+  "longdescription": "Liechtenstein is a tiny principality of just 160 square kilometers nestled between Switzerland and Austria in the Rhine Valley, yet it ranks among the world's wealthiest nations per capita with a highly developed financial services sector and substantial manufacturing base. Vaduz, the capital, features the iconic Vaduz Castle on a hill overlooking the Rhine, alongside a small but impressive collection of museums and galleries. Despite its size, Liechtenstein has a remarkably diverse economy anchored in precision manufacturing (dental products, heating equipment, power tools), financial services, and ceramics. The country uses the Swiss franc as its currency and has a customs and monetary union with Switzerland. Liechtenstein is a member of the EEA and Schengen Area but not the EU, maintaining significant autonomy. It offers extremely low tax rates, attracting international businesses and wealthy residents. The principality's small size (just 38,000 people) makes it exceptionally exclusive and intimate. The Alpine landscapes are beautiful, offering skiing, hiking, and outdoor activities across multiple seasons. Immigration and residency are strictly controlled, with very limited pathways for foreign nationals. Liechtenstein's political stability, extraordinary prosperity, and natural beauty make it a fascinating if highly exclusive destination that deserves more attention from those exploring Central Europe.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Liechtenstein citizens automatically acquire citizenship. Citizenship passes through the paternal line; children of citizen mothers and foreign fathers require special application."
+    },
+    "Naturalization (Very Selective)": {
+      "icon": "📋",
+      "desc": "**Requirements:** 30 years of residence for ordinary naturalization (10 years if born in Liechtenstein), integration, language, clean record. Voted on by local municipality.\n\n**Processing:** Extremely long and selective. Voted by municipal council."
+    },
+    "Exceptional Naturalization": {
+      "icon": "⭐",
+      "desc": "Parliament may grant citizenship to individuals with particular merit to Liechtenstein. Also available for those married 5+ years to a citizen with 5 years residence."
+    },
+    "No Dual Citizenship Generally": {
+      "icon": "⚠️",
+      "desc": "Liechtenstein generally does not permit dual citizenship. Naturalizing citizens must renounce their previous nationality."
+    }
+  },
+  "tax_advice": "- Liechtenstein has very low income tax (1.2% to 8% cantonal/communal rates + national tax)\n- Effective combined income tax rate rarely exceeds 20% even for high earners\n- Corporate tax at approximately 12.5% effective rate\n- VAT at 7.7% (same as Switzerland, part of Swiss customs union)\n- No inheritance tax for direct family members; modest rates for others\n- No wealth tax exceeding modest annual base\n- Participation exemption for qualifying dividends and capital gains at holding level\n- High-net-worth individuals may negotiate lump-sum taxation agreements",
+  "local_tips": "- German official language; English spoken in business but everyday German essential\n- Residency permit application through Ausländeramt; requires appointment booked in advance\n- Healthcare mandatory Swiss insurance (Grundversicherung) required within 3 months; very expensive\n- Extremely high cost of living; budget CHF 4,000-6,000+/month even outside Zurich/Geneva\n- Rhine Valley location very scenic; hiking and cycling from Vaduz excellent\n- Swiss cross-border shopping common; residents regularly shop in Austria and Switzerland for staples\n- Very small community; everyone knows everyone; discretion and respect for neighbors important\n- Train connections to Zurich (1 hour) and Innsbruck easy for wider European travel"
+}

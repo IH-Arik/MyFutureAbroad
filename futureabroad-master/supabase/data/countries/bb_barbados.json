@@ -1,0 +1,100 @@
+{
+  "continent": "North America",
+  "name": "Barbados",
+  "iso_code": "BB",
+  "flag_url": "https://flagcdn.com/bb.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80",
+  "description": "A Caribbean gem known for pristine beaches, rum, cricket, and a welcoming culture. Barbados offers a high standard of living, English as the official language, and a popular digital nomad visa.\n\n## Key Highlights\n- English-speaking Caribbean island nation\n- Barbados Welcome Stamp for remote workers (up to 12 months)\n- Excellent infrastructure by Caribbean standards",
+  "longdescription": "Barbados is a small island nation in the eastern Caribbean, widely regarded as one of the most developed and stable countries in the region. Its famous white-sand beaches, turquoise waters, and warm year-round climate make it a top tourist destination. Bridgetown, the capital, is a UNESCO World Heritage Site. The country has a high literacy rate, strong healthcare system, and reliable infrastructure. English is the official language, making it very accessible for expats. Barbados introduced the Barbados Welcome Stamp, a 12-month remote work visa that attracted digital nomads globally. The economy is based on tourism, financial services, and offshore business. The cost of living is relatively high by Caribbean standards but comparable to small European nations. It is an ideal destination for retirees, remote workers, and those seeking Caribbean island life with modern comforts.",
+  "visas": [
+    {
+      "name": "Barbados Welcome Stamp",
+      "visa_type": "digital_nomad",
+      "description": "The Barbados Welcome Stamp is a 12-month renewable remote work visa for individuals who can work remotely for an employer outside Barbados.",
+      "benefits": [
+        "Live and work remotely for 12 months",
+        "Renewable for another 12 months",
+        "Family members included",
+        "Access to beaches and Caribbean lifestyle",
+        "No Barbados income tax on foreign-sourced income"
+      ],
+      "min_income": 50000,
+      "min_income_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 7,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 2000,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of employment or self-employment outside Barbados",
+        "Proof of income ($50,000+ per year)",
+        "Health insurance",
+        "Police certificate"
+      ],
+      "official_link": "https://www.visitbarbados.org/barbados-welcome-stamp",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Barbados Retirement Visa",
+      "visa_type": "retirement",
+      "description": "Retirement residence permit for individuals who wish to retire in Barbados with proven passive income.",
+      "benefits": [
+        "Live in Barbados year-round",
+        "Access to quality healthcare",
+        "English-speaking environment",
+        "Stable political climate"
+      ],
+      "min_income": 2000,
+      "min_income_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Long-term retirees may apply for permanent residency after extended continuous stay.",
+      "application_fee_usd": 750,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of pension or retirement income",
+        "Health insurance",
+        "Police clearance",
+        "Medical certificate"
+      ],
+      "official_link": "https://immigration.gov.bb",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Barbados Welcome Stamp: 12-month remote work visa available online\n- Retirement visa available for those with passive income\n- Citizens of CARICOM countries have freedom of movement",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children born to Barbadian citizen parents acquire citizenship automatically at birth regardless of where they are born."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years lawful residence (5 years for CARICOM nationals), English language, good character, intention to remain in Barbados.\n\n**Processing:** Through Ministry of Home Affairs, 6-12 months."
+    },
+    "Spouse of Barbadian Citizen": {
+      "icon": "💍",
+      "desc": "Foreign spouses may apply after 3 years of marriage with continuous residence in Barbados."
+    },
+    "CARICOM Citizens": {
+      "icon": "🌍",
+      "desc": "Citizens of CARICOM member states enjoy freedom of movement within the Caribbean Community, with simplified residency and shorter naturalization timelines."
+    }
+  },
+  "tax_advice": "- Personal income tax: 12.5% on first BBD $50,000; 28.5% above that\n- Corporate tax rate: 5.5% to 1% on a sliding scale (reduced for larger companies)\n- VAT at 17.5% standard rate\n- No capital gains tax in Barbados\n- Welcome Stamp holders: income earned from foreign sources is not taxed in Barbados\n- Barbados has tax treaties with Canada, USA, UK, and several others\n- Non-resident income from Barbados sources subject to withholding tax\n- Property transfer tax applies on sale of real estate"
+}

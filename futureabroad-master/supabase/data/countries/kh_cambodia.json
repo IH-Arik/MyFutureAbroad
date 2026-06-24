@@ -1,0 +1,98 @@
+{
+  "continent": "Asia",
+  "name": "Cambodia",
+  "iso_code": "KH",
+  "flag_url": "https://flagcdn.com/kh.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
+  "description": "Home to the ancient temples of Angkor Wat, Cambodia offers an affordable lifestyle, a welcoming expat community, and a rapidly growing economy in Southeast Asia.\n\n## Key Highlights\n- Angkor Wat — one of the world's greatest archaeological sites\n- Very low cost of living\n- Easy long-term visa options for expats",
+  "longdescription": "Cambodia is a Southeast Asian nation with a fascinating history, from the glory of the ancient Khmer Empire to the tragic Khmer Rouge era, and now a country rapidly rebuilding and modernizing. Phnom Penh, the capital, is a growing city with cafes, restaurants, and a lively expat scene. Siem Reap is the gateway to Angkor Wat, one of the most awe-inspiring archaeological complexes on earth. The cost of living is extremely low — accommodation, food, and transport are cheap compared to most of the world. Cambodia uses the US dollar alongside the Khmer riel, making financial life straightforward for Western expats. The country offers flexible long-stay visa options. Khmer is the official language but English is widely spoken in tourist areas and cities. Cambodia is ideal for digital nomads, retirees, and adventurous expats seeking affordable Southeast Asian living.",
+  "visas": [
+    {
+      "name": "Cambodia E-Class Visa (Tourist)",
+      "visa_type": "tourist",
+      "description": "The E-class tourist visa allows entry for tourism and can be extended multiple times inside Cambodia, making it popular with long-stay visitors and expats.",
+      "benefits": [
+        "Extendable up to 12 months in-country",
+        "Easy to obtain online or on arrival",
+        "Low cost",
+        "Multiple entry possible with extensions"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 3,
+      "validity_months": 1,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 30,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Valid passport (6+ months)",
+        "Passport photo",
+        "Return or onward ticket",
+        "Hotel booking (recommended)"
+      ],
+      "official_link": "https://evisa.gov.kh",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Cambodia Ordinary Resident Visa",
+      "visa_type": "retirement",
+      "description": "Long-term resident visa for retirees and self-sufficient individuals wanting to live in Cambodia. One of the most flexible and affordable expat visas in Southeast Asia.",
+      "benefits": [
+        "12-month stay",
+        "Renewable indefinitely",
+        "Very low cost of living",
+        "No minimum income requirement",
+        "USD-based economy"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 7,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 290,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Passport photo",
+        "Bank statement or proof of funds",
+        "Application form"
+      ],
+      "official_link": "https://www.mfaic.gov.kh",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- E-Class (tourist/business) visa: extendable up to 1 year\n- Ordinary Resident visa available for retirees and investors\n- No capital gains tax; USD widely accepted",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of at least one Cambodian citizen parent acquire citizenship automatically at birth, regardless of country of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years lawful residence, Khmer language ability, renunciation of previous nationality, good moral character, financial stability.\n\n**Processing:** Royal Decree required; through Ministry of Interior, can take several years."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏛️",
+      "desc": "Children born in Cambodia to Cambodian parents acquire citizenship. Foundlings discovered in Cambodia may also be granted citizenship."
+    },
+    "Investment Citizenship": {
+      "icon": "💰",
+      "desc": "Cambodia does not have a formal citizenship-by-investment program. However, significant investors may petition for citizenship via special government consideration."
+    }
+  },
+  "tax_advice": "- Personal income tax: 0% to 20% progressive rates\n- Corporate tax: flat 20% on profits (reduced rates for small enterprises)\n- VAT at 10% (standard rate); exports are zero-rated\n- Non-residents taxed on Cambodia-sourced income only at 14% withholding\n- No capital gains tax on most assets (real estate gains taxed separately)\n- USD widely accepted; tax can be paid in either USD or Khmer Riel\n- Special Economic Zones offer tax holidays of up to 9 years\n- Limited tax treaty network; check for your home country agreement"
+}

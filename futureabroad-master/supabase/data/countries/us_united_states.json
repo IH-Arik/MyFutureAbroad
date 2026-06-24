@@ -1,0 +1,30 @@
+{
+  "continent": "North America",
+  "name": "United States",
+  "iso_code": "US",
+  "flag_url": "https://flagcdn.com/us.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=800&q=80",
+  "description": "The world's largest economy and global cultural powerhouse, the United States offers unparalleled career opportunities, diverse landscapes, and world-class universities. From Silicon Valley to New York City, innovation and ambition define the American experience.\n\n## Key Highlights\n- World's largest economy with unmatched career opportunities\n- World-class universities and technology innovation hubs\n- Extraordinarily diverse landscapes and multicultural society",
+  "longdescription": "The United States is the world's largest economy and most globally influential nation, comprising 50 diverse states spanning an entire continent. From the technology corridors of Silicon Valley to the financial powerhouse of New York City, the US offers unparalleled professional opportunities across virtually every industry. The country is home to the world's leading universities, including Harvard, MIT, and Stanford, which attract talent from every corner of the globe. American culture, entertainment, and innovation have shaped global society through technology, film, music, and media. The landscape is extraordinarily diverse, from the rocky coastlines of New England to the sunny beaches of Florida, the Rocky Mountains, the Great Plains, and Hawaii's tropical islands. Immigration to the US is highly competitive and complex, with visa categories catering to skilled workers, investors, students, and family members. The H-1B visa is the primary pathway for skilled workers, while the EB-5 investor visa requires substantial capital. American healthcare is world-class but expensive, making health insurance essential. The cost of living varies dramatically by region, with major coastal cities being expensive but interior states offering more affordability. The American dream of opportunity and reinvention continues to attract millions of ambitious individuals seeking education, career advancement, and a better life in the world's most powerful democracy.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Birth (Jus Soli)": {
+      "icon": "🏛️",
+      "desc": "Children born on US soil automatically acquire citizenship regardless of parents' nationality. Birthright citizenship is enshrined in the 14th Amendment."
+    },
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of US citizens may acquire citizenship at birth even if born abroad, subject to residency requirements of the citizen parent."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years as Lawful Permanent Resident (3 years if married to US citizen), English language, US history and civics test, good moral character, no criminal record.\n\n**Processing:** 8-24 months depending on field office."
+    },
+    "Investor Pathway": {
+      "icon": "💰",
+      "desc": "EB-5 Immigrant Investor Program requires $800,000-$1,050,000 investment creating 10 full-time jobs, leading to Green Card and eventual citizenship."
+    }
+  },
+  "tax_advice": "- US has progressive federal income tax (10% to 37%) plus state income taxes (0% to 13.3%)\n- Corporate tax rate is 21% at federal level; state taxes vary\n- Capital gains rates of 0%, 15%, or 20% depending on income\n- US taxes citizens and permanent residents on worldwide income regardless of residence\n- FBAR and FATCA require reporting of foreign bank accounts and assets\n- Foreign Earned Income Exclusion (FEIE) allows up to ~$120k exclusion for abroad residents\n- Sales tax varies by state (0% to over 10%); no federal sales tax\n- Estate tax applies to estates over $13+ million; gift tax rules apply",
+  "local_tips": "- English is the primary language but dialects, accents, and slang vary enormously by region\n- Healthcare expensive and insurance critical; marketplace plans available for non-employer coverage\n- Social Security Number (SSN) essential for banking, employment, and tax filing\n- Cost of living varies dramatically: NYC/SF very expensive; midwest/south much more affordable\n- US visa system complex; work with an immigration attorney for best outcomes\n- Tipping culture expected: 18-25% at restaurants, 15-20% for taxis/Uber, $1-2/bag for hotel\n- Credit score system important; build it carefully from arrival using secured cards\n- State varies enormously in laws, taxes, climate, culture; research specific state before choosing where to live"
+}

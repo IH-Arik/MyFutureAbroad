@@ -1,0 +1,30 @@
+{
+  "continent": "South America",
+  "name": "Argentina",
+  "iso_code": "AR",
+  "flag_url": "https://flagcdn.com/ar.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&w=800&q=80",
+  "description": "The land of tango, Malbec, and Patagonia offers one of South America's richest cultural experiences. Despite economic challenges, Argentina's sophisticated Buenos Aires, extraordinary natural landscapes, and warm people create an irresistible destination.\n\n## Key Highlights\n- World-class Malbec wine and legendary Argentine beef cuisine\n- Dramatic Patagonia with glaciers and some of the world's finest wilderness\n- Vibrant Buenos Aires with world-class tango, culture, and nightlife",
+  "longdescription": "Argentina is South America's second largest country, extending from the subtropical north to the subarctic reaches of Patagonia and Tierra del Fuego, encompassing extraordinary natural diversity. Buenos Aires, the capital, is one of Latin America's most sophisticated and European-influenced cities, with world-class restaurants, tango culture, vibrant nightlife, and a passionate football culture. Argentina is renowned globally for its premium Malbec wines from Mendoza and exceptional beef, with Argentine asado (barbecue) culture deeply embedded in national identity. Patagonia in the south offers some of the planet's most dramatic landscapes: Perito Moreno Glacier, the jagged Fitz Roy massif, and pristine wilderness that draws adventurers from around the world. The country has a highly educated, largely European-descended population with strong cultural and intellectual traditions. Argentina has faced persistent economic challenges including chronic inflation and currency instability, which has paradoxically made it very affordable for those earning in foreign currencies — digital nomads and remote workers can live extremely well on modest US dollar incomes. Spanish is the official language, with the distinctive Rioplatense accent. Despite economic challenges, Argentina's cultural richness, natural beauty, food culture, and warm people make it deeply appealing and one of South America's most compelling destinations.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Argentine citizens automatically acquire citizenship regardless of birthplace."
+    },
+    "Naturalization (Very Accessible)": {
+      "icon": "📋",
+      "desc": "**Requirements:** Only 2 years continuous legal residence, evidence of 'good morals,' means of legitimate livelihood, no criminal record.\n\n**Processing:** Through National Migration Authority, 3-12 months. One of the most accessible in the world."
+    },
+    "Spouse of Argentine Citizen": {
+      "icon": "💍",
+      "desc": "Spouses of Argentine citizens may apply immediately (no minimum residence) if they can demonstrate continuous cohabitation and marriage."
+    },
+    "Birthright Citizenship": {
+      "icon": "🇦🇷",
+      "desc": "Children born on Argentine soil acquire Argentine citizenship automatically (jus soli), regardless of parents' nationality — one of the world's most generous birthright citizenship policies."
+    }
+  },
+  "tax_advice": "- Argentina has progressive income tax (5% to 35%)\n- Corporate tax at 35%\n- VAT at 21% (reduced rates of 10.5% and 0%)\n- Extraordinary inflation means real-terms calculations are complex\n- Withholding taxes of 7-35% on payments to non-residents\n- Wealth/assets tax (Bienes Personales) at 0.5-1.5% annually\n- High effective tax burden for businesses but enforcement variable\n- Official and informal exchange rates differ significantly; tax planning complex\n- Digital nomads may qualify for special income tax treatment on foreign earnings",
+  "local_tips": "- Spanish official; Argentine Spanish distinct with vos usage and Italian-influenced accent\n- DNI (national identity document) or cedula required; for long-term residents, obtain CUIL/CUIT\n- Healthcare: private clinics excellent in Buenos Aires; OSDE insurance recommended\n- Currency situation complex; blue dollar (informal) rate much better than official; seek local advice\n- Cost of living very low in USD/EUR terms despite high local inflation\n- Buenos Aires: research neighborhoods (Palermo, Belgrano, Recoleta) for best expat fit\n- Safety variable by neighborhood and city; research before going to unfamiliar areas\n- Argentines eat dinner very late (10pm-midnight); social life starts extremely late by most standards"
+}

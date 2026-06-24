@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Moldova",
+  "iso_code": "MD",
+  "flag_url": "https://flagcdn.com/md.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1627408236286-3f36d5e0d9d7?auto=format&fit=crop&w=800&q=80",
+  "description": "Europe's least visited country harbors a remarkable secret: thousands of cave wine cellars making it one of the world's most surprising wine destinations. Moldova is modernizing rapidly with EU candidate status driving significant reform.\n\n## Key Highlights\n- World-class wine country with cave cellars holding millions of bottles\n- Europe's most affordable destination for budget travelers\n- EU candidate status driving rapid modernization and reform",
+  "longdescription": "Moldova is a small landlocked Eastern European nation sandwiched between Romania and Ukraine, often cited as Europe's least visited country despite having genuine attractions for curious travelers. Chișinău, the capital, is a pleasant city with Soviet-era architecture, excellent restaurants, and an increasingly cosmopolitan atmosphere as the country modernizes. The country's extraordinary wine culture is its most compelling draw — Cricova and Mileștii Mici operate the world's largest wine cellars, with tens of kilometers of underground tunnels carved into limestone holding millions of bottles. Moldova consistently produces excellent wines, particularly from indigenous Fetească grape varieties, at astonishingly low prices. The country received EU candidate status in 2022, following Russia's invasion of Ukraine, and is working toward reforms that may lead to EU membership within the next decade. This prospect is driving modernization across governance, infrastructure, and digital services. Moldova is home to the breakaway region of Transnistria, a Soviet-era enclave along the Dniester River that operates quasi-independently. The cost of living is among Europe's lowest, and the country offers genuine hospitality. Romanian-speaking Moldovans can travel on Romanian passports, granting EU rights. The country faces challenges including poverty, significant emigration, and dependency on remittances from the diaspora, but offers remarkable character.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Moldovan citizens automatically acquire citizenship regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence (8 years for stateless persons, 5 years for those with meritorious contributions), Romanian/Moldovan language competency, knowledge of constitution, financial stability.\n\n**Processing:** Through State Citizenship Agency, 12-24 months."
+    },
+    "Romanian Citizenship Option": {
+      "icon": "🇷🇴",
+      "desc": "Many ethnic Moldovans of Romanian heritage can apply for Romanian citizenship (and thus EU citizenship) under Romanian re-acquisition laws. This is widely used and provides EU freedom of movement."
+    },
+    "EU Aspirations": {
+      "icon": "🇪🇺",
+      "desc": "Moldova has EU candidate status. Future accession could automatically confer EU rights on Moldovan citizens, though this is still years away."
+    }
+  },
+  "tax_advice": "- Moldova has flat 12% personal income tax\n- Corporate tax at 12%\n- VAT at 20% (reduced rates of 12%, 8%, and 0%)\n- Non-residents taxed on Moldova-source income only\n- Capital gains generally taxed at standard 12% income tax rate\n- No inheritance tax between direct family members\n- Moldova has limited double tax treaty network\n- EU association agreement provides some harmonization of tax rules\n- Wine export sector receives certain preferential fiscal treatments",
+  "local_tips": "- Romanian/Moldovan is the official language; Russian widely spoken by minorities\n- Registration required within 30 days at local Civil Records Office\n- Healthcare: private clinics in Chișinău adequate; medical insurance for serious conditions needed\n- Cost of living among Europe's lowest; budget €400-600/month comfortably\n- Wine experience genuinely extraordinary; Cricova winery tours world-class\n- Power outages historically common; have backup solutions especially in winter\n- Transnistria region interesting day trip from Chișinău; carry passport and be aware of unusual rules\n- Romanian citizenship option widely pursued by eligible Moldovans for EU freedom of movement"
+}

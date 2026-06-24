@@ -1,0 +1,102 @@
+{
+  "continent": "South America",
+  "name": "Colombia",
+  "iso_code": "CO",
+  "flag_url": "https://flagcdn.com/co.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1561553873-e8491a564fd0?auto=format&fit=crop&w=800&q=80",
+  "description": "A vibrant South American nation famous for its coffee, salsa music, biodiversity, and stunning landscapes from the Amazon to the Caribbean coast. Medellín is now a global innovation hub.\n\n## Key Highlights\n- World's richest biodiversity and stunning landscapes\n- Medellín named world's most innovative city\n- Affordable cost of living with warm climate",
+  "longdescription": "Colombia has undergone a remarkable transformation over the past two decades, shedding its troubled past to emerge as one of Latin America's most exciting destinations for expats, entrepreneurs, and tourists. Bogotá, the capital, is a sprawling city at altitude with world-class museums, restaurants, and a growing tech sector. Medellín, once infamous, is now celebrated as a hub of innovation, urban renewal, and startup culture, attracting remote workers from around the world. Cartagena on the Caribbean coast is a colonial gem with colorful streets and vibrant nightlife. Colombia is the world's second most biodiverse country, with Pacific coast, Amazon jungle, Andes mountains, and Caribbean beaches all within its borders. The cost of living is very affordable. Spanish is the official language. Colombia offers various visa options for retirees, investors, and digital nomads. Coffee culture, salsa dancing, and warm Colombian hospitality make everyday life a pleasure.",
+  "visas": [
+    {
+      "name": "Colombia Digital Nomad Visa",
+      "visa_type": "digital_nomad",
+      "description": "Colombia's digital nomad visa (Nómada Digital) allows remote workers to live in Colombia for up to 2 years while working for foreign employers or clients.",
+      "benefits": [
+        "2-year renewable visa",
+        "Work legally as a remote worker",
+        "Path to residency",
+        "Affordable cost of living",
+        "Vibrant expat community"
+      ],
+      "min_income": 3000,
+      "min_income_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "After 5 years of continuous legal residence, you may apply for permanent residency.",
+      "application_fee_usd": 52,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Employment or client contract",
+        "Proof of monthly income ($3,000+)",
+        "Health insurance",
+        "Bank statements (3 months)",
+        "Police clearance"
+      ],
+      "official_link": "https://www.cancilleria.gov.co",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Colombia Pensionado Visa",
+      "visa_type": "retirement",
+      "description": "Retirement visa for those receiving a pension or regular passive income of at least 3x the Colombian minimum wage (~$650/month).",
+      "benefits": [
+        "Live in Colombia indefinitely",
+        "Renewable annually",
+        "Low cost of living",
+        "Warm climate year-round",
+        "Path to permanent residency"
+      ],
+      "min_income": 650,
+      "min_income_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "After 5 years as a visa holder, eligible to apply for permanent residency (Resident Visa).",
+      "application_fee_usd": 52,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of pension or passive income",
+        "Bank statements",
+        "Health insurance in Colombia",
+        "Police clearance"
+      ],
+      "official_link": "https://www.cancilleria.gov.co",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Digital Nomad Visa (Digital Nomad Visa): 2-year renewable visa\n- Pensionado visa for retirees with passive income\n- Investor visa (Inversionista) for business owners",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children born to at least one Colombian parent are Colombian citizens automatically, regardless of where they are born."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence (2 years for nationals of Latin American and Caribbean countries, Spain, and Ibero-American countries), Spanish language ability, good conduct, knowledge of Colombian history and constitution.\n\n**Processing:** Through Ministry of Foreign Affairs, 6-12 months."
+    },
+    "Spouse of Colombian Citizen": {
+      "icon": "💍",
+      "desc": "Foreign spouses may apply after 1 year of marriage with continuous legal residence in Colombia."
+    },
+    "Latin American / Spanish Nationals": {
+      "icon": "🌍",
+      "desc": "Nationals of Latin American, Caribbean, and Spanish-speaking countries benefit from reduced residence requirements (2 years) due to regional integration agreements."
+    }
+  },
+  "tax_advice": "- Personal income tax: 0% to 39% progressive scale\n- Corporate tax: 35% (plus 10% surcharge for some sectors like oil)\n- VAT at 19% standard rate; essential goods exempt or taxed at 5%\n- Non-residents taxed on Colombia-sourced income at flat 35%\n- Digital nomad visa holders: income earned abroad not taxed in Colombia\n- Capital gains taxed at 10% flat rate (separate from ordinary income)\n- Wealth tax applies to net assets above COP 3 billion (~$750,000)\n- Tax treaties with 9+ countries including Spain, Canada, Chile, Mexico, India"
+}

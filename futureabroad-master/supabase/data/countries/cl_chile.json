@@ -1,0 +1,30 @@
+{
+  "continent": "South America",
+  "name": "Chile",
+  "iso_code": "CL",
+  "flag_url": "https://flagcdn.com/cl.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80",
+  "description": "A long, narrow country stretching along South America's Pacific coast, known for the Atacama Desert, Patagonia, and the Andes. Chile offers stability and economic opportunities in South America.\n\n## Key Highlights\n- Diverse landscapes from desert to mountain to coast\n- Political and economic stability in the region\n- Strong opportunities in mining and technology sectors",
+  "longdescription": "Chile is one of South America's most developed and stable nations, stretching along the continent's western edge with an extraordinary range of landscapes. The country extends from the world's driest desert, the Atacama, in the north to the windswept fjords and glaciers of Patagonia in the south. The Andes Mountains form the country's eastern border, creating dramatic terrain. Santiago, the capital, is a modern cosmopolitan city with excellent infrastructure, restaurants, cultural venues, and business opportunities. Chile's economy is relatively diversified and stable, with mining, particularly copper, remaining a major industry, but technology and renewable energy sectors rapidly expanding. The country ranks high in South America for economic development and is considered one of the region's safest destinations. Healthcare and education standards are above regional averages, and infrastructure is relatively modern. Chile offers lower costs of living than developed nations while maintaining good services in urban areas. The country's legal system is well-developed, making business operations relatively straightforward for foreign investors. Expats are attracted to Chile for its stability, natural beauty, and economic opportunities in tech, renewable energy, mining, and tourism sectors. The wine industry is world-renowned, offering unique opportunities. Chile's commitment to environmental sustainability and renewable energy development presents growing opportunities. However, political changes and economic adjustments have created recent volatility.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Chilean citizens automatically acquire citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous residence (reduced for Latin Americans, Portuguese, Spanish), Spanish language ability, adherence to Chilean Constitution, good moral character.\n\n**Processing:** Application through Ministry of Interior, typically 6-12 months."
+    },
+    "Spouse Naturalization": {
+      "icon": "💍",
+      "desc": "Spouses of Chilean citizens may apply after 1 year of marriage with 5-year residence requirement reduced to 1 year."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏔️",
+      "desc": "Children born in Chile to at least one Chilean parent acquire citizenship automatically."
+    }
+  },
+  "tax_advice": "- Chile has a progressive tax system (up to 37%)\n- Corporate tax (impuesto a la renta) is a flat 27% on profits\n- VAT at 19% (standard rate applies to most goods/services)\n- Foreign-source income only taxed if remitted to Chile\n- Generous tax deductions for personal expenses and business costs\n- Pension contributions (up to 10%) are mandatory and tax-deductible\n- Capital gains can be taxable depending on holding period and circumstances\n- Mining industry receives special tax treatment and incentives",
+  "local_tips": "- Spanish is essential; English limited outside Santiago and tourist areas\n- Healthcare excellent public system; FONASA registration recommended\n- High internet speeds and tech-forward infrastructure\n- Cost of living rising rapidly; budget accordingly for Santiago\n- Visa requirements can be navigated with tourism loop if needed\n- Strong wine culture; explore local vineyards in Central Valley\n- Weather varies dramatically by region; choose location carefully"
+}

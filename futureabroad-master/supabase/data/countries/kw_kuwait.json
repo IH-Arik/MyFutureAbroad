@@ -1,0 +1,67 @@
+{
+  "continent": "Asia",
+  "name": "Kuwait",
+  "iso_code": "KW",
+  "flag_url": "https://flagcdn.com/kw.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1600240644455-3edc55c375fe?auto=format&fit=crop&w=800&q=80",
+  "description": "A wealthy Gulf state with no personal income tax, a high standard of living, and a thriving expat community making up over 70% of the population. Kuwait City is a modern metropolis with a rich trading heritage.\n\n## Key Highlights\n- No personal income tax\n- One of the highest GDP per capita in the world\n- Large expat community with world-class amenities",
+  "longdescription": "Kuwait is a small but extremely wealthy emirate at the northwestern tip of the Persian Gulf. Its vast oil reserves have made it one of the world's richest countries, with a GDP per capita among the highest globally. Kuwait City is a modern, air-conditioned metropolis with luxury malls, fine dining, and excellent healthcare and education facilities. There is no personal income tax, making employment packages very attractive. The expat population accounts for over 70% of Kuwait's residents, creating a diverse, multicultural environment with communities from across South Asia, the Arab world, and Western countries. Arabic is the official language, but English is widely used in business. The cost of living is high but manageable given the generous salary packages typically offered. Kuwait offers a safe, well-organized, high-income lifestyle, though social restrictions apply (alcohol is prohibited).",
+  "visas": [
+    {
+      "name": "Kuwait Work Visa",
+      "visa_type": "work",
+      "description": "Kuwait work visa for foreign nationals sponsored by a Kuwaiti employer. No income tax makes Kuwait employment packages very attractive. Residency tied to employment.",
+      "benefits": [
+        "No personal income tax",
+        "High salary packages",
+        "Modern city amenities",
+        "Tax-free savings",
+        "Large expat community"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 100,
+      "application_fee_currency": "KWD",
+      "required_documents": [
+        "Passport",
+        "Employer sponsorship letter",
+        "Medical fitness certificate",
+        "Police clearance",
+        "Educational certificates",
+        "Passport photos"
+      ],
+      "official_link": "https://www.moi.gov.kw",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Work visa requires Kuwait employer sponsorship\n- Residency tied to employment contract (Kafala system)\n- Investor residence available for business owners",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Kuwaiti fathers acquire citizenship automatically. Citizenship through Kuwaiti mothers is more restricted and requires special government approval."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 20 years continuous legal residence for non-Arabs; 15 years for Arab nationals. Arabic language, good conduct, no criminal record, renunciation of previous citizenship.\n\n**Processing:** By Amiri decree only; extremely selective. Granted to very few foreigners each year."
+    },
+    "Bedoon Status": {
+      "icon": "📋",
+      "desc": "Stateless long-term residents (Bedoon) have a separate administrative status and limited pathway to citizenship under special review processes."
+    },
+    "Merit Recognition": {
+      "icon": "⭐",
+      "desc": "Citizenship may be granted by royal decree to individuals of exceptional achievement or service to Kuwait, at the discretion of the Amir."
+    }
+  },
+  "tax_advice": "- No personal income tax in Kuwait — zero for all residents\n- No corporate income tax for Kuwaiti-owned businesses\n- Foreign companies operating in Kuwait pay 15% KNET tax on profits\n- No VAT currently (though GCC VAT framework may be implemented)\n- No capital gains tax, inheritance tax, or wealth tax\n- Zakat: obligatory for Muslim business owners on eligible assets\n- Oil sector operated by government; private sector largely tax-free\n- Kuwait has double taxation treaties with select countries"
+}

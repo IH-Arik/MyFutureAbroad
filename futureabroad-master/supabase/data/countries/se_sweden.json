@@ -1,0 +1,166 @@
+{
+  "continent": "Europe",
+  "name": "Sweden",
+  "iso_code": "SE",
+  "flag_url": "https://flagcdn.com/se.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1638487246661-8a62aa593a16?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "description": "A Nordic leader in innovation and sustainability, Sweden boasts Stockholm's beauty, cutting-edge tech companies, and exceptional work-life balance. Known for IKEA, Spotify, and progressive social values.\n\n## Key Highlights\n- Nordic leader in innovation and sustainability\n- World-famous companies like IKEA and Spotify\n- Exceptional work-life balance and social values",
+  "longdescription": "Sweden is a Nordic nation renowned for innovation, sustainability, and exceptional quality of life. Stockholm, the capital, is built on 14 islands and ranks among the world's most beautiful capital cities. Sweden has produced world-famous companies: IKEA, Spotify, Volvo, Ericsson, and Minecraft creator Mojang. The tech sector is vibrant and global, with Stockholm's startup ecosystem rivaling Silicon Valley in some metrics. Sweden is a world leader in renewable energy and sustainability, with environmental values deeply embedded in culture. Swedes value equality, individual rights, and work-life balance. The education system is highly regarded and tuition-free through university. Healthcare is excellent. Swedish design is world-renowned for simplicity and functionality. The cost of living is high, particularly in Stockholm. Swedish is the official language, though English is widely spoken. The weather features long, dark winters and bright summers. Outdoor activities are central to Swedish life: hiking, skiing, and swimming. The Swedish concept of 'lagom' (balance and moderation) characterizes society. Sweden offers visas for skilled workers. Challenges include high costs, weather, and a somewhat reserved culture initially. Sweden combines technological innovation, sustainability leadership, design excellence, work-life balance, natural beauty, and progressive values, making it ideal for tech professionals, sustainability-focused individuals, and those valuing Nordic quality of life.",
+  "visas": [
+    {
+      "name": "Swedish work permit (Sweden)",
+      "visa_type": "work",
+      "description": "Swedish work permit for non-EU citizens with a job offer meeting salary and insurance requirements.",
+      "benefits": [
+        "Excellent work-life balance",
+        "Strong social security",
+        "Beautiful nature",
+        "Family inclusion",
+        "Path to permanent residency"
+      ],
+      "min_income": 2200,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 120,
+      "validity_months": 24,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 250,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.migrationsverket.se/en/you-want-to-apply/work.html",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Sweden Student Residence Permit",
+      "visa_type": "student",
+      "description": "Sweden's student residence permit for non-EU/EEA nationals enrolled in a full-time degree programme at a Swedish university, allowing residence for the duration of the course.",
+      "benefits": [
+        "Study at Swedish universities",
+        "Part-time work permitted",
+        "Post-study job search permit",
+        "High quality of life",
+        "Schengen Area travel"
+      ],
+      "min_income": 0,
+      "min_income_currency": "SEK",
+      "min_savings": 80640,
+      "min_savings_currency": "SEK",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 15,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 200,
+      "application_fee_currency": "SEK",
+      "required_documents": [],
+      "official_link": "https://www.migrationsverket.se/en/you-want-to-apply/study.html",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Sweden Family Reunification Residence Permit",
+      "visa_type": "work",
+      "description": "Sweden's family reunification residence permit allows the spouse, cohabiting partner, and minor children of Swedish residents to join them in Sweden. The sponsor must meet income and accommodation requirements.",
+      "benefits": [
+        "Family unity in Sweden",
+        "Right to work",
+        "Path to permanent residency",
+        "Strong social welfare system",
+        "Schengen Area travel"
+      ],
+      "min_income": 2200,
+      "min_income_currency": "SEK",
+      "min_savings": 0,
+      "min_savings_currency": "SEK",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 270,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 200,
+      "application_fee_currency": "SEK",
+      "required_documents": [],
+      "official_link": "https://www.migrationsverket.se/en/you-want-to-apply/live-with-someone/live-with-a-partner-child-or-other-relative.html",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Sweden Self-Employment Permit",
+      "visa_type": "work",
+      "description": "Sweden's self-employment permit for entrepreneurs enables non-EU nationals with an innovative business idea to establish and run a company in Sweden, subject to a viability assessment.",
+      "benefits": [
+        "Launch a startup in Sweden",
+        "Access to thriving Nordic startup ecosystem",
+        "Path to permanent residency",
+        "Strong work-life balance",
+        "Schengen Area travel"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "SEK",
+      "min_savings": 200000,
+      "min_savings_currency": "SEK",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 24,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 280,
+      "application_fee_currency": "SEK",
+      "required_documents": [],
+      "official_link": "https://www.migrationsverket.se/en/you-want-to-apply/work/start-a-business.html",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Entrepreneurship",
+        "Innovation"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Swedish citizen parent(s) acquire Swedish citizenship automatically at birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years legal residence (EU/EEA: 2 years for workers), Swedish language, stable income, good conduct.\n\n**Processing:** Through Swedish Migration Agency, 4-8 months."
+    },
+    "Spouse and Family": {
+      "icon": "💍",
+      "desc": "Spouses may apply after 2 years marriage, with EU/EEA spouses having simpler procedures."
+    },
+    "Birthright Citizenship": {
+      "icon": "🇸🇪",
+      "desc": "Children born in Sweden acquire citizenship if at least one parent is Swedish or permanent resident."
+    }
+  },
+  "tax_advice": "- Sweden has progressive income tax (up to 56.6%)\n- Corporate tax rate is 20.6%\n- VAT at 25% (reduced rates of 12% and 6%)\n- Non-residents taxed on Sweden-source income only\n- Capital gains: 30% flat tax (lower for primary residence - often exempt)\n- Wealth tax abolished in 2007\n- Tax deductions for mortgage interest and pension contributions\n- Dividend tax: 30% for standard rate (varies for retirement accounts)",
+  "local_tips": "- Swedish helpful but English universal among younger generations\n- Cost of living very high; Stockholm especially expensive; budget SEK 20,000-25,000/month\n- \"Fika\" (coffee break) culture important; embrace social/work integration\n- Healthcare excellent; mandatory registration with region's healthcare service\n- Bureaucracy efficient; personnummer (personal ID number) essential\n- Excellent work-life balance and parental leave; generous social benefits\n- Winter long and dark; seasonal depression common; prepare mentally\n- Outdoor culture strong year-round; invest in proper cold weather gear"
+}

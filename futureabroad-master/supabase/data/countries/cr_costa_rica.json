@@ -1,0 +1,103 @@
+{
+  "continent": "North America",
+  "name": "Costa Rica",
+  "iso_code": "CR",
+  "flag_url": "https://flagcdn.com/cr.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1518259102261-b40117eabbc9?auto=format&fit=crop&w=800&q=80",
+  "description": "A pioneer in eco-tourism and sustainability, Costa Rica offers lush rainforests, active volcanoes, pristine beaches, and one of the happiest populations on earth. Pura Vida!\n\n## Key Highlights\n- World leader in eco-tourism and sustainability\n- No standing army; strong focus on education and health\n- Popular retirement and digital nomad destination",
+  "longdescription": "Costa Rica is a Central American nation punching far above its weight in global rankings for happiness, sustainability, and quality of life. The country generates nearly 100% of its electricity from renewable sources and has abolished its military, redirecting funds to education and healthcare. San José is the capital, but most expats gravitate towards beach towns like Tamarindo, Manuel Antonio, and the mountain town of Monteverde. Costa Rica's biodiversity is extraordinary — it holds 5% of the world's species in just 0.03% of its area. The people, known for their \"Pura Vida\" (pure life) philosophy, are famously friendly and optimistic. The country has a well-established expat community and offers attractive retirement (Pensionado) and investor visa programs. The cost of living is moderate by Latin American standards — higher than Colombia or Peru, but much cheaper than North America or Europe. Spanish is the official language; English widely spoken in tourist areas.",
+  "visas": [
+    {
+      "name": "Costa Rica Pensionado Visa",
+      "visa_type": "retirement",
+      "description": "The Pensionado visa is ideal for retirees who can prove a monthly pension income of at least $1,000. One of the most popular retirement visas in Latin America.",
+      "benefits": [
+        "Live in Costa Rica legally",
+        "Import one vehicle and household goods duty-free",
+        "Healthcare system access (CAJA)",
+        "12% discount on utilities and transportation",
+        "Warm climate and nature"
+      ],
+      "min_income": 1000,
+      "min_income_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "After 3 years as a Pensionado, eligible to apply for permanent residency.",
+      "application_fee_usd": 100,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of monthly pension ($1,000+)",
+        "Birth certificate (apostilled)",
+        "Police clearance (apostilled)",
+        "Marriage certificate if applicable",
+        "Passport photos"
+      ],
+      "official_link": "https://migracion.go.cr",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Costa Rica Rentista Visa",
+      "visa_type": "investor",
+      "description": "For non-retirees who can demonstrate a stable passive income of $2,500/month from investments, rental income, or other sources.",
+      "benefits": [
+        "Legal long-term residency",
+        "Bring household goods duty-free",
+        "Renewable every 2 years",
+        "Path to permanent residency after 3 years",
+        "Beautiful natural environment"
+      ],
+      "min_income": 2500,
+      "min_income_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Eligible for permanent residency after 3 years of continuous legal residence.",
+      "application_fee_usd": 100,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of $2,500/month passive income",
+        "Bank statements",
+        "Police clearance (apostilled)",
+        "Birth certificate (apostilled)",
+        "Passport photos"
+      ],
+      "official_link": "https://migracion.go.cr",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Pensionado visa: proof of pension/social security income required\n- Rentista visa: show monthly passive income of $2,500+\n- Inversionista visa: invest $150,000+ in Costa Rican business or property",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children born to at least one Costa Rican parent acquire citizenship at birth, regardless of country of birth."
+    },
+    "Birthright Citizenship (Jus Soli)": {
+      "icon": "🏔️",
+      "desc": "All children born in Costa Rica acquire citizenship at birth, regardless of the parents' nationality — one of the strongest birthright citizenship laws in the region."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years lawful residence (5 years for Central Americans and Spaniards; 2 years for married spouses of Costa Ricans), Spanish language test, knowledge of Costa Rican history and constitution, good conduct.\n\n**Processing:** Through Civil Registry (Tribunal Supremo de Elecciones), 6-18 months."
+    },
+    "Spouse of Costa Rican Citizen": {
+      "icon": "💍",
+      "desc": "Foreign spouses married to Costa Ricans may apply for naturalization after just 2 years of marriage, with continuous legal residence."
+    }
+  },
+  "tax_advice": "- Personal income tax: 0% to 25% progressive (on Costa Rica-sourced income only)\n- Territorial tax system: foreign-sourced income generally not taxed\n- Corporate tax: 30% on profits for large companies; reduced rates for small/medium\n- VAT at 13% standard rate; food staples and medicines exempt\n- No capital gains tax on most assets (introduced in 2019 for certain property sales at 15%)\n- Pensionado/Rentista visa holders: foreign pension and investment income not taxed in CR\n- Digital nomad visa: foreign income not subject to Costa Rican tax\n- Real estate transfer tax at 1.5% applies on property purchases"
+}

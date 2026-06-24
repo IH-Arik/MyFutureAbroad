@@ -1,0 +1,163 @@
+{
+  "continent": "Europe",
+  "name": "Cyprus",
+  "iso_code": "CY",
+  "flag_url": "https://flagcdn.com/cy.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1677023484291-005b9840132f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "description": "A Mediterranean island paradise with year-round sunshine, beautiful beaches, and a relaxed lifestyle. Cyprus offers EU citizenship, favorable tax benefits, and a growing expat community in Nicosia and Limassol.\n\n## Key Highlights\n- Year-round sunshine and Mediterranean beaches\n- EU citizenship and favorable tax benefits\n- Growing expat community and relaxed lifestyle",
+  "longdescription": "Cyprus is a Mediterranean island nation and EU member state offering year-round sunshine, stunning beaches, and relaxed Mediterranean lifestyle. The island has strategic geographic location between Europe, Asia, and Africa. The Republic of Cyprus is divided, with the northern part controlled by Northern Cyprus (recognized only by Turkey). Nicosia is the capital, while Limassol and Paphos are major tourist and expat hubs. Cyprus offers EU citizenship through property investment programs. The cost of living is moderate, with significant affordability outside main resort areas. Healthcare is good and affordable. Mediterranean climate with over 300 days of sunshine annually. Cyprus offers various visa programs and residency options for retirees, remote workers, and investors. The economy is based on tourism, shipping, and services. English is widely spoken due to tourism and expat communities. Beaches and Mediterranean culture attract retirees and those seeking warm climates. Expat communities are well-established, providing support networks. Tax benefits are available for certain residents. Challenges include political division, financial crisis history, and visa restrictions for some nationalities. Cyprus combines Mediterranean beauty, EU membership, citizenship investment opportunities, sunshine, beaches, affordability, and established expat communities, making it attractive for retirees, remote workers, and those seeking southern European island living.",
+  "visas": [
+    {
+      "name": "Cyprus visa for (Cyprus)",
+      "visa_type": "work",
+      "description": "Cyprus visa for remote workers wanting to enjoy Mediterranean living while working for overseas employers.",
+      "benefits": [
+        "Mediterranean climate",
+        "Low cost of living",
+        "English widely spoken",
+        "EU member",
+        "Tax benefits"
+      ],
+      "min_income": 3500,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 150,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://www.moi.gov.cy/moi/crmd/crmd.nsf/dmlindex_en/dmlindex_en",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Cyprus Family Reunification Permit",
+      "visa_type": "family",
+      "description": "Cyprus's family reunification permit allows non-EU spouses and dependent children of legal Cypriot residents to join them for long-term residence in Cyprus.",
+      "benefits": [
+        "Family unity in Cyprus",
+        "EU member state",
+        "Mediterranean climate",
+        "English widely spoken",
+        "Schengen Area adjacent travel"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "EUR",
+      "min_savings": 0,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 173,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://www.moi.gov.cy/moi/crmd/crmd.nsf/dmlindex_en/dmlindex_en",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Cyprus Student Visa",
+      "visa_type": "student",
+      "description": "Cyprus's student visa for non-EU nationals enrolled at a Cypriot university or accredited higher education institution for a full-time programme lasting more than 90 days.",
+      "benefits": [
+        "Study in English-speaking EU country",
+        "Affordable tuition fees",
+        "Mediterranean climate",
+        "Part-time work permitted",
+        "European qualifications"
+      ],
+      "min_income": 0,
+      "min_income_currency": "EUR",
+      "min_savings": 5400,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 173,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://www.moi.gov.cy/moi/crmd/crmd.nsf/dmlindex_en/dmlindex_en",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Cyprus Category F Permanent Residence Permit",
+      "visa_type": "other",
+      "description": "Cyprus's Category F permanent residence permit allows non-EU nationals with sufficient independent annual income (not earned in Cyprus) to retire or live in Cyprus indefinitely.",
+      "benefits": [
+        "EU permanent residency",
+        "Mediterranean climate",
+        "Low tax environment",
+        "English widely spoken",
+        "High quality healthcare"
+      ],
+      "min_income": 30000,
+      "min_income_currency": "EUR",
+      "min_savings": 0,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 540,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://www.moi.gov.cy/moi/crmd/crmd.nsf/dmlindex_en/dmlindex_en",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Cypriot citizen parent(s) acquire Cypriot citizenship automatically at birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years legal residence (EU/EEA: 5 years), Greek language, knowledge of Cypriot culture, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of Interior, 6-12 months."
+    },
+    "Investment Citizenship": {
+      "icon": "💰",
+      "desc": "Citizenship through investment: €2 million real estate investment plus €500,000 to economic development fund."
+    },
+    "EU Citizenship": {
+      "icon": "🇪🇺",
+      "desc": "Cypriot citizenship confers EU citizenship automatically, providing visa-free access across EU/EEA."
+    }
+  },
+  "tax_advice": "- Cyprus has one of the lowest corporate tax rates in EU (0% for certain income)\n- Regular corporate tax rate is 12.5%\n- Personal income tax: 0% to 35% progressive\n- VAT at 19% (reduced rates of 9%, 5%, and 0%)\n- Non-residents taxed on Cyprus-source income only\n- Dividends received can be exempt from taxation (participation exemption)\n- Capital gains: 0% on shares (with holding requirements), 20% on real estate\n- IP holding companies receive preferential treatment\n- Non-dom individuals don't pay tax on foreign income",
+  "local_tips": "- Greek essential; English common among younger people and expat community\n- Cost of living very reasonable; budget €800-1,000/month comfortably\n- Residency straightforward; UK pension holders popular demographic\n- Healthcare adequate; private insurance recommended; EU coverage helps\n- Bureaucratic processes slow; patience and connections valuable\n- Island lifestyle: choose between quiet/developed depending on preference\n- Community strong; join local groups quickly for integration\n- Prepare for summer heat and variable winter weather"
+}

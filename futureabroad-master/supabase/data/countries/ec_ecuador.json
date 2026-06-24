@@ -1,0 +1,101 @@
+{
+  "continent": "South America",
+  "name": "Ecuador",
+  "iso_code": "EC",
+  "flag_url": "https://flagcdn.com/ec.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1544985361-b420d7a77043?auto=format&fit=crop&w=800&q=80",
+  "description": "A biodiverse gem straddling the equator, Ecuador offers the Galapagos Islands, Amazon rainforest, Andean highlands, and Pacific coast — all at a very affordable cost of living using the US dollar.\n\n## Key Highlights\n- Uses the US dollar — no currency risk\n- Galápagos Islands and extraordinary biodiversity\n- Very affordable cost of living with excellent expat community",
+  "longdescription": "Ecuador is a small but extraordinarily diverse country on South America's Pacific coast, straddling the equator (hence the name). It is home to four distinct regions: the Pacific coast, the Andes highlands, the Amazon basin, and the Galápagos Islands — one of the world's greatest natural wonders. Quito, the capital, sits at 2,850m altitude and is a UNESCO World Heritage Site with a beautifully preserved colonial center. Cuenca, another highland city, is considered one of the best retirement destinations in the world for its climate, culture, and affordability. Ecuador officially uses the US dollar, eliminating currency risk. The cost of living is very low — retirees can live comfortably for $1,500/month. The country offers straightforward residency visas with low income thresholds, making it exceptionally popular with retirees and digital nomads from North America and Europe.",
+  "visas": [
+    {
+      "name": "Ecuador Retirement Visa",
+      "visa_type": "retirement",
+      "description": "Ecuador's retirement (Jubilado) visa requires just $800/month in pension income — one of the world's lowest thresholds. Uses US dollars, making budgeting straightforward.",
+      "benefits": [
+        "Very low income requirement",
+        "USD economy — no currency risk",
+        "Galápagos access",
+        "Excellent climate in Cuenca",
+        "Import one vehicle duty-free"
+      ],
+      "min_income": 800,
+      "min_income_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "After 3 years as a temporary resident, eligible for permanent residency.",
+      "application_fee_usd": 450,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of pension income ($800+/month)",
+        "Criminal background check (apostilled)",
+        "Medical certificate",
+        "Passport photos"
+      ],
+      "official_link": "https://www.cancilleria.gob.ec",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Ecuador Digital Nomad Visa",
+      "visa_type": "digital_nomad",
+      "description": "Temporary residency for remote workers with foreign-sourced income. Ecuador uses the US dollar, making financial planning easy for North American and European nomads.",
+      "benefits": [
+        "Legal residency for 2 years",
+        "USD economy",
+        "Affordable cost of living",
+        "Four distinct ecosystems to explore",
+        "Path to permanent residency"
+      ],
+      "min_income": 1350,
+      "min_income_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "After 3 years, eligible for permanent residency.",
+      "application_fee_usd": 450,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of remote income ($1,350+/month)",
+        "Health insurance",
+        "Criminal background check (apostilled)",
+        "Bank statements"
+      ],
+      "official_link": "https://www.cancilleria.gob.ec",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Retirement visa: $800/month income requirement (one of lowest in world)\n- Digital nomad visa: $1,350/month income required\n- Investor visa: invest $30,000+ in Ecuador",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Ecuadorian citizen parents acquire citizenship automatically at birth regardless of where they are born."
+    },
+    "Birthright Citizenship": {
+      "icon": "🌎",
+      "desc": "Ecuador applies jus soli broadly: children born in Ecuador are citizens by birth, regardless of parents' nationality — one of the most open policies in the region."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 3 years lawful residence, Spanish language ability, renunciation of other citizenship, good conduct.\n\n**Processing:** Through Ministry of Foreign Affairs, 6-12 months."
+    },
+    "Spouse of Ecuadorian Citizen": {
+      "icon": "💍",
+      "desc": "Foreign spouses may apply after 2 years of marriage with residence in Ecuador."
+    }
+  },
+  "tax_advice": "- Ecuador uses the US dollar — no currency exchange concerns\n- Personal income tax: 0% to 37% progressive scale\n- Corporate tax: 25% standard rate\n- VAT at 12%; basic food and medicine exempt\n- Territorial tax system: only Ecuador-sourced income taxed for residents\n- Retirement visa holders: foreign pension income not taxed in Ecuador\n- Capital gains on real estate taxed at 10%\n- Significant tax incentives in designated investment zones"
+}

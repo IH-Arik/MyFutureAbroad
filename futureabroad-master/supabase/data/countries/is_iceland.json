@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Iceland",
+  "iso_code": "IS",
+  "flag_url": "https://flagcdn.com/is.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?auto=format&fit=crop&w=800&q=80",
+  "description": "A Nordic island nation known for its stunning natural landscapes, including glaciers, waterfalls, and geothermal activity. Iceland offers a high quality of life and excellent opportunities for nature enthusiasts.\n\n## Key Highlights\n- Stunning natural landscapes with glaciers and waterfalls\n- High quality of life and excellent social services\n- Unique geothermal energy and sustainable living",
+  "longdescription": "Iceland is a Nordic island nation located in the North Atlantic Ocean, known for its dramatic natural landscapes and cutting-edge approach to renewable energy. The country is famous for its spectacular waterfalls, vast glaciers, and geothermal hot springs, making it a paradise for nature lovers and adventure seekers. Reykjavik, the capital, is one of the world's northernmost capital cities and offers a vibrant cultural scene despite its small size. Iceland has consistently ranked among the world's highest in quality of life indices, offering excellent healthcare, education, and social services. The country has made remarkable progress in renewable energy, with geothermal and hydroelectric power providing nearly all of its electricity. For those considering relocation, Iceland offers opportunities in tech, tourism, and creative industries, though the cost of living is notably high. The Icelandic people are known for their warmth and hospitality, and English is widely spoken. The unique landscape provides year-round activities, from hiking and camping in summer to Northern Lights viewing in winter. Iceland's strong economy and social stability make it an attractive destination for skilled workers, entrepreneurs, and families seeking a high-quality lifestyle in a sustainable society.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Icelandic citizens automatically acquire Icelandic citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years of residence in Iceland, basic knowledge of Icelandic language and culture, no criminal record, financial stability.\n\n**Processing:** Applications reviewed by Ministry of Justice, typically 6-12 months."
+    },
+    "Spouse of Icelandic Citizen": {
+      "icon": "💍",
+      "desc": "Spouses may apply after 3 years of marriage and 2 years continuous residence, with reduced language requirements."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏔️",
+      "desc": "Children born in Iceland to at least one Icelandic parent acquire citizenship automatically."
+    }
+  },
+  "tax_advice": "- No VAT or sales tax on products and services\n- Personal income tax ranges from 8.93% to 20.87%\n- Corporate tax is a flat 20% on net profits\n- Iceland has competitive withholding tax rates on dividends (6% if conditions met)\n- Pension contributions are tax-deductible\n- Foreign-sourced income may be exempt if criteria met\n- Health insurance contributions are deductible\n- Use tax residency carefully to optimize tax filing status",
+  "local_tips": "- Embrace \"hygge\" culture - slow living and candlelit evenings are essential\n- Winter is long and dark; prepare mentally and invest in quality outerwear\n- High cost of living (food, alcohol, housing) but excellent public services justify it\n- Learn Icelandic if staying long-term; English widely spoken but appreciated\n- Rental market very competitive; start searching 2-3 months before move\n- Expat communities in Reykjavík can help with bureaucratic processes\n- Geothermal heating makes energy costs manageable"
+}

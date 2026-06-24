@@ -1,0 +1,30 @@
+{
+  "continent": "Africa",
+  "name": "Egypt",
+  "iso_code": "EG",
+  "flag_url": "https://flagcdn.com/eg.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=800&q=80",
+  "description": "Home to one of humanity's greatest civilizations, Egypt captivates with the Pyramids of Giza, Nile River culture, and ancient temples spanning thousands of years. A bridge between Africa and the Middle East offering extraordinary history at accessible prices.\n\n## Key Highlights\n- Pyramids of Giza and Sphinx: the sole surviving ancient world wonder\n- Extraordinary Nile Valley temples and pharaonic heritage\n- World-class Red Sea diving and Mediterranean beaches",
+  "longdescription": "Egypt is a transcontinental country primarily located in northeastern Africa, with the Sinai Peninsula forming a land bridge into Asia. Cairo, Africa's largest city, serves as the capital and gateway to ancient civilization. The Pyramids of Giza, just outside Cairo, represent one of humanity's most extraordinary engineering achievements and the sole surviving wonder of the ancient world. The Nile River, the world's longest river, flows through Egypt's eastern desert creating the fertile valley that sustained one of history's greatest civilizations for over 5,000 years. Luxor contains the world's greatest concentration of ancient Egyptian monuments, including Karnak Temple, the Valley of the Kings, and dozens of other extraordinary archaeological sites. The Red Sea coast offers world-class diving and snorkeling in pristine coral reef ecosystems, with resorts at Hurghada and Sharm el-Sheikh attracting divers from around the world. Egypt's economy has revenues from tourism, Suez Canal transit fees, oil, and remittances. Arabic is the official language; English is widely spoken in tourism and business contexts. The cost of living is very low by international standards. Egypt's extraordinary historical depth, vibrant urban culture, and geographical diversity — from deserts to Mediterranean coast — make it one of the world's most compelling destinations for both short visits and long-term stays, particularly for history enthusiasts.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Egyptian citizens automatically acquire citizenship. Egyptian mothers can pass citizenship to their children born abroad if the father is stateless or unknown."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence for most foreigners (3 years for Arab nationals, spouses of Egyptians after 2 years of marriage), Arabic language, good character, renunciation of previous citizenship.\n\n**Processing:** Presidential approval required; 2-4 years."
+    },
+    "Investment Naturalization": {
+      "icon": "💰",
+      "desc": "Investors making significant contributions to the Egyptian economy (USD 250,000+ in certain approved sectors) may apply for accelerated naturalization."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏺",
+      "desc": "Limited birthright citizenship: children born in Egypt to unknown or stateless parents acquire Egyptian citizenship. Jus soli not broadly applied."
+    }
+  },
+  "tax_advice": "- Egypt has progressive income tax (0% to 25%)\n- Corporate tax at 22.5%\n- VAT at 14%\n- Non-residents taxed on Egypt-source income only\n- Capital gains from securities listed on Egyptian Stock Exchange exempt\n- Dividend withholding tax of 10% for individuals\n- Real estate transaction tax of 2.5%\n- Free zone entities may be exempt from corporate tax\n- Egypt-US and extensive treaty network available",
+  "local_tips": "- Arabic (Egyptian dialect) most widely understood Arabic in the world due to media influence\n- Registration with CAPMAS (immigration authorities) required; process varies by visa type\n- Healthcare: private hospitals excellent in Cairo (Cairo American Medical Center); insurance strongly recommended\n- Extremely hot April-September; avoid midday sun and schedule activities for morning/evening\n- Traffic chaotic in Cairo; Uber/Careem safer than hailing taxis; metro efficient for city travel\n- Cost of living very low; budget EGP 15,000-25,000/month for comfortable life\n- Islamic hospitality culture; accepting tea/coffee offers important for building relationships\n- Nile cruises between Luxor and Aswan (2-3 days) among world's great travel experiences"
+}

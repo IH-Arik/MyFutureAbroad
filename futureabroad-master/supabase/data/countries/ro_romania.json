@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Romania",
+  "iso_code": "RO",
+  "flag_url": "https://flagcdn.com/ro.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+  "description": "Home to Transylvania's Gothic castles, the Carpathian Mountains, and vibrant Bucharest, Romania offers EU membership at some of Europe's most affordable prices. A rapidly growing tech sector is turning it into Central Europe's next startup destination.\n\n## Key Highlights\n- Iconic Transylvania with Bran Castle and Carpathian forests\n- Affordable EU living with Europe's fastest internet speeds\n- Booming technology industry and rapidly modernizing economy",
+  "longdescription": "Romania is a Southeastern European nation and EU member state with a rich cultural heritage blending Latin, Slavic, and Dacian traditions. The country is internationally famous for Transylvania, with its Gothic castles, medieval towns, and legends — Bran Castle near Brașov being the most visited landmark. Bucharest, the capital, earned the nickname \"Little Paris\" in the early 20th century for its grand boulevards and architecture, and today hosts a growing startup ecosystem and lively arts scene. Romania has some of Europe's fastest internet speeds and highest broadband penetration, supporting a thriving IT and software development sector. The cost of living is among the lowest in the EU, making Bucharest and other cities extremely attractive for digital nomads who earn in stronger currencies. The Carpathian Mountains, Black Sea coast, and Danube Delta provide extraordinary natural diversity. The Danube Delta, one of Europe's largest wetland areas, is a UNESCO World Heritage site of exceptional biodiversity. Romanian is a Romance language with significant Latin roots, making it more accessible to speakers of Spanish, French, Italian, or Portuguese. English proficiency is growing rapidly, particularly among younger generations, though it remains variable outside urban centers. Romania's combination of history, natural beauty, affordability, and modernizing economy makes it one of Eastern Europe's most compelling destinations.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Romanian citizens automatically acquire citizenship regardless of birthplace. Diaspora Romanians can pass citizenship to their children indefinitely."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 8 years continuous legal residence (5 years for stateless persons/refugees, 4 years for EU citizens), Romanian language B1, knowledge of Romanian culture/constitution.\n\n**Processing:** Through National Citizenship Authority, 12-18 months."
+    },
+    "Re-acquisition for Former Citizens": {
+      "icon": "🔄",
+      "desc": "Former Romanian citizens (and their children/grandchildren) who lost citizenship involuntarily, particularly those from the Communist era or from Moldova, may re-acquire citizenship through simplified procedure."
+    },
+    "EU Citizenship Bonus": {
+      "icon": "🇪🇺",
+      "desc": "Romanian citizenship grants EU citizenship, providing visa-free access to 26 EU member states. Highly sought after by Moldovans due to shared cultural and linguistic heritage."
+    }
+  },
+  "tax_advice": "- Romania has progressive income tax of 10% flat for most income\n- Corporate tax at 16% (micro-enterprise revenue tax of 1-3% as alternative)\n- VAT at 19% (reduced rates of 9%, 5%, and 0%)\n- Non-residents taxed on Romania-source income only\n- Social security contributions approximately 35% total\n- Capital gains taxed at 10% for listed securities\n- IT sector employees under 26 with software certifications are exempt from income tax\n- Romania uses its own currency (Romanian Leu) — not in Eurozone yet",
+  "local_tips": "- Romanian language is Romance-based; Spanish or Italian speakers adapt quickly\n- Registration with Population Records within 15 days of arrival (EU citizens: within 3 months)\n- Healthcare improving but slow in public system; private insurance recommended\n- Internet fastest in Europe; remote work infrastructure excellent\n- Cost of living very low; budget €600-900/month in Bucharest or Brașov\n- Transylvania and Carpathians easily accessible for weekend adventures\n- Bucharest growing fast; gentrifying neighborhoods (Floreasca, Dorobanți, Pantelimon) worth exploring\n- Tap water safe in Bucharest but bottled often preferred; check by city/town"
+}

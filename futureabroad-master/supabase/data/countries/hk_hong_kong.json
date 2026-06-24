@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Hong Kong",
+  "iso_code": "HK",
+  "flag_url": "https://flagcdn.com/hk.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=800&q=80",
+  "description": "A dynamic Special Administrative Region with one of the world's most iconic skylines. Hong Kong blends East and West in a compact vertical city offering major financial opportunities, vibrant Cantonese culture, and unique historical heritage.\n\n## Key Highlights\n- World-class financial center with iconic Victoria Harbour skyline\n- Unique blend of Chinese and international cultures\n- Exceptional Cantonese cuisine and vibrant urban energy",
+  "longdescription": "Hong Kong is a Special Administrative Region of China, situated on the southeastern coast of mainland China, known for its dramatic skyline, deep natural harbor, and unique position as a meeting point of Chinese and international cultures. Hong Kong operates under the \"one country, two systems\" framework, maintaining its own legal system based on English common law, currency, and immigration policies separate from mainland China. The city developed as a major British trading port and transformed into one of Asia's leading financial centers, housing major banks, stock exchanges, and investment firms. Victoria Harbour provides one of the world's most spectacular urban waterfronts. Cantonese is the primary language, though English is widely spoken in business, legal, and government contexts. Hong Kong's cuisine, particularly dim sum and seafood, is world-renowned and considered among Asia's finest. The city offers excellent transportation, world-class healthcare at private hospitals, and exceptional connectivity. Political changes since 2020 have affected the city's governance and seen significant emigration waves to the UK, Canada, and Australia. Hong Kong remains an important financial hub with significant opportunities, though the evolving political situation requires careful consideration for those considering relocation. The cost of living, particularly housing, is among the world's highest.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Hong Kong permanent residents do not automatically acquire HK permanent resident status at birth outside HK. Residency must be established."
+    },
+    "Right of Abode": {
+      "icon": "🏙️",
+      "desc": "**Permanent Residency:** 7 years ordinary residence in HK with right to land. Right of abode holders have full residency and work rights.\n\n**Chinese National Path:** Chinese nationals residing continuously in HK for 7 years may acquire right of abode."
+    },
+    "BN(O) Status": {
+      "icon": "🇬🇧",
+      "desc": "Hong Kong British National (Overseas) passport holders and dependants may apply for British citizenship through a 5-year UK residence pathway following 2020 policy changes."
+    },
+    "Note on Changes": {
+      "icon": "⚠️",
+      "desc": "Political changes since the 2020 National Security Law have significantly altered the practical situation for many residents. Many have emigrated using UK, Canadian, and Australian pathways."
+    }
+  },
+  "tax_advice": "- Hong Kong has low salaries tax (2% to 17%, capped at 16% of net income)\n- Corporate profits tax at 16.5% (8.25% on first HKD 2 million for qualifying companies)\n- No VAT, GST, sales tax, or capital gains tax\n- No withholding tax on dividends or interest\n- Source-based taxation: only income arising in or derived from HK is taxable\n- Territorial tax system: foreign-source income exempt from HK tax\n- Property rates (tax on rental value) instead of property purchase tax\n- Stamp duty applies to stock and property transactions",
+  "local_tips": "- Cantonese primary language; Mandarin increasingly useful; English in business/official contexts\n- Registration with Immigration Department required for long-term visa holders\n- Healthcare excellent at public hospitals (subsidized for visa holders) and private facilities\n- Housing extremely expensive; be prepared for very small living spaces even at high cost\n- MTR (Mass Transit Railway) world-class and covers city efficiently; Octopus card essential\n- Dim sum culture: Sunday yum cha with family is a cherished social institution\n- Political situation fluid since 2020; follow news on visa policy and legal environment\n- Air quality variable; check AQI daily and have N95 masks available during pollution spikes"
+}

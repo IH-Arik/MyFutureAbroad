@@ -1,0 +1,30 @@
+{
+  "continent": "North America",
+  "name": "Mexico",
+  "iso_code": "MX",
+  "flag_url": "https://flagcdn.com/mx.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&w=800&q=80",
+  "description": "A culturally rich nation with pre-Hispanic ruins, colonial architecture, colorful markets, and world-renowned cuisine. Mexico offers close proximity to the US and growing business opportunities.\n\n## Key Highlights\n- Rich pre-Hispanic and colonial heritage\n- World-renowned cuisine and vibrant culture\n- Close proximity to North America and growing economy",
+  "longdescription": "Mexico is a large North American nation with a rich cultural heritage spanning indigenous pre-Hispanic civilizations, Spanish colonial history, and modern development. The country is home to approximately 130 million people and is North America's cultural bridge, blending indigenous and European influences. Mexico City is the capital, one of the world's largest metropolitan areas, with museums, restaurants, and cultural venues of international importance. The country's cuisine is UNESCO-recognized as intangible cultural heritage, celebrated globally for its complexity and regional variations. Mexico offers extremely affordable living costs, particularly outside major tourist areas, making it attractive for retirees and digital nomads. The country has extensive natural beauty: beaches on both coasts, pre-Hispanic archaeological sites, colonial cities, and diverse ecosystems. Healthcare is modern and affordable in major cities. Spanish is the official language, though English proficiency varies. Mexico's economy is relatively large and diversified, with opportunities in tourism, manufacturing, technology, and business services. Mexico City has a growing tech scene and startup ecosystem. Proximity to the United States offers cultural and economic advantages. Mexico offers various temporary resident visas for entrepreneurs, remote workers, and retirees. Challenges include security concerns in certain regions, bureaucracy, and variable service quality outside major centers. Mexico combines cultural richness, affordability, geographic proximity to the US, economic opportunities, and natural diversity, attracting expats, retirees, and entrepreneurs seeking Latin American living with US accessibility.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Mexican citizens automatically acquire Mexican citizenship at birth. Foreigners born in Mexico to Mexican parent also eligible."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous residence (reduced for certain nationalities), Spanish language ability, renunciation of previous citizenship, stable employment.\n\n**Special:** Central Americans, Spanish nationals, Portuguese nationals: 2 years residence."
+    },
+    "Spouse and Family": {
+      "icon": "👨‍👩‍👧‍👦",
+      "desc": "Spouses of Mexican citizens may apply after 1 year marriage with simplified requirements."
+    },
+    "Birthright Citizenship": {
+      "icon": "🇲🇽",
+      "desc": "Children born in Mexico acquire citizenship if born to Mexican parent(s) or if registered with Mexican authorities."
+    }
+  },
+  "tax_advice": "- Mexico has progressive income tax (1.92% to 35%)\n- Corporate tax rate is 30% with deductions\n- VAT at 16% (reduced rates of 0% and 8% in border regions)\n- Non-residents taxed on Mexico-source income only\n- Capital gains taxed at same rate as ordinary income\n- Foreign tax credits available for taxes paid abroad\n- Temporary resident status doesn't automatically grant residency for tax purposes\n- Export-oriented businesses receive various incentives",
+  "local_tips": "- Spanish essential; English limited outside tourist areas and Mexico City\n- Visa sponsorship needed for work; temporary resident visa renewable\n- Healthcare: Private insurance recommended; IMSS public system adequate\n- Cost of living very low outside Mexico City; budget €600-900/month\n- Residency visa (temporary) renewable annually for several years\n- Bureaucracy improving but still can be complicated; hire gestoria if needed\n- Security situation varies dramatically by location; choose carefully"
+}

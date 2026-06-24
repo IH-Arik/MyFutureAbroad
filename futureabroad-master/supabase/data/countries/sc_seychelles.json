@@ -1,0 +1,30 @@
+{
+  "continent": "Africa",
+  "name": "Seychelles",
+  "iso_code": "SC",
+  "flag_url": "https://flagcdn.com/sc.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&w=800&q=80",
+  "description": "An Indian Ocean archipelago of extraordinary beauty — dramatic granite boulders, lush tropical forests, and pristine beaches. The Seychelles offers a stable island paradise with a welcoming visa policy and unique Creole culture.\n\n## Key Highlights\n- Stunning granite islands with unique prehistoric Coco de Mer palms\n- World-class diving in UNESCO Biosphere Reserves\n- Stable island economy with welcoming visitor permit system",
+  "longdescription": "The Seychelles is an archipelago nation of 115 islands in the Indian Ocean, northeast of Madagascar. Victoria, located on the main island of Mahé, is the world's smallest capital city. The Seychelles is famous for its unique geological character — many islands are granitic rather than coral, creating dramatic landscapes of massive rounded boulders, lush tropical vegetation, and pristine beaches unlike those found elsewhere in the Indian Ocean. Praslin and La Digue are the most popular outer islands, famous for Anse Source d'Argent (frequently listed among the world's most beautiful beaches) and the Vallée de Mai palm forest, a UNESCO World Heritage site where the Coco de Mer palm — producing the world's largest seed — grows in a primeval setting. The marine environment is exceptional, with pristine coral reefs, diverse fish populations, and nesting grounds for sea turtles. The country is politically stable and maintains a relatively high Human Development Index for Africa. The economy relies heavily on tourism and fishing, with the government promoting offshore financial services. The Seychellois Creole culture combines African, French, Indian, and Chinese influences, creating unique cuisine, music, and artistic traditions. The Seychelles Visitor Permit allows extended stays for nationals of most countries, making it very accessible. The cost of living is moderate to high, with the island's pristine environment and biodiversity more than justifying the investment.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Seychellois citizens automatically acquire citizenship at birth regardless of where they are born."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years legal residence (3 years for spouses of Seychellois citizens), English or French language (official languages), good character, financial stability, renunciation of previous citizenship.\n\n**Processing:** Through Civil Status Division, 12-24 months."
+    },
+    "Investment Residence": {
+      "icon": "💰",
+      "desc": "The Seychelles has investor residency programs that can provide long-term residence permits but do not automatically lead to citizenship."
+    },
+    "Visitor Permit System": {
+      "icon": "🌴",
+      "desc": "The Seychelles grants a Visitor's Permit on arrival allowing stays of up to 3 months initially, extendable up to 12 months. This permit system is one of the world's most welcoming for initial entry."
+    }
+  },
+  "tax_advice": "- Seychelles has progressive income tax (0% to 15%) under Social Security Act\n- Corporate tax at 25% (15% for companies in International Business Companies regime)\n- GST at 15%\n- International Business Companies (IBCs) can be structured for low/zero tax on non-Seychelles income\n- Capital gains generally not taxed for individuals\n- Withholding tax of 15% on dividends for residents\n- No inheritance tax\n- Seychelles is a significant offshore financial center with special IBC and foundation legislation",
+  "local_tips": "- Seychellois Creole (Kreol Seselwa), English, and French all official languages; English most practical\n- Visitor Permit issued on arrival; register with Immigration for longer stays\n- Healthcare: Victoria Hospital public; private clinics available; evacuation insurance recommended for serious conditions\n- Heat year-round (27-30°C); sun protection essential — UV very intense at Indian Ocean latitude\n- Car hire on Mahé and Praslin essential as taxis expensive; drive on left (British colonial legacy)\n- Cost of living high for groceries and imported goods; local fruit and fish affordable\n- Boat charters from Mahé to inner islands essential for island-hopping; book in advance\n- Cyclone season January-April; monitor warnings though Seychelles relatively well-protected geographically"
+}

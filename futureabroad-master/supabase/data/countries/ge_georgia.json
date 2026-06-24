@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Georgia",
+  "iso_code": "GE",
+  "flag_url": "https://flagcdn.com/ge.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1565008887078-5e4f9a8cd5e8?auto=format&fit=crop&w=800&q=80",
+  "description": "The Caucasus crossroads of Europe and Asia offers the world's oldest winemaking tradition, stunning mountain landscapes, and legendary hospitality. Tbilisi's bohemian charm has made Georgia a global digital nomad hotspot.\n\n## Key Highlights\n- World's oldest winemaking tradition with unique qvevri clay vessels\n- Stunning Greater Caucasus mountains and ancient cave cities\n- Extremely welcoming visa-free policy and flat 20% income tax",
+  "longdescription": "Georgia is a small Caucasian nation at the crossroads of Europe and Asia, situated south of the Greater Caucasus mountains, bordering Russia, Armenia, Azerbaijan, and Turkey. Tbilisi, the capital, is a city of extraordinary bohemian charm with a strikingly diverse architectural heritage from ancient Persian to Soviet-era and contemporary design, a vibrant arts scene, and a world-class electronic music scene that has earned Tbilisi a reputation as one of Europe's most exciting emerging cities. Georgia is widely recognized as the world's oldest wine region, with evidence of winemaking dating back 8,000 years, using the unique qvevri clay vessels buried underground for fermentation and aging. The country harbors remarkable natural and cultural heritage including the cave city of Uplistsikhe, the ancient capital Mtskheta, and the spectacular Kazbegi region in the Greater Caucasus mountains. Georgia offers one of the world's most welcoming visa policies, allowing citizens of most nations to stay for up to a year without a visa, alongside a very low flat tax rate, making it extremely attractive for remote workers and entrepreneurs. The cost of living is low, the food is exceptional (khinkali dumplings, khachapuri cheese bread), and Georgians have a legendary reputation for hospitality. English is growing rapidly among younger people and the significant expat community that has built up in Tbilisi in recent years.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Georgian citizens automatically acquire citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence (5 years for persons of Georgian descent, spouses of Georgian citizens), Georgian language proficiency, knowledge of Georgian history and law, financial stability.\n\n**Processing:** Through Agency of Civil Registry, 6-12 months."
+    },
+    "Citizenship by Exception": {
+      "icon": "⭐",
+      "desc": "Georgian President may grant citizenship to individuals of exceptional merit or those who make significant contributions to Georgia's economic, cultural, or scientific development."
+    },
+    "Welcoming Visa Policy": {
+      "icon": "🇬🇪",
+      "desc": "Georgia offers 1-year visa-free stays to citizens of most countries (including EU/US/UK), making it exceptionally accessible for digital nomads before any formal visa or citizenship is needed."
+    }
+  },
+  "tax_advice": "- Georgia has a flat 20% personal income tax (one of Europe's simplest and lowest)\n- Corporate tax at 15% (20% on distributed profits in Estonia-style system)\n- VAT at 18%\n- Non-residents taxed on Georgia-source income only\n- Virtual Zone Company (IT businesses) pay 0% corporate tax on foreign-source revenue\n- No capital gains tax for individuals on securities held in qualifying accounts\n- Free Industrial Zones offer further tax incentives for manufacturers\n- Territorial tax system: foreign income of Georgia-resident companies not taxable if not Georgia-sourced",
+  "local_tips": "- Georgian language uses unique script (Mkhedruli); learn to recognize it but English widespread in Tbilisi\n- Registration not required for up to 1-year stays; for longer, apply for residence permit\n- Healthcare: private clinics in Tbilisi excellent and very affordable; international standard\n- Cost of living very low; budget €600-900/month very comfortably in Tbilisi\n- Wine culture pervasive; natural and qvevri wines fundamental to social life\n- Supras (feasts) can last for hours with multiple toasts; pace yourself with the chacha (grape brandy)\n- Tbilisi nightlife (especially techno scene) world-renowned; Bassiani and Khidi venues legendary\n- Kazbegi mountain road stunning but sometimes closed in winter; check conditions before driving"
+}

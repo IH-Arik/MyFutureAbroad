@@ -1,0 +1,101 @@
+{
+  "continent": "Africa",
+  "name": "Ghana",
+  "iso_code": "GH",
+  "flag_url": "https://flagcdn.com/gh.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=800&q=80",
+  "description": "West Africa's gateway nation, Ghana is known for its political stability, English-speaking population, vibrant culture, and the \"Year of Return\" initiative welcoming the African diaspora home.\n\n## Key Highlights\n- Most stable democracy in West Africa\n- English-speaking with strong cultural identity\n- Growing tech and startup ecosystem in Accra",
+  "longdescription": "Ghana is widely regarded as one of West Africa's most stable and democratic nations, making it a gateway for business and investment in the region. Accra, the capital, is a vibrant, English-speaking city with a growing tech ecosystem, international restaurants, and a rising middle class. The country gained independence in 1957 as the first sub-Saharan African nation to do so, and has maintained democratic governance for decades. Ghana launched the \"Year of Return\" in 2019, inviting the African diaspora to reconnect with their heritage, attracting thousands of visitors and new residents. The country has a rich culture, beautiful beaches along the Gulf of Guinea, and natural resources including gold and cocoa. English is the official language. The cost of living is moderate for Africa. Ghana is increasingly popular with diaspora returnees, expats working in development, and entrepreneurs entering West African markets.",
+  "visas": [
+    {
+      "name": "Ghana Work Permit",
+      "visa_type": "work",
+      "description": "Employment permit for foreign nationals working with Ghanaian companies. Ghana is West Africa's most stable and business-friendly destination for expats.",
+      "benefits": [
+        "Legal right to work",
+        "English-speaking environment",
+        "Gateway to West Africa",
+        "Growing tech ecosystem",
+        "Rich cultural heritage"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 150,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Employment contract",
+        "Educational certificates",
+        "Medical certificate",
+        "Police clearance"
+      ],
+      "official_link": "https://www.gipc.gov.gh",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Ghana Investor Visa",
+      "visa_type": "investor",
+      "description": "Residence permit for foreign investors registering a business with the Ghana Investment Promotion Centre (GIPC). Minimum investment thresholds apply.",
+      "benefits": [
+        "Business ownership rights",
+        "Access to West African markets",
+        "English-speaking country",
+        "Renewable residence",
+        "Stable democracy"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 45,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Investors may apply for permanent residence after sustained business operations.",
+      "application_fee_usd": 1000,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "GIPC registration certificate",
+        "Business registration",
+        "Proof of investment",
+        "Bank statements"
+      ],
+      "official_link": "https://www.gipc.gov.gh",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Residence permit available for investors and retirees\n- Ghana Card required for long-term residents\n- \"Year of Return\" diaspora program offers support for returnees",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Ghanaian citizen parents acquire citizenship automatically at birth, regardless of country of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous lawful residence, English language ability (or a Ghanaian language), good conduct, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of Interior, 12-18 months."
+    },
+    "Right of Abode": {
+      "icon": "🌍",
+      "desc": "Persons of African descent may qualify for Right of Abode in Ghana under the Joseph Project and Year of Return initiative, allowing indefinite stay without need to naturalize."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏛️",
+      "desc": "Children born in Ghana to Ghanaian parents acquire citizenship automatically."
+    }
+  },
+  "tax_advice": "- Personal income tax: 0% to 35% progressive rates\n- Corporate tax: 25% standard rate\n- VAT at 15% standard rate; some essentials exempt\n- Non-residents taxed on Ghana-sourced income only\n- Withholding tax on dividends: 8% for residents, 8% for non-residents\n- Capital gains on property taxed at 15%\n- Mining and petroleum sectors have special tax regimes\n- Double taxation agreements with several countries including UK and Germany"
+}

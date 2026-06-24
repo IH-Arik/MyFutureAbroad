@@ -1,0 +1,30 @@
+{
+  "continent": "Oceania",
+  "name": "New Zealand",
+  "iso_code": "NZ",
+  "flag_url": "https://flagcdn.com/nz.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=800&q=80",
+  "description": "A breathtaking land of fiords, volcanoes, and vast green landscapes made famous by The Lord of the Rings. New Zealand offers clean living, friendly immigration, and a superb quality of life in one of the world's most pristine environments.\n\n## Key Highlights\n- Spectacular landscapes from fiords to volcanic plateaus\n- Clean, safe environment with accessible immigration policies\n- Rich Māori cultural heritage enriching national identity",
+  "longdescription": "New Zealand is a Pacific island nation of extraordinary natural beauty, comprising two main islands with dramatically different characters: the North Island featuring volcanic plateaus and geothermal activity, and the South Island with the Southern Alps, fiords, glaciers, and vast plains. Wellington is the compact, creative capital, while Auckland is the largest city and economic hub. New Zealand consistently ranks among the world's safest, most livable, and least corrupt nations. The country's immigration system is relatively accessible, with various pathways for skilled workers, entrepreneurs, and investors through the points-based Skilled Migrant Category. New Zealand's Māori culture is integral to national identity, with te reo Māori recognized as an official language. The economy is strong in agriculture, tourism, film production, and a growing technology sector. The country gained international fame as the filming location for The Lord of the Rings and The Hobbit trilogies. New Zealand's clean environment, excellent outdoor recreation, and friendly people make it consistently popular with both visitors and immigrants. The cost of living is moderate to high, with Auckland particularly expensive for housing. The country's geographic remoteness is both a challenge and a virtue, preserving its pristine environment and distinct culture while requiring long-haul flights for international travel.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of New Zealand citizens or permanent residents born in New Zealand acquire citizenship automatically. Those born abroad to NZ citizen parents may also qualify."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 1,350 days physical presence in NZ in the past 5 years as PR, good character, English language ability.\n\n**Processing:** Through Department of Internal Affairs, 3-6 months."
+    },
+    "Skilled Migrant & PR Pathways": {
+      "icon": "🥝",
+      "desc": "Skilled Migrant Category (points-based), Accredited Employer Work Visa, Investor visas, and various work-to-residence pathways lead to PR before citizenship."
+    },
+    "Māori Citizenship": {
+      "icon": "🌿",
+      "desc": "Māori people (tangata whenua) have specific constitutional status under the Treaty of Waitangi, recognizing their status as the indigenous people of New Zealand."
+    }
+  },
+  "tax_advice": "- New Zealand has progressive income tax (10.5% to 39%)\n- Corporate tax at 28%\n- GST (goods and services tax) at 15%\n- No capital gains tax (with some exceptions for property speculation)\n- No inheritance or gift taxes\n- KiwiSaver voluntary superannuation scheme with government contributions\n- Non-residents taxed on NZ-source income only\n- Foreign Investment Fund (FIF) rules apply to foreign investments above NZD 50,000\n- Resident foreign trusts have complex disclosure requirements",
+  "local_tips": "- English primary language; Māori (te reo) increasingly present in public life\n- IRD number (tax ID) required before starting work; apply online immediately\n- Healthcare good; enroll with a GP practice as soon as possible\n- Housing expensive in Auckland and Wellington; consider Hamilton, Christchurch, or regional towns\n- Car essential outside Auckland and Wellington; public transport limited in most areas\n- Earthquakes common; register for civil defense alerts and know what to do\n- Outdoor culture central: hiking (tramping), camping, and sport expected activities\n- Kiwi culture values modesty and a fair go; avoid bragging or being seen to think you're better"
+}

@@ -1,0 +1,30 @@
+{
+  "continent": "South America",
+  "name": "Peru",
+  "iso_code": "PE",
+  "flag_url": "https://flagcdn.com/pe.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80",
+  "description": "Home to Machu Picchu and the Amazon rainforest, Peru is a vibrant destination with rich indigenous culture, diverse landscapes, and growing opportunities in Lima's modern economy.\n\n## Key Highlights\n- Iconic landmarks and UNESCO World Heritage sites\n- Vibrant indigenous culture and traditions\n- Growing tech and business opportunities in Lima",
+  "longdescription": "Peru is a South American nation renowned for its extraordinary archaeological heritage, particularly the ancient Incan citadel of Machu Picchu, one of the world's most iconic landmarks. The country spans three distinct geographical regions: the Pacific coastal desert, the Andes Mountains, and the Amazon rainforest, offering incredible biodiversity. Peru's history is deeply intertwined with indigenous civilizations, and this heritage remains visible in its culture, traditions, and approximately 47 indigenous languages still spoken today. Lima, the capital, has evolved into a modern metropolis with a thriving culinary scene, recognized as one of South America's gastronomic capitals. The country is experiencing economic growth, with Lima's tech sector developing rapidly and attracting startup entrepreneurs. Peru offers lower costs of living compared to many developed nations while maintaining reasonable infrastructure in urban areas. The country is rich in natural resources and minerals, contributing to its economy. Expats and digital nomads are increasingly attracted to Peru for its affordable lifestyle, cultural richness, and adventure opportunities. The textile and handicraft industries are globally renowned, and tourism remains a significant economic driver. Peru's challenges include infrastructure gaps and income inequality, but opportunities abound in tourism, education, technology, and international business sectors, particularly for Spanish-speaking professionals and entrepreneurs.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Peruvian citizens acquire citizenship automatically at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 2 years continuous residence, knowledge of Spanish language, good moral character, economic solvency.\n\n**For Latin Americans:** Residence requirement may be reduced. For Spanish citizens: 1 year residence."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏔️",
+      "desc": "Children born in Peru to at least one Peruvian parent acquire citizenship. Foreign-born children of Peruvian parents can claim jus sanguinis."
+    },
+    "Spouse and Family": {
+      "icon": "👨‍👩‍👧‍👦",
+      "desc": "Spouses of Peruvian citizens may apply after 2 years of marriage and continuous residence."
+    }
+  },
+  "tax_advice": "- Peru offers a tiered income tax system (up to 30%)\n- Corporate tax rate is 27%, but lower rates available for certain sectors\n- VAT is 18% with some exemptions for essentials\n- Non-residents taxed only on Peruvian-sourced income\n- Foreign remittances to Peru can benefit from reduced tax treatment\n- Export income may qualify for tax incentives\n- Retirement contributions are tax-deductible\n- Regional tax incentives available for businesses in designated zones",
+  "local_tips": "- Spanish (not Portuguese) is primary language; learn regional dialects\n- Bureaucracy can be slow; patience and connections essential\n- Siesta culture still strong outside major cities; adjust schedule accordingly\n- Healthcare: Public system (IMSS) good value; register quickly after arrival\n- Visa runs to Bolivia/Chile easy if needed for long-term stays\n- Cost of living reasonable outside Lima and major tourist zones\n- Join local clubs/sports groups to build community quickly"
+}

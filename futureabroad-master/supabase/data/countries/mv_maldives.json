@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Maldives",
+  "iso_code": "MV",
+  "flag_url": "https://flagcdn.com/mv.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=80",
+  "description": "Paradise found — the Maldives is the world's lowest-lying nation, a string of coral atolls with crystal-clear turquoise lagoons, overwater bungalows, and some of the finest tropical luxury on Earth.\n\n## Key Highlights\n- World's most iconic overwater bungalows above turquoise lagoons\n- Exceptional coral reef diving and world-class marine biodiversity\n- Ultimate luxury tropical destination with unparalleled natural beauty",
+  "longdescription": "The Maldives is an island nation in the Indian Ocean southwest of Sri Lanka, comprising approximately 1,200 coral islands organized into 26 atolls, with a total land area of just 298 square kilometers spread across 90,000 square kilometers of ocean. Malé, the tiny capital island, is one of the world's most densely populated cities, contrasting dramatically with the resort islands that have made the Maldives globally synonymous with luxury tropical holidays. The country pioneered the overwater bungalow concept, offering guests accommodation directly above crystal-clear turquoise lagoons with immediate access to extraordinary coral gardens teeming with marine life. The Maldives' underwater world is among the planet's finest for diving and snorkeling, with whale sharks, manta rays, sea turtles, and brilliant coral formations in exceptionally clear visibility. The economy is almost entirely dependent on luxury tourism alongside fishing. The Maldives is one of the countries most vulnerable to climate change — its highest point is just 2.4 meters above sea level, making the entire nation potentially threatened by rising seas. Islamic law applies, and alcohol is prohibited for locals (though available in resort islands). The cost of resort stays is among the world's highest, while local islands offer more budget-friendly experiences. Long-term residency opportunities are limited, primarily through employment with resorts or significant investment programs.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Maldivian citizens acquire citizenship. However, children born abroad to Maldivian citizens must be registered with authorities to secure citizenship."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** Marriage to Maldivian citizen for 3 years (with conversion to Islam required), OR continuous legal residence of 12 years.\n\n**Note:** Non-Muslims cannot obtain Maldivian citizenship. Islam is constitutionally the state religion."
+    },
+    "Islamic Requirement": {
+      "icon": "☪️",
+      "desc": "The Constitution of the Maldives requires that all citizens be Muslim. Foreign nationals seeking citizenship must convert to Islam as part of the naturalization process."
+    },
+    "Limited Immigration": {
+      "icon": "🏝️",
+      "desc": "The Maldives has very limited permanent immigration programs. Long-term residency is primarily available through employment with resorts or investment. The small land area limits population capacity."
+    }
+  },
+  "tax_advice": "- Maldives has no personal income tax for individuals\n- Business Profit Tax (BPT) at 15% for businesses with revenue over MVR 1 million\n- GST at 6% for tourism sector (16% for tourist establishments under GST Act)\n- No capital gains tax, inheritance tax, or wealth tax\n- Tourism Goods and Services Tax (TGST) is the primary revenue source\n- Resort operators pay significant lease fees to the government\n- Work permit fees apply for expatriate employees\n- No double tax treaty network of significance",
+  "local_tips": "- Dhivehi (Maldivian) official; English universally spoken in tourism sectors\n- Work permit and residency through employer (resort) manages all documentation\n- Healthcare: Malé has limited hospital (ADK Hospital); serious cases evacuated to Sri Lanka or India\n- Heat year-round (29-31°C) but cooling ocean breeze; sun protection critical (UV intensity extreme)\n- Alcohol only on resort islands; local islands strictly dry; check policies before booking non-resort stays\n- Muslim culture on local islands; dress modestly when visiting non-resort communities\n- Speedboat or seaplane transfers between Malé airport and resorts; book in advance\n- Coral bleaching a growing concern; check reef health at specific atolls before diving trips"
+}

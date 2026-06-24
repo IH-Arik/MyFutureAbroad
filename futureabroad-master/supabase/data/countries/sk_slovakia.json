@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Slovakia",
+  "iso_code": "SK",
+  "flag_url": "https://flagcdn.com/sk.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1564689510742-4e9c7584c1f8?auto=format&fit=crop&w=800&q=80",
+  "description": "A Central European hidden gem with dramatic mountain landscapes and hundreds of medieval castles. Slovakia's EU and Eurozone membership, combined with Bratislava's unique tri-border location, makes it an underrated expat destination.\n\n## Key Highlights\n- Dramatic Tatra Mountains and hundreds of preserved medieval castles\n- Affordable EU/Eurozone living with a growing economy\n- Bratislava's unique proximity to Vienna and Budapest",
+  "longdescription": "Slovakia is a Central European nation that gained independence in 1993 following the peaceful \"Velvet Divorce\" from Czechoslovakia, and has since developed into a successful EU and Eurozone member. Bratislava, the compact capital, sits uniquely at the junction of three countries (Slovakia, Austria, and Hungary), with Vienna and Budapest each less than an hour away — making it ideal for those wishing to access multiple major European cities easily. Slovakia is characterized by dramatic natural landscapes including the High Tatra Mountains, offering some of Central Europe's best skiing and hiking, alongside hundreds of medieval castles scattered across the countryside. The country has attracted significant foreign manufacturing investment, particularly in the automotive sector, with major plants operated by Volkswagen, Kia, and Stellantis. The cost of living is among the lowest in the Eurozone, making it extremely attractive for remote workers and digital nomads maintaining incomes in stronger currencies. Slovak people are known for warmth and hospitality, and English is growing among younger generations and professionals. Healthcare is adequate and the public education system is solid. Bratislava's restaurant and bar scene is excellent, and the cultural scene is developing rapidly. The country's proximity to Vienna also means residents have easy access to one of Europe's greatest cultural capitals.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Slovak citizens automatically acquire citizenship at birth regardless of where they are born."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 8 years continuous legal residence (5 years for EU citizens, 3 years for spouses of Slovak citizens), Slovak language B1, knowledge of Slovak culture/history, clean criminal record.\n\n**Processing:** Through Ministry of Interior, 6-12 months."
+    },
+    "Spouse of Slovak Citizen": {
+      "icon": "💍",
+      "desc": "Spouses of Slovak citizens may apply after 3 years of marriage with reduced residence of 3 years."
+    },
+    "Slovak Diaspora": {
+      "icon": "🇸🇰",
+      "desc": "Ethnic Slovaks living abroad may apply for Slovak citizenship under simplified conditions without residency requirements."
+    }
+  },
+  "tax_advice": "- Slovakia has 19% personal income tax (25% above 3× average wage threshold)\n- Corporate tax at 21%\n- VAT at 20% (reduced rate of 10%)\n- Part of Eurozone since 2009 — no currency conversion needed for Euro earners\n- Social security contributions approximately 44% total (split employer/employee)\n- Capital gains generally taxed as ordinary income\n- Tax residency established after 183 days or main center of life\n- R&D tax super-deduction of 200% available for qualifying businesses",
+  "local_tips": "- Slovak language helpful; English widespread especially in Bratislava among young professionals\n- Registration with Foreign Police required within 3 days for non-EU citizens\n- Healthcare adequate; register with health insurance fund (VšZP, Dôvera, or Union)\n- Cost of living lowest in Eurozone; budget €600-900/month comfortably in Bratislava\n- Bratislava perfectly positioned between Vienna (45 min) and Budapest (1 hour by bus/train)\n- Mountains very close; skiing in Jasná and Low Tatras accessible for weekend trips\n- Slovak cuisine hearty and cheap; try bryndzové halušky (potato dumplings with sheep cheese)\n- Expat community small but growing; coworking spaces concentrated in downtown Bratislava"
+}

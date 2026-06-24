@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Lithuania",
+  "iso_code": "LT",
+  "flag_url": "https://flagcdn.com/lt.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1553408619-26c4abb4d22f?auto=format&fit=crop&w=800&q=80",
+  "description": "The Baltic state with a stunning baroque capital and the largest surviving medieval old town in Northern Europe. Lithuania combines EU membership, affordable living, and one of the EU's fastest-growing fintech sectors.\n\n## Key Highlights\n- Vilnius: UNESCO-listed medieval old town with baroque architecture\n- EU's fastest growing fintech and licensed payments sector\n- Affordable living with EU membership and a welcoming startup scene",
+  "longdescription": "Lithuania is the southernmost and largest of the three Baltic states, with Vilnius as its capital and one of the best-preserved medieval old towns in Northern Europe, designated as a UNESCO World Heritage site for its extensive baroque architecture. Lithuania was the last European country to convert to Christianity in 1387, and its ancient pagan heritage continues to influence local culture and traditions. The country joined the EU and NATO in 2004 and adopted the Euro in 2015. Lithuania has emerged as a significant European fintech hub, with Vilnius hosting dozens of licensed payment institutions and electronic money firms that chose it as their EU passporting base. The city's startup ecosystem is growing rapidly, supported by EU funding and government innovation programs. The cost of living is lower than Western Europe, making it attractive for remote workers and entrepreneurs. Lithuanian is the official language and one of the oldest living Indo-European languages. English is widely spoken among younger people and professionals. The country's natural landscapes include the beautiful Curonian Spit (a UNESCO World Heritage site shared with Russia), extensive forests, and thousands of lakes. The Curonian Spit offers unique dune landscapes and traditional fishing culture. Lithuania's relatively small size (under 3 million people) creates a close-knit business community where relationships matter greatly.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Lithuanian citizens automatically acquire citizenship regardless of where they are born."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence (5 years for stateless, 5 years for refugees, reduced for EU/EEA citizens), Lithuanian language B1, knowledge of Lithuanian constitution/history, renunciation of previous citizenship.\n\n**Processing:** Through Migration Department, 6-12 months."
+    },
+    "Ethnic Lithuanians": {
+      "icon": "⭐",
+      "desc": "Ethnic Lithuanians of Lithuanian descent living abroad may restore or acquire citizenship through simplified procedure without renouncing their current citizenship."
+    },
+    "Dual Citizenship": {
+      "icon": "🇱🇹",
+      "desc": "Dual citizenship is generally not permitted except for ethnic Lithuanians, persons who acquired foreign citizenship involuntarily, and citizens of certain EU/EEA member states in limited circumstances."
+    }
+  },
+  "tax_advice": "- Lithuania has progressive income tax (20% and 32%)\n- Corporate tax at 15% (5% for small companies and startups)\n- VAT at 21% (reduced rates of 9% and 5%)\n- Part of Eurozone since 2015\n- Capital gains taxed at 15% flat for individuals\n- No inheritance tax between direct family members\n- Fintech businesses benefit from Bank of Lithuania regulatory sandbox\n- Social insurance contributions approximately 30% total (split employer/employee)",
+  "local_tips": "- Lithuanian and Russian both spoken; English widespread among professionals and younger people\n- Register at Migration Department within 3 months (EU) or within residency visa conditions\n- Healthcare: register with State Patient Fund (VPSP); private clinics also excellent and affordable\n- Cost of living low by Eurozone standards; budget €700-1,000/month in Vilnius\n- Vilnius tech and fintech ecosystem growing fast; attend Vilnius Tech Park and LOGIN events\n- Curonian Spit accessible for weekend trips from Vilnius; unique natural landscape\n- Vilnius Old Town among Europe's best preserved and least crowded; explore thoroughly\n- Lithuanian amber considered world's finest; great authentic souvenirs"
+}

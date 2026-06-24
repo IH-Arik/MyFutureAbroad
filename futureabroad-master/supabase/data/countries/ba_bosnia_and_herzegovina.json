@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Bosnia and Herzegovina",
+  "iso_code": "BA",
+  "flag_url": "https://flagcdn.com/ba.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1535530992830-e25d07cfa780?auto=format&fit=crop&w=800&q=80",
+  "description": "A Balkan jewel where Ottoman, Austro-Hungarian, and Yugoslav heritages converge in stunning Sarajevo. Bosnia and Herzegovina offers medieval towns, mountain rivers, and some of Europe's most affordable and authentic living.\n\n## Key Highlights\n- Sarajevo's extraordinary multicultural Ottoman-era old town\n- Stunning mountains with world-class rafting and adventure activities\n- One of Europe's most affordable destinations with EU candidate status",
+  "longdescription": "Bosnia and Herzegovina is a Southeastern European nation in the western Balkans, sharing borders with Croatia, Serbia, and Montenegro. Sarajevo, the capital, is one of Europe's most unique cities, where Ottoman minarets, Austro-Hungarian architecture, and socialist-era apartment blocks converge in a valley surrounded by mountains — a legacy of the city's complex multicultural history as a meeting point of civilizations. The Old Town (Baščaršija) features cobblestoned streets, traditional craftsmen's shops, and the central Gazi Husrev-beg mosque dating to the 16th century. Mostar, with its iconic reconstructed Stari Most (Old Bridge) over the Neretva River, is one of the Balkans' most photographed sites. The country endured a devastating war between 1992 and 1995 but has rebuilt and is developing as an EU candidate, with accession aspirations driving reforms. Bosnia has stunning mountain landscapes for skiing in winter and hiking in summer, and dramatic river canyons for white-water adventures. The Una and Neretva rivers are exceptional for rafting and kayaking. The cost of living is among Europe's lowest. The country's three constituent peoples — Bosniaks, Serbs, and Croats — give it linguistic accessibility (mutually intelligible South Slavic languages) and rich cultural diversity. Bosnia's combination of history, natural beauty, affordability, and authenticity make it one of Europe's most underrated destinations.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of citizens of Bosnia and Herzegovina (regardless of entity — Federation or Republika Srpska) automatically acquire citizenship."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 8 years continuous legal residence, Bosnian/Croatian/Serbian language (official languages), knowledge of constitutional order, financial stability, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of Civil Affairs, 12-24 months. Can be slow due to complex governance."
+    },
+    "EU Candidate Status": {
+      "icon": "🇪🇺",
+      "desc": "Bosnia and Herzegovina has EU candidate status. Future accession would significantly change the value of BiH citizenship in terms of freedom of movement and economic opportunity."
+    },
+    "Diaspora": {
+      "icon": "🌍",
+      "desc": "The Bosnian diaspora is large (particularly in Germany, Austria, Switzerland, and Scandinavia). Citizenship maintenance by diaspora varies based on individual circumstances."
+    }
+  },
+  "tax_advice": "- Bosnia and Herzegovina has flat 10% personal income tax (varies slightly by entity)\n- Corporate tax at 10% (Federation BiH) or 10% (Republika Srpska)\n- VAT at 17% (uniform across country — administered by Indirect Taxation Authority)\n- Non-residents taxed on BiH-source income only\n- Capital gains integrated into income tax base\n- Social security contributions approximately 41.5% total (split employer/employee)\n- Withholding tax on dividends at 5%\n- Complex dual-entity system (Federation and Republika Srpska have separate tax administrations)",
+  "local_tips": "- Bosnian/Croatian/Serbian mutually intelligible; English growing especially in Sarajevo and among younger people\n- Registration at Ministry of Civil Affairs required; process can be slow\n- Healthcare: private clinics in Sarajevo adequate; insurance for serious conditions recommended\n- Cost of living among Europe's very lowest; budget €400-700/month comfortably\n- Sarajevo food culture extraordinary; cevapi (grilled meat) and baklava iconic\n- Warm hospitality culture; invitations to coffee (kafa) important social rituals\n- Driving between entities requires attention; road quality varies; watch speed cameras\n- Mostar day trip from Sarajevo (2.5 hours) absolutely worth it for the iconic bridge"
+}

@@ -1,0 +1,30 @@
+{
+  "continent": "Asia",
+  "name": "Malaysia",
+  "iso_code": "MY",
+  "flag_url": "https://flagcdn.com/my.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=800&q=80",
+  "description": "A multiethnic Southeast Asian gem where Malay, Chinese, and Indian cultures create extraordinary cuisine and vibrant diversity. Kuala Lumpur offers modern infrastructure, affordable living, and the Malaysia My Second Home program.\n\n## Key Highlights\n- Extraordinary multicultural cuisine ranked among Asia's finest\n- Affordable modern living with the Malaysia My Second Home program\n- Borneo's ancient rainforests and world-class marine ecosystems",
+  "longdescription": "Malaysia is a Southeast Asian nation of remarkable cultural diversity, split between the Malay Peninsula and the northern portion of the island of Borneo. Kuala Lumpur, the capital, is a modern metropolis dominated by the iconic Petronas Twin Towers, with excellent infrastructure, world-class shopping, and diverse food offerings at very affordable prices. Malaysia's multicultural society — comprising Malay, Chinese, Indian, and indigenous communities — creates one of the world's most diverse and celebrated food cultures, with hawker centers offering extraordinary variety. The country operates the MM2H (Malaysia My Second Home) program, one of Southeast Asia's most established long-term residency programs for retirees and remote workers. Malaysian Borneo (Sabah and Sarawak) offers ancient rainforests, diverse wildlife including orangutans and pygmy elephants, and some of the world's best diving at Sipadan. The cost of living is very reasonable, with quality meals available for a few dollars and comfortable accommodation at a fraction of Western prices. English is widely spoken as a business and educational language, making Malaysia very accessible to English speakers. The country is predominantly Muslim, and Islamic law applies to Muslim residents. Malaysia's combination of modernity, affordability, natural beauty, and cultural richness makes it consistently popular among expats, particularly retirees and digital nomads.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Malaysian citizens acquire citizenship at birth if born in Malaysia. Children born abroad to Malaysian fathers may register for citizenship."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 of the last 12 years residence in Malaysia (5 years in the last 7 for spouses), Malay language test, good character, intention to reside in Malaysia permanently.\n\n**Processing:** Through National Registration Department, 2-4 years. Selective."
+    },
+    "MM2H Pathway": {
+      "icon": "🏙️",
+      "desc": "Malaysia My Second Home (MM2H) provides long-term residence up to 10 years but does not directly lead to citizenship. It is a lifestyle visa, not a pathway to permanent residency."
+    },
+    "No Dual Citizenship": {
+      "icon": "⚠️",
+      "desc": "Malaysia does not permit dual citizenship. Malaysian citizens who voluntarily acquire foreign citizenship lose Malaysian citizenship automatically."
+    }
+  },
+  "tax_advice": "- Malaysia has progressive income tax (1% to 30%)\n- Corporate tax at 24% (17% for SMEs on first MYR 600,000)\n- GST abolished in 2018; replaced by SST (Sales and Services Tax) at 5-10%\n- Non-residents taxed at flat 30% on Malaysia-source income\n- Capital gains on shares generally exempt; RPGT applies to property (5-30% depending on holding period)\n- Dividends from Malaysian companies received by individuals are tax-exempt (single-tier system)\n- MM2H participants enjoy some preferential tax treatment on foreign pension income\n- Double tax treaty with 70+ countries",
+  "local_tips": "- Malay official language; English widely used in business and daily life — genuinely accessible\n- Visa/residence permit through Immigration Department; MM2H requires financial proof and approvals\n- Healthcare excellent at private hospitals (Prince Court, Pantai); Medic medical insurance recommended\n- Cost of living very reasonable; budget RM 4,000-6,000/month for comfortable expat life\n- Islamic customs respected; dress modestly at mosques and religious sites\n- Heat and humidity year-round; air conditioning essential and universally available\n- Grab app (like Uber) essential for transport; MRT excellent in KL\n- Hawker food culture extraordinary; Jalan Alor, Chow Kit, and Chinatown food streets legendary"
+}

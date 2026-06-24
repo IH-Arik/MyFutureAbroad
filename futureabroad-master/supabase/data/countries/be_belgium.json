@@ -1,0 +1,163 @@
+{
+  "continent": "Europe",
+  "name": "Belgium",
+  "iso_code": "BE",
+  "flag_url": "https://flagcdn.com/be.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "description": "The heart of Europe, Belgium is home to the EU headquarters and a perfect base for European exploration. Known for chocolate, beer, and medieval architecture, it offers urban sophistication in Brussels and Antwerp.\n\n## Key Highlights\n- Heart of Europe and EU headquarters\n- Famous for world-class chocolate and Belgian beer\n- Medieval architecture and urban sophistication",
+  "longdescription": "Belgium is a small Western European nation serving as the de facto capital of the European Union, with Brussels hosting EU headquarters and major international organizations. The country is strategically located, serving as a gateway to Europe for international business. Belgium is bilingual: French (Walloon) in the south and Dutch (Flemish) in the north, creating distinct regional cultures. Brussels is an international city with diverse communities and excellent international schools. The country is famous for Belgian chocolate, considered among the world's finest, and Belgian beer with diverse styles and high quality. Medieval architecture is preserved in cities like Bruges and Ghent, offering picturesque charm. Belgium offers excellent infrastructure, public services, and quality of life. The education system is good, particularly regarding international schools. Healthcare is excellent and well-organized. The cost of living is moderate to high. Belgium offers opportunities in EU administration, international organizations, finance, and technology. Chocolate and beer industries provide niche opportunities. English is widely spoken in urban areas and international business contexts. Belgium's small size makes it easy to travel to neighboring countries. Challenges include linguistic complexity, weather, and competition for jobs in major sectors. Belgium combines European strategic importance, international business hub status, culinary excellence, medieval charm, and excellent infrastructure, making it attractive for EU professionals, expats, and those seeking a European base.",
+  "visas": [
+    {
+      "name": "Work permit for (Belgium)",
+      "visa_type": "work",
+      "description": "Work permit for self-employed professionals and business owners wanting to establish in Belgium.",
+      "benefits": [
+        "EU headquarters location",
+        "Multilingual environment",
+        "Family reunification",
+        "Path to residency",
+        "Central European location"
+      ],
+      "min_income": 0,
+      "min_income_currency": "USD",
+      "min_savings": 0,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 60,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 400,
+      "application_fee_currency": "USD",
+      "required_documents": [],
+      "official_link": "https://economie.fgov.be/en/themes/enterprises/starting-business/procedures-self-employed",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Belgium Student Visa (Type D)",
+      "visa_type": "student",
+      "description": "Belgium's long-stay student visa (Type D) for non-EU nationals enrolled at a Belgian university or higher education institution for a full academic programme lasting more than 90 days.",
+      "benefits": [
+        "Study at Belgian universities",
+        "Part-time work permitted",
+        "Multilingual environment",
+        "EU headquarters location",
+        "Schengen Area travel"
+      ],
+      "min_income": 0,
+      "min_income_currency": "EUR",
+      "min_savings": 7200,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 220,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://dofi.ibz.be/en/themes/visa/categories-of-visa-d/student",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Belgium Family Reunification Visa",
+      "visa_type": "work",
+      "description": "Belgium's family reunification visa allows non-EU spouses, minor children, and in some cases dependent relatives of Belgian citizens or legal residents to join them in Belgium for long-term residence.",
+      "benefits": [
+        "Family unity in Belgium",
+        "Right to work",
+        "Path to permanent residency",
+        "EU headquarters location",
+        "Schengen Area travel"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "EUR",
+      "min_savings": 0,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 220,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://dofi.ibz.be/en/themes/residence/family-reunification",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Belgium Single Permit",
+      "visa_type": "work",
+      "description": "Belgium's Single Permit (Permis unique) combines a work permit and residence permit into one document for non-EU nationals who have a job offer from a Belgian employer.",
+      "benefits": [
+        "Live and work legally in Belgium",
+        "Path to permanent residency",
+        "EU headquarters location",
+        "Multilingual environment",
+        "Schengen Area travel"
+      ],
+      "min_income": 2500,
+      "min_income_currency": "EUR",
+      "min_savings": 0,
+      "min_savings_currency": "EUR",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": null,
+      "application_fee_usd": 440,
+      "application_fee_currency": "EUR",
+      "required_documents": [],
+      "official_link": "https://economie.fgov.be/en/themes/enterprises/starting-business/foreign-nationals/single-permit",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Belgian citizen parent(s) automatically acquire Belgian citizenship at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years legal residence (EU/EEA: 3 years), Dutch/French/German language depending on region, integration, renunciation of previous nationality.\n\n**Processing:** Through local municipality, 6-12 months."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏛️",
+      "desc": "Limited jus soli: Children born in Belgium to non-citizen parents can claim after age 18 if they resided there for 5 years."
+    },
+    "Spouse and Family": {
+      "icon": "💍",
+      "desc": "Spouses of Belgian citizens have access to accelerated naturalization with reduced residence requirements."
+    }
+  },
+  "tax_advice": "- Belgium has progressive income tax (up to 50%)\n- Corporate tax rate is 25% (reduced rate of 20.9% for small enterprises)\n- VAT at 21% (reduced rates of 12%, 6%, and 0%)\n- Non-residents taxed on Belgium-source income only\n- Patent box: 80% deduction on IP income (effective 6.25% tax rate)\n- Ruling system (Advanced Pricing Agreements) available\n- Capital gains taxed at ordinary rates or 16.5% depending on circumstances\n- Higher earner withheld tax (précompte mobilier) requires careful planning",
+  "local_tips": "- French or Dutch essential depending on region (Brussels, Flanders, Wallonia)\n- Bureaucracy complex due to regional differences; hire relocation specialist if possible\n- Cost of living reasonable outside Brussels; budget €1,200-1,800/month\n- Healthcare excellent; mandatory registration with mutuellе (health fund)\n- Regional integration important; learn local language of region\n- Tax brackets complicated; professional advice recommended\n- Cycling infrastructure excellent especially in Flanders"
+}

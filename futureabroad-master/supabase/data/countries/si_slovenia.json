@@ -1,0 +1,30 @@
+{
+  "continent": "Europe",
+  "name": "Slovenia",
+  "iso_code": "SI",
+  "flag_url": "https://flagcdn.com/si.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80",
+  "description": "A tiny Central European gem with extraordinary natural beauty — from Lake Bled to the Julian Alps and Adriatic coast. Slovenia packs incredible diversity into a small territory with EU membership and exceptional sustainability credentials.\n\n## Key Highlights\n- Iconic Lake Bled surrounded by the Julian Alps\n- EU member with excellent sustainability and green credentials\n- Surprising diversity: Alps, caves, wine regions, and coastline in one country",
+  "longdescription": "Slovenia is a small Central European nation that surprises visitors with how much it packs into its compact territory — just 20,000 square kilometers of stunning Alpine lakes, dramatic karst caves, wine regions, and a short but beautiful Adriatic coastline. Ljubljana, the charming capital, is consistently ranked among Europe's most livable and sustainable cities, with a car-free center, vibrant cafe culture, and excellent quality of life. Lake Bled, with its island church and dramatic castle backdrop, is one of Europe's most romantic and photographed landscapes. Slovenia was among the most prosperous republics of the former Yugoslavia and transitioned successfully to a market economy, joining both the EU and Eurozone in 2004 and 2007 respectively. The country consistently performs well in environmental sustainability rankings and has ambitious green energy goals. The economy is diversified with strengths in manufacturing, pharmaceuticals, and tourism. Slovenians have high English proficiency and are known for their outdoors-oriented, active lifestyle. The cost of living is moderate by EU standards, slightly lower than Western European countries. Slovenia's geographic position makes it excellent for exploring neighboring Italy, Austria, Croatia, and Hungary. The country's extraordinary natural landscapes, including Triglav National Park and the Škocjan Caves UNESCO World Heritage site, offer world-class outdoor pursuits across all seasons.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Slovenian citizens acquire citizenship automatically at birth regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence (6 years for EU citizens), Slovenian language A2 level, knowledge of Slovenian constitution/culture, financial stability, clean criminal record.\n\n**Processing:** Through Ministry of Interior, 6-12 months."
+    },
+    "EU Citizens": {
+      "icon": "🇪🇺",
+      "desc": "EU/EEA citizens have right of free movement and reduced residence requirements for naturalization after 6 years."
+    },
+    "Dual Citizenship": {
+      "icon": "🇸🇮",
+      "desc": "Dual citizenship is permitted in Slovenia. Applicants are not required to renounce their previous nationality."
+    }
+  },
+  "tax_advice": "- Slovenia has progressive income tax (16% to 50%)\n- Corporate tax at 19%\n- VAT at 22% (reduced rates of 9.5% and 5%)\n- Part of Eurozone since 2007 — no currency conversion needed\n- Capital gains taxed at 25% (reducing to 0% after 20 years of ownership)\n- Dividend withholding tax of 27.5%\n- Non-residents taxed on Slovenia-source income only\n- Social contributions approximately 38% total (split employer/employee)",
+  "local_tips": "- Slovenian language similar to Croatian/Serbian; English very widespread especially in Ljubljana\n- Registration with Administrative Unit required within 8 days for non-EU citizens\n- Healthcare excellent; mandatory health insurance registration on arrival\n- Cost of living moderate by EU standards; budget €900-1,200/month in Ljubljana\n- Lake Bled just 1 hour from Ljubljana; easily accessible for regular escapes\n- Triglav National Park UNESCO World Heritage site; hiking and outdoor culture central to Slovenian identity\n- Ljubljana car-free center; cycling very popular and infrastructure excellent\n- Very safe and clean; consistently ranked top European country for quality of life"
+}

@@ -1,0 +1,30 @@
+{
+  "continent": "South America",
+  "name": "Brazil",
+  "iso_code": "BR",
+  "flag_url": "https://flagcdn.com/br.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=800&q=80",
+  "description": "South America's giant captivates with Carnival, the Amazon, and Rio de Janeiro's iconic beaches. Brazil offers the continent's largest economy, extraordinary biodiversity, vibrant culture, and a warmth of spirit unmatched anywhere in the world.\n\n## Key Highlights\n- Iconic Rio de Janeiro, Carnival celebrations, and Copacabana\n- The Amazon: world's largest rainforest and greatest biodiversity\n- Vibrant Brazilian culture and extraordinarily warm, welcoming people",
+  "longdescription": "Brazil is South America's largest and most populous nation, the world's fifth largest country, and the dominant economic power of the continent. Rio de Janeiro, with its stunning natural setting between mountains and sea, is globally iconic for Carnival, the statue of Christ the Redeemer, Copacabana beach, and samba culture. São Paulo, the economic capital, is Latin America's largest city and financial hub, with world-class restaurants, museums, and business opportunities. The Amazon Basin covers much of Brazil's interior and represents the world's largest tropical rainforest, containing approximately 10% of all species on Earth. Brazil is enormously diverse, with indigenous, European, African, and Asian influences creating a unique multicultural identity. The country has the 11th largest economy in the world, with significant sectors in agriculture, mining, manufacturing, and a rapidly growing technology sector. São Paulo's tech scene and startup ecosystem is among Latin America's most dynamic. Portuguese is Brazil's official language, and the country is linguistically distinct from its Spanish-speaking neighbors. The cost of living varies dramatically by city and region. Brazil offers visa pathways for skilled workers, investors, and digital nomads through its Digital Nomad Visa program. The country's extraordinary cultural richness, natural diversity, and the warmth of its people make it one of the world's most captivating destinations.",
+  "visas": [],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Brazilian citizens automatically acquire citizenship at birth regardless of birthplace, provided they are registered at a Brazilian consulate."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements (Ordinary):** 4 years continuous residence, Portuguese language.\n\n**Requirements (Facilitated):** 1 year if married to Brazilian citizen, 1 year if having Brazilian child, 3 years if from Portuguese-speaking country (PALOP).\n\n**Processing:** Through Ministry of Justice, 6-18 months."
+    },
+    "Birthright Citizenship": {
+      "icon": "🇧🇷",
+      "desc": "Children born in Brazil to foreign parents acquire Brazilian citizenship at birth (jus soli), with some exceptions for parents on official foreign government service."
+    },
+    "Digital Nomad Visa": {
+      "icon": "💻",
+      "desc": "Brazil launched a Digital Nomad Visa in 2022, providing a 1-year renewable residence permit for remote workers earning from abroad, potentially leading to permanent residency."
+    }
+  },
+  "tax_advice": "- Brazil has progressive income tax (7.5% to 27.5%) for residents\n- Corporate tax at 15% (25% above BRL 20,000/month) plus 9% social contribution\n- ICMS (state VAT) at 12-25%; federal taxes (PIS/COFINS) also apply; total tax burden on goods can exceed 40%\n- Non-residents taxed at flat 25% on Brazil-source income\n- Capital gains on assets held abroad taxed at 15-22.5%\n- IOF (financial operations tax) applies to currency exchange and some financial transactions\n- Brazil has a Digital Nomad Visa allowing tax-favorable treatment on foreign income\n- Brazil's complex tax system often requires local professional advice",
+  "local_tips": "- Portuguese (Brazilian dialect) official; different from European Portuguese in accent and vocabulary\n- CPF (Cadastro de Pessoas Físicas) number essential for banking, contracts, and tax — obtain first\n- Healthcare: SUS public system free but often overcrowded; private insurance strongly recommended\n- Cost of living varies dramatically; São Paulo expensive by South American standards; smaller cities affordable\n- Safety awareness critical in major cities; research neighborhoods and apply common-sense precautions\n- Traffic culture aggressive; Uber widely available and preferred over driving initially\n- Digital nomad visa available; requires minimum $1,500/month income proof\n- Brazilians very warm and social; participating in churrasco and futebol culture accelerates integration"
+}

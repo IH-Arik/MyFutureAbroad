@@ -1,0 +1,99 @@
+{
+  "continent": "Asia",
+  "name": "Bangladesh",
+  "iso_code": "BD",
+  "flag_url": "https://flagcdn.com/bd.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+  "description": "One of South Asia's fastest-growing economies with a rich cultural heritage, the Sundarbans mangrove forest, and a booming garment industry driving rapid development in Dhaka.\n\n## Key Highlights\n- Rapidly growing economy and emerging market\n- Home to the Sundarbans, world's largest mangrove forest\n- Very low cost of living",
+  "longdescription": "Bangladesh is a densely populated South Asian nation that has achieved remarkable economic growth over the past two decades, largely driven by its massive garment and textile industry. Dhaka, the capital, is a bustling megacity with a chaotic but vibrant energy, rich street food culture, and a growing tech startup scene. The country offers one of the lowest costs of living in Asia, making everyday expenses very affordable. Bangladesh is home to the Sundarbans — the world's largest mangrove forest and a UNESCO World Heritage Site shared with India. The people are known for their warmth and hospitality. Bengali is the official language, though English is used in business and education. The country faces challenges around infrastructure, traffic congestion, and flooding, but presents significant opportunity for investors and entrepreneurs in manufacturing, technology, and agriculture sectors.",
+  "visas": [
+    {
+      "name": "Bangladesh Employment Visa",
+      "visa_type": "work",
+      "description": "Employment visa for foreign nationals with a job offer from a Bangladeshi company. Requires employer sponsorship and government clearance.",
+      "benefits": [
+        "Legal right to work",
+        "Multiple entry permitted",
+        "Renewable annually",
+        "Access to banking services"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 150,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Valid passport",
+        "Employer invitation letter",
+        "Work permit from BIDA",
+        "Medical certificate",
+        "Police clearance",
+        "Educational certificates"
+      ],
+      "official_link": "https://www.dip.gov.bd",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Bangladesh Tourist Visa on Arrival",
+      "visa_type": "tourist",
+      "description": "Visa on arrival available for nationals of eligible countries at international airports. Valid for short stays and tourism purposes.",
+      "benefits": [
+        "Available at major airports",
+        "Quick processing",
+        "Suitable for short visits",
+        "Extendable in-country"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 1,
+      "validity_months": 1,
+      "renewable": false,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 50,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Valid passport (6+ months)",
+        "Return flight ticket",
+        "Hotel booking",
+        "Sufficient funds proof"
+      ],
+      "official_link": "https://www.dip.gov.bd",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Work permit required; employer sponsorship typically needed\n- Tourist visa on arrival for many nationalities (up to 30 days)\n- Longer stays require separate visa application",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children born to Bangladeshi citizen parents automatically acquire citizenship at birth, regardless of birthplace."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence, renunciation of previous citizenship, Bengali language proficiency, good moral character, financial stability.\n\n**Processing:** Through Ministry of Home Affairs, 12-18 months. Dual citizenship not generally allowed."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏙️",
+      "desc": "Children born in Bangladesh to at least one Bangladeshi parent acquire citizenship automatically."
+    },
+    "Special Provisions": {
+      "icon": "⭐",
+      "desc": "Persons of Bangladeshi origin living abroad (especially UK, USA, Canada) may hold a NRB (Non-Resident Bangladeshi) card for investment and banking privileges, but not full citizenship."
+    }
+  },
+  "tax_advice": "- Personal income tax rates range from 0% to 25% depending on income level\n- Corporate tax rate is 27.5% for publicly listed companies; 30% for others\n- VAT at 15% (standard rate) with some reduced rates for essentials\n- Non-residents taxed only on Bangladesh-sourced income\n- Tax treaty network with 35+ countries for double taxation relief\n- Export-oriented industries (especially garments) receive significant tax incentives\n- Capital gains on securities listed on stock exchange taxed at reduced rates\n- Tax-free income threshold updated regularly; check current limit"
+}

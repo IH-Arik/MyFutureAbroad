@@ -63,7 +63,8 @@ CREATE TABLE IF NOT EXISTS "public"."visas" (
   "image_url"                   text,
   "additional_info"             jsonb,
   "created_at"                  timestamptz DEFAULT now(),
-  "updated_at"                  timestamptz DEFAULT now()
+  "updated_at"                  timestamptz DEFAULT now(),
+  CONSTRAINT visas_name_country_id_key UNIQUE (name, country_id)
 );
 
 CREATE INDEX IF NOT EXISTS idx_visas_name        ON visas (name);

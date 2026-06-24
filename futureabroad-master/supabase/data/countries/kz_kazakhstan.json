@@ -1,0 +1,101 @@
+{
+  "continent": "Asia",
+  "name": "Kazakhstan",
+  "iso_code": "KZ",
+  "flag_url": "https://flagcdn.com/kz.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1586184702565-6e9d0a05fa49?auto=format&fit=crop&w=800&q=80",
+  "description": "Central Asia's largest and most prosperous nation, Kazakhstan blends Soviet-era history with a futuristic capital, vast steppes, and a booming economy driven by oil, minerals, and a growing tech sector.\n\n## Key Highlights\n- Astana: one of the world's most futuristic capital cities\n- Rapidly growing economy and tech ecosystem\n- Strategic location between China, Russia, and Europe",
+  "longdescription": "Kazakhstan is by far the largest country in Central Asia and the ninth largest in the world, a vast landlocked nation of steppes, mountains, and deserts. Astana (formerly Nur-Sultan), the modern capital built from scratch in the 1990s, is a showcase of ambitious futuristic architecture. Almaty, the former capital, remains the cultural and business center with a vibrant cafe scene, excellent skiing, and access to the Tian Shan mountains. Kazakhstan's economy is driven by oil, gas, and minerals, but is actively diversifying into technology and finance. The government has launched numerous economic zones and tech hubs to attract international business and talent. Russian is widely spoken alongside Kazakh. The cost of living is low to moderate — significantly cheaper than Western Europe. Kazakhstan is emerging as a destination for business professionals, expats in the energy sector, and adventurers exploring Central Asia.",
+  "visas": [
+    {
+      "name": "Kazakhstan Work Visa",
+      "visa_type": "work",
+      "description": "Kazakhstan work permit for foreign professionals. The country actively recruits skilled workers in oil & gas, technology, and finance.",
+      "benefits": [
+        "Low cost of living",
+        "Growing economy",
+        "Strategic location",
+        "Modern capital city",
+        "Natural landscapes"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 120,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Employment contract",
+        "Educational certificates",
+        "Medical certificate",
+        "Police clearance"
+      ],
+      "official_link": "https://www.gov.kz",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Kazakhstan Investor Visa",
+      "visa_type": "investor",
+      "description": "Residence for foreign investors establishing businesses in Kazakhstan. Special Economic Zones offer significant tax incentives for qualifying investments.",
+      "benefits": [
+        "Tax incentives in SEZs",
+        "Strategic Central Asian location",
+        "Growing consumer market",
+        "Modern business infrastructure",
+        "Renewable residence"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 45,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "After 5 years of legal residence, eligible for permanent residency.",
+      "application_fee_usd": 500,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Business registration documents",
+        "Proof of investment",
+        "Bank statements",
+        "Business plan"
+      ],
+      "official_link": "https://www.invest.gov.kz",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Work visa requires employer sponsorship\n- Investor visa available for business formation\n- Tax residence requires 183+ days in Kazakhstan per year",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Kazakhstani citizen parents acquire citizenship automatically at birth, regardless of country of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous residence, Kazakh or Russian language ability, renunciation of previous citizenship, good conduct, financial stability.\n\n**Processing:** Through Ministry of Internal Affairs, 12-18 months."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏔️",
+      "desc": "Children born in Kazakhstan to at least one Kazakhstani parent acquire citizenship automatically."
+    },
+    "Special Merit": {
+      "icon": "⭐",
+      "desc": "Individuals with outstanding achievements or significant investment may be considered for citizenship by presidential decree."
+    }
+  },
+  "tax_advice": "- Personal income tax: flat 10% rate on all income\n- Corporate tax: flat 20% on profits\n- VAT at 12%; some essentials exempt\n- Non-residents taxed on Kazakhstan-sourced income only\n- Tax residence requires 183+ days presence in Kazakhstan\n- Special Economic Zones (SEZs) offer 0% corporate tax for qualifying activities\n- No inheritance or gift tax\n- Kazakhstan has tax treaties with 50+ countries"
+}

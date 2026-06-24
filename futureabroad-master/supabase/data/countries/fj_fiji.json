@@ -1,0 +1,66 @@
+{
+  "continent": "Oceania",
+  "name": "Fiji",
+  "iso_code": "FJ",
+  "flag_url": "https://flagcdn.com/fj.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+  "description": "A South Pacific paradise of 330 islands famous for crystal-clear waters, coral reefs, and warm Fijian hospitality. Fiji offers a relaxed tropical lifestyle and growing opportunities in tourism and sustainable development.\n\n## Key Highlights\n- 330 islands with stunning beaches and coral reefs\n- Warm and welcoming Fijian culture (Bula spirit)\n- Growing digital nomad and retirement destination",
+  "longdescription": "Fiji is an archipelago of 330 islands in the South Pacific Ocean, known for its stunning natural beauty, warm tropical climate, and exceptionally friendly people. The Fijian greeting \"Bula!\" embodies the warmth of the culture. Suva is the capital and largest city, while Nadi on the main island of Viti Levu is the main tourist gateway. Fiji's economy is primarily driven by tourism, sugar cane production, and garment manufacturing. The country offers a relaxed, island pace of life with English as one of the official languages alongside Fijian and Hindi. Expats are drawn by the natural beauty, low crime rates, and welcoming community. The cost of living is moderate — more affordable than Australia or New Zealand but higher than Southeast Asia. Fiji is increasingly attracting remote workers and retirees seeking Pacific island life.",
+  "visas": [
+    {
+      "name": "Fiji Long-Stay Permit",
+      "visa_type": "retirement",
+      "description": "Fiji's long-stay permit allows retirees and investors to reside in Fiji for extended periods. Ideal for those seeking a peaceful Pacific island lifestyle.",
+      "benefits": [
+        "Peaceful island lifestyle",
+        "330 islands to explore",
+        "English-speaking",
+        "Warm tropical climate",
+        "World-class diving and snorkeling"
+      ],
+      "min_income": 2000,
+      "min_income_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": null,
+      "application_fee_usd": 400,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport",
+        "Proof of funds or income",
+        "Medical certificate",
+        "Police clearance",
+        "Passport photos"
+      ],
+      "official_link": "https://www.fiji.gov.fj",
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "extra_info": "### Visas & Notes\n- Long-stay permit available for retirees and investors\n- Temporary residence for those with Fijian family connections\n- Investment visa for property buyers and business investors",
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Children of Fijian citizen parents automatically acquire citizenship at birth, regardless of country of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous lawful residence, English or Fijian language, good character, intention to remain in Fiji.\n\n**Processing:** Through Department of Immigration, 6-12 months."
+    },
+    "Birthright Citizenship": {
+      "icon": "🏝️",
+      "desc": "Children born in Fiji to at least one Fijian parent acquire citizenship. Foundlings discovered in Fiji may also be granted citizenship."
+    },
+    "iTaukei (Indigenous) Provisions": {
+      "icon": "⭐",
+      "desc": "Indigenous iTaukei Fijians have specific land and citizenship rights distinct from other citizens."
+    }
+  },
+  "tax_advice": "- Personal income tax: 18% to 20% flat rates\n- Corporate tax: 20% standard rate\n- VAT at 15% standard rate\n- Non-residents taxed on Fiji-sourced income only\n- No capital gains tax in Fiji\n- Tourism and investment zones offer significant tax holidays\n- Withholding tax on dividends: 9% for residents, 17% for non-residents\n- Property transfer tax applies on real estate transactions"
+}
