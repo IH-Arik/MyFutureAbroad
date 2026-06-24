@@ -270,7 +270,7 @@ def run_pipeline_subprocess(country: Optional[str] = None):
     project_root = router_dir.parent.parent.parent
     script_path = project_root / "ai-backend" / "scripts" / "run_monthly_update.py"
     
-    cmd = [sys.executable, str(script_path)]
+    cmd = [sys.executable, "-u", str(script_path)]
     if country:
         cmd.append(f"--country={country}")
         

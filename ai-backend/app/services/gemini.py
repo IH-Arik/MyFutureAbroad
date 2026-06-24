@@ -273,7 +273,7 @@ def generate_structured_json(
                 
             # 6. Parse JSON content
             try:
-                parsed_json = json.loads(cleaned_text)
+                parsed_json = json.loads(cleaned_text, strict=False)
                 return parsed_json
             except json.JSONDecodeError as je:
                 logger.error(f"JSON parsing failed for raw response:\n{raw_text}")

@@ -4,19 +4,19 @@
   "iso_code": "SE",
   "flag_url": "https://flagcdn.com/se.svg",
   "highlight_img_url": "https://images.unsplash.com/photo-1638487246661-8a62aa593a16?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "description": "Sweden is a highly sought-after destination for expats due to its exceptional quality of life, robust economy driven by technology and green energy, and a strong emphasis on work-life balance. The country offers an efficient healthcare system, high-standard education, and a welcoming, though sometimes reserved, cultural environment.",
-  "longdescription": "Expat life in Sweden is characterized by a high standard of living, supported by extensive social benefits and a focus on public services. The economy is strong, particularly in technology, engineering, and green energy, offering attractive job opportunities. Swedish society values equality, punctuality, and a healthy work-life balance, including generous parental leave and ample vacation days. However, expats should be prepared for the dark, long winters and the challenge of integrating into local social circles, as Swedes often maintain long-standing friendships. The cost of living is relatively high, particularly for housing in major cities like Stockholm, Gothenburg, and Malmö, which face housing shortages. While generally a very safe country with low crime rates, petty crime can occur in crowded areas, and there have been recent concerns regarding gang-related violence in some major urban centers. Learning Swedish is highly beneficial for integration and job prospects, with free government-sponsored language courses available.",
+  "description": "Sweden is a highly attractive destination for expats, boasting a strong economy, high standard of living, and a renowned focus on work-life balance. It is globally recognized for innovation and its pristine natural landscapes, offering a unique blend of modern urban life and traditional values for those looking to relocate.",
+  "longdescription": "Expat life in Sweden is characterized by a society that champions equality, individualism, and a healthy work-life balance, driven by a robust economy in technology, engineering, and green energy sectors. While the cost of living can be elevated, competitive salaries and extensive public services, including healthcare and education, often mitigate this. English proficiency is widespread, facilitating initial integration, though learning Swedish is key for deeper social and professional engagement. The country's commitment to sustainability is evident in its environmental policies, such as mandatory waste separation. Safety is generally high, with low overall crime rates, though petty theft can occur in busy areas, and gang-related violence is a concern in larger cities, typically not affecting tourist zones. Sweden's natural beauty, featuring vast forests and archipelagos, encourages an active outdoor lifestyle, while its cities offer a blend of historical charm and modern infrastructure.",
   "visas": [
     {
       "name": "Swedish work permit (Sweden)",
       "visa_type": "work",
-      "description": "The Swedish work permit (arbetstillstånd) is a residence permit for employment issued by the Swedish Migration Agency (Migrationsverket). It is required for non-EU/EEA nationals seeking to work in Sweden and is tied to a specific employer, role, and salary. The employment terms must meet Swedish collective agreements or common practice in the profession or industry.",
+      "description": "The Swedish work permit allows non-EU/EEA/Swiss citizens to live and work in Sweden. It is an employer-initiated permit tied to a specific role, salary, and requires an employment contract. The process is primarily online through the Swedish Migration Agency (Migrationsverket). A new processing model introduced in January 2024 aims to shorten processing times, especially for highly qualified workers.",
       "benefits": [
-        "Opportunity to live and work in Sweden for non-EU/EEA citizens.",
-        "Potential path to permanent residency after 4 years.",
-        "Family members can apply for permits to accompany the main applicant.",
-        "Allows legal employment under Swedish labor laws and conditions.",
-        "Online application process available."
+        "Right to work and reside in Sweden for the duration of the permit.",
+        "Opportunity to apply for permanent residency after four years of employment.",
+        "Family members (spouse/cohabitee and children) can apply for residence permits at the same time.",
+        "Renewable permit, allowing for longer stays.",
+        "Faster processing times for highly qualified workers (Category A)."
       ],
       "min_income": 34470,
       "min_income_currency": "SEK",
@@ -28,19 +28,19 @@
       "validity_months": 24,
       "renewable": true,
       "has_path_to_residency": true,
-      "path_to_residency_description": "After 4 years (48 months) of continuous work with a valid work permit within a 7-year period, individuals may qualify to apply for permanent residency. This period must reflect active employment, and certain interruptions can reset the qualifying period.",
-      "application_fee_usd": 203,
+      "path_to_residency_description": "A permanent residence permit may be granted after four years of continuous employment in Sweden within a seven-year period. After five years of legal and continuous residence, applicants may also be eligible for EC long-term residence status.",
+      "application_fee_usd": 225.18,
       "application_fee_currency": "SEK",
       "required_documents": [
-        "Valid passport (copies of personal data, photograph, signature, passport number, validity period, bar code)",
-        "Employment contract, signed by both applicant and employer",
-        "Documents showing that salary and other employment conditions are at least on par with Swedish collective agreements or common practice",
-        "Documents showing the employer has taken out health, life, industrial injuries, and occupational pension insurance (to be active by start date)",
-        "Proof of comprehensive health insurance, if employment is for a maximum of one year or until registered in the Swedish Population Register",
-        "Trade union opinion (utlåtande) from the relevant union (often handled by employer)",
-        "Academic credentials and CV (translated to Swedish or English if needed)"
+        "Valid passport (copy showing personal data, photo, signature, passport number, issuing country, validity period, and any permission to live in countries other than your country of origin).",
+        "Signed employment contract (must specify job title, duties, salary, working hours, and duration).",
+        "Documents showing comprehensive health insurance (if employment is for a maximum of one year). For longer stays, employer-provided health, life, occupational injury, and pension insurance must be in place from day one.",
+        "Trade union opinion (utlåtande) from the relevant trade union (typically provided by the employer).",
+        "Evidence of job advertisement on the EURES portal for at least 10 days (typically provided by the employer).",
+        "Academic credentials and CV (translated into Swedish or English if needed).",
+        "Documents for accompanying family members, if applicable."
       ],
-      "official_link": "https://www.migrationsverket.se/English/Private-individuals/Working-in-Sweden/Apply-for-a-work-permit.html",
+      "official_link": "https://www.migrationsverket.se/English/Private-individuals/Working-in-Sweden.html",
       "min_age": null,
       "max_age": null,
       "required_skills": [],
@@ -51,36 +51,36 @@
     {
       "name": "Sweden Student Residence Permit",
       "visa_type": "student",
-      "description": "The Sweden Student Residence Permit is for non-EU/EEA citizens admitted to full-time studies at a Swedish university or university college for a period longer than three months. It allows students to reside in Sweden for the duration of their education.",
+      "description": "The Sweden Student Residence Permit (Uppehållstillstånd för studier) is required for non-EU/EEA citizens intending to study in Sweden for more than three months. It allows recipients to reside in Sweden for full-time higher education studies at an accredited university or university college. As of June 11, 2026, new rules include limitations on working hours (maximum 15 hours per week for bachelor's and master's students), higher requirements for academic progress, and the obligation to notify the Migration Agency of a Swedish address.",
       "benefits": [
-        "Ability to work part-time (up to 15 hours per week during semesters for permits granted after 11 June 2026; uncapped during June-August).",
-        "Access to public healthcare if residing for one year or more and registered with the Swedish Tax Agency.",
-        "Opportunity for family members to apply for accompanying residence permits.",
-        "Eligibility to apply for an extended permit to seek employment after graduation.",
-        "Potential path to permanent residency in Sweden."
+        "Right to reside in Sweden for the duration of studies.",
+        "Allows part-time work (up to 15 hours/week for bachelor's/master's level students from June 11, 2026; unlimited for those with permits before this date) without a separate work permit.",
+        "Renewable if studies continue and satisfactory academic progress is maintained.",
+        "Possibility to apply for an extended residence permit to seek employment after graduation.",
+        "Access to public healthcare if registered in Sweden (typically for permits longer than one year)."
       ],
-      "min_income": 10656,
+      "min_income": 10314,
       "min_income_currency": "SEK",
-      "min_savings": 106560,
+      "min_savings": 123768,
       "min_savings_currency": "SEK",
       "requires_health_insurance": true,
       "requires_clean_criminal_record": false,
-      "processing_time_days": 64,
+      "processing_time_days": 90,
       "validity_months": 12,
       "renewable": true,
       "has_path_to_residency": true,
-      "path_to_residency_description": "Upon completion of studies, graduates can apply for an extended residence permit to seek employment or start a business for 12 to 18 months (an increase from the previous fixed 12 months, effective June 11, 2026). After securing employment, they can apply for a work permit. Permanent residency can generally be obtained after residing and working in Sweden for five years. Doctoral students have a faster route, potentially qualifying for permanent residency after three consecutive years with qualifying research, doctoral, or EU Blue Card permits, or four years in total.",
-      "application_fee_usd": 153.74,
+      "path_to_residency_description": "Students who complete higher education can apply for a residence permit to look for work or start a business in Sweden for up to 12-18 months. After securing employment, they can apply for a work permit. Permanent residency can be obtained after living and working in Sweden for a total of 5 years (including post-study work). Doctoral students have an accelerated path, potentially gaining permanent residence after three to four years of continuous residence.",
+      "application_fee_usd": 155,
       "application_fee_currency": "SEK",
       "required_documents": [
-        "Valid passport (copy of personal data pages and validity period).",
-        "Letter of admission or admission decision from a higher education institution confirming full-time studies.",
+        "Valid passport (copy of personal data pages, valid for the entire permit period).",
+        "Admission decision from the higher education institution (confirming final admission to full-time, on-site studies).",
         "Proof of paid tuition fees (if applicable, must be paid before applying).",
-        "Documents showing financial means to support yourself (e.g., bank statement in your name, scholarship letter, student grants).",
-        "Documents showing comprehensive health insurance (required if studies are for less than one year).",
-        "Completed application form (if not applying online)."
+        "Documents showing financial means to support yourself (e.g., bank statements in your name, scholarship letter, or loan certificate, showing at least SEK 10,314 per month for the duration of the permit).",
+        "Documents showing comprehensive health insurance (if studies are for less than one year and not registered in Sweden's population register).",
+        "Certified translations of documents not in Swedish or English."
       ],
-      "official_link": "https://www.migrationsverket.se/English/Private-individuals/Study-in-Sweden/Higher-education.html",
+      "official_link": "https://www.migrationsverket.se/English/Private-individuals/Studying-in-Sweden/Higher-education.html",
       "min_age": null,
       "max_age": null,
       "required_skills": [],
@@ -91,38 +91,34 @@
     {
       "name": "Sweden Family Reunification Residence Permit",
       "visa_type": "work",
-      "description": "The Sweden Family Reunification Residence Permit allows close family members (spouses, registered partners, cohabiting partners, and children under 18, and in exceptional cases dependent adult children or parents) of Swedish citizens, permanent residents, or valid residence permit holders (such as those with work, study, or protection status) to live, work, and study in Sweden. The sponsor in Sweden must generally meet maintenance requirements, including sufficient income and adequate housing.",
+      "description": "The Sweden Family Reunification Residence Permit allows non-EU/EEA family members to join their relatives (sponsors) who have a residence permit (permanent, work, refugee, or subsidiary protection) or Swedish/Nordic citizenship in Sweden. Eligible family members typically include spouses, registered partners, cohabiting partners, and children under 18 years of age. Both the applicant and the sponsor must generally be over 21 years old. The sponsor in Sweden must meet maintenance requirements, demonstrating sufficient income and adequate housing for the entire family.",
       "benefits": [
-        "Reunite and reside with family in Sweden.",
-        "Ability to work and study in Sweden for the family members.",
-        "Pathway to apply for Permanent Residency (PR) and eventually citizenship.",
-        "Access to Sweden's public healthcare system once registered and issued a personnummer.",
-        "Children have full access to free schooling."
+        "Enables family members to live together in Sweden.",
+        "Spouses and partners generally have the right to work in Sweden.",
+        "Children gain access to Sweden's public schooling and healthcare system.",
+        "Provides a pathway to permanent residency after a qualifying period.",
+        "Permit is renewable, offering long-term stability."
       ],
       "min_income": 10314,
       "min_income_currency": "SEK",
-      "min_savings": 300000,
-      "min_savings_currency": "SEK",
+      "min_savings": null,
+      "min_savings_currency": null,
       "requires_health_insurance": true,
       "requires_clean_criminal_record": true,
-      "processing_time_days": 540,
+      "processing_time_days": 270,
       "validity_months": 24,
       "renewable": true,
       "has_path_to_residency": true,
-      "path_to_residency_description": "After two years of continuous residence, family members can be granted a permanent residence permit if the relationship is well-established. Generally, permanent residency can be obtained after 3-5 years of continuous residence in Sweden.",
-      "application_fee_usd": 142.5,
+      "path_to_residency_description": "Family members are initially granted a temporary residence permit, typically for up to two years. After residing in Sweden for a continuous period, usually four years, they may become eligible to apply for a permanent residence permit. For spouses/partners who lived together for at least two years in their country of origin, a permanent residence permit may be granted directly.",
+      "application_fee_usd": 144,
       "application_fee_currency": "SEK",
       "required_documents": [
-        "Valid passport for all applicants.",
-        "Documentation translated into English or Swedish.",
-        "Proof of family relationship (e.g., marriage certificate, birth certificate, adoption certificate).",
-        "Proof of financial maintenance for the sponsor (income statements, employment contract, tax returns, or proof of sufficient savings). The income must cover housing costs and living expenses after tax.",
-        "Proof of adequate housing in Sweden for the entire family (e.g., rental agreement or ownership papers).",
-        "Proof of age (both applicant and sponsor must generally be over 21 years old; exceptions for those with children together).",
-        "Comprehensive private health insurance covering the period until a personnummer is issued and access to public healthcare is obtained.",
-        "Police clearance certificate (for the applicant).",
-        "Completed application forms.",
-        "Power of attorney (if applying on behalf of a family member)."
+        "Valid passport for the applicant",
+        "Proof of family relationship (e.g., marriage certificate, birth certificate, population registration certificates, joint rental contract, proof of cohabitation)",
+        "Documents demonstrating the sponsor's income (e.g., employment contract, salary specifications, bank statements)",
+        "Documents proving adequate housing (e.g., rental contract, title deed)",
+        "Power of attorney (if someone is applying on behalf of the family member)",
+        "Comprehensive private health insurance (required if the total continuous period of residence permits in Sweden is less than one year, or until registered in the Swedish population register)."
       ],
       "official_link": "https://www.migrationsverket.se/English/Private-individuals/Moving-to-someone-in-Sweden.html",
       "min_age": null,
@@ -135,42 +131,38 @@
     {
       "name": "Sweden Self-Employment Permit",
       "visa_type": "work",
-      "description": "The Sweden Self-Employment Permit, formally known as a residence permit for self-employed persons, allows non-EU/EEA citizens to live and work in Sweden by owning and operating their own business. It requires significant experience in the relevant industry and in running a business, along with sufficient financial resources to support oneself and the business. The business must primarily operate and sell goods or services in Sweden, and the applicant must own at least 50% of it.",
+      "description": "The Sweden Self-Employment Permit (Residence Permit for Self-Employed Persons) is for non-EU/EEA citizens who wish to live in Sweden and run their own business. Applicants must own at least 50-51% of the business and have executive responsibility for its operations. The business must be viable and focused on selling goods or services within the Swedish market.",
       "benefits": [
-        "Opportunity to live and work in Sweden by running your own business.",
-        "Potential path to permanent residency in Sweden after two years.",
-        "Family members (spouse/partner and children under 18) can apply to join.",
-        "Access to Sweden's quality of life, including healthcare and schools for children.",
-        "Flexibility to develop and scale a business within the Swedish market."
+        "Ability to live and work in Sweden.",
+        "Run and manage your own company in Sweden.",
+        "Potential path to permanent residency after two years.",
+        "Family members can be included in the application."
       ],
       "min_income": null,
       "min_income_currency": null,
       "min_savings": 200000,
       "min_savings_currency": "SEK",
-      "requires_health_insurance": false,
+      "requires_health_insurance": true,
       "requires_clean_criminal_record": true,
-      "processing_time_days": 600,
+      "processing_time_days": 608,
       "validity_months": 24,
       "renewable": true,
       "has_path_to_residency": true,
-      "path_to_residency_description": "After two years on a Self-Employment Permit, you can apply for permanent residency if your business is successfully supporting you, you continue to run the business with decisive influence, meet financial maintenance requirements through business income, comply with accounting rules, and have lived in Sweden for at least half the time your previous permit was valid.",
-      "application_fee_usd": 195,
-      "application_fee_currency": "EUR",
+      "path_to_residency_description": "After an initial permit for up to two years, applicants can apply for permanent residency. This requires demonstrating that the business is successfully supporting the applicant, adhering to generally accepted accounting principles, holding all necessary business permits, and that the applicant has primarily resided in Sweden during the permit period.",
+      "application_fee_usd": 190,
+      "application_fee_currency": "SEK",
       "required_documents": [
-        "Valid passport and copies of personal data, photo, signature, passport number, issuing country, validity period.",
-        "Bank certificates demonstrating sufficient funds (SEK 200,000 for main applicant, plus SEK 100,000 for spouse and SEK 50,000 per child) to support yourself and family for two years.",
-        "Proof of funds to purchase the company (if applicable) and cover business costs/investments.",
-        "Comprehensive business plan and financial forecasts demonstrating viability for two years.",
-        "Evidence of significant experience in the industry and prior experience running your own business.",
-        "Proof of proficiency in Swedish or English (course certificate or other evidence).",
-        "Company documents (e.g., purchase contract if buying, registration certificate, trading company agreement, share register, proof of payment if already purchased).",
-        "Copies of contracts with customers, suppliers, and premises.",
-        "Two most recent annual accounts or financial statements (if business already in operation).",
-        "Balance sheet and income statement for the current financial year up to the previous month.",
-        "Certificates to substantiate educational background.",
-        "Certificates from previous employers."
+        "Valid passport copies (showing personal data, photo, signature, passport number, issuing country, validity period, and any permits to reside in other countries).",
+        "Bank certificates or statements showing sufficient funds (SEK 200,000 for main applicant, SEK 100,000 for spouse/partner, SEK 50,000 per child) to support self and family for two years.",
+        "Business plan and financial forecasts proving commercial viability.",
+        "Evidence of significant industry experience and qualifications.",
+        "Proof of previous experience running a business.",
+        "Documented knowledge of Swedish or English.",
+        "Documents showing ownership of at least 51% of the business (e.g., certificate of incorporation, partnership agreement, share register).",
+        "Contracts with customers, suppliers, and for business premises.",
+        "Purchase contract and proof of payment if buying an existing business."
       ],
-      "official_link": "https://www.migrationsverket.se/English/Private-individuals/Moving-to-Sweden/Work-and-live-in-Sweden/Start-your-own-business.html",
+      "official_link": "https://www.migrationsverket.se/English/Private-individuals/Work-in-Sweden/Self-employed-people.html",
       "min_age": null,
       "max_age": null,
       "required_skills": [
@@ -185,21 +177,21 @@
   "citizenship_requirements": {
     "Citizenship by Descent": {
       "icon": "👨‍👩‍👧",
-      "desc": "A child born after April 1, 2015, automatically acquires Swedish citizenship if at least one parent is a Swedish citizen at the time of the child's birth, regardless of where the child was born. For children born before April 1, 2015, rules depend on the parents' marital status and the mother's citizenship; a child born in Sweden to a Swedish father and non-Swedish mother always became a Swedish citizen, and if the parents were married, the child acquired citizenship regardless of birthplace. If born abroad to an unmarried Swedish father and foreign mother before this date, citizenship could be acquired if parents married before the child turned 18, or if the father submitted a notification."
+      "desc": "Swedish citizenship is primarily based on *jus sanguinis* (right of blood). A child born after April 1, 2015, automatically acquires Swedish citizenship if at least one parent is a Swedish citizen at the time of birth, regardless of where the child is born. For children born before April 1, 2015, the rules vary; generally, a child received Swedish citizenship if the mother was Swedish, or if the father was Swedish and married to the mother (or born in Sweden to a Swedish father not married to the mother before 2015). Having a Swedish grandparent or great-grandparent typically does not automatically confer citizenship beyond the first generation, unless specific circumstances like statelessness apply. Required documents include birth certificates and proof of the parent's Swedish citizenship."
     },
     "Naturalization": {
       "icon": "📋",
-      "desc": "To become a Swedish citizen by naturalization, non-Nordic citizens generally must have resided in Sweden for at least five consecutive years with a valid permanent residence permit, be over 18 years old, and have maintained an honest lifestyle (e.g., no serious crimes, unpaid debts). Nordic citizens may apply after two years of residence. Stateless persons may apply after four years, and refugees after three years."
+      "desc": "To apply for Swedish citizenship through naturalization, you must generally be 18 years or older, be able to verify your identity, have a permanent residence permit (or right of residence/status for EU/EEA/British citizens), and have lived in Sweden continuously for a specified period. The standard residence requirement is currently 5 years. However, new proposals suggest raising this to 8 years of continuous residence, expected to take effect on June 6, 2026. Exceptions apply: Nordic citizens need 2 years of residence. Those with refugee status generally need 3 years of residence (some sources say 7 years). Applicants must also demonstrate good conduct and, under proposed new rules (from June 6, 2026), prove financial self-sufficiency and sufficient knowledge of Swedish language and society."
     },
     "Birthright": {
       "icon": "🏙️",
-      "desc": "Sweden does not have general birthright (jus soli) citizenship. Being born in Sweden does not automatically grant citizenship unless the child would otherwise be stateless. Citizenship is primarily based on 'jus sanguinis' (right of blood), meaning it is acquired through a Swedish parent."
+      "desc": "Sweden does not generally grant birthright citizenship (*jus soli*). Children born in Sweden to foreign parents do not automatically acquire Swedish citizenship. An exception is made if the child is born in Sweden and would otherwise be stateless (i.e., their parents have no citizenship or unknown citizenship)."
     },
     "Spouse and Family": {
       "icon": "💍",
-      "desc": "If you are married to, a registered partner of, or co-habiting with a Swedish citizen, you can apply for citizenship after three years if you have lived together for at least two years and have a permanent residence permit. If you are married to a Swedish citizen but not living in Sweden, stricter conditions apply: you must have been married for at least 10 years, reside in a country where you do not hold citizenship, and demonstrate clear connections to Sweden or Swedish society."
+      "desc": "If you are married to, a registered partner of, or cohabiting with a Swedish citizen, you can apply for citizenship after a shorter period of residence. Currently, this is typically 3 years if you have lived together for at least two years. However, new proposals suggest raising this requirement to 7 years of residence (if living together for the past five years), with the Swedish partner having been a citizen for at least five years. These changes are proposed to enter into force on June 6, 2026. The applicant must also meet general requirements such as identity verification and good conduct."
     }
   },
-  "tax_advice": "- **Personal Income Tax:** Sweden's income tax system includes a municipal tax (Kommunalskatt) ranging from approximately 29% to 35% depending on the municipality, applicable to all taxable income. Additionally, a national income tax of 20% applies to incomes exceeding SEK 598,500 (for 2024).\n- **Corporate Income Tax:** The standard corporate tax rate in Sweden is 20.6% as of 2024.\n- **Value-Added Tax (VAT):** Sweden applies a standard VAT rate of 25%. Reduced rates include 12% for foodstuffs, non-alcoholic beverages, hotel stays, and restaurant services, and 6% for books, newspapers, magazines, concerts, and passenger transportation. Certain services are VAT exempt.\n- **Capital Gains Tax:** Capital gains are generally taxed at a flat rate of 30% for individuals.\n- **Social Security Contributions:** Employers pay substantial social security contributions on behalf of their employees, amounting to approximately 31.42% of each employee's gross salary. Employees contribute 7% of their salary as a pension contribution, up to a maximum income ceiling (SEK 598,500 in 2024).",
-  "local_tips": "- **Cost of Living:** Sweden has a high cost of living, particularly in major cities like Stockholm, Gothenburg, and Malmö. Housing is a significant expense, with rent for a one-bedroom apartment in a city center averaging around €885 per month in 2024. Overall monthly expenses for a single person are estimated at €895 (excluding rent) and €3,279 for a family of four (excluding rent).\n- **Language:** While many Swedes speak excellent English, learning Swedish is highly beneficial for social integration and improving job prospects. The government offers free Swedish for Immigrants (SFI) courses.\n- **Safety:** Sweden is generally considered one of the safest countries globally, with low crime rates. However, petty crimes like pickpocketing can occur in crowded tourist areas. There has been an increase in gang-related violence in major cities, but these incidents do not typically affect areas frequented by tourists.\n- **Registration:** If you plan to live in Sweden for more than 12 months, you must register with the Swedish Tax Agency (Skatteverket) to obtain a Swedish personal identity number (personnummer). This number is crucial for accessing public services, opening bank accounts, receiving salaries, and obtaining a Swedish ID card.\n- **Housing Market:** The housing market in major cities is competitive, with high demand and limited supply for first-hand rental contracts. Expats often rely on more expensive, short-term second-hand rentals initially.\n- **Transportation:** Sweden has an excellent public transport system. Many urban areas are also bike-friendly with dedicated bike lanes."
+  "tax_advice": "*   **Personal Income Tax (PIT):** For residents, income tax comprises municipal and state tax. Municipal tax varies by municipality, averaging around 30-35% (approx. 32% average in 2025). An additional 20% state tax applies to taxable income exceeding SEK 643,100 (for 2025). Non-residents are taxed at a flat rate of 25%, or a reduced SINK (special income tax for non-residents) rate of 22.5% from January 1, 2026, further reducing to 20% from January 1, 2027.\n*   **Corporate Income Tax (CIT):** The standard corporate tax rate in Sweden is a flat 20.6% for 2024, 2025, and 2026.\n*   **Value-Added Tax (VAT):** Sweden, as an EU member, follows EU VAT rules. The standard VAT rate is 25%. Reduced rates apply to certain goods and services: 12% for foodstuffs, non-alcoholic beverages, hotel stays, and restaurant services; and 6% for books, newspapers, magazines, concerts, and passenger transport.\n*   **Capital Gains Tax (CGT):** The capital gains tax rate is 30%. Profits from property sales are taxed at 22%.\n*   **Social Security Contributions:** Statutory social security charges amount to 31.42% (2025) of total remuneration, paid by employers. Employees contribute a 7% pension insurance fee, capped at SEK 45,500 (2025), which is fully credited.\n*   **Expat Concessions:** Foreign experts, researchers, or key employees may apply for a 25% tax relief for seven years if their gross monthly salary exceeds 1.5 times the price base amount (SEK 88,201 for 2025, based on a price base amount of SEK 58,800). The application must be filed within three months of starting work.",
+  "local_tips": "*   **Cost of Living:** Sweden is considered one of the more expensive countries in Europe, though generally less so than Norway, Switzerland, or Iceland. A single person's monthly expenses average around €895-€1,780 (excluding rent) or USD 1,600–1,800 (including housing, food, transport, utilities), while a family of four might expect €3,279-€4,667 (excluding rent) or USD 3,800–4,200 (including housing, food, transport, utilities). Rent for a one-bedroom apartment in a city center can range from €885-€1,500 or USD 926-USD 2,170, with lower costs outside major cities. Groceries for a single person are around USD 350-500 per month.\n*   **Language:** Swedish is the official language, but a high percentage of the population, especially in larger cities, speaks near-fluent English. Many companies use English as the business language. While it's possible to get by with English, learning Swedish (free SFI courses are available) is crucial for better integration, navigating daily stressors (mail, forms, healthcare), and enhancing job prospects.\n*   **Safety:** Sweden is generally a safe country with low crime rates, contributing to a secure environment for expats. However, petty crimes like pickpocketing can occur in crowded areas. There has been an increase in gang and organized crime-related violence, mainly in the three largest cities (Stockholm, Gothenburg, Malmö), though these incidents have not typically occurred in tourist areas.\n*   **Registration:** If planning to stay in Sweden for more than 12 months, you must register with the Swedish Tax Agency (Skatteverket) to obtain a personal identity number (Personnummer). This number is essential for accessing social services, healthcare, and opening a bank account. Non-EU/EEA citizens typically need a residence permit valid for at least 12 months to register. Book an appointment for an identity check at a Skatteverket office."
 }

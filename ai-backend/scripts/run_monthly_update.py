@@ -116,6 +116,208 @@ def update_local_json(iso_code, name, updated_country_fields, updated_visas):
     except Exception as e:
         print(f"  ❌ Failed to update local JSON: {e}")
 
+def parse_numeric(val):
+    if val is None:
+        return None
+    if isinstance(val, (int, float)):
+        return val
+    if isinstance(val, str):
+        cleaned = val.strip().lower()
+        if cleaned in ["none", "n/a", "null", "unknown", "free", "varies", "no", "not applicable", "not specified", ""]:
+            return None
+        # Remove spaces
+        cleaned = cleaned.replace(" ", "")
+        import re
+        # If there's a comma and a dot, remove comma (e.g. 1,250.50 -> 1250.50)
+        if "," in cleaned and "." in cleaned:
+            if cleaned.find(",") < cleaned.find("."):
+                cleaned = cleaned.replace(",", "")
+            else:
+                # European style: 1.250,50 -> remove dot, replace comma with dot
+                cleaned = cleaned.replace(".", "").replace(",", ".")
+        elif "," in cleaned:
+            # Only comma. Is it thousands or decimals?
+            parts = cleaned.split(",")
+            if len(parts) == 2 and len(parts[1]) == 2:
+                cleaned = cleaned.replace(",", ".")
+            else:
+                cleaned = cleaned.replace(",", "")
+        
+        # Match number pattern: optional negative sign, digits, optional dot and digits
+        match = re.search(r"-?\d+(?:\.\d+)?", cleaned)
+        if match:
+            try:
+                num_str = match.group(0)
+                if "." in num_str:
+                    return float(num_str)
+                else:
+                    return int(num_str)
+            except ValueError:
+                return None
+    return None
+
+def parse_integer(val):
+    num = parse_numeric(val)
+    if num is not None:
+        return int(round(num))
+    return None
+
+def parse_boolean(val, default=False):
+    if val is None:
+        return default
+    if isinstance(val, bool):
+        return val
+    if isinstance(val, (int, float)):
+        return bool(val)
+    if isinstance(val, str):
+        cleaned = val.strip().lower()
+        if cleaned in ["true", "yes", "1", "y", "required"]:
+            return True
+        if cleaned in ["false", "no", "0", "n", "none", "null", "n/a", "not required", "no requirement"]:
+            return False
+        # Check standard indicators
+        if "not required" in cleaned or "no " in cleaned or "does not" in cleaned or "false" in cleaned:
+            return False
+        if "required" in cleaned or "yes" in cleaned or "true" in cleaned:
+            return True
+    return default
+
+def parse_currency(val):
+    if not val:
+        return None
+    if isinstance(val, str):
+        cleaned = val.strip().upper()
+        import re
+        match = re.search(r"[A-Z]{3}", cleaned)
+        if match:
+            return match.group(0)
+    return None
+
+def parse_string_list(val):
+    if val is None:
+        return []
+    if isinstance(val, list):
+        cleaned_list = []
+        for item in val:
+            if item is not None:
+                cleaned_list.append(str(item).strip())
+        return cleaned_list
+    if isinstance(val, str):
+        trimmed = val.strip()
+        if trimmed.startswith("[") and trimmed.endswith("]"):
+            try:
+                parsed = json.loads(trimmed)
+                if isinstance(parsed, list):
+                    return parse_string_list(parsed)
+            except:
+                pass
+        if "\n" in trimmed:
+            return [line.strip().lstrip("-*• ").strip() for line in trimmed.split("\n") if line.strip()]
+        if "," in trimmed:
+            return [item.strip() for item in trimmed.split(",") if item.strip()]
+        return [trimmed]
+    return []
+
+def sanitize_visa_fields(visa_data):
+    """
+    Sanitizes visa fields to match Supabase schema types and prevent 400 Bad Request.
+    """
+    if not isinstance(visa_data, dict):
+        return {}
+        
+    sanitized = {}
+    
+    # Text fields
+    sanitized["name"] = str(visa_data.get("name", "")).strip() if visa_data.get("name") else None
+    sanitized["visa_type"] = str(visa_data.get("visa_type", "")).strip() if visa_data.get("visa_type") else None
+    sanitized["description"] = str(visa_data.get("description", "")).strip() if visa_data.get("description") else None
+    sanitized["path_to_residency_description"] = str(visa_data.get("path_to_residency_description", "")).strip() if visa_data.get("path_to_residency_description") else None
+    sanitized["official_link"] = str(visa_data.get("official_link", "")).strip() if visa_data.get("official_link") else None
+    sanitized["image_url"] = str(visa_data.get("image_url", "")).strip() if visa_data.get("image_url") else None
+    
+    # Numeric fields
+    sanitized["min_income"] = parse_numeric(visa_data.get("min_income"))
+    sanitized["min_savings"] = parse_numeric(visa_data.get("min_savings"))
+    sanitized["application_fee_usd"] = parse_numeric(visa_data.get("application_fee_usd"))
+    
+    # Integer fields
+    sanitized["min_age"] = parse_integer(visa_data.get("min_age"))
+    sanitized["max_age"] = parse_integer(visa_data.get("max_age"))
+    sanitized["processing_time_days"] = parse_integer(visa_data.get("processing_time_days"))
+    sanitized["validity_months"] = parse_integer(visa_data.get("validity_months"))
+    
+    # Currency fields
+    sanitized["min_income_currency"] = parse_currency(visa_data.get("min_income_currency"))
+    sanitized["min_savings_currency"] = parse_currency(visa_data.get("min_savings_currency"))
+    sanitized["application_fee_currency"] = parse_currency(visa_data.get("application_fee_currency"))
+    
+    # Boolean fields
+    sanitized["requires_health_insurance"] = parse_boolean(visa_data.get("requires_health_insurance"), default=False)
+    sanitized["requires_clean_criminal_record"] = parse_boolean(visa_data.get("requires_clean_criminal_record"), default=False)
+    sanitized["renewable"] = parse_boolean(visa_data.get("renewable"), default=False)
+    sanitized["has_path_to_residency"] = parse_boolean(visa_data.get("has_path_to_residency"), default=False)
+    
+    # Array fields
+    sanitized["benefits"] = parse_string_list(visa_data.get("benefits"))
+    sanitized["required_skills"] = parse_string_list(visa_data.get("required_skills"))
+    sanitized["eligible_nationalities"] = parse_string_list(visa_data.get("eligible_nationalities"))
+    sanitized["excluded_nationalities"] = parse_string_list(visa_data.get("excluded_nationalities"))
+    sanitized["required_documents"] = parse_string_list(visa_data.get("required_documents"))
+    
+    # JSONB field
+    additional_info = visa_data.get("additional_info")
+    if additional_info:
+        if isinstance(additional_info, dict):
+            sanitized["additional_info"] = additional_info
+        elif isinstance(additional_info, str):
+            try:
+                sanitized["additional_info"] = json.loads(additional_info)
+            except:
+                sanitized["additional_info"] = {"raw": additional_info}
+        else:
+            sanitized["additional_info"] = {"info": additional_info}
+    else:
+        sanitized["additional_info"] = None
+        
+    return sanitized
+
+def sanitize_country_fields(country_data):
+    """
+    Sanitizes country fields to prevent type/schema mismatches.
+    """
+    if not isinstance(country_data, dict):
+        return {}
+        
+    sanitized = {}
+    
+    # Text fields
+    for field in ["description", "longdescription", "tax_advice", "local_tips"]:
+        if field in country_data:
+            val = country_data[field]
+            sanitized[field] = str(val).strip() if val is not None else None
+            
+    # JSONB fields
+    citizenship_requirements = country_data.get("citizenship_requirements")
+    if citizenship_requirements:
+        if isinstance(citizenship_requirements, dict):
+            # Ensure it has the correct nested structure
+            sanitized["citizenship_requirements"] = {}
+            for category, details in citizenship_requirements.items():
+                if isinstance(details, dict):
+                    sanitized["citizenship_requirements"][category] = {
+                        "icon": str(details.get("icon", "")).strip(),
+                        "desc": str(details.get("desc", "")).strip()
+                    }
+                else:
+                    sanitized["citizenship_requirements"][category] = {
+                        "icon": "📋",
+                        "desc": str(details).strip()
+                    }
+        else:
+            sanitized["citizenship_requirements"] = {"info": str(citizenship_requirements)}
+            
+    return sanitized
+
 def update_country_db(country_id, data):
     """Updates a country profile in the Supabase database."""
     # Check if updated_at exists or is supported
@@ -140,11 +342,15 @@ def update_country_db(country_id, data):
 
 def update_visa_db(visa_id, data):
     """Updates a visa record in the Supabase database."""
-    response = supabase_client.patch(
-        f"{SUPABASE_URL}/rest/v1/visas?id=eq.{visa_id}",
-        json={**data, "updated_at": datetime.now(timezone.utc).isoformat()}
-    )
-    response.raise_for_status()
+    try:
+        response = supabase_client.patch(
+            f"{SUPABASE_URL}/rest/v1/visas?id=eq.{visa_id}",
+            json={**data, "updated_at": datetime.now(timezone.utc).isoformat()}
+        )
+        response.raise_for_status()
+    except httpx.HTTPStatusError as e:
+        print(f"  ❌ Visa update failed (HTTP {e.response.status_code}): {e.response.text}")
+        raise
 
 def update_single_country(country, dry_run=False):
     """Updates profile information and all visas for a single country."""
@@ -179,12 +385,13 @@ def update_single_country(country, dry_run=False):
     updated_country_fields = {}
     try:
         print("  🔍 Grounding search for country details...")
-        updated_country_fields = generate_structured_json(
+        raw_country_fields = generate_structured_json(
             country_sys_prompt,
             user_prompt,
             enable_search_grounding=True
         )
-        print("  ✅ Country details successfully generated from search.")
+        updated_country_fields = sanitize_country_fields(raw_country_fields)
+        print("  ✅ Country details successfully generated and sanitized from search.")
     except Exception as e:
         print(f"  ❌ Failed to generate country details for {country_name}: {e}")
         return False
@@ -230,14 +437,15 @@ def update_single_country(country, dry_run=False):
         
         try:
             print(f"      🔍 Grounding search for visa '{visa_name}'...")
-            updated_visa_fields = generate_structured_json(
+            raw_visa_fields = generate_structured_json(
                 visa_sys_prompt,
                 visa_user_prompt,
                 enable_search_grounding=True
             )
-            updated_visa_fields["name"] = visa_name
+            raw_visa_fields["name"] = visa_name
+            updated_visa_fields = sanitize_visa_fields(raw_visa_fields)
             updated_visas.append(updated_visa_fields)
-            print(f"      ✅ Visa requirements generated successfully.")
+            print(f"      ✅ Visa requirements generated and sanitized successfully.")
             
             # Rate limiting delay between visa queries to respect Gemini RPM limits
             time.sleep(4)
