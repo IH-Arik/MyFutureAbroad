@@ -1,7 +1,49 @@
 -- ============================================================
--- Basic visa entries for the new countries
+-- FIXED v2: Visa entries for new countries batch 1
+-- Run this in Supabase SQL Editor → New query → Run
+--
+-- This version handles the case where partial/duplicate data
+-- already exists in the visas table.
+--
+-- Steps:
+--   1. Disable RLS so INSERT is not blocked
+--   2. Deduplicate any existing duplicate visa rows (keep lowest id)
+--   3. Add unique constraint (name, country_id)
+--   4. Insert any missing visas with ON CONFLICT DO NOTHING
+--   5. Re-enable RLS
 -- ============================================================
 
+-- ── Step 1: Disable RLS ──────────────────────────────────────
+ALTER TABLE public.visas DISABLE ROW LEVEL SECURITY;
+
+-- ── Step 2: Deduplicate existing visa rows ───────────────────
+-- Keeps the row with the LOWEST id for each (name, country_id) pair
+-- and deletes all later duplicates.
+DELETE FROM public.visas
+WHERE id NOT IN (
+  SELECT MIN(id)
+  FROM public.visas
+  GROUP BY name, country_id
+);
+
+-- ── Step 3: Add unique constraint (safe, idempotent) ─────────
+DO $$
+BEGIN
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_constraint
+    WHERE conname = 'visas_name_country_id_key'
+      AND conrelid = 'public.visas'::regclass
+  ) THEN
+    ALTER TABLE public.visas
+      ADD CONSTRAINT visas_name_country_id_key UNIQUE (name, country_id);
+  END IF;
+END;
+$$;
+
+-- ── Step 4: Insert all visa records ──────────────────────────
+-- ON CONFLICT (name, country_id) DO NOTHING means safe to re-run
+
+-- ── BAHRAIN ──────────────────────────────────────────────────
 INSERT INTO visas (
   name, country_id, visa_type, description, benefits,
   min_income, min_income_currency,
@@ -12,8 +54,6 @@ INSERT INTO visas (
   required_documents, official_link
 )
 VALUES
-
--- ── BAHRAIN ──────────────────────────────────────────────────
 (
   'Bahrain Work Visa',
   (SELECT id FROM countries WHERE name = 'Bahrain'),
@@ -37,9 +77,12 @@ VALUES
   500, 'USD',
   ARRAY['Business registration documents', 'Proof of investment', 'Bank statements', 'Passport', 'Business plan'],
   'https://www.bahrainedb.com'
-),
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── BANGLADESH ───────────────────────────────────────────────
+INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
+VALUES
 (
   'Bangladesh Employment Visa',
   (SELECT id FROM countries WHERE name = 'Bangladesh'),
@@ -61,9 +104,12 @@ VALUES
   50, 'USD',
   ARRAY['Valid passport (6+ months)', 'Return flight ticket', 'Hotel booking', 'Sufficient funds proof'],
   'https://www.dip.gov.bd'
-),
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── BARBADOS ─────────────────────────────────────────────────
+INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
+VALUES
 (
   'Barbados Welcome Stamp',
   (SELECT id FROM countries WHERE name = 'Barbados'),
@@ -86,9 +132,12 @@ VALUES
   750, 'USD',
   ARRAY['Passport', 'Proof of pension or retirement income', 'Health insurance', 'Police clearance', 'Medical certificate'],
   'https://immigration.gov.bb'
-),
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── CAMBODIA ─────────────────────────────────────────────────
+INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
+VALUES
 (
   'Cambodia E-Class Visa (Tourist)',
   (SELECT id FROM countries WHERE name = 'Cambodia'),
@@ -110,9 +159,12 @@ VALUES
   290, 'USD',
   ARRAY['Passport', 'Passport photo', 'Bank statement or proof of funds', 'Application form'],
   'https://www.mfaic.gov.kh'
-),
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── COLOMBIA ─────────────────────────────────────────────────
+INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
+VALUES
 (
   'Colombia Digital Nomad Visa',
   (SELECT id FROM countries WHERE name = 'Colombia'),
@@ -136,9 +188,12 @@ VALUES
   52, 'USD',
   ARRAY['Passport', 'Proof of pension or passive income', 'Bank statements', 'Health insurance in Colombia', 'Police clearance'],
   'https://www.cancilleria.gov.co'
-),
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── COSTA RICA ───────────────────────────────────────────────
+INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
+VALUES
 (
   'Costa Rica Pensionado Visa',
   (SELECT id FROM countries WHERE name = 'Costa Rica'),
@@ -163,9 +218,9 @@ VALUES
   ARRAY['Passport', 'Proof of $2,500/month passive income', 'Bank statements', 'Police clearance (apostilled)', 'Birth certificate (apostilled)', 'Passport photos'],
   'https://migracion.go.cr'
 )
-ON CONFLICT DO NOTHING;
+ON CONFLICT (name, country_id) DO NOTHING;
 
--- ── DOMINICAN REPUBLIC ──────────────────────────────────────
+-- ── DOMINICAN REPUBLIC ───────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
 VALUES
 (
@@ -191,7 +246,8 @@ VALUES
   200, 'USD',
   ARRAY['Passport', 'Proof of pension income ($1,500+/month)', 'Birth certificate', 'Police clearance', 'Medical exam', 'Passport photos'],
   'https://migracion.gob.do'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── ECUADOR ──────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -219,7 +275,8 @@ VALUES
   450, 'USD',
   ARRAY['Passport', 'Proof of remote income ($1,350+/month)', 'Health insurance', 'Criminal background check (apostilled)', 'Bank statements'],
   'https://www.cancilleria.gob.ec'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── FIJI ─────────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -234,7 +291,8 @@ VALUES
   400, 'USD',
   ARRAY['Passport', 'Proof of funds or income', 'Medical certificate', 'Police clearance', 'Passport photos'],
   'https://www.fiji.gov.fj'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── GHANA ─────────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -261,7 +319,8 @@ VALUES
   1000, 'USD',
   ARRAY['Passport', 'GIPC registration certificate', 'Business registration', 'Proof of investment', 'Bank statements'],
   'https://www.gipc.gov.gh'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── GUYANA ────────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -276,7 +335,8 @@ VALUES
   100, 'USD',
   ARRAY['Passport', 'Job offer letter', 'Educational certificates', 'Medical certificate', 'Police clearance'],
   'https://www.minfor.gov.gy'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── HONDURAS ──────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -292,7 +352,8 @@ VALUES
   200, 'USD',
   ARRAY['Passport', 'Proof of income ($1,500+/month)', 'Birth certificate (apostilled)', 'Police clearance (apostilled)', 'Medical certificate'],
   'https://www.migracion.gob.hn'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── JAMAICA ───────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -307,7 +368,8 @@ VALUES
   0, 'USD',
   ARRAY['Passport', 'Proof of employment or self-employment outside Jamaica', 'Health insurance', 'Return flight ticket', 'Hotel or accommodation booking'],
   'https://www.visitjamaica.com/global-work-holiday'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── JORDAN ────────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -333,7 +395,8 @@ VALUES
   200, 'USD',
   ARRAY['Passport', 'Proof of retirement income or savings', 'Medical certificate', 'Police clearance', 'Passport photos'],
   'https://www.moi.gov.jo'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── KAZAKHSTAN ────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -360,7 +423,8 @@ VALUES
   500, 'USD',
   ARRAY['Passport', 'Business registration documents', 'Proof of investment', 'Bank statements', 'Business plan'],
   'https://www.invest.gov.kz'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── KENYA ─────────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -386,7 +450,8 @@ VALUES
   111, 'USD',
   ARRAY['Passport', 'Proof of remote employment', 'Proof of income', 'Health insurance', 'Police clearance'],
   'https://www.ecitizen.go.ke'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── KYRGYZSTAN ────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -401,7 +466,8 @@ VALUES
   0, 'USD',
   ARRAY['Valid passport (6+ months)', 'Return ticket', 'Proof of funds'],
   'https://www.mfa.gov.kg'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── KUWAIT ────────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -416,7 +482,8 @@ VALUES
   100, 'KWD',
   ARRAY['Passport', 'Employer sponsorship letter', 'Medical fitness certificate', 'Police clearance', 'Educational certificates', 'Passport photos'],
   'https://www.moi.gov.kw'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
 
 -- ── LAOS ──────────────────────────────────────────────────────
 INSERT INTO visas (name, country_id, visa_type, description, benefits, min_income, min_income_currency, requires_health_insurance, requires_clean_criminal_record, processing_time_days, validity_months, renewable, has_path_to_residency, path_to_residency_description, application_fee_usd, application_fee_currency, required_documents, official_link)
@@ -442,4 +509,20 @@ VALUES
   100, 'USD',
   ARRAY['Passport', 'Business registration documents', 'Proof of investment', 'Medical certificate'],
   'https://www.investlaos.gov.la'
-) ON CONFLICT DO NOTHING;
+)
+ON CONFLICT (name, country_id) DO NOTHING;
+
+-- ── Step 5: Re-enable RLS ────────────────────────────────────
+ALTER TABLE public.visas ENABLE ROW LEVEL SECURITY;
+
+-- ── Step 6: Verify ───────────────────────────────────────────
+-- Uncomment and run to confirm all rows are present and clean:
+-- SELECT v.name, c.name AS country, v.visa_type
+-- FROM visas v
+-- JOIN countries c ON c.id = v.country_id
+-- WHERE c.name IN (
+--   'Bahrain','Bangladesh','Barbados','Cambodia','Colombia','Costa Rica',
+--   'Dominican Republic','Ecuador','Fiji','Ghana','Guyana','Honduras',
+--   'Jamaica','Jordan','Kazakhstan','Kenya','Kyrgyzstan','Kuwait','Laos'
+-- )
+-- ORDER BY c.name, v.name;
