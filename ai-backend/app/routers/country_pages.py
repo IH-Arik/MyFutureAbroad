@@ -4,7 +4,7 @@ import json
 import logging
 from datetime import datetime, timezone, timedelta
 from typing import Optional
-from fastapi import APIRouter, Depends, HTTPException, Query, Request
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, BackgroundTasks
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -258,4 +258,52 @@ async def list_countries(
         "request_id": request_id,
         "cache_hit": cache_hit,
         "countries": list_data.get("countries", [])
+    }
+
+
+def run_pipeline_subprocess(country: Optional[str] = None):
+    import subprocess
+    import sys
+    from pathlib import Path
+    
+    router_dir = Path(__file__).resolve().parent
+    project_root = router_dir.parent.parent.parent
+    script_path = project_root / "ai-backend" / "scripts" / "run_monthly_update.py"
+    
+    cmd = [sys.executable, str(script_path)]
+    if country:
+        cmd.append(f"--country={country}")
+        
+    log_dir = project_root / "ai-backend" / "tmp"
+    log_dir.mkdir(exist_ok=True)
+    log_file = log_dir / "monthly_update.log"
+    
+    with open(log_file, "a", encoding="utf-8") as f:
+        f.write(f"\n--- Update Pipeline Triggered at {datetime.now()} ---\n")
+        f.flush()
+        subprocess.run(
+            cmd,
+            stdout=f,
+            stderr=f,
+            cwd=str(project_root)
+        )
+
+
+@router.post("/update-pipeline")
+async def trigger_update_pipeline(
+    background_tasks: BackgroundTasks,
+    country: Optional[str] = Query(None, description="ISO code or country name to update (e.g. 'SE' or 'sweden')"),
+    request: Request = None
+):
+    """
+    Triggers the automated country and visa update pipeline in the background.
+    """
+    request_id = getattr(request.state, "request_id", str(uuid.uuid4()))
+    background_tasks.add_task(run_pipeline_subprocess, country)
+    
+    return {
+        "request_id": request_id,
+        "status": "triggered",
+        "message": f"Update pipeline running in the background. Check logs at tmp/monthly_update.log for progress.",
+        "country_filter": country
     }

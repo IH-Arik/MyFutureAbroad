@@ -258,9 +258,18 @@ def generate_structured_json(
                 lines = cleaned_text.split("\n")
                 if lines[0].startswith("```json") or lines[0].startswith("```"):
                     lines = lines[1:]
-                if lines and lines[-1].startswith("```"):
-                    lines = lines[:-1]
+                if lines:
+                    if lines[-1].strip().endswith("```"):
+                        lines[-1] = lines[-1].strip().rstrip("`").strip()
+                    if lines and lines[-1] == "":
+                        lines = lines[:-1]
                 cleaned_text = "\n".join(lines).strip()
+                
+            # Extract pure JSON using regex to handle inline backticks or preamble/postamble
+            import re
+            match = re.search(r"(\{[\s\S]*\}|\[[\s\S]*\])", cleaned_text)
+            if match:
+                cleaned_text = match.group(1).strip()
                 
             # 6. Parse JSON content
             try:
