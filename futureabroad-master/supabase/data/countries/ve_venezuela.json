@@ -1,0 +1,58 @@
+{
+  "continent": "South America",
+  "name": "Venezuela",
+  "iso_code": "VE",
+  "flag_url": "https://flagcdn.com/ve.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=80",
+  "description": "A country of stunning natural beauty, from Caribbean coastlines to Angel Falls. Offers business and passive income visa options.\n\n## Key Highlights\n- Angel Falls, the world's tallest uninterrupted waterfall, and Mount Roraima\n- Beautiful Caribbean coast and tropical archipelagos like Los Roques\n- Very low cost of living in USD terms under current economic conditions",
+  "longdescription": "Venezuela is a country on the northern coast of South America, bordering Colombia, Brazil, and Guyana. It boasts immense natural diversity, ranging from the Andes Mountains to the Amazon basin, the vast plains of the llanos, and the Caribbean coastline. Venezuela has the world's largest proven oil reserves, though it is currently experiencing complex economic conditions. The capital, Caracas, is situated in a valley and is the administrative and economic center. Spanish is the official language, with local indigenous languages spoken in rural forest regions. Life in Venezuela is complex, but offers unique opportunities. The cost of living is very low in US dollar terms, with US dollars widely used informally. The government offers business and passive income visas.",
+  "visas": [
+    {
+      "name": "Venezuela Rentista Visa",
+      "visa_type": "other",
+      "description": "Venezuela's passive income visa (TR-RE) is granted to foreign nationals who have a guaranteed monthly passive income from foreign sources of at least $1,500.",
+      "benefits": [
+        "Live in a naturally diverse South American country",
+        "Path to permanent residency",
+        "Extremely low cost of living in USD terms"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency status after 5 years of temporary residence.",
+      "application_fee_usd": 200,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Proof of passive income ($1,500/month)",
+        "Criminal record check",
+        "Health certificate"
+      ],
+      "official_link": "http://www.saime.gob.ve/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a parent who is a citizen of Venezuela."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence (reduced to 5 years for Spanish-Americans/Iberians), basic knowledge of Spanish, history, and geography, dual citizenship allowed.\n\n**Processing:** Through SAIME, can take 12-24 months."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 34% on income over local thresholds\n- Corporate income tax rate is flat 34% (higher for oil companies)\n- Standard Value Added Tax (VAT) rate is 16%\n- Capital gains tax is 15% on property sales",
+  "local_tips": "- Spanish is official and essential for daily life; English is limited\n- Cash (US Dollars) is widely used informally; local currency (Bolivar) is subject to high inflation\n- Healthcare: basic public; private clinics in Caracas (e.g. Clínica Metropolitana) are recommended\n- Safety: exercise extreme caution, avoid night travel, and hire trusted local transport\n- Cost of living: very low in USD terms for housing and services"
+}

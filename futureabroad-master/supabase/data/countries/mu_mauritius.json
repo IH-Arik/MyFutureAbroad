@@ -1,0 +1,139 @@
+{
+  "continent": "Africa",
+  "name": "Mauritius",
+  "iso_code": "MU",
+  "flag_url": "https://flagcdn.com/mu.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+  "description": "A luxurious Indian Ocean paradise known for its pristine beaches, coral reefs, stable economy, and business-friendly tax regime. Highly popular with digital nomads and retirees.\n\n## Key Highlights\n- Exceptional quality of life and world-class tropical beaches\n- Highly attractive flat 15% tax system with no capital gains tax\n- Stable democracy and secure environment for international business",
+  "longdescription": "Mauritius is an island nation in the Indian Ocean, located east of Madagascar. Renowned for its white-sand beaches, lagoons, and dramatic volcanic peaks, it is one of Africa's most prosperous and politically stable countries. The capital, Port Louis, is a bustling economic center combining modern office buildings with colonial history and colorful street markets. Mauritius has successfully diversified its economy from sugar cane into financial services, luxury tourism, textiles, and information technology. The island is highly international, with a multicultural population of Indian, African, Chinese, and European descent. English is the official language for administration, while Creole and French are widely spoken in daily life. Mauritius offers a very high standard of living, with excellent international schools, modern healthcare facilities, and low crime rates. It is considered one of the world's best tax havens, offering a flat 15% income tax rate and no inheritance or capital gains tax. The government offers multiple residence permits, including the Premium Visa for remote workers and various Occupation Permits for investors and retirees.",
+  "visas": [
+    {
+      "name": "Mauritius Premium Visa",
+      "visa_type": "work",
+      "description": "Mauritius's digital nomad and long-stay visa allows remote workers, retirees, and tourists to live in Mauritius for up to a year, with income sourced from outside the island.",
+      "benefits": [
+        "Live and work remotely from a tropical island",
+        "No application fee",
+        "Tax-exempt status for foreign income during the first 6 months",
+        "Schengen-like travel flexibility"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 14,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": "Does not count toward permanent residency.",
+      "application_fee_usd": 0,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Passport copy",
+        "Flight itinerary",
+        "Proof of monthly income ($1,500)",
+        "Health insurance"
+      ],
+      "official_link": "https://residencyinmauritius.com/premium-visa/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Mauritius Retired Residence Permit",
+      "visa_type": "other",
+      "description": "A 10-year residence permit for non-citizens aged 50+ who can commit to transferring a minimum of $1,500 monthly (or $18,000 annually) into a Mauritian bank account.",
+      "benefits": [
+        "10-year residency in a safe, tropical nation",
+        "Permit holders can invest in local businesses",
+        "No tax on capital gains or inheritance",
+        "Path to permanent residency"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 120,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Eligible to apply for a 20-year Permanent Residence Permit after 3 consecutive years.",
+      "application_fee_usd": 1000,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Medical report",
+        "Clean criminal record",
+        "Proof of funds",
+        "Bank reference letter"
+      ],
+      "official_link": "https://residencyinmauritius.com/retire-in-mauritius/",
+      "min_age": 50,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Mauritius Investor Occupation Permit",
+      "visa_type": "startup",
+      "description": "An occupation permit combining work and residence for investors establishing an business in Mauritius with an initial investment of at least $50,000.",
+      "benefits": [
+        "Live, work, and do business in Mauritius",
+        "10-year residency permit",
+        "Exempt from custom duties on office equipment",
+        "Tax incentives for new businesses"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": 50000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 120,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Eligible to apply for a 20-year Permanent Residence Permit after 3 consecutive years with minimum annual turnover.",
+      "application_fee_usd": 1000,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Detailed business plan",
+        "Company registration docs",
+        "Certificate of bank deposit"
+      ],
+      "official_link": "https://residencyinmauritius.com/work-in-mauritius/investor/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Entrepreneurship"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to at least one Mauritian citizen parent."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 7 years continuous legal residence (5 years for Commonwealth citizens), sound mind, knowledge of English or French, investment-based fast track available.\n\n**Processing:** Through Prime Minister's Office, 12-18 months."
+    },
+    "Spouse of Citizen": {
+      "icon": "💍",
+      "desc": "Spouses of Mauritian citizens may apply for citizenship after 4 years of marriage and continuous residence."
+    }
+  },
+  "tax_advice": "- Flat 15% personal income tax rate\n- Flat 15% corporate tax rate (can be as low as 3% for export or offshore companies)\n- Value Added Tax (VAT) is flat 15%\n- No capital gains tax, wealth tax, or inheritance tax\n- Territorial tax incentives exist for global headquarters and fund management businesses\n- Dividends and interest are generally exempt from taxation locally",
+  "local_tips": "- English is the official language for government and business, but French and Creole are spoken daily\n- Driving is on the left; public transit (buses) is cheap, but renting a car or scooter is best\n- Healthcare: public hospitals are free but crowded; private clinics (e.g. Wellkin) are excellent\n- Cost of living is moderate; budget $1,500-2,500/month for a high-quality lifestyle in Grand Baie or Flic en Flac\n- Internet connectivity is excellent; fiber optic coverage is widespread across the island"
+}

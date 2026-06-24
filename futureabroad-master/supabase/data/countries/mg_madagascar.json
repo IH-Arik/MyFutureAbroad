@@ -1,0 +1,101 @@
+{
+  "continent": "Africa",
+  "name": "Madagascar",
+  "iso_code": "MG",
+  "flag_url": "https://flagcdn.com/mg.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1552588355-1f22b7a9775f?auto=format&fit=crop&w=800&q=80",
+  "description": "The island of lemurs, baobabs, and vanilla. Madagascar offers a unique ecosystem with incredible biodiversity off the coast of East Africa, suitable for adventurous travelers.\n\n## Key Highlights\n- Home of unique wildlife, including lemurs found nowhere else\n- Stunning landscapes from Avenue of the Baobabs to Tsingy de Bemaraha\n- Rich cultural heritage blending African and Austronesian traditions",
+  "longdescription": "Madagascar is the world's fourth largest island, located off the eastern coast of Africa in the Indian Ocean. Geographically isolated for millions of years, the island has developed an incredibly unique ecosystem, with over 90% of its wildlife found nowhere else on Earth. The capital, Antananarivo, is situated in the central highlands and features a mix of French colonial architecture and historic royal palaces. Madagascar is a major global producer of vanilla, cloves, and essential oils, with agriculture anchoring the local economy. The island's landscapes are highly diverse, ranging from lush tropical rainforests in the east to dry deciduous forests and dramatic limestone stone forests (Tsingy) in the west. The culture is a unique blend of African, South Asian, and Austronesian influences, reflected in the Malagasy language, customs, and ancestral traditions. The cost of living is extremely low, but infrastructure, public services, and healthcare are limited, particularly outside the capital. Internet connectivity is good in Antananarivo due to fiber optic cables but remains scarce in rural regions. Madagascar offers residence permits for investors and retirees seeking a slow, rustic life in a biological wonderland.",
+  "visas": [
+    {
+      "name": "Madagascar Investor Visa",
+      "visa_type": "work",
+      "description": "Madagascar's investor residence permit (visa de séjour pour investisseur) is for foreign nationals who establish a local company or invest in an approved business sector.",
+      "benefits": [
+        "Live and operate a business in Madagascar",
+        "Path to long-term residency",
+        "Low operating and labor costs",
+        "Access to unique agricultural and mineral resources"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": 100000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 60,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency after 5 years of legal status.",
+      "application_fee_usd": 250,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Business plan",
+        "Company registration documents",
+        "Bank reference",
+        "Proof of investment"
+      ],
+      "official_link": "https://www.edbm.mg/investing-in-madagascar/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Business Management"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Madagascar Retired Visa",
+      "visa_type": "other",
+      "description": "Madagascar's retiree residence permit (visa de séjour pour retraité) is for foreign nationals aged 50+ who can show a steady passive income or monthly pension transferred to a Malagasy bank account.",
+      "benefits": [
+        "Enjoy a low-cost tropical retirement",
+        "Path to long-term residency",
+        "Friendly communities and beautiful coastal regions"
+      ],
+      "min_income": 1100,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 45,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency after 5 years of residence.",
+      "application_fee_usd": 200,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Pension statement",
+        "Bank certificate showing monthly transfers",
+        "Criminal record check"
+      ],
+      "official_link": "https://www.diplomatie.gov.mg/",
+      "min_age": 50,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired at birth if at least one parent is a citizen of Madagascar."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years legal residence (can be reduced for spouses/children of citizens), fluency in Malagasy, integration into local society, renunciation of other citizenships.\n\n**Processing:** Through Ministry of Justice, can take 12-24 months."
+    },
+    "Spouse of Citizen": {
+      "icon": "💍",
+      "desc": "Spouses of Malagasy citizens may apply for naturalization after 2 years of marriage and continuous residence."
+    }
+  },
+  "tax_advice": "- Madagascar has progressive income tax rates (0% to 20%)\n- Corporate income tax rate is 20%\n- Standard Value Added Tax (VAT) rate is 20%\n- Double tax treaties exist with France, Canada, and Mauritius\n- Passive income (dividends, interest) is subject to a 10-15% withholding tax\n- Wealth tax is not applicable, but property tax is charged on real estate assets",
+  "local_tips": "- Malagasy and French are official; French is crucial for administration and business\n- Cash is essential; Ariary is the local currency and credit cards are rarely accepted outside luxury hotels\n- Healthcare is basic; emergency evacuation insurance (like Amref Flying Doctors) is highly recommended\n- Public transport (taxi-be) is crowded; expats usually rent a 4WD vehicle with a driver\n- Standard of living is low; budget €1,000-1,500/month for a comfortable expat lifestyle in Antananarivo\n- Punctuality is relaxed (the concept of 'mora mora' or slowly slowly defines local life)"
+}

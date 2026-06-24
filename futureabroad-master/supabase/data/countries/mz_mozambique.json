@@ -1,0 +1,66 @@
+{
+  "continent": "Africa",
+  "name": "Mozambique",
+  "iso_code": "MZ",
+  "flag_url": "https://flagcdn.com/mz.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1582296465471-db9b01518f8e?auto=format&fit=crop&w=800&q=80",
+  "description": "A beautiful East African nation with a long Indian Ocean coastline, rich culture, and pristine marine parks. Known for natural resource investments and coastal living.\n\n## Key Highlights\n- Beautiful coastal areas and islands like Bazaruto Archipelago\n- Thriving natural gas, mining, and agricultural sectors\n- Rich Portuguese-African fusion culture and cuisine",
+  "longdescription": "Mozambique is a Southern African nation bordered by the Indian Ocean to the east. The country features a sprawling coastline of over 2,500 kilometers, dotted with white-sand beaches, coral reefs, and traditional dhow fishing boats. The capital, Maputo, is a lively port city with Portuguese colonial architecture, wide avenues lined with jacaranda trees, and a thriving seafood and jazz scene. Mozambique is highly rich in natural resources, particularly coal, titanium, and massive offshore natural gas deposits currently drawing major international energy investments. Portuguese is the official language, with various local Bantu languages spoken widely. The country offers a relaxed pace of life, but faces challenges including infrastructure gaps, economic inequality, and basic public services. Expats are primarily drawn to Mozambique for corporate contracts in resource sectors or to set up tourism ventures along its stunning coasts. Residence permits are available for investors and employees.",
+  "visas": [
+    {
+      "name": "Mozambique Investment Visa",
+      "visa_type": "work",
+      "description": "Mozambique's investment visa (Visto de Investimento) is granted to foreign nationals who invest in projects approved by the Center for Investment Promotion (CPI) of Mozambique.",
+      "benefits": [
+        "Live and work in Mozambique",
+        "Path to long-term residency",
+        "Incentives for business and tax exemptions in special economic zones",
+        "Import machinery duty-free"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": 50000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 45,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency after 5 years of residence.",
+      "application_fee_usd": 400,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "CPI investment approval",
+        "Detailed project business plan",
+        "Proof of funds deposit",
+        "Criminal record check"
+      ],
+      "official_link": "https://www.cpi.co.mz/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Business Management"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a Mozambican father or mother who was born in Mozambique."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence, basic Portuguese language, sound mind, proof of means of subsistence, renunciation of previous citizenship.\n\n**Processing:** Through Ministry of Justice, can take up to 2 years."
+    },
+    "Spouse of Citizen": {
+      "icon": "💍",
+      "desc": "Foreign nationals married to Mozambican citizens may apply for naturalization after 5 years of marriage."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 32%\n- Corporate income tax rate is flat 32% (agriculture enjoys a reduced rate of 10%)\n- Value Added Tax (VAT) rate is 17%\n- High withholding tax of 20% on interest and dividends paid to non-residents\n- Double tax treaties exist with Portugal, South Africa, and Italy",
+  "local_tips": "- Portuguese is the official language and essential for administration and business; English is limited\n- Cash is king; Metical is the local currency and South African Rand is accepted in the south\n- Healthcare is limited; private clinics (e.g. Lenmed Maputo Private Hospital) are recommended\n- Traffic can be congested; 4WD is necessary for traveling outside major cities\n- Expats usually live in secure residential compounds in Maputo (Sommerschield or Polana)\n- Security: exercise caution in public spaces and avoid travel to northern Cabo Delgado province"
+}

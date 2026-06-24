@@ -1,0 +1,62 @@
+{
+  "continent": "Africa",
+  "name": "Uganda",
+  "iso_code": "UG",
+  "flag_url": "https://flagcdn.com/ug.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1542397284385-601017645516?auto=format&fit=crop&w=800&q=80",
+  "description": "The pearl of Africa. Uganda offers the source of the Nile, mountain gorilla habitats, and exceptionally friendly people, with investor and business visa options.\n\n## Key Highlights\n- Bwindi Impenetrable Forest and mountain gorilla safari reserves\n- Source of the Nile River in Jinja and beautiful lake settings\n- Highly welcoming population and very low cost of living",
+  "longdescription": "Uganda is a landlocked country in East Africa, characterized by its diverse terrain including the snow-capped Rwenzori Mountains and immense Lake Victoria. Known as the 'Pearl of Africa,' it hosts a wide range of wildlife, including half of the world's mountain gorillas. The capital, Kampala, is a hilly, energetic city featuring open-air markets, traffic, and a lively social culture. Uganda's economy is primarily driven by agriculture, coffee exports, and tourism. English and Swahili are official languages, with English used for all commercial and administrative work. The country offers a low cost of living and warm hospitality, attracting expats and investors. Gated housing is standard in Kampala residential hubs, and Uganda offers work permits for business investors.",
+  "visas": [
+    {
+      "name": "Uganda Work Permit (Class G - Investor)",
+      "visa_type": "work",
+      "description": "Uganda's investor work permit is granted to foreign nationals who invest in a business enterprise in Uganda, with a minimum investment requirement.",
+      "benefits": [
+        "Live and operate a business in East Africa",
+        "Path to long-term residency",
+        "Abundant natural and agricultural resources",
+        "Very low cost of operations"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": 100000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency status after 10 years of continuous residence.",
+      "application_fee_usd": 400,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Business plan",
+        "Company registration certificate",
+        "Bank reference",
+        "Police clearance certificate"
+      ],
+      "official_link": "https://www.immigration.go.ug/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Business Management"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to parents or grandparents who are citizens of Uganda."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 to 20 years continuous legal residence, good character, contribution to Uganda, ability to speak English or Swahili, dual citizenship allowed since 2009.\n\n**Processing:** Through National Citizenship and Immigration Board, can take 12-18 months."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 40% on income over UGX 120 million\n- Corporate income tax rate is flat 30%\n- Value Added Tax (VAT) rate is flat 18%\n- Capital gains tax is 30% on investment profits",
+  "local_tips": "- English and Swahili are official; English is spoken universally in government, business, and daily life\n- Cash (Ugandan Franc) is standard; mobile money (MTN/Airtel Mobile Money) is widely used\n- Healthcare: basic public; private clinics in Kampala (e.g. The Surgery) are recommended\n- Traffic in Kampala is heavy; motorcycle taxis (boda-bodas) are common but require safety caution\n- Cost of living is very low; budget $1,000-1,500/month for a high-quality lifestyle"
+}

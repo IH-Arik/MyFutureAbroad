@@ -1,0 +1,95 @@
+{
+  "continent": "North America",
+  "name": "Panama",
+  "iso_code": "PA",
+  "flag_url": "https://flagcdn.com/pa.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1533554908277-3acb8a01869e?auto=format&fit=crop&w=800&q=80",
+  "description": "The bridge of the Americas, known for the Panama Canal, modern skyline, tropical climate, and highly attractive retirement/investment options with territorial tax benefits.\n\n## Key Highlights\n- Territorial tax system: foreign source income is entirely tax-free\n- Famous Pensionado (Retirement) Visa with up to 50% discount on entertainment and services\n- Highly attractive Panama Friendly Nations Visa for property buyers and investors",
+  "longdescription": "Panama is an isthmus connecting North and South America, bordered by Costa Rica and Colombia. Known globally for the Panama Canal, it serves as a major hub for global shipping, logistics, and financial services. The capital, Panama City, is a modern metropolis featuring a skyline of high-rise skyscrapers contrasting with the historic Casco Viejo district. Panama has a tropical climate, lush rainforests, and beautiful coastlines on both the Pacific and Caribbean. The country is business-friendly and uses the US Dollar as its official currency (known locally as the Balboa), providing monetary stability. Panama's territorial tax system means that all foreign-source income is entirely exempt from taxation. The country is globally famous for its expat visa programs, particularly the Pensionado Visa for retirees and the Friendly Nations Visa for citizens of 50 designated countries.",
+  "visas": [
+    {
+      "name": "Panama Pensionado Visa",
+      "visa_type": "other",
+      "description": "Panama's world-famous retirement visa is granted to foreign nationals who have a guaranteed lifetime pension or passive annuity of at least $1,000 per month.",
+      "benefits": [
+        "Lifetime permanent residency in Panama",
+        "50% off entertainment (cinemas, concerts, sports)",
+        "30% off public transport, hotel stays, and utility bills",
+        "20% off medical consultations and prescription drugs"
+      ],
+      "min_income": 1000,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 120,
+      "renewable": false,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Grants immediate permanent residency upon approval.",
+      "application_fee_usd": 250,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Letter of pension verification",
+        "Criminal record check",
+        "Health certificate"
+      ],
+      "official_link": "https://www.migracion.gob.pa/",
+      "min_age": 18,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Panama Friendly Nations Visa",
+      "visa_type": "work",
+      "description": "A residency visa for citizens of 50 designated countries who establish professional or economic ties with Panama by purchasing real estate or depositing funds in a local bank.",
+      "benefits": [
+        "Permanent residency pathway (granted after 2 years)",
+        "Right to apply for a work permit",
+        "Territorial tax benefits on foreign income",
+        "Operate a business in a stable economy"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": 200000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Granted temporary residence for 2 years, after which you can apply for permanent residency.",
+      "application_fee_usd": 800,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Proof of property ownership ($200k) or fixed deposit",
+        "Certificate of citizenship of Friendly Nation",
+        "Criminal record check"
+      ],
+      "official_link": "https://www.migracion.gob.pa/",
+      "min_age": 18,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a parent who is a Panamanian citizen."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence as a permanent resident (reduced to 3 years if married to a Panamanian citizen), basic knowledge of Spanish, history, and geography, renunciation of other citizenships.\n\n**Processing:** Through Ministry of Foreign Affairs, can take 12-24 months."
+    }
+  },
+  "tax_advice": "- Territorial tax system: only income earned within Panama is subject to taxation; all foreign income is 100% tax-free\n- Local progressive income tax rate is 0% to 25% (on income earned in Panama)\n- Corporate tax rate is flat 25% (on local revenue)\n- Value Added Tax (ITBMS) rate is flat 7% (reduced rate of 0% on basic foodstuffs/medicines)\n- Capital gains tax is 10% on local property/security sales",
+  "local_tips": "- Spanish is the official language; English is widely spoken in banking and tourism sectors\n- US Dollar (known as Balboa) is the currency; card payments are standard in Panama City, but cash is necessary in rural areas\n- Healthcare: private hospitals in Panama City (e.g. Hospital Punta Pacífica, affiliated with Johns Hopkins) are world-class\n- Cost of living: moderate; budget $1,500-2,500/month for a high-quality lifestyle in Panama City or Coronado beach\n- Internet: fast fiber optic coverage is widely available in all major cities and expat hubs"
+}

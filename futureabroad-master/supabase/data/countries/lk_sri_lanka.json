@@ -1,0 +1,60 @@
+{
+  "continent": "Asia",
+  "name": "Sri Lanka",
+  "iso_code": "LK",
+  "flag_url": "https://flagcdn.com/lk.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80",
+  "description": "The pearl of the Indian Ocean. Sri Lanka offers ancient temples, tea plantations, leopards, and surf beaches, with retiree and investor residency options.\n\n## Key Highlights\n- Sigiriya rock fortress and historic Buddhist temples of Kandy and Dambulla\n- Lush mountain tea plantations and world-class surf coasts like Weligama\n- Highly attractive Dream Haven Visa program for retirees aged 55+",
+  "longdescription": "Sri Lanka is an island country in South Asia, located in the Indian Ocean. It features a diverse landscape ranging from tropical rain forests and dry plains to highlands and sandy beaches. Sri Lanka has a rich history, with ancient kingdoms, Buddhist relics, and colonial fortifications. The commercial capital, Colombo, is a growing city featuring modern high-rises alongside historic colonial quarters, while Galle and Weligama are hubs for expats and surfers. The economy is primarily driven by tea exports, textiles, and tourism. Sinhala, Tamil, and English are widely spoken, with English used for commercial operations. Sri Lanka offers an affordable cost of living, with various resident programs including the Dream Haven Visa for retirees.",
+  "visas": [
+    {
+      "name": "Sri Lanka Dream Haven Visa",
+      "visa_type": "other",
+      "description": "A retiree residence visa for foreign nationals aged 55+ who can maintain a fixed deposit in a Sri Lankan bank account.",
+      "benefits": [
+        "Live in a beautiful tropical island",
+        "Tax-free status on foreign source pension income",
+        "Sponsor residency for spouse",
+        "Affordable cost of living"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "min_savings": 15000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Allows temporary residency which can be renewed indefinitely as long as bank deposits are maintained.",
+      "application_fee_usd": 200,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Pension verification letter",
+        "Local bank deposit statement ($15k)",
+        "Criminal record check",
+        "Medical report"
+      ],
+      "official_link": "https://www.immigration.gov.lk/",
+      "min_age": 55,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a parent who is a citizen of Sri Lanka."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 to 7 years continuous legal residence, good character, integration, contribution to Sri Lanka, renunciation of other citizenships.\n\n**Dual citizenship:** Permitted under specific conditions and fees."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 36%\n- Corporate income tax rate is flat 30%\n- Value Added Tax (VAT) rate is flat 15%\n- Capital gains tax is 10% on investment profits",
+  "local_tips": "- Sinhala and Tamil are official; English is widely used in business and tourist spots\n- Cash (Sri Lankan Rupee - LKR) is essential; card payments are standard in Colombo supermarkets\n- Healthcare: private hospitals in Colombo (e.g. Lanka Hospitals) are excellent and affordable\n- Transport: local buses are congested; renting a scooter or using three-wheelers (tuktuks) via PickMe is standard\n- Cost of living: very low; budget $1,000-1,500/month for a high-quality lifestyle"
+}

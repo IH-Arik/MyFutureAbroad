@@ -1,0 +1,59 @@
+{
+  "continent": "Africa",
+  "name": "Senegal",
+  "iso_code": "SN",
+  "flag_url": "https://flagcdn.com/sn.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80",
+  "description": "The land of Teranga. Senegal features a vibrant arts scene, colonial history, and beautiful Atlantic coastlines in West Africa.\n\n## Key Highlights\n- Vibrant art, music, and fashion culture in Dakar\n- Rich historical sites, including Gorée Island UNESCO World Heritage\n- Beautiful coastal areas and warm West African hospitality",
+  "longdescription": "Senegal is a country in West Africa, bordered by the Atlantic Ocean to the west. It is culturally famous for the concept of 'Teranga'—local hospitality and mutual respect. The capital, Dakar, is located on a peninsula and is a major diplomatic, cultural, and economic hub for West Africa, hosting international organizations, museums, and a bustling art market. Senegal's economy is diverse, anchored in agriculture, fisheries, mining, and services, with offshore natural gas projects under development. Wolof is the widely spoken national language, though French is the official language for government and business. Life in Senegal combines traditional markets with coastal beaches and modern city blocks. Challenges include infrastructure gaps outside Dakar and bureaucratic procedures.",
+  "visas": [
+    {
+      "name": "Senegal Long-Stay Visa",
+      "visa_type": "other",
+      "description": "Senegal's long-stay visa and residence card (Carte d'identité d'étranger) is for foreign nationals who intend to reside in Senegal for more than 3 months for retirement, employment, or business.",
+      "benefits": [
+        "Live and reside in West Africa's cultural hub",
+        "Path to long-term residency",
+        "Enjoy a beautiful Atlantic coastline"
+      ],
+      "min_income": 1000,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 45,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency status after 5 years of continuous legal residence.",
+      "application_fee_usd": 150,
+      "application_fee_currency": "XOF",
+      "required_documents": [
+        "Proof of income or pension",
+        "Criminal record check",
+        "Medical certificate",
+        "Rental agreement"
+      ],
+      "official_link": "https://www.visasenegal.sn/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a parent who is a citizen of Senegal."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 to 10 years continuous legal residence, good character, assimilation into local society, renunciation of other citizenships.\n\n**Processing:** Through Ministry of Justice, can take 12-24 months."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 40%\n- Corporate income tax rate is 30%\n- Standard Value Added Tax (VAT) rate is 18%\n- Double tax treaties exist with France, Canada, and Belgium\n- Capital gains tax is 15% on property sales",
+  "local_tips": "- French is official; Wolof is the most widely spoken language socially and essential for daily life\n- Cash (CFA Franc - XOF) is standard; mobile money (Orange Money / Wave) is widely used\n- Healthcare: private clinics in Dakar (e.g. Clinique de la Madeleine) are recommended\n- Public transport is crowded; expats usually hire private drivers or use taxis in Dakar\n- Cost of living: moderate; budget $1,200-1,800/month for a comfortable expat lifestyle in Dakar"
+}

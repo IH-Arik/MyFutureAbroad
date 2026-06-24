@@ -1,0 +1,61 @@
+{
+  "continent": "Asia",
+  "name": "Taiwan",
+  "iso_code": "TW",
+  "flag_url": "https://flagcdn.com/tw.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1506970845246-18f21d533b20?auto=format&fit=crop&w=800&q=80",
+  "description": "A highly safe, modern democratic island known for night markets, high-tech industry, and scenic mountains. Offers the flexible Employment Gold Card program.\n\n## Key Highlights\n- World-class public transit, convenience stores, and high safety standards\n- Flexible 4-in-1 Employment Gold Card for skilled foreign professionals\n- Rich cultural heritage with night markets and spectacular mountain parks",
+  "longdescription": "Taiwan is a democratic island nation in East Asia, located off the southeastern coast of China. It is globally famous for its high-tech semiconductor industry, vibrant night markets, and dramatic mountain landscapes. The capital, Taipei, is a modern city featuring the iconic Taipei 101 tower, world-class public transit, and convenience stores that serve as the center of daily convenience. Taiwan's economy is highly developed, driven by manufacturing, electronics, and global trade. Mandarin is the official language, and English is used in business and technology sectors. Taiwan is ranked as one of the world's safest countries, with universal healthcare (NHI) that is highly regarded. The government offers the Employment Gold Card, which combines a work permit, residence permit, and multi-entry visa for highly skilled professionals.",
+  "visas": [
+    {
+      "name": "Taiwan Employment Gold Card",
+      "visa_type": "work",
+      "description": "A flexible 4-in-1 card (work permit, residence permit, multi-entry visa, re-entry permit) for foreign professionals in tech, science, arts, or finance, without requiring employer sponsorship.",
+      "benefits": [
+        "Live and work in Taiwan without employer sponsorship",
+        "Tax incentives: 50% income tax exemption on salary over NT$3 million",
+        "Sponsor residency for spouses and children",
+        "Access to Taiwan's world-class National Health Insurance (NHI)"
+      ],
+      "min_income": 5000,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 36,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency (APRC) after 3 years (reduced to 2 years for PhD holders).",
+      "application_fee_usd": 300,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Professional credentials",
+        "Proof of income ($5k/month)",
+        "Criminal record check"
+      ],
+      "official_link": "https://goldcard.nat.gov.tw/en/",
+      "min_age": 18,
+      "max_age": null,
+      "required_skills": [
+        "Specialized Professional Credentials"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a parent who is a citizen of Taiwan."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence as a resident, basic Mandarin fluency, clean criminal record, renunciation of other citizenships (highly skilled professionals can apply for exemptions).\n\n**Processing:** Through Ministry of the Interior, can take 12-18 months."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 40% on income over NT$4.5 million\n- Corporate income tax rate is flat 20%\n- Standard Value Added Tax (VAT) rate is 5%\n- Double tax treaties exist with over 30 countries, including the UK, Canada, and Germany\n- Gold Card holders enjoy a 50% income tax deduction on salary above NT$3 million during their first 3 years",
+  "local_tips": "- Mandarin is official; English is widely used in business, signage, and transit networks\n- Cash and EasyCard are standard; convenience stores (7-Eleven/FamilyMart) handle bills, tickets, and shipping\n- Healthcare: National Health Insurance (NHI) is world-class, mandatory, and highly affordable\n- Transport: public transit (MRT/HSR) is fast and reliable; renting a scooter or public bike (YouBike) is standard\n- Cost of living: moderate; budget $1,200-2,000/month for a high-quality lifestyle in Taipei"
+}

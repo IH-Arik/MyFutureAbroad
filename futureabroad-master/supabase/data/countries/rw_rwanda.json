@@ -1,0 +1,62 @@
+{
+  "continent": "Africa",
+  "name": "Rwanda",
+  "iso_code": "RW",
+  "flag_url": "https://flagcdn.com/rw.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1563116972-e1d2c64d39f4?auto=format&fit=crop&w=800&q=80",
+  "description": "The land of a thousand hills. Rwanda offers clean, safe, and business-friendly urban environments in Kigali, alongside famous gorilla trekking reserves.\n\n## Key Highlights\n- Cleanest and safest cities in Africa, with Kigali as a modern regional hub\n- Outstanding eco-tourism, including Volcanoes National Park gorilla safaris\n- Highly business-friendly regulatory framework, ranking top in East Africa",
+  "longdescription": "Rwanda is a landlocked country in East Africa, characterized by its mountainous terrain, lush valleys, and dramatic lakes. Known as the 'Land of a Thousand Hills,' it has undergone a remarkable transformation, establishing itself as a model for clean governance, safety, and business ease in Africa. The capital, Kigali, is renowned as the cleanest city on the continent, with green spaces, modern architecture, and highly safe streets. Rwanda's economy is growing rapidly, anchored in eco-tourism, coffee, tea, and a growing financial sector centered in the Kigali International Financial Centre (KIFC). English, French, Swahili, and Kinyarwanda are official languages, with English used widely in business. The country offers a high quality of life for expats, with a low cost of living. Plastic bags are strictly banned, and the government enforces active environmental initiatives. Rwanda offers attractive residence permits for investors.",
+  "visas": [
+    {
+      "name": "Rwanda Entrepreneur Visa",
+      "visa_type": "startup",
+      "description": "Rwanda's business investor residence permit is granted to foreign nationals who establish a business or invest in an approved project in the country.",
+      "benefits": [
+        "Live and operate a business in a clean, safe country",
+        "Tax incentives for new businesses (up to 7-year tax holiday)",
+        "100% foreign ownership allowed",
+        "Access to East African market"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency after 5 years of residence.",
+      "application_fee_usd": 250,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Business plan",
+        "Company registration certificate",
+        "Police clearance",
+        "Proof of capital investment"
+      ],
+      "official_link": "https://www.migration.gov.rw/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Business Management"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a parent who is a citizen of Rwanda."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence, good character, integration, basic knowledge of Kinyarwanda or local culture, renunciation of other citizenships (though dual citizenship is permitted for born Rwandans).\n\n**Processing:** Through Ministry of Justice, can take 12-18 months."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 30%\n- Corporate income tax rate is 30% (with incentives reducing it to 15% for finance and manufacturing)\n- Standard Value Added Tax (VAT) rate is 18%\n- Double tax treaties exist with Singapore, Mauritius, and Belgium\n- Capital gains tax is 5% on property and security sales",
+  "local_tips": "- Kinyarwanda and English are the main languages; French and Swahili are also official\n- Cash (Rwandan Franc) and mobile money (MTN Mobile Money) are standard; cards are accepted in Kigali hotels\n- Healthcare: private clinics in Kigali (e.g. King Faisal Hospital) are excellent\n- Gated security is standard in Kigali residential areas; streets are exceptionally clean and well-policed\n- Environmental rules: plastic bags are prohibited; expect bag checks at Kigali International Airport"
+}

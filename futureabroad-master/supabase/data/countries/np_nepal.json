@@ -1,0 +1,61 @@
+{
+  "continent": "Asia",
+  "name": "Nepal",
+  "iso_code": "NP",
+  "flag_url": "https://flagcdn.com/np.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+  "description": "The rooftop of the world, home to Mount Everest and the birth of Buddha. Nepal offers spiritual experiences, hiking, and a very low cost of living.\n\n## Key Highlights\n- Mount Everest and the spectacular trekking circuits of the Himalayas\n- Rich Buddhist and Hindu spiritual heritage and temples in Kathmandu\n- Extremely affordable living costs for travelers and remote workers",
+  "longdescription": "Nepal is a landlocked country in South Asia, situated mainly in the Himalayas, sandwiched between China and India. It is famous for containing eight of the world's ten tallest mountains, including Mount Everest, drawing trekkers and mountaineers globally. The capital, Kathmandu, is a dense city packed with historic durbar squares, Hindu temples, and Buddhist stupas. Nepal's economy is highly dependent on agriculture, tourism, and remittances. The culture is deeply spiritual and diverse, with over 120 ethnic groups speaking various languages, though Nepali is the official language. The cost of living is extremely low, making it one of the cheapest destinations globally. Infrastructure, public transport, and health services are basic, with power cuts and traffic congestion common in Kathmandu. Pokhara, located next to a lake, has become a popular hub for digital nomads seeking a scenic and tranquil base. Nepal offers business visas for foreign investors.",
+  "visas": [
+    {
+      "name": "Nepal Business Visa",
+      "visa_type": "work",
+      "description": "A visa granted to foreign nationals who invest in a Nepalese business or enterprise, with a minimum investment requirement of 5,000,000 NPR (approx. $40,000).",
+      "benefits": [
+        "Live and operate a business in Nepal",
+        "Path to long-term residency",
+        "Low cost of operations and labor",
+        "Breathtaking mountain base"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": 40000,
+      "min_savings_currency": "USD",
+      "requires_health_insurance": false,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can be renewed indefinitely as long as the investment is maintained.",
+      "application_fee_usd": 300,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Investment approval from Department of Industries",
+        "Company registration certificate",
+        "Bank transfer records"
+      ],
+      "official_link": "https://www.nepalimmigration.gov.np/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Business Management"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired at birth if born to a Nepalese father or mother."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 15 years continuous legal residence, ability to speak and write Nepali, good character, renunciation of other citizenships.\n\n**Dual citizenship:** Strictly not permitted; acquiring foreign citizenship automatically revokes Nepalese citizenship."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 39%\n- Corporate tax rate is flat 25% (30% for financial institutions)\n- Value Added Tax (VAT) rate is flat 13%\n- Non-residents are taxed on Nepal-source income only, at a flat rate of 25%\n- Double tax treaties exist with India, China, Qatar, and Sri Lanka",
+  "local_tips": "- Nepali is the official language; English is spoken in tourist areas like Thamel and Pokhara, but limited elsewhere\n- Cash is essential; Nepalese Rupee (NPR) is the currency and foreign cards are often not accepted\n- Healthcare: basic public facilities; private hospitals in Kathmandu (e.g. CIWEC Clinic) are recommended\n- Transportation: local buses are congested; renting a motorcycle or hiring private taxis is standard\n- Cost of living is very low; budget $800-1,200/month for a comfortable expat lifestyle\n- Power outages are common; ensure your accommodation has backup generators or solar power"
+}

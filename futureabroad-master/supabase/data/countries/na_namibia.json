@@ -1,0 +1,64 @@
+{
+  "continent": "Africa",
+  "name": "Namibia",
+  "iso_code": "NA",
+  "flag_url": "https://flagcdn.com/na.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80",
+  "description": "A vast country of dramatic desert landscapes, towering sand dunes, and exceptional wildlife. Offers a new digital nomad visa and high quality of life in Southern Africa.\n\n## Key Highlights\n- Sossusvlei dunes and wildlife viewing in Etosha National Park\n- Modern infrastructure and stable democracy in Southern Africa\n- Newly launched Digital Nomad Visa program for remote workers",
+  "longdescription": "Namibia is a country in Southwest Africa, bordered by the Atlantic Ocean to the west. It is one of the most sparsely populated countries in the world, characterized by the dramatic Namib Desert, the rugged Kalahari, and spectacular wildlife reserves like Etosha National Park. The capital, Windhoek, is located in the central highlands and features clean streets, German colonial architecture, and a quiet, laid-back vibe. Namibia's economy is anchored in mining (diamonds, uranium), agriculture, and eco-tourism. English is the official language, though German and Afrikaans are widely spoken due to historical ties. The country boasts excellent infrastructure, reliable road networks, and high-quality private healthcare. Namibia has recently positioned itself as a hub for remote work by launching Africa's newest Digital Nomad Visa, which requires proof of $2,000 monthly income and allows nomads to reside in this stable desert nation.",
+  "visas": [
+    {
+      "name": "Namibia Digital Nomad Visa",
+      "visa_type": "work",
+      "description": "Namibia's remote work visa allows foreign nationals employed by companies outside Namibia to live and work in the country for up to 6 months, enjoying its spectacular scenery.",
+      "benefits": [
+        "Live and work in a peaceful, secure African nation",
+        "Tax-free status on foreign source income",
+        "Explore the Namib Desert and national parks",
+        "Access to reliable internet and modern infrastructure"
+      ],
+      "min_income": 2000,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 14,
+      "validity_months": 6,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": "Does not count toward permanent residency.",
+      "application_fee_usd": 150,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Proof of employment outside Namibia",
+        "Bank statements showing $2,000/month",
+        "Medical report",
+        "Criminal record check"
+      ],
+      "official_link": "https://www.nipdb.com/nomadvisa/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to at least one Namibian citizen parent at the time of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence, basic knowledge of English, good character, renunciation of other citizenships.\n\n**Processing:** Through Ministry of Home Affairs, can take 12-24 months."
+    },
+    "Spouse of Citizen": {
+      "icon": "💍",
+      "desc": "Spouses of Namibian citizens may naturalize after 10 years of marriage and continuous residence."
+    }
+  },
+  "tax_advice": "- Progressive personal income tax up to 37% on income over N$1.5 million\n- Corporate income tax rate is 32% (non-mining companies)\n- Standard Value Added Tax (VAT) rate is 15%\n- Capital gains tax is not applicable in Namibia\n- Passive income (interest, dividends) is subject to a 10% withholding tax for non-residents",
+  "local_tips": "- English is the official language; German and Afrikaans are common in business and daily life\n- Driving is on the left; road networks are excellent but a 4WD is recommended for gravel desert roads\n- Healthcare: private hospitals in Windhoek (e.g. Lady Pohamba Private Hospital) are world-class\n- Cost of living is moderate; budget $1,500-2,500/month for a high-quality lifestyle in Windhoek or Swakopmund\n- Internet is fast in major towns but can be spotty in remote desert locations; buy a local MTC SIM card"
+}

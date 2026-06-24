@@ -1,0 +1,99 @@
+{
+  "continent": "Europe",
+  "name": "Serbia",
+  "iso_code": "RS",
+  "flag_url": "https://flagcdn.com/rs.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=800&q=80",
+  "description": "A vibrant Balkan nation known for its rich history, Belgrade's famous cafe culture, and affordable cost of living. Offers easy residency paths through company registration.\n\n## Key Highlights\n- Vibrant Belgrade with world-famous nightlife and cafe culture\n- Highly favorable flat tax rate of 15% on corporate profits\n- Very accessible residency through company registration or property purchase",
+  "longdescription": "Serbia is a landlocked nation located at the crossroads of Central and Southeast Europe, in the southern Pannonian Plain and the central Balkans. The capital, Belgrade, is a lively city situated at the confluence of the Sava and Danube rivers, known for its historic Belgrade Fortress, cafes, and nightlife. Serbia has a rich history, with ancient towns, orthodox monasteries, and beautiful national parks. The economy is growing, driven by agriculture, manufacturing, and a rapidly expanding IT and tech outsourcing sector. Serbian is the official language, and English is widely spoken in Belgrade, Novi Sad, and among professionals. Serbia offers an affordable cost of living compared to Western Europe. The government offers accessible residency options through property purchase and company registration.",
+  "visas": [
+    {
+      "name": "Serbia Temporary Residence - Company Registration",
+      "visa_type": "startup",
+      "description": "A temporary residence permit granted to foreign nationals who register an LLC company (D.O.O.) or a sole proprietorship in Serbia and appoint themselves as the director.",
+      "benefits": [
+        "Live and work legally in Serbia",
+        "Path to permanent residency",
+        "Low operating and corporate tax costs (15%)",
+        "Access to Central European markets"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency after 3-5 years of continuous temporary residence.",
+      "application_fee_usd": 120,
+      "application_fee_currency": "RSD",
+      "required_documents": [
+        "Company registration certificate (APR)",
+        "Business address lease",
+        "Criminal record check",
+        "Local bank statement"
+      ],
+      "official_link": "http://www.mup.gov.rs/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Business Management"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Serbia Temporary Residence - Real Estate",
+      "visa_type": "other",
+      "description": "A temporary residence permit granted to foreign nationals who purchase residential or commercial real estate in Serbia, with no minimum value requirement.",
+      "benefits": [
+        "Live in Serbia for the duration of property ownership",
+        "No minimum property value required",
+        "Path to permanent residency",
+        "Low cost of living"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency after 3-5 years of continuous temporary residence.",
+      "application_fee_usd": 120,
+      "application_fee_currency": "RSD",
+      "required_documents": [
+        "Property deed",
+        "Purchase agreement",
+        "Criminal record check",
+        "Local bank statement"
+      ],
+      "official_link": "http://www.mup.gov.rs/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to at least one parent who is a citizen of Serbia at the time of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 3 years continuous permanent residence, clean criminal record, basic knowledge of Serbian, renunciation of other citizenships.\n\n**Dual citizenship:** Allowed under specific treaties or if you are ethnic Serbian."
+    }
+  },
+  "tax_advice": "- Flat 10% to 15% personal income tax rate on salaries\n- Flat 15% corporate income tax rate\n- Standard Value Added Tax (VAT) rate is 20% (reduced rate of 10% on basic foodstuffs/utilities)\n- Capital gains tax is flat 15%\n- Double tax treaties exist with over 60 countries, including Germany, the UK, and France",
+  "local_tips": "- Serbian is the official language; English is spoken universally by younger generations in Belgrade and Novi Sad\n- Cash is used; Serbian Dinar (RSD) is the currency, and card payments are accepted in all major cities\n- Healthcare: public system is basic; private clinics (e.g. Bel Medic) are recommended and affordable\n- Cost of living is low; budget €1,000-1,500/month for a high-quality lifestyle in Belgrade or Novi Sad\n- Internet: fiber optic speed is fast and stable in major cities, with 5G expanding"
+}

@@ -1,0 +1,95 @@
+{
+  "continent": "South America",
+  "name": "Uruguay",
+  "iso_code": "UY",
+  "flag_url": "https://flagcdn.com/uy.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1578918239023-e6e52b1b7b5f?auto=format&fit=crop&w=800&q=80",
+  "description": "South America's most progressive and stable country, known for its scenic coastline, high standard of living, and tax benefits for foreign residents.\n\n## Key Highlights\n- Outstanding political and economic stability with a progressive lifestyle\n- Territorial tax system: foreign source income is generally tax-free\n- Easy pathways to permanent residency and citizenship",
+  "longdescription": "Uruguay is a country in South America, bordering Brazil and Argentina. Known as the 'Switzerland of South America,' it is celebrated for its stable democracy, progressive social laws, and high standard of living. The capital, Montevideo, is a laid-back city with a coastal promenade (Rambla), colonial plazas, and historic markets, while Punta del Este is a major seaside resort. The economy is primarily driven by agriculture, software exports, and tourism. Spanish is the official language, and English is spoken in business and tourism hubs. Uruguay offers a high quality of life with excellent healthcare and low crime rates. The country's territorial tax system and tax holidays make it highly attractive to expats and retirees.",
+  "visas": [
+    {
+      "name": "Uruguay Rentista Visa",
+      "visa_type": "other",
+      "description": "Uruguay's passive income visa is granted to foreign nationals who have a guaranteed monthly passive income (from rent, dividends, or investments) of at least $1,500.",
+      "benefits": [
+        "Live and reside in South America's most stable country",
+        "Path to permanent residency and citizenship",
+        "Territorial tax benefits on foreign source income",
+        "Access to local healthcare and ID card (cédula)"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 90,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Grants a direct pathway to permanent residency and citizenship.",
+      "application_fee_usd": 200,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Proof of guaranteed passive income ($1,500/month)",
+        "Criminal record check",
+        "Birth certificate"
+      ],
+      "official_link": "https://www.gub.uy/tramites/residencia-legal",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Uruguay Digital Nomad Visa",
+      "visa_type": "work",
+      "description": "Uruguay's nomad visa allows remote workers employed by companies outside Uruguay to live and work in the country for up to 6 months.",
+      "benefits": [
+        "Work remotely in a highly secure, progressive country",
+        "Exempt from Uruguayan income tax on foreign source income",
+        "Simple online application",
+        "Enjoy coastal lifestyle"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": false,
+      "processing_time_days": 14,
+      "validity_months": 6,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": "Nomad residency does not count toward permanent residency.",
+      "application_fee_usd": 50,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Proof of employment/remote work contract",
+        "Declaration of clean record",
+        "Passport copy"
+      ],
+      "official_link": "https://www.gub.uy/ministerio-relaciones-exteriores/nomada-digital",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a parent who is a citizen of Uruguay."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 3 years continuous residency for families (5 years for single individuals), clean criminal record, basic knowledge of Spanish, dual citizenship allowed.\n\n**Processing:** Through Electoral Court, can take 12-24 months."
+    }
+  },
+  "tax_advice": "- Territorial tax system: foreign source income is generally tax-free (interest/dividends taxed at 12% after a 10-year holiday)\n- Progressive local personal income tax rate up to 36%\n- Corporate income tax rate is flat 25%\n- Value Added Tax (VAT) rate is flat 22%\n- Capital gains tax is 12% on local assets sales",
+  "local_tips": "- Spanish is official; English is widely used in business, banking, and tourist spots\n- Cash and card payments are universally accepted; Uruguayan Peso is the currency\n- Healthcare: private system is excellent; mutualista insurance (e.g. Asociacion Española) is recommended\n- Cost of living: moderate to high; budget $1,500-2,500/month for a high-quality lifestyle\n- Internet: fast fiber optic speed is widely available in all major cities and coastal hubs"
+}

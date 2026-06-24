@@ -1,0 +1,62 @@
+{
+  "continent": "Asia",
+  "name": "Uzbekistan",
+  "iso_code": "UZ",
+  "flag_url": "https://flagcdn.com/uz.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1582296465471-db9b01518f8e?auto=format&fit=crop&w=800&q=80",
+  "description": "The heart of the ancient Silk Road. Uzbekistan boasts stunning Islamic architecture, rich history, and a rapidly developing IT visa program.\n\n## Key Highlights\n- Breathtaking Islamic architecture in Samarkand, Bukhara, and Khiva\n- Newly launched IT Visa offering tax cuts and simplified registration\n- Very low cost of living and warm, hospitable population",
+  "longdescription": "Uzbekistan is a double-landlocked country in Central Asia, bordered by Kazakhstan, Kyrgyzstan, Tajikistan, Afghanistan, and Turkmenistan. It is globally famous for containing Samarkand, Bukhara, and Khiva—key trading cities along the ancient Silk Road featuring spectacular turquoise-domed mosques, minarets, and historic squares. The capital, Tashkent, is a clean, modern city featuring Soviet-era metro stations and commercial centers. The economy is expanding rapidly, driven by agriculture, natural gas, gold, and a growing IT sector. Uzbek is the official language, and Russian is widely spoken. The cost of living is very low, making it attractive for digital nomads seeking historic Central Asian experiences. The government recently launched a special 3-year IT Visa to attract tech talent and investors.",
+  "visas": [
+    {
+      "name": "Uzbekistan IT Visa",
+      "visa_type": "work",
+      "description": "Uzbekistan's special 3-year residence visa is granted to foreign IT specialists, founders, and investors, offering tax deductions and simplified residency registration.",
+      "benefits": [
+        "Live and work in a historically rich Central Asian country",
+        "Tax cuts: reduced personal income tax rate (flat 7.5%)",
+        "Simplified real estate purchasing rules",
+        "Access to growing tech markets"
+      ],
+      "min_income": 1500,
+      "min_income_currency": "USD",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 14,
+      "validity_months": 36,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Allows temporary residency for 3 years, renewable as long as IT card is maintained.",
+      "application_fee_usd": 100,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "IT Park recommendation letter",
+        "Proof of income ($1,500/month)",
+        "Criminal record check"
+      ],
+      "official_link": "https://it-visa.uz/en/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Information Technology",
+        "Software Development"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to a parent who is a citizen of Uzbekistan."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 5 years continuous legal residence, basic knowledge of Uzbek, clean record, renunciation of other citizenships.\n\n**Dual citizenship:** Strictly not permitted; acquiring foreign citizenship automatically revokes Uzbek citizenship."
+    }
+  },
+  "tax_advice": "- Flat 12% personal income tax rate (reduced to 7.5% for IT Visa holders)\n- Flat 15% corporate income tax rate (exemptions exist for IT Park resident companies)\n- Standard Value Added Tax (VAT) rate is 12%\n- Capital gains tax is 10% on investment profits",
+  "local_tips": "- Uzbek is official; Russian is widely spoken in cities, while English is growing among younger people\n- Cash is used; Uzbek Som (UZS) is the currency, and card payments are standard in Tashkent supermarkets\n- Healthcare: basic public; private hospitals in Tashkent (e.g. Tashkent International Clinic) are recommended\n- Transport: Tashkent metro is beautiful and cheap; using Yandex Go for taxis is standard\n- Cost of living: very low; budget $800-1,200/month for a high-quality lifestyle"
+}

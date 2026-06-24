@@ -1,0 +1,140 @@
+{
+  "continent": "Europe",
+  "name": "Montenegro",
+  "iso_code": "ME",
+  "flag_url": "https://flagcdn.com/me.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1555992336-03a23c7b20eb?auto=format&fit=crop&w=800&q=80",
+  "description": "A stunning Balkan country with dramatic mountains and medieval coastline villages along the Adriatic Sea. Known for low taxes and accessible residency programs.\n\n## Key Highlights\n- Spectacular Adriatic coastline and UNESCO-listed Bay of Kotor\n- Highly favorable tax system with progressive tax rates between 9% and 15%\n- Highly accessible residency by real estate or company formation",
+  "longdescription": "Montenegro is a Balkan country located in Southeast Europe, bordering Croatia, Bosnia, Serbia, and Albania. With a population of just over 600,000, it is known for its rugged mountains, pristine glacial lakes, and a dramatic Adriatic coast. The capital, Podgorica, is the administrative hub, while coastal towns like Kotor, Budva, and Tivat (home to Porto Montenegro) are centers of tourism and expat life. The country uses the Euro as its de facto currency and is currently an official candidate to join the European Union. Montenegro offers a relaxed Mediterranean lifestyle with a low cost of living compared to Western Europe. The country is business-friendly, offering some of Europe's lowest personal and corporate tax rates (ranging from 9% to 15%). Montenegro offers highly popular residency options through property purchase (no minimum investment) and company registration.",
+  "visas": [
+    {
+      "name": "Montenegro Digital Nomad Visa",
+      "visa_type": "work",
+      "description": "Montenegro's digital nomad program allows remote workers employed by companies outside Montenegro to live and work in the country for up to two years, with tax exemptions on foreign income.",
+      "benefits": [
+        "Live and work in a scenic European country",
+        "Exempt from Montenegrin income tax on foreign source income",
+        "Path to temporary residency",
+        "Low cost of living"
+      ],
+      "min_income": 1450,
+      "min_income_currency": "EUR",
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": false,
+      "path_to_residency_description": "Nomad residency does not count toward permanent residency or citizenship.",
+      "application_fee_usd": 80,
+      "application_fee_currency": "EUR",
+      "required_documents": [
+        "Proof of employment outside Montenegro",
+        "Bank statement showing monthly income",
+        "Criminal record check",
+        "Rental agreement"
+      ],
+      "official_link": "https://www.gov.me/en/ministry-of-internal-affairs",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Montenegro Residency by Real Estate",
+      "visa_type": "other",
+      "description": "A temporary residence permit granted to foreign nationals who purchase residential or commercial real estate in Montenegro, with no minimum property value requirement.",
+      "benefits": [
+        "Residency in Montenegro for the duration of property ownership",
+        "No minimum property value required",
+        "Access to local services and infrastructure",
+        "Balkan lifestyle on the Adriatic"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency after 5 years of continuous temporary residence.",
+      "application_fee_usd": 120,
+      "application_fee_currency": "EUR",
+      "required_documents": [
+        "Property deed (List Nepokretnosti)",
+        "Proof of ownership",
+        "Criminal record check",
+        "Local bank account statement"
+      ],
+      "official_link": "https://www.gov.me/en",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    },
+    {
+      "name": "Montenegro Residency by Company Registration",
+      "visa_type": "startup",
+      "description": "Residency granted to foreign nationals who register a Montenegrin limited liability company (D.O.O.) and employ themselves as the executive director.",
+      "benefits": [
+        "Residency within 3-4 weeks",
+        "No minimum company capital required (only €1 needed)",
+        "Low corporate tax rate (9% - 15%)",
+        "Open business opportunities in Europe"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 21,
+      "validity_months": 12,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Can apply for permanent residency after 5 years of continuous temporary residence.",
+      "application_fee_usd": 150,
+      "application_fee_currency": "EUR",
+      "required_documents": [
+        "Company registration certificate",
+        "Executive director contract",
+        "Criminal record check",
+        "University diploma copy"
+      ],
+      "official_link": "https://www.gov.me/en/ministry-of-internal-affairs",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Business Management"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if at least one parent is a citizen of Montenegro at the time of birth."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 10 years continuous legal residence (5 years temporary + 5 years permanent), fluency in Montenegrin, clean record, renunciation of other citizenships.\n\n**Dual citizenship:** Generally not permitted except in historical circumstances or special treaties."
+    },
+    "Spouse of Citizen": {
+      "icon": "💍",
+      "desc": "Spouses of Montenegrin citizens may naturalize after 3 years of marriage and continuous residence."
+    }
+  },
+  "tax_advice": "- Progressive personal income tax rate of 9% to 15% (salary tax)\n- Corporate tax is progressive between 9% and 15% depending on profit\n- Standard Value Added Tax (VAT) rate is 21% (reduced rate of 7% for tourism/essentials)\n- Capital gains tax is flat 15%\n- Low property transaction tax (3% on purchases, progressive for luxury)\n- Non-residents only taxed on Montenegrin-source income",
+  "local_tips": "- Montenegrin is the official language; English is spoken in tourist hubs like Kotor/Budva, but limited in government offices\n- Euro is the official currency; card payments are standard in tourist areas but cash is necessary for local shops/taxis\n- Healthcare: public system is basic; private healthcare clinics (e.g. Codra) are recommended\n- Cost of living is low; budget €1,000-1,500/month for a high-quality lifestyle in Kotor or Budva\n- Internet is fast and stable in major cities via VDSL or cable, with 5G expanding"
+}

@@ -1,0 +1,62 @@
+{
+  "continent": "Africa",
+  "name": "Nigeria",
+  "iso_code": "NG",
+  "flag_url": "https://flagcdn.com/ng.svg",
+  "highlight_img_url": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80",
+  "description": "The giant of Africa. Nigeria boasts a massive economy, rich cultural influence, and energetic cities like Lagos. Offers corporate and investment opportunities in West Africa.\n\n## Key Highlights\n- West Africa's economic powerhouse with booming tech and financial hubs\n- Global cultural influence through Nollywood cinema and Afrobeats music\n- Thriving startup ecosystem in Lagos, attracting international capital",
+  "longdescription": "Nigeria is a federal republic in West Africa, bordering the Gulf of Guinea. As Africa's most populous nation (over 220 million people) and one of its largest economies, it plays a massive role in regional politics and trade. The capital is Abuja, a planned city hosting government institutions, while Lagos is the economic heart, hosting a massive port, financial district, and tech ecosystem. Nigeria is a major global oil producer, though sectors like telecommunications, entertainment (Nollywood and Afrobeats), and technology are expanding rapidly. English is the official language, with over 500 local languages spoken, including Yoruba, Igbo, and Hausa. Life in Nigeria is fast-paced, energetic, and highly dynamic. Challenges include infrastructure gaps, safety concerns in specific regions, and bureaucratic hurdles. Expats usually reside in secure neighborhoods in Lagos (Ikoyi or Victoria Island) or Abuja.",
+  "visas": [
+    {
+      "name": "Nigeria STR Visa",
+      "visa_type": "work",
+      "description": "Nigeria's Subject to Regularization (STR) visa is granted to foreign nationals who secure long-term employment with a Nigerian company or multinational entity.",
+      "benefits": [
+        "Live and work legally in Nigeria",
+        "Obtain a residency card (CERPAC)",
+        "Access to Africa's largest market",
+        "Family reunification"
+      ],
+      "min_income": null,
+      "min_income_currency": null,
+      "min_savings": null,
+      "min_savings_currency": null,
+      "requires_health_insurance": true,
+      "requires_clean_criminal_record": true,
+      "processing_time_days": 30,
+      "validity_months": 24,
+      "renewable": true,
+      "has_path_to_residency": true,
+      "path_to_residency_description": "Allows temporary residency which can be renewed as long as employment is maintained.",
+      "application_fee_usd": 250,
+      "application_fee_currency": "USD",
+      "required_documents": [
+        "Employment letter",
+        "Expatriate quota approval",
+        "Credentials evaluation",
+        "Acceptance of employment"
+      ],
+      "official_link": "https://immigration.gov.ng/str-visa/",
+      "min_age": null,
+      "max_age": null,
+      "required_skills": [
+        "Specialized Expertise"
+      ],
+      "eligible_nationalities": [],
+      "excluded_nationalities": [],
+      "image_url": null
+    }
+  ],
+  "citizenship_requirements": {
+    "Citizenship by Descent": {
+      "icon": "👨‍👩‍👧",
+      "desc": "Acquired if born to parents or grandparents who are citizens of Nigeria."
+    },
+    "Naturalization": {
+      "icon": "📋",
+      "desc": "**Requirements:** 15 years continuous legal residence, good character, integration, contribution to Nigeria, renunciation of other citizenships (unless born a citizen).\n\n**Processing:** Granted by the President, 12-24 months."
+    }
+  },
+  "tax_advice": "- Personal income tax is progressive up to 24%\n- Corporate income tax rate is 30% (medium companies 20%, small companies 0%)\n- Value Added Tax (VAT) rate is 7.5%\n- Double tax treaties exist with the UK, France, and Canada\n- Withholding tax of 10% is charged on dividends, interest, and royalties",
+  "local_tips": "- English is the official language and spoken universally in business; Pidgin English is common socially\n- Cash (Naira) is used, but bank transfers and debit card (POS) payments are standard in urban hubs\n- Healthcare: basic public; private clinics in Lagos (e.g. Lagoon Hospital) and Abuja are recommended\n- Traffic in Lagos (known as 'go-slow') is notorious; plan journeys and use ride-hailing services (Uber/Bolt)\n- Expats usually live in gated residential communities in Victoria Island, Ikoyi, or Abuja's Maitama\n- Security: avoid night travel and check security advisories before traveling outside major cities"
+}
