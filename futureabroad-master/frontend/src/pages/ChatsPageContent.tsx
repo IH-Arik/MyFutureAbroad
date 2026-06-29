@@ -47,6 +47,7 @@ export default function ChatsPageContent() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const feature = searchParams.get("feature") || "general";
+  const initialQuery = searchParams.get("q") || "";
 
   const [warningAccepted, setWarningAccepted] = useState(() =>
     localStorage.getItem("ai_chat_warning_accepted") === "true"
@@ -108,7 +109,7 @@ export default function ChatsPageContent() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [mobileHistoryOpen, setMobileHistoryOpen] = useState(false);
 
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(initialQuery);
   const [sending, setSending] = useState(false);
   const [loadingSession, setLoadingSession] = useState(false);
   const [toolStatus, setToolStatus] = useState<string | null>(null);

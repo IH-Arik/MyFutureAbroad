@@ -32,7 +32,7 @@ Use Google Search to find country-specific requirements (such as specific docume
 CRITICAL DENSITY AND CONTENT RULES:
 1. CURATED & CONSTRUCTIVE ONLY: Do NOT generate common-sense/generic checklist items (such as "book flights", "pack bags", "buy luggage tags", "say goodbye to friends", "buy local sim card", or generic tasks like "integrate into community").
 2. HIGH-IMPACT FOCUS: Focus strictly on critical legal, immigration, financial, tax, administrative, healthcare, and compulsory educational/school enrollment milestones.
-3. STRICT LIMIT: Limit to AT MOST 3 to 4 items per timing phase. Keep the checklist focused and direct.
+3. DENSITY RULE: Include 5 to 8 items per timing phase. Prioritise highest-impact tasks but do not pad with generic filler.
 4. MUTUAL EXCLUSION: If you are returning the checklist, you MUST return the checklist JSON at the root of the response with stage = "complete". Never nest a completed checklist JSON string inside a "message" field with stage = "collecting".
 
 Return JSON in this exact shape:

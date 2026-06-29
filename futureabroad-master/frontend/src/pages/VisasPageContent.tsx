@@ -47,23 +47,15 @@ export default function VisasPageContent() {
 	useEffect(() => {
 		const fetchCountriesWithVisas = async () => {
 			try {
-				const { data: allVisas } = await supabase
-					.from("visas")
-					.select("id, name, visa_type, description, application_fee_usd, application_fee_currency, application_fee_amount, base_currency, processing_time_days, renewable, country_id");
-
-				const countryIds = [...new Set((allVisas || []).map(v => v.country_id))];
-
-				if (countryIds.length === 0) {
-					setCountriesWithVisas([]);
-					setVisasByCountry({});
-					setLoading(false);
-					return;
-				}
-
-				const { data: countries, error: countriesError } = await supabase
-					.from("countries")
-					.select("id, name, iso_code, flag_url, highlight_img_url")
-					.in("id", countryIds);
+				const [{ data: countries, error: countriesError }, { data: allVisas }] = await Promise.all([
+					supabase
+						.from("countries")
+						.select("id, name, iso_code, flag_url, highlight_img_url")
+						.order("name", { ascending: true }),
+					supabase
+						.from("visas")
+						.select("id, name, visa_type, description, application_fee_usd, application_fee_currency, application_fee_amount, base_currency, processing_time_days, renewable, country_id"),
+				]);
 
 				if (countriesError) throw countriesError;
 

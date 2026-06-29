@@ -31,6 +31,12 @@ JSON SCHEMA FIELDS:
 - "validity_months": integer or null, the initial validity period of the visa in months.
 - "renewable": boolean or null, true if the visa is renewable, false if non-renewable, or null if unspecified.
 - "path_to_residency": string or null, a plain-English description of the path to permanent residency or citizenship if one exists.
+- "work_permitted": boolean or null, true if the visa holder is explicitly permitted to work (employed or self-employed) in the country, false if work is prohibited, null if the rules are conditional or unspecified.
+- "dependants_allowed": boolean or null, true if the main applicant's spouse and/or dependent children can be included in the application or apply for a dependent visa, false if not, null if unspecified.
+- "renewal_conditions": string or null, a plain-English description of the conditions under which the visa can be renewed (e.g. "Must maintain minimum income threshold and have no criminal record during the initial period"). Set to null if the visa is auto-renewable with no special conditions.
+- "application_process_steps": array of strings, each string is one numbered step describing how to apply for this visa (e.g. "1. Gather required documents including apostilles", "2. Submit online application via the official immigration portal"). Include 3 to 6 steps.
+- "tax_implications": string or null, a plain-English description of any special tax treatment that applies specifically to this visa category (e.g. NHR status eligibility in Portugal, non-dom in Ireland). Set to null if there are no special tax considerations beyond standard resident rules.
+- "last_verified_date": string, the ISO 8601 date (YYYY-MM-DD) when the data on this page was last confirmed from official sources. Use today's date if you have retrieved live data in this session.
 - "source_url": string or null, the absolute URL of the primary official government source used for this data.
 - "data_confidence": string, must be either "full" (if all fields were successfully verified from official sources) or "partial" (if any requirement fields could not be verified and were set to null).
 - "generated_at": string, current date and time in ISO 8601 UTC format.

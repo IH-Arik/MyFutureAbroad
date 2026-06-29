@@ -24,12 +24,12 @@ if env_path.exists():
 
 async def find_visas(country_name: str) -> list:
     from browser_use import Agent
-    from browser_use.llm import ChatOpenAI
     from browser_use.browser.session import BrowserSession
+    from langchain_google_genai import ChatGoogleGenerativeAI
 
-    llm = ChatOpenAI(
-        model="gpt-4o-mini",
-        api_key=os.environ["OPENAI_API_KEY"],
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        google_api_key=os.environ.get("GOOGLE_API_KEY") or os.environ["GEMINI_API_KEY"],
     )
 
     task = f"""Go to the official government immigration website for {country_name}. Find the complete list of ALL visa types, residence permits, and immigration programs offered.

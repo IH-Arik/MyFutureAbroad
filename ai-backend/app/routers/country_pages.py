@@ -4,18 +4,19 @@ import json
 import logging
 from datetime import datetime, timezone, timedelta
 from typing import Optional
-from fastapi import APIRouter, Depends, HTTPException, Query, Request, BackgroundTasks
+from urllib.parse import urlparse
+from fastapi import APIRouter, Depends, HTTPException, Header, Query, Request, BackgroundTasks
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import settings
-from app.database import async_session
 from app.dependencies import get_db
+from app.supported_countries import SUPPORTED_COUNTRY_SLUGS
 from app.models.cache import ContentCache
-from app.services.gemini import generate_structured_json
+from app.services.gemini import generate_structured_json_async
 from app.services.currency import convert_currency, CurrencyServiceError
 from app.prompts.country_page import SYSTEM_PROMPT_TEMPLATE
-from app.schemas.country import CountryDetailResponse, CountryListResponse, CountryListItem
+from app.schemas.country import CountryDetailResponse, CountryListResponse
 
 logger = logging.getLogger("app.routers.country_pages")
 
@@ -32,6 +33,26 @@ def validate_slug(slug: str, name: str) -> None:
 def slug_to_title(slug: str) -> str:
     # Replace hyphens with spaces and title case
     return slug.replace("-", " ").title()
+
+
+_OFFICIAL_DOMAIN_RE = re.compile(
+    r'\.(gov|gouv|gob|gc\.ca|govt|admin|bund)(\.([a-z]{2}))?$|\.europa\.eu$',
+    re.IGNORECASE
+)
+
+
+def _is_official_source(url: Optional[str]) -> bool:
+    if not url:
+        return False
+    try:
+        hostname = urlparse(url).hostname or ""
+        return bool(_OFFICIAL_DOMAIN_RE.search(hostname))
+    except Exception:
+        return False
+
+
+def _is_country_supported(slug: str) -> bool:
+    return slug in SUPPORTED_COUNTRY_SLUGS
 
 
 @router.get("/{country_slug}", response_model=CountryDetailResponse)
@@ -86,23 +107,35 @@ async def get_country_details(
 
     # 3. Cache MISS or refresh required -> Call Gemini Service
     if raw_data is None:
+        if not _is_country_supported(country_slug):
+            raise HTTPException(status_code=404, detail=f"Country '{country_slug}' is not in the supported countries list.")
+
         logger.info(f"Cache MISS or forced refresh for country cache key: {cache_key}. Fetching from Gemini...")
         system_prompt = SYSTEM_PROMPT_TEMPLATE.format(country_name=country_name)
         user_prompt = f"Perform the search for the country profile of {country_name} and generate the structured JSON report."
-        
+
         try:
-            raw_data = generate_structured_json(system_prompt, user_prompt, enable_search_grounding=True)
+            raw_data = await generate_structured_json_async(system_prompt, user_prompt, enable_search_grounding=True)
             # Ensure generated_at is set to current time
             raw_data["generated_at"] = now.isoformat()
         except Exception as e:
             logger.error(f"Gemini generation failed for country {country_name}: {e}")
             raise e  # Global exception handlers will intercept and output correct Standard Error Envelopes
-            
+
         # 4. JSON Schema Validation
         # Verify structure contains key fields before writing to cache
         required_keys = ["country", "country_code", "capital_city", "data_confidence"]
         if not all(k in raw_data for k in required_keys):
             raise HTTPException(status_code=502, detail="The AI service returned an invalid country data structure.")
+
+        # Downgrade confidence if none of the source URLs resolve to a verified official government domain
+        source_urls = raw_data.get("source_urls") or []
+        if raw_data.get("data_confidence") == "full" and not any(_is_official_source(u) for u in source_urls if u):
+            logger.warning(
+                f"Downgrading data_confidence to 'partial' for {country_name}: "
+                f"none of source_urls {source_urls} resolve to a verified official government domain."
+            )
+            raw_data["data_confidence"] = "partial"
 
         # 5. Persist to localized content cache
         try:
@@ -133,14 +166,33 @@ async def get_country_details(
     converted_fields = {}
     if currency:
         try:
-            from_rent = raw_data.get("average_monthly_rent_city_centre_1bed_currency")
-            amt_rent = raw_data.get("average_monthly_rent_city_centre_1bed_amount")
-            converted_rent = await convert_currency(amt_rent, from_rent, currency)
-
+            converted_rent = await convert_currency(
+                raw_data.get("average_monthly_rent_city_centre_1bed_amount"),
+                raw_data.get("average_monthly_rent_city_centre_1bed_currency"),
+                currency,
+            )
+            converted_groceries = await convert_currency(
+                raw_data.get("monthly_groceries_amount"),
+                raw_data.get("monthly_groceries_currency"),
+                currency,
+            )
+            converted_utilities = await convert_currency(
+                raw_data.get("monthly_utilities_amount"),
+                raw_data.get("monthly_utilities_currency"),
+                currency,
+            )
+            converted_property = await convert_currency(
+                raw_data.get("average_property_price_city_centre_per_sqm_amount"),
+                raw_data.get("average_property_price_city_centre_per_sqm_currency"),
+                currency,
+            )
             converted_fields = {
                 "converted_rent_amount": converted_rent,
+                "converted_groceries_amount": converted_groceries,
+                "converted_utilities_amount": converted_utilities,
+                "converted_property_price_amount": converted_property,
                 "converted_currency": currency,
-                "currency_conversion_error": False
+                "currency_conversion_error": False,
             }
         except CurrencyServiceError as ce:
             logger.warning(f"Currency conversion failed for request: {ce}")
@@ -155,7 +207,9 @@ async def get_country_details(
         **raw_data,
         **converted_fields
     }
-    
+    if raw_data.get("data_confidence") == "partial":
+        response_payload["partial_data_warning"] = True
+
     return response_payload
 
 
@@ -212,7 +266,7 @@ async def list_countries(
         user_prompt = "Generate the list of major expat destination countries."
         
         try:
-            list_data = generate_structured_json(sys_prompt, user_prompt, enable_search_grounding=True)
+            list_data = await generate_structured_json_async(sys_prompt, user_prompt, enable_search_grounding=True)
             
             # Robust wrapping if Gemini returns an array directly
             if isinstance(list_data, list):
@@ -293,12 +347,21 @@ def run_pipeline_subprocess(country: Optional[str] = None):
 async def trigger_update_pipeline(
     background_tasks: BackgroundTasks,
     country: Optional[str] = Query(None, description="ISO code or country name to update (e.g. 'SE' or 'sweden')"),
+    authorization: Optional[str] = Header(None),
     request: Request = None
 ):
     """
-    Triggers the automated country and visa update pipeline in the background.
+    Triggers the weekly country and visa update pipeline in the background.
+    Requires Authorization: Bearer <PIPELINE_SECRET_KEY> header.
     """
     request_id = getattr(request.state, "request_id", str(uuid.uuid4()))
+
+    expected = settings.PIPELINE_SECRET_KEY.strip()
+    if not expected:
+        raise HTTPException(status_code=503, detail="Update pipeline is not configured on this server.")
+    provided = (authorization or "").removeprefix("Bearer ").strip()
+    if not provided or provided != expected:
+        raise HTTPException(status_code=401, detail="Invalid or missing Authorization token.")
     background_tasks.add_task(run_pipeline_subprocess, country)
     
     return {

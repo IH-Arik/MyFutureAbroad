@@ -32,6 +32,7 @@ class VisaDetailResponse(BaseModel):
     source_url: Optional[str] = Field(None, description="The URL of the primary official government source used.")
     data_confidence: str = Field(description="Either 'full' or 'partial'.")
     generated_at: str = Field(description="ISO 8601 UTC datetime of when this was generated.")
+    partial_data_warning: Optional[bool] = Field(None, description="True if data_confidence is 'partial' — some fields could not be verified from official sources.")
     
     # Currency conversion fields (present only when conversion requested)
     minimum_monthly_income_converted_amount: Optional[float] = Field(None, description="Converted monthly income.")

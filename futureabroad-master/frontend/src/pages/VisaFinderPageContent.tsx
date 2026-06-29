@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import type { Visa, Country } from "@/lib/types";
 import { useCurrency, CURRENCY_SYMBOLS } from "@/components/currency/CurrencyProvider";
@@ -171,6 +172,7 @@ const clearSavedProfile = () => {
 
 export default function VisaFinderPageContent({ onBack }: { onBack?: () => void }) {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const { currency, rates } = useCurrency();
   const currencySymbol = CURRENCY_SYMBOLS[currency]?.symbol ?? currency;
 
@@ -414,6 +416,39 @@ export default function VisaFinderPageContent({ onBack }: { onBack?: () => void 
     }
   };
 
+  const buildAIQuery = () => {
+    const purposeLabel = PURPOSES.find((p) => p.id === profile.purpose)?.label || profile.purpose;
+    const parts: string[] = [];
+    parts.push(`I'm looking for a visa to live abroad.`);
+    if (purposeLabel) parts.push(`My purpose is: ${purposeLabel}.`);
+    if (profile.nationality) parts.push(`My nationality is ${profile.nationality}.`);
+    if (profile.monthlyIncome) parts.push(`Monthly income: ${currency} ${profile.monthlyIncome}.`);
+    if (profile.savings) parts.push(`Savings: ${currency} ${profile.savings}.`);
+    if (profile.skills.length > 0) parts.push(`Skills: ${profile.skills.join(", ")}.`);
+    if (profile.language) {
+      const langLabel = LANGUAGE_OPTIONS.find((l) => l.id === profile.language)?.label;
+      if (langLabel) parts.push(`Preferred language: ${langLabel}.`);
+    }
+    if (profile.preferences.length > 0) {
+      const prefLabels = profile.preferences
+        .map((id) => PREFERENCES.find((p) => p.id === id)?.label)
+        .filter(Boolean);
+      if (prefLabels.length > 0) parts.push(`Lifestyle preferences: ${prefLabels.join(", ")}.`);
+    }
+    if (profile.cleanRecord !== null) {
+      parts.push(`Clean criminal record: ${profile.cleanRecord ? "yes" : "no"}.`);
+    }
+    parts.push(`Which visas do I qualify for?`);
+    return parts.join(" ");
+  };
+
+  const handleAskAI = () => {
+    const query = buildAIQuery();
+    navigate(`/chats?feature=visa_finder&q=${encodeURIComponent(query)}`);
+  };
+
+  const [activeTab, setActiveTab] = useState<"ai" | "filter">("ai");
+
   const reset = () => {
     clearSavedProfile();
     setStep(1);
@@ -503,6 +538,7 @@ export default function VisaFinderPageContent({ onBack }: { onBack?: () => void 
         updateProfile={updateProfile}
         reset={reset}
         renderIcon={renderIcon}
+        onAskAI={handleAskAI}
       />
     );
   }
@@ -519,22 +555,82 @@ export default function VisaFinderPageContent({ onBack }: { onBack?: () => void 
             Back to landing page
           </button>
         )}
-        <VisaHeader t={t} />
-        <StepProgress step={step} totalSteps={TOTAL_STEPS} stepLabels={STEP_LABELS} t={t} />
 
-        <div className="bg-card rounded-2xl border border-border p-6 sm:p-8 mb-6">
-          {renderStep()}
+        {/* Mode tabs */}
+        <div className="flex gap-2 mb-6 p-1 bg-muted rounded-xl">
+          <button
+            onClick={() => setActiveTab("ai")}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all ${
+              activeTab === "ai"
+                ? "bg-gradient-to-r from-[#8B6949] to-[#D4C2A1] text-white shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {renderIcon("globe", "w-4 h-4")}
+            AI Advisor
+          </button>
+          <button
+            onClick={() => setActiveTab("filter")}
+            className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-semibold transition-all ${
+              activeTab === "filter"
+                ? "bg-background text-foreground shadow-sm border border-border"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {renderIcon("list", "w-4 h-4")}
+            Filter Manually
+          </button>
         </div>
 
-        <StepControls
-          step={step}
-          totalSteps={TOTAL_STEPS}
-          canProceed={canProceed}
-          setStep={setStep}
-          handleSearch={handleSearch}
-          loading={loading}
-          t={t}
-        />
+        {activeTab === "ai" ? (
+          <div className="bg-card rounded-2xl border border-border p-8 flex flex-col items-center text-center gap-6">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#8B6949] to-[#D4C2A1] flex items-center justify-center">
+              {renderIcon("globe", "w-8 h-8 text-white")}
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-foreground mb-2">Find Your Perfect Visa with AI</h2>
+              <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
+                Describe your situation in your own words — where you want to move, your income, lifestyle preferences, and goals. Our AI advisor will ask the right follow-up questions and match you to real visa programmes.
+              </p>
+            </div>
+            <ul className="text-left text-sm text-muted-foreground space-y-2 w-full max-w-sm">
+              <li className="flex items-start gap-2">{renderIcon("check", "w-4 h-4 text-emerald-500 mt-0.5 shrink-0")} Asks about your finances, lifestyle &amp; preferences</li>
+              <li className="flex items-start gap-2">{renderIcon("check", "w-4 h-4 text-emerald-500 mt-0.5 shrink-0")} Filters by your target country or region</li>
+              <li className="flex items-start gap-2">{renderIcon("check", "w-4 h-4 text-emerald-500 mt-0.5 shrink-0")} Rates visas as Excellent, Good, or Ordinary match</li>
+              <li className="flex items-start gap-2">{renderIcon("check", "w-4 h-4 text-emerald-500 mt-0.5 shrink-0")} Uses live government sources for requirements</li>
+            </ul>
+            <button
+              onClick={() => navigate("/chats?feature=visa_finder")}
+              className="flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r from-[#8B6949] to-[#D4C2A1] text-white font-semibold hover:opacity-90 transition-opacity text-base"
+            >
+              {renderIcon("globe", "w-5 h-5")}
+              Start AI Visa Chat
+            </button>
+            <p className="text-xs text-muted-foreground">
+              Prefer a structured form?{" "}
+              <button onClick={() => setActiveTab("filter")} className="underline hover:text-foreground transition-colors">
+                Use the manual filter instead
+              </button>
+            </p>
+          </div>
+        ) : (
+          <>
+            <VisaHeader t={t} />
+            <StepProgress step={step} totalSteps={TOTAL_STEPS} stepLabels={STEP_LABELS} t={t} />
+            <div className="bg-card rounded-2xl border border-border p-6 sm:p-8 mb-6">
+              {renderStep()}
+            </div>
+            <StepControls
+              step={step}
+              totalSteps={TOTAL_STEPS}
+              canProceed={canProceed}
+              setStep={setStep}
+              handleSearch={handleSearch}
+              loading={loading}
+              t={t}
+            />
+          </>
+        )}
       </div>
     </div>
   );

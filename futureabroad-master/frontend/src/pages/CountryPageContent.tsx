@@ -13,6 +13,21 @@ import { useTranslatedVisas } from "@/hooks/useTranslatedVisas";
 import { useTranslatedServices } from "@/hooks/useTranslatedServices";
 import { useTranslatedCountry } from "@/hooks/useTranslatedCountry";
 
+interface CountryEnrichment {
+  pros_for_expats?: string[];
+  cons_for_expats?: string[];
+  average_property_price_city_centre_per_sqm_amount?: number | null;
+  average_property_price_city_centre_per_sqm_currency?: string | null;
+  public_transport_description?: string | null;
+  international_schools_available?: boolean | null;
+  school_fees_description?: string | null;
+  average_monthly_rent_city_centre_1bed_amount?: number | null;
+  average_monthly_rent_city_centre_1bed_currency?: string | null;
+  converted_rent_amount?: number | null;
+  converted_property_price_amount?: number | null;
+  converted_currency?: string | null;
+}
+
 export default function CountryPageContent() {
   const { t } = useTranslation();
   const { countryId } = useParams<{ countryId: string }>();
@@ -22,6 +37,8 @@ export default function CountryPageContent() {
   const [loading, setLoading] = useState(true);
   const [expandedLongDescription, setExpandedLongDescription] = useState(false);
   const [expandedVisas, setExpandedVisas] = useState(false);
+  const [enrichment, setEnrichment] = useState<CountryEnrichment | null>(null);
+  const [enrichmentLoading, setEnrichmentLoading] = useState(false);
 
   useEffect(() => {
     if (!countryId) return;
@@ -108,6 +125,43 @@ export default function CountryPageContent() {
     fetchCountryAndVisas();
   }, [countryId]);
 
+  // Lazy-load AI enrichment data after country is known.
+  // If pros/cons are already stored in Supabase (populated by the weekly pipeline),
+  // seed enrichment immediately from DB to avoid a slow Gemini round-trip.
+  useEffect(() => {
+    if (!country) return;
+
+    // Seed from DB fields if available so the section renders instantly
+    if (country.pros_for_expats?.length || country.cons_for_expats?.length) {
+      setEnrichment((prev) => ({
+        ...prev,
+        pros_for_expats: country.pros_for_expats,
+        cons_for_expats: country.cons_for_expats,
+      }));
+    }
+
+    // Still fetch enrichment for the living-details cards (property, transport, schools)
+    // that are not stored in the countries table
+    const slug = country.name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+    if (!slug) return;
+    setEnrichmentLoading(true);
+    fetch(`/api/chat/country-enrichment/${slug}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data) {
+          setEnrichment((prev) => ({
+            ...prev,
+            ...data,
+            // DB values take priority over enrichment API for pros/cons
+            pros_for_expats: country.pros_for_expats?.length ? country.pros_for_expats : data.pros_for_expats,
+            cons_for_expats: country.cons_for_expats?.length ? country.cons_for_expats : data.cons_for_expats,
+          }));
+        }
+      })
+      .catch(() => {})
+      .finally(() => setEnrichmentLoading(false));
+  }, [country]);
+
   const translatedVisas = useTranslatedVisas(visas);
   const translatedServices = useTranslatedServices(services);
   const translatedCountry = useTranslatedCountry(country);
@@ -131,6 +185,89 @@ export default function CountryPageContent() {
           {/* Long Description Section */}
           {country.longdescription && (
             <CountryLongDescription longDescriptionText={translatedCountry?.longdescription ?? country.longdescription} name={translatedCountry?.name ?? country.name} expanded={expandedLongDescription} onToggle={() => setExpandedLongDescription(!expandedLongDescription)} t={t} />
+          )}
+
+          {/* AI Enrichment: Pros & Cons for Expats */}
+          {(enrichmentLoading || enrichment?.pros_for_expats?.length || enrichment?.cons_for_expats?.length) && (
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-3">For Expats</h2>
+              {enrichmentLoading && !enrichment ? (
+                <div className="text-sm text-muted-foreground animate-pulse">Loading AI insights…</div>
+              ) : (
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {enrichment?.pros_for_expats && enrichment.pros_for_expats.length > 0 && (
+                    <div className="rounded-lg border border-emerald-200 dark:border-emerald-800/50 bg-emerald-50 dark:bg-emerald-900/20 p-4">
+                      <h3 className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mb-2">Advantages</h3>
+                      <ul className="space-y-1">
+                        {enrichment.pros_for_expats.map((pro, i) => (
+                          <li key={i} className="text-sm text-emerald-800 dark:text-emerald-300 flex gap-2">
+                            <span className="shrink-0 mt-0.5">✓</span>{pro}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {enrichment?.cons_for_expats && enrichment.cons_for_expats.length > 0 && (
+                    <div className="rounded-lg border border-rose-200 dark:border-rose-800/50 bg-rose-50 dark:bg-rose-900/20 p-4">
+                      <h3 className="text-sm font-semibold text-rose-700 dark:text-rose-400 mb-2">Challenges</h3>
+                      <ul className="space-y-1">
+                        {enrichment.cons_for_expats.map((con, i) => (
+                          <li key={i} className="text-sm text-rose-800 dark:text-rose-300 flex gap-2">
+                            <span className="shrink-0 mt-0.5">✗</span>{con}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+            </section>
+          )}
+
+          {/* AI Enrichment: Property, Transport, Education */}
+          {enrichment && (enrichment.average_property_price_city_centre_per_sqm_amount || enrichment.public_transport_description || enrichment.international_schools_available !== null) && (
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-3">Living Details</h2>
+              <div className="grid sm:grid-cols-3 gap-4">
+                {enrichment.average_property_price_city_centre_per_sqm_amount && (
+                  <div className="rounded-lg border border-border bg-card p-4">
+                    <p className="text-xs text-muted-foreground mb-1">Property (city centre / m²)</p>
+                    <p className="text-lg font-semibold text-foreground">
+                      {enrichment.converted_property_price_amount
+                        ? `${enrichment.converted_currency} ${enrichment.converted_property_price_amount.toLocaleString()}`
+                        : `${enrichment.average_property_price_city_centre_per_sqm_currency ?? ""} ${enrichment.average_property_price_city_centre_per_sqm_amount.toLocaleString()}`}
+                    </p>
+                  </div>
+                )}
+                {enrichment.average_monthly_rent_city_centre_1bed_amount && (
+                  <div className="rounded-lg border border-border bg-card p-4">
+                    <p className="text-xs text-muted-foreground mb-1">Rent 1-bed (city centre / mo)</p>
+                    <p className="text-lg font-semibold text-foreground">
+                      {enrichment.converted_rent_amount
+                        ? `${enrichment.converted_currency} ${enrichment.converted_rent_amount.toLocaleString()}`
+                        : `${enrichment.average_monthly_rent_city_centre_1bed_currency ?? ""} ${enrichment.average_monthly_rent_city_centre_1bed_amount.toLocaleString()}`}
+                    </p>
+                  </div>
+                )}
+                {enrichment.international_schools_available !== null && enrichment.international_schools_available !== undefined && (
+                  <div className="rounded-lg border border-border bg-card p-4">
+                    <p className="text-xs text-muted-foreground mb-1">International Schools</p>
+                    <p className="text-lg font-semibold text-foreground">
+                      {enrichment.international_schools_available ? "Available" : "Limited"}
+                    </p>
+                    {enrichment.school_fees_description && (
+                      <p className="text-xs text-muted-foreground mt-1">{enrichment.school_fees_description}</p>
+                    )}
+                  </div>
+                )}
+              </div>
+              {enrichment.public_transport_description && (
+                <div className="mt-4 rounded-lg border border-border bg-card p-4">
+                  <p className="text-xs font-semibold text-muted-foreground mb-1 uppercase tracking-wide">Public Transport</p>
+                  <p className="text-sm text-foreground">{enrichment.public_transport_description}</p>
+                </div>
+              )}
+            </section>
           )}
 
           {/* Visas Section */}

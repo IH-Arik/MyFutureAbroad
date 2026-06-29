@@ -84,3 +84,42 @@ class ChecklistUpdateRequest(BaseModel):
 class ChecklistUpdateResponse(BaseModel):
     session_id: uuid.UUID = Field(description="Session UUID.")
     checklist: ChecklistSchema = Field(..., description="Modified checklist.")
+
+
+class ChecklistItemStatusRequest(BaseModel):
+    session_id: uuid.UUID = Field(description="Session UUID.")
+    item_id: str = Field(..., description="Unique slug of the checklist item to update.")
+    status: Literal["not_started", "in_progress", "done"] = Field(..., description="New status for the item.")
+
+
+class ChecklistItemStatusResponse(BaseModel):
+    session_id: uuid.UUID = Field(description="Session UUID.")
+    item_id: str = Field(description="The item that was updated.")
+    status: str = Field(description="The new status applied.")
+    checklist: ChecklistSchema = Field(..., description="Full updated checklist.")
+
+
+class ChecklistAddItemRequest(BaseModel):
+    session_id: uuid.UUID = Field(description="Session UUID.")
+    phase_id: Literal[
+        "six_months_before", "three_months_before", "one_month_before", "two_weeks_before",
+        "moving_week", "first_month_after", "three_months_after", "six_months_after", "ongoing"
+    ] = Field(..., description="Phase to add the item to.")
+    title: str = Field(..., min_length=3, max_length=200, description="Short action title.")
+    description: str = Field(..., min_length=5, max_length=1000, description="What to do and why.")
+    category: Literal[
+        "documents", "legal", "financial", "property", "logistics", "healthcare", "administrative", "personal"
+    ] = Field(..., description="Category of the task.")
+    country_specific: bool = Field(False, description="Whether this task is specific to the destination country.")
+    notes: Optional[str] = Field(None, description="Extra notes or caveats.")
+
+
+class ChecklistAddItemResponse(BaseModel):
+    session_id: uuid.UUID = Field(description="Session UUID.")
+    item_id: str = Field(description="The generated item_id slug for the new item.")
+    checklist: ChecklistSchema = Field(..., description="Full updated checklist.")
+
+
+class ChecklistDeleteItemRequest(BaseModel):
+    session_id: uuid.UUID = Field(description="Session UUID.")
+    item_id: str = Field(..., description="Unique slug of the item to remove.")

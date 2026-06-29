@@ -4,16 +4,17 @@ import logging
 import re
 from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi.responses import StreamingResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.database import async_session
 from app.dependencies import get_db
 from app.models.session import ChatSession
 from app.models.message import ChatMessage
 from app.schemas.chat import ChatbotRequest, ChatbotResponse, SessionHistoryResponse, ChatMessageItem
 from app.prompts.chatbot import SYSTEM_PROMPT
-from app.services.gemini import generate_chat_stream
+from app.services.gemini import collect_chat_stream_async, stream_chat_sse
+from app.services_catalogue import PARTNER_SLUGS
 
 logger = logging.getLogger("app.routers.chatbot")
 
@@ -21,12 +22,17 @@ router = APIRouter(prefix="/chatbot", tags=["General Chatbot"])
 
 ALLOWED_STATIC_REDIRECTS = {"/visas", "/visa-finder", "/budgets", "/checklists"}
 SPECIFIC_VISA_REDIRECT_PATTERN = re.compile(r"^/visas/[a-z0-9-]+/[a-z0-9-]+$")
+PARTNER_PAGE_PATTERN = re.compile(r"^/partners/[a-z0-9-]+$")
+
 
 def is_valid_redirect(path: str) -> bool:
     if path in ALLOWED_STATIC_REDIRECTS:
         return True
     if SPECIFIC_VISA_REDIRECT_PATTERN.match(path):
         return True
+    if PARTNER_PAGE_PATTERN.match(path):
+        slug = path.removeprefix("/partners/")
+        return slug in PARTNER_SLUGS
     return False
 
 @router.post("/chat", response_model=ChatbotResponse)
@@ -90,11 +96,9 @@ async def chatbot_chat(
             "content": f"[System Note: User is currently on page: {request_body.current_page}]\n{latest_msg['content']}"
         }
 
-    # 7. Call Gemini
-    response_text = ""
+    # 7. Call Gemini (non-blocking — runs in thread pool)
     try:
-        for chunk in generate_chat_stream(SYSTEM_PROMPT, api_history, enable_search_grounding=True):
-            response_text += chunk
+        response_text = await collect_chat_stream_async(SYSTEM_PROMPT, api_history, enable_search_grounding=True)
     except Exception as e:
         logger.error(f"Gemini call failed: {e}")
         raise e
@@ -178,6 +182,98 @@ async def chatbot_chat(
         sources=sources_list,
         request_id=request_id
     )
+
+
+@router.post("/stream")
+async def chatbot_stream(
+    request_body: ChatbotRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    SSE streaming endpoint for the General Chatbot.
+    Yields text chunks then a final event with message, redirect, and sources.
+    """
+    if not request_body.message or not request_body.message.strip():
+        raise HTTPException(status_code=400, detail="Message cannot be empty.")
+    if len(request_body.message) > 2000:
+        raise HTTPException(status_code=400, detail="Message exceeds maximum length of 2000 characters.")
+
+    session = None
+    session_id = request_body.session_id
+    if session_id:
+        res = await db.execute(select(ChatSession).where(ChatSession.id == session_id))
+        session = res.scalars().first()
+        if not session:
+            raise HTTPException(status_code=404, detail="Session not found.")
+        if session.feature != "chatbot":
+            raise HTTPException(status_code=400, detail="Session belongs to a different feature.")
+
+    history = []
+    if session_id:
+        res = await db.execute(
+            select(ChatMessage).where(ChatMessage.session_id == session_id).order_by(ChatMessage.created_at.asc())
+        )
+        history = [{"role": m.role, "content": m.content} for m in res.scalars().all()]
+
+    history.append({"role": "user", "content": request_body.message})
+    api_history = list(history)
+    if request_body.current_page:
+        api_history[-1] = {
+            "role": "user",
+            "content": f"[System Note: User is currently on page: {request_body.current_page}]\n{request_body.message}"
+        }
+
+    async def event_generator():
+        accumulated = ""
+        try:
+            async for chunk in stream_chat_sse(SYSTEM_PROMPT, api_history, enable_search_grounding=True):
+                accumulated += chunk
+                yield f"data: {json.dumps({'type': 'chunk', 'text': chunk})}\n\n"
+        except Exception as exc:
+            yield f"data: {json.dumps({'type': 'error', 'message': str(exc)})}\n\n"
+            return
+
+        cleaned = accumulated.strip()
+        first_brace = cleaned.find("{")
+        last_brace = cleaned.rfind("}")
+        if first_brace != -1 and last_brace > first_brace:
+            cleaned = cleaned[first_brace:last_brace + 1]
+        try:
+            parsed = json.loads(cleaned)
+        except json.JSONDecodeError:
+            parsed = {"message": accumulated.strip(), "redirect": None, "sources": []}
+
+        message_content = parsed.get("message", "").strip() or accumulated.strip()
+        redirect_path = parsed.get("redirect")
+        if redirect_path and not is_valid_redirect(redirect_path):
+            redirect_path = None
+        sources_list = [str(s) for s in parsed.get("sources", []) if isinstance(parsed.get("sources"), list)]
+
+        try:
+            nonlocal session, session_id
+            if not session_id:
+                session = ChatSession(feature="chatbot")
+                db.add(session)
+                await db.flush()
+                session_id = session.id
+            else:
+                session = await db.merge(session)
+                session.updated_at = datetime.now(timezone.utc)
+                db.add(session)
+            db.add(ChatMessage(session_id=session_id, role="user", content=request_body.message))
+            db.add(ChatMessage(session_id=session_id, role="assistant", content=json.dumps({
+                "message": message_content, "redirect": redirect_path, "sources": sources_list
+            })))
+            await db.commit()
+        except Exception as exc:
+            await db.rollback()
+            logger.error(f"Failed to save SSE chatbot conversation: {exc}")
+
+        yield f"data: {json.dumps({'type': 'final', 'session_id': str(session_id), 'message': message_content, 'redirect': redirect_path, 'sources': sources_list})}\n\n"
+        yield "data: [DONE]\n\n"
+
+    return StreamingResponse(event_generator(), media_type="text/event-stream")
+
 
 @router.get("/session/{session_id}", response_model=SessionHistoryResponse)
 async def get_session_history(

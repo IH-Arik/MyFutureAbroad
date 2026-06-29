@@ -267,7 +267,13 @@
     "benefits": "Benefits",
     "path_to_residency": "Path to Residency",
     "path_to_residency_desc": "This visa offers a pathway to permanent residency",
-    "view_details": "View Details"
+    "view_details": "View Details",
+    "target_applicant": "Best Suited For",
+    "work_permitted": "Work Permitted",
+    "dependants_allowed": "Dependants Allowed",
+    "renewal_conditions": "Renewal Conditions",
+    "application_steps": "How to Apply",
+    "tax_implications": "Tax Implications"
   },
   "resources": {
     "page_title": "Resources & Guides",

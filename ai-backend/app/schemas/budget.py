@@ -5,10 +5,11 @@ from pydantic import BaseModel, Field
 class LineItem(BaseModel):
     item_id: str = Field(description="Unique slug for the line item.")
     label: str = Field(description="Human-readable name.")
-    amount: float = Field(description="Amount of the cost.")
+    amount: float = Field(description="Amount of the cost in the budget's base currency.")
     frequency: Literal["one_time", "monthly"] = Field(description="Frequency of the cost.")
     notes: Optional[str] = Field(None, description="Important caveats or assumptions.")
     source_url: Optional[str] = Field(None, description="URL where cost figure was found.")
+    display_amount: Optional[float] = Field(None, description="Amount converted to display_currency (if requested).")
 
 
 class BudgetCategory(BaseModel):
@@ -25,6 +26,11 @@ class BudgetSchema(BaseModel):
     total_monthly_ongoing_costs: float = Field(description="Total of monthly ongoing costs.")
     buffer_fund_amount: float = Field(description="Buffer fund calculated as 15% of one-time costs.")
     categories: List[BudgetCategory] = Field(default_factory=list, description="List of budget categories.")
+    display_currency: Optional[str] = Field(None, description="ISO 4217 code for display conversion (if requested).")
+    display_conversion_error: bool = Field(False, description="True if display currency conversion failed.")
+    display_total_one_time: Optional[float] = Field(None, description="Total one-time costs in display currency.")
+    display_total_monthly: Optional[float] = Field(None, description="Total monthly costs in display currency.")
+    display_buffer_fund: Optional[float] = Field(None, description="Buffer fund in display currency.")
 
 
 class BudgetChatResponse(BaseModel):
@@ -44,3 +50,17 @@ class BudgetUpdateRequest(BaseModel):
 class BudgetUpdateResponse(BaseModel):
     session_id: uuid.UUID = Field(description="Session UUID.")
     budget: BudgetSchema = Field(..., description="Modified budget.")
+
+
+class BudgetItemUpdateRequest(BaseModel):
+    session_id: uuid.UUID = Field(description="Session UUID.")
+    item_id: str = Field(..., description="Unique slug of the line item to update.")
+    label: Optional[str] = Field(None, description="New label for the item.")
+    amount: Optional[float] = Field(None, ge=0, description="New amount (must be >= 0).")
+    notes: Optional[str] = Field(None, description="New notes string (pass empty string to clear).")
+
+
+class BudgetItemUpdateResponse(BaseModel):
+    session_id: uuid.UUID = Field(description="Session UUID.")
+    item_id: str = Field(description="The item that was updated.")
+    budget: BudgetSchema = Field(..., description="Full budget with recalculated totals.")

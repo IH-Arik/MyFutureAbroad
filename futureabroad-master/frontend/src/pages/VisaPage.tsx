@@ -5,7 +5,7 @@ import type { Visa, Country } from "@/lib/types";
 import { HugeiconsIcon } from '@hugeicons/react'
 import { ArrowLeft01Icon } from '@hugeicons/core-free-icons'
 import ReactMarkdown from "react-markdown";
-import { VisaKeyDetails, VisaRequirements, VisaDocuments, VisaOfficialLink } from "@/components/visa/VisaDetailComponents";
+import { VisaKeyDetails, VisaRequirements, VisaDocuments, VisaOfficialLink, VisaApplicationSteps, VisaTaxImplications, VisaTargetApplicant } from "@/components/visa/VisaDetailComponents";
 import { VisaBenefits, VisaPathToResidency } from "@/components/visa/VisaSidebar";
 import { useTranslation } from "react-i18next";
 import { useTranslatedVisa } from "@/hooks/useTranslatedVisa";
@@ -97,6 +97,7 @@ export function VisaPage() {
                                 {translatedVisa.description}
                             </p>
                         )}
+                        <VisaTargetApplicant visa={translatedVisa} />
                     </div>
 
                     {/* Right: Highlight Image */}
@@ -121,6 +122,8 @@ export function VisaPage() {
                 <div className="space-y-8">
                     <VisaKeyDetails visa={translatedVisa} />
                     <VisaRequirements visa={translatedVisa} />
+                    <VisaApplicationSteps steps={translatedVisa.application_process_steps} />
+                    <VisaTaxImplications tax_implications={translatedVisa.tax_implications} />
 
                     {/* Additional Details (markdown from country.extra_info) */}
                     {country?.extra_info && (

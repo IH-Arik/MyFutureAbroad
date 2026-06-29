@@ -10,6 +10,8 @@ export interface Country {
     tax_advice?: string;
     extra_info?: string;
     local_tips?: string;
+    pros_for_expats?: string[];
+    cons_for_expats?: string[];
 }
 
 export default {} as any;

@@ -5,6 +5,32 @@ from app.config import settings
 
 logger = logging.getLogger("app.services.currency")
 
+_http_client: Optional[httpx.AsyncClient] = None
+
+_POOL_LIMITS = httpx.Limits(
+    max_connections=20,
+    max_keepalive_connections=10,
+    keepalive_expiry=30.0,
+)
+
+
+def _get_http_client() -> httpx.AsyncClient:
+    global _http_client
+    if _http_client is None or _http_client.is_closed:
+        _http_client = httpx.AsyncClient(
+            timeout=httpx.Timeout(10.0),
+            limits=_POOL_LIMITS,
+        )
+    return _http_client
+
+
+async def close_http_client() -> None:
+    """Close the shared httpx client. Call this during app shutdown."""
+    global _http_client
+    if _http_client is not None and not _http_client.is_closed:
+        await _http_client.aclose()
+        _http_client = None
+
 
 class CurrencyServiceError(Exception):
     """Custom exception raised for external currency API failures."""
@@ -64,9 +90,6 @@ async def convert_currency(
         return round(amount * rate, 2)
 
     # Physical integration using httpx
-    # 1. Enforce strict 10.0s timeout limit
-    timeout = httpx.Timeout(10.0)
-    
     # Construct base URL and query parameters
     url = f"{settings.CURRENCY_API_BASE_URL.rstrip('/')}/convert"
     params = {
@@ -74,7 +97,7 @@ async def convert_currency(
         "to": to_curr,
         "amount": amount
     }
-    
+
     headers = {}
     if settings.CURRENCY_API_KEY:
         # Pass API key in Authorization header and query param for maximum compatibility
@@ -82,41 +105,41 @@ async def convert_currency(
         params["api_key"] = settings.CURRENCY_API_KEY
 
     try:
-        async with httpx.AsyncClient(timeout=timeout) as client:
-            logger.info(f"Initiating currency conversion from {from_curr} to {to_curr} for amount {amount}")
-            res = await client.get(url, params=params, headers=headers)
-            
-            # Catch network errors and non-200 responses
-            if res.status_code != 200:
-                logger.error(f"External currency API returned non-200 status {res.status_code}: {res.text}")
-                raise CurrencyServiceError(
-                    f"Currency service returned error status {res.status_code}: {res.text}"
-                )
-                
-            data = res.json()
-            
-            # Support multiple standard response format keys for robustness
-            converted_val = None
-            if isinstance(data, dict):
-                converted_val = data.get("result")
-                if converted_val is None:
-                    converted_val = data.get("converted_amount")
-                if converted_val is None:
-                    # Support flat conversion rate return
-                    rate = data.get("rate")
-                    if rate is not None:
-                        converted_val = amount * float(rate)
-                if converted_val is None:
-                    # Check nested keys or data object
-                    data_obj = data.get("data")
-                    if isinstance(data_obj, dict):
-                        converted_val = data_obj.get("result") or data_obj.get("converted_amount") or data_obj.get("converted")
-                        
+        client = _get_http_client()
+        logger.info(f"Initiating currency conversion from {from_curr} to {to_curr} for amount {amount}")
+        res = await client.get(url, params=params, headers=headers)
+
+        # Catch network errors and non-200 responses
+        if res.status_code != 200:
+            logger.error(f"External currency API returned non-200 status {res.status_code}: {res.text}")
+            raise CurrencyServiceError(
+                f"Currency service returned error status {res.status_code}: {res.text}"
+            )
+
+        data = res.json()
+
+        # Support multiple standard response format keys for robustness
+        converted_val = None
+        if isinstance(data, dict):
+            converted_val = data.get("result")
             if converted_val is None:
-                logger.error(f"Failed to locate converted amount in currency API response: {data}")
-                raise CurrencyServiceError("Unexpected currency conversion response format.")
-                
-            return round(float(converted_val), 2)
+                converted_val = data.get("converted_amount")
+            if converted_val is None:
+                # Support flat conversion rate return
+                rate = data.get("rate")
+                if rate is not None:
+                    converted_val = amount * float(rate)
+            if converted_val is None:
+                # Check nested keys or data object
+                data_obj = data.get("data")
+                if isinstance(data_obj, dict):
+                    converted_val = data_obj.get("result") or data_obj.get("converted_amount") or data_obj.get("converted")
+
+        if converted_val is None:
+            logger.error(f"Failed to locate converted amount in currency API response: {data}")
+            raise CurrencyServiceError("Unexpected currency conversion response format.")
+
+        return round(float(converted_val), 2)
             
     except httpx.TimeoutException as te:
         logger.error(f"Currency exchange API request timed out: {te}")

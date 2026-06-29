@@ -4,18 +4,19 @@ import json
 import logging
 from datetime import datetime, timezone, timedelta
 from typing import Optional
+from urllib.parse import urlparse
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import settings
-from app.database import async_session
 from app.dependencies import get_db
+from app.supported_countries import SUPPORTED_COUNTRY_SLUGS
 from app.models.cache import ContentCache
-from app.services.gemini import generate_structured_json
+from app.services.gemini import generate_structured_json_async
 from app.services.currency import convert_currency, CurrencyServiceError
 from app.prompts.visa_page import SYSTEM_PROMPT_TEMPLATE
-from app.schemas.visa import VisaDetailResponse, VisaListResponse, VisaListItem
+from app.schemas.visa import VisaDetailResponse, VisaListResponse
 
 logger = logging.getLogger("app.routers.visa_pages")
 
@@ -32,6 +33,26 @@ def validate_slug(slug: str, name: str) -> None:
 def slug_to_title(slug: str) -> str:
     # Replace hyphens with spaces and title case
     return slug.replace("-", " ").title()
+
+
+_OFFICIAL_DOMAIN_RE = re.compile(
+    r'\.(gov|gouv|gob|gc\.ca|govt|admin|bund)(\.([a-z]{2}))?$|\.europa\.eu$',
+    re.IGNORECASE
+)
+
+
+def _is_official_source(url: Optional[str]) -> bool:
+    if not url:
+        return False
+    try:
+        hostname = urlparse(url).hostname or ""
+        return bool(_OFFICIAL_DOMAIN_RE.search(hostname))
+    except Exception:
+        return False
+
+
+def _is_country_supported(slug: str) -> bool:
+    return slug in SUPPORTED_COUNTRY_SLUGS
 
 
 @router.get("/{country_slug}/{visa_slug}", response_model=VisaDetailResponse)
@@ -90,23 +111,34 @@ async def get_visa_details(
 
     # 3. Cache MISS or refresh required -> Call Gemini Service
     if raw_data is None:
+        if not _is_country_supported(country_slug):
+            raise HTTPException(status_code=404, detail=f"Country '{country_slug}' is not in the supported countries list.")
+
         logger.info(f"Cache MISS or forced refresh for cache key: {cache_key}. Fetching from Gemini...")
         system_prompt = SYSTEM_PROMPT_TEMPLATE.format(country_name=country_name, visa_name=visa_name)
         user_prompt = f"Perform the search for the {visa_name} requirements in {country_name} and generate the structured JSON report."
-        
+
         try:
-            raw_data = generate_structured_json(system_prompt, user_prompt, enable_search_grounding=True)
+            raw_data = await generate_structured_json_async(system_prompt, user_prompt, enable_search_grounding=True)
             # Ensure generated_at is set to current time
             raw_data["generated_at"] = now.isoformat()
         except Exception as e:
             logger.error(f"Gemini generation failed for {visa_name} ({country_name}): {e}")
             raise e  # Global exception handlers will intercept and output correct Standard Error Envelopes
-            
+
         # 4. JSON Schema Validation
         # Verify structure contains key fields before writing to cache
         required_keys = ["visa_name", "country", "country_code", "data_confidence"]
         if not all(k in raw_data for k in required_keys):
             raise HTTPException(status_code=502, detail="The AI service returned an invalid visa data structure.")
+
+        # Downgrade confidence if source URL is not from a verified official government domain
+        if raw_data.get("data_confidence") == "full" and not _is_official_source(raw_data.get("source_url")):
+            logger.warning(
+                f"Downgrading data_confidence to 'partial' for {visa_name} ({country_name}): "
+                f"source_url '{raw_data.get('source_url')}' is not a verified official government domain."
+            )
+            raw_data["data_confidence"] = "partial"
 
         # 5. Persist to localized content cache
         try:
@@ -169,7 +201,9 @@ async def get_visa_details(
         **raw_data,
         **converted_fields
     }
-    
+    if raw_data.get("data_confidence") == "partial":
+        response_payload["partial_data_warning"] = True
+
     return response_payload
 
 
@@ -208,6 +242,9 @@ async def list_country_visas(
 
     # Generate if cache miss
     if list_data is None:
+        if not _is_country_supported(country_slug):
+            raise HTTPException(status_code=404, detail=f"Country '{country_slug}' is not in the supported countries list.")
+
         logger.info(f"Cache MISS or refresh forced for visas list cache key: {cache_key}. Fetching from Gemini...")
         sys_prompt = (
             f"You are a visa listing assistant for MyFutureAbroad. Use Google Search to query official government databases, embassy portals, and reliable immigration directories to compile a complete, comprehensive, and exhaustive list of all available visa types, options, and programmes for {country_name} (including both short-stay/Schengen visas and long-stay/National visas).\n"
@@ -230,7 +267,7 @@ async def list_country_visas(
         user_prompt = f"Perform a comprehensive Google Search of official government and immigration websites for {country_name} and generate the complete, exhaustive list of all short-stay and long-stay visas."
         
         try:
-            list_data = generate_structured_json(sys_prompt, user_prompt, enable_search_grounding=True)
+            list_data = await generate_structured_json_async(sys_prompt, user_prompt, enable_search_grounding=True)
             
             # Robust wrapping if Gemini returns an array directly
             if isinstance(list_data, list):

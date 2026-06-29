@@ -58,6 +58,104 @@ def fetch_visas(country_id):
     response.raise_for_status()
     return response.json()
 
+def create_visa_db(country_id, data):
+    """Inserts a new visa record into Supabase."""
+    payload = {**data, "country_id": country_id, "updated_at": datetime.now(timezone.utc).isoformat()}
+    try:
+        response = supabase_client.post(
+            f"{SUPABASE_URL}/rest/v1/visas",
+            json=payload,
+            headers={"Prefer": "return=representation"}
+        )
+        response.raise_for_status()
+        created = response.json()
+        return created[0] if isinstance(created, list) else created
+    except httpx.HTTPStatusError as e:
+        print(f"  ❌ Visa creation failed (HTTP {e.response.status_code}): {e.response.text}")
+        raise
+
+_VISA_DISCOVERY_PROMPT = (
+    "You are an expert immigration researcher. Search for ALL official long-stay visa and residency programs "
+    "currently available to foreign nationals in {country_name}. "
+    "Use Google Search to find the complete, up-to-date list from official government immigration websites.\n"
+    "Return ONLY a valid JSON object. No markdown, no code blocks, pure JSON only.\n"
+    "JSON SCHEMA:\n"
+    "{{\n"
+    "  \"visas\": [\n"
+    "    {{\n"
+    "      \"name\": \"string, official name of the visa or residency program\",\n"
+    "      \"visa_type\": \"string, one of: digital_nomad | retirement | work | student | investor | family | skilled_worker | self_employed | other\"\n"
+    "    }}\n"
+    "  ]\n"
+    "}}\n"
+    "Include ALL types that allow stays longer than 90 days: retirement visas, digital nomad visas, "
+    "work visas, student visas, investor/golden visas, family reunification visas, skilled worker visas, "
+    "self-employment visas, passive income visas, etc.\n"
+    "Do NOT include: standard tourist visas under 90 days, visa-on-arrival for tourism, eVisa for short tourism stays.\n"
+    "List only programs that officially exist as of today."
+)
+
+_VISA_DETAIL_PROMPT = (
+    "You are an expert immigration researcher. Search the official government immigration website of {country_name} "
+    "for the current, authoritative requirements for the '{visa_name}' program.\n"
+    "Use Google Search to find data from official government sources only (immigration ministries, embassies).\n"
+    "Return ONLY a valid JSON object. No markdown, no code blocks, pure JSON only.\n"
+    "JSON SCHEMA:\n"
+    "{{\n"
+    "  \"description\": \"string, 2-3 sentence plain-English description of who this visa is for and what it allows\",\n"
+    "  \"target_applicant\": \"string, one sentence describing the ideal applicant (e.g. retirees with passive income, remote workers employed abroad)\",\n"
+    "  \"benefits\": [\"array of 3-5 strings, key advantages of this visa program\"],\n"
+    "  \"min_income\": number_or_null (minimum required monthly income in the local currency),\n"
+    "  \"min_income_currency\": \"ISO 4217 code or null (e.g. EUR, USD, THB)\",\n"
+    "  \"min_savings\": number_or_null (minimum lump-sum savings required, in local currency),\n"
+    "  \"min_savings_currency\": \"ISO 4217 code or null\",\n"
+    "  \"min_age\": integer_or_null,\n"
+    "  \"max_age\": integer_or_null,\n"
+    "  \"requires_health_insurance\": boolean,\n"
+    "  \"requires_clean_criminal_record\": boolean,\n"
+    "  \"required_documents\": [\"array of strings, each one specific required document\"],\n"
+    "  \"work_permitted\": boolean_or_null (true if holder may work in {country_name}, false if work is prohibited, null if conditional),\n"
+    "  \"dependants_allowed\": boolean_or_null (true if spouse/children can join on dependent visa),\n"
+    "  \"application_fee_amount\": number_or_null (official fee in the original local currency — NOT converted to USD),\n"
+    "  \"application_fee_currency\": \"ISO 4217 code of the fee currency or null (e.g. EUR, GBP, THB)\",\n"
+    "  \"processing_time_min_days\": integer_or_null,\n"
+    "  \"processing_time_max_days\": integer_or_null,\n"
+    "  \"validity_months\": integer_or_null (initial validity in months),\n"
+    "  \"renewable\": boolean_or_null,\n"
+    "  \"renewal_conditions\": \"string or null, conditions required to renew (e.g. must maintain income threshold, no criminal convictions)\",\n"
+    "  \"has_path_to_residency\": boolean,\n"
+    "  \"path_to_residency_description\": \"string or null, how this visa leads to permanent residency or citizenship\",\n"
+    "  \"application_process_steps\": [\"array of 4-6 strings, each a numbered step in the application process\"],\n"
+    "  \"tax_implications\": \"string or null, special tax treatment for this visa category (e.g. NHR status in Portugal, exemptions). Null if standard resident rules apply.\",\n"
+    "  \"official_link\": \"string, URL of the official government page for this visa\"\n"
+    "}}\n"
+    "CRITICAL RULES:\n"
+    "1. NEVER invent or estimate fees, income thresholds, or legal numbers. Set to null if not found on official sources.\n"
+    "2. Use the original local currency for ALL financial fields — do NOT convert to USD.\n"
+    "3. Set official_link to the actual government page URL.\n"
+)
+
+def discover_visa_types(country_name, iso_code):
+    """Uses Gemini with Google Search to discover all long-stay visa programs for a country."""
+    sys_prompt = _VISA_DISCOVERY_PROMPT.format(country_name=country_name)
+    user_prompt = f"List all official long-stay visa and residency programs available in {country_name} ({iso_code}) as of today."
+    try:
+        result = generate_structured_json(sys_prompt, user_prompt, enable_search_grounding=True)
+        visas = result.get("visas", [])
+        if not isinstance(visas, list):
+            return []
+        # Filter out entries with empty names
+        return [v for v in visas if isinstance(v, dict) and v.get("name", "").strip()]
+    except Exception as e:
+        print(f"  ⚠️ Visa discovery failed for {country_name}: {e}")
+        return []
+
+def fetch_visa_details(country_name, visa_name):
+    """Uses Gemini with Google Search to get full details for a specific visa program."""
+    sys_prompt = _VISA_DETAIL_PROMPT.format(country_name=country_name, visa_name=visa_name)
+    user_prompt = f"Fetch current requirements and details for the '{visa_name}' program in {country_name}."
+    return generate_structured_json(sys_prompt, user_prompt, enable_search_grounding=True)
+
 def get_json_filepath(data_dir: str, iso_code: str, name: str) -> Path:
     """Finds the path to the local country JSON file, allowing minor formatting differences."""
     formatted_name = name.lower().replace(" ", "_").replace("-", "_").replace("(", "").replace(")", "").replace("'", "")
@@ -87,27 +185,42 @@ def update_local_json(iso_code, name, updated_country_fields, updated_visas):
             if k in ["description", "longdescription", "tax_advice", "local_tips", "citizenship_requirements"]:
                 local_data[k] = v
                 
-        # Map updated visas by name
+        # Map updated visas by name; also append newly created visas
         visas_by_name = {v["name"].lower(): v for v in updated_visas}
-        
+
+        _VISA_SYNC_FIELDS = [
+            "description", "target_applicant", "benefits",
+            "min_income", "min_income_currency",
+            "min_savings", "min_savings_currency",
+            "requires_health_insurance", "requires_clean_criminal_record",
+            "required_documents", "work_permitted", "dependants_allowed",
+            "application_fee_amount", "application_fee_currency", "base_currency",
+            "application_fee_usd",
+            "processing_time_days", "processing_time_min_days", "processing_time_max_days",
+            "validity_months", "renewable", "renewal_conditions",
+            "has_path_to_residency", "path_to_residency_description",
+            "application_process_steps", "tax_implications",
+            "official_link",
+        ]
+
+        if "visas" not in local_data or not isinstance(local_data["visas"], list):
+            local_data["visas"] = []
+
+        existing_local_names = {v.get("name", "").lower() for v in local_data["visas"]}
+
         if "visas" in local_data and isinstance(local_data["visas"], list):
             for i, v in enumerate(local_data["visas"]):
                 v_name = v.get("name", "").lower()
                 if v_name in visas_by_name:
                     updated_v = visas_by_name[v_name]
-                    # Merge fields
-                    for field in [
-                        "description", "benefits", "min_income", "min_income_currency",
-                        "min_savings", "min_savings_currency", "requires_health_insurance",
-                        "requires_clean_criminal_record", "processing_time_days", "validity_months",
-                        "renewable", "has_path_to_residency", "path_to_residency_description",
-                        "application_fee_usd", "application_fee_currency", "required_documents",
-                        "official_link"
-                    ]:
+                    for field in _VISA_SYNC_FIELDS:
                         if field in updated_v:
-                            # Convert number type to support float/int matching
-                            val = updated_v[field]
-                            local_data["visas"][i][field] = val
+                            local_data["visas"][i][field] = updated_v[field]
+
+        # Append newly created visas that weren't in local JSON
+        for uv in updated_visas:
+            if uv.get("name", "").lower() not in existing_local_names:
+                local_data["visas"].append(uv)
                             
         with open(json_path, "w", encoding="utf-8") as f:
             json.dump(local_data, f, indent=2, ensure_ascii=False)
@@ -218,52 +331,92 @@ def parse_string_list(val):
         return [trimmed]
     return []
 
+_DIFF_THRESHOLD_PCT = 50  # Flag if a numeric visa field changes by more than this percentage
+
+
+def _visa_numeric_diff(old_visa: dict, new_fields: dict) -> list:
+    """Returns list of suspicious change descriptions for key numeric visa fields."""
+    suspicious = []
+    for field in ("min_income", "min_savings", "application_fee_amount", "validity_months"):
+        old_val = parse_numeric(old_visa.get(field))
+        new_val = parse_numeric(new_fields.get(field))
+        if old_val and new_val and old_val > 0:
+            pct = abs(new_val - old_val) / old_val * 100
+            if pct > _DIFF_THRESHOLD_PCT:
+                suspicious.append(f"{field}: {old_val} → {new_val} ({pct:.0f}% change)")
+    return suspicious
+
+
 def sanitize_visa_fields(visa_data):
     """
     Sanitizes visa fields to match Supabase schema types and prevent 400 Bad Request.
     """
     if not isinstance(visa_data, dict):
         return {}
-        
+
     sanitized = {}
-    
+
     # Text fields
     sanitized["name"] = str(visa_data.get("name", "")).strip() if visa_data.get("name") else None
     sanitized["visa_type"] = str(visa_data.get("visa_type", "")).strip() if visa_data.get("visa_type") else None
     sanitized["description"] = str(visa_data.get("description", "")).strip() if visa_data.get("description") else None
+    sanitized["target_applicant"] = str(visa_data.get("target_applicant", "")).strip() if visa_data.get("target_applicant") else None
     sanitized["path_to_residency_description"] = str(visa_data.get("path_to_residency_description", "")).strip() if visa_data.get("path_to_residency_description") else None
+    sanitized["renewal_conditions"] = str(visa_data.get("renewal_conditions", "")).strip() if visa_data.get("renewal_conditions") else None
+    sanitized["tax_implications"] = str(visa_data.get("tax_implications", "")).strip() if visa_data.get("tax_implications") else None
     sanitized["official_link"] = str(visa_data.get("official_link", "")).strip() if visa_data.get("official_link") else None
     sanitized["image_url"] = str(visa_data.get("image_url", "")).strip() if visa_data.get("image_url") else None
-    
-    # Numeric fields
+
+    # Numeric fields — all in original local currency
     sanitized["min_income"] = parse_numeric(visa_data.get("min_income"))
     sanitized["min_savings"] = parse_numeric(visa_data.get("min_savings"))
-    sanitized["application_fee_usd"] = parse_numeric(visa_data.get("application_fee_usd"))
-    
+    # application_fee_amount is the authoritative fee in the original local currency
+    fee_amount = parse_numeric(visa_data.get("application_fee_amount"))
+    sanitized["application_fee_amount"] = fee_amount
+    # application_fee_usd kept for backwards compatibility / visa-finder filtering
+    sanitized["application_fee_usd"] = fee_amount  # best-effort; AI should provide local currency value
+
     # Integer fields
     sanitized["min_age"] = parse_integer(visa_data.get("min_age"))
     sanitized["max_age"] = parse_integer(visa_data.get("max_age"))
-    sanitized["processing_time_days"] = parse_integer(visa_data.get("processing_time_days"))
+    sanitized["processing_time_min_days"] = parse_integer(visa_data.get("processing_time_min_days"))
+    sanitized["processing_time_max_days"] = parse_integer(visa_data.get("processing_time_max_days"))
+    # Derive a single processing_time_days as average of min/max for backwards compat
+    t_min = sanitized["processing_time_min_days"]
+    t_max = sanitized["processing_time_max_days"]
+    if t_min is not None and t_max is not None:
+        sanitized["processing_time_days"] = (t_min + t_max) // 2
+    elif t_min is not None:
+        sanitized["processing_time_days"] = t_min
+    elif t_max is not None:
+        sanitized["processing_time_days"] = t_max
+    else:
+        sanitized["processing_time_days"] = None
     sanitized["validity_months"] = parse_integer(visa_data.get("validity_months"))
-    
+
     # Currency fields
     sanitized["min_income_currency"] = parse_currency(visa_data.get("min_income_currency"))
     sanitized["min_savings_currency"] = parse_currency(visa_data.get("min_savings_currency"))
-    sanitized["application_fee_currency"] = parse_currency(visa_data.get("application_fee_currency"))
-    
+    fee_currency = parse_currency(visa_data.get("application_fee_currency"))
+    sanitized["application_fee_currency"] = fee_currency
+    sanitized["base_currency"] = fee_currency  # mirrors application_fee_currency for frontend display
+
     # Boolean fields
     sanitized["requires_health_insurance"] = parse_boolean(visa_data.get("requires_health_insurance"), default=False)
     sanitized["requires_clean_criminal_record"] = parse_boolean(visa_data.get("requires_clean_criminal_record"), default=False)
     sanitized["renewable"] = parse_boolean(visa_data.get("renewable"), default=False)
     sanitized["has_path_to_residency"] = parse_boolean(visa_data.get("has_path_to_residency"), default=False)
-    
+    sanitized["work_permitted"] = parse_boolean(visa_data.get("work_permitted")) if visa_data.get("work_permitted") is not None else None
+    sanitized["dependants_allowed"] = parse_boolean(visa_data.get("dependants_allowed")) if visa_data.get("dependants_allowed") is not None else None
+
     # Array fields
     sanitized["benefits"] = parse_string_list(visa_data.get("benefits"))
     sanitized["required_skills"] = parse_string_list(visa_data.get("required_skills"))
     sanitized["eligible_nationalities"] = parse_string_list(visa_data.get("eligible_nationalities"))
     sanitized["excluded_nationalities"] = parse_string_list(visa_data.get("excluded_nationalities"))
     sanitized["required_documents"] = parse_string_list(visa_data.get("required_documents"))
-    
+    sanitized["application_process_steps"] = parse_string_list(visa_data.get("application_process_steps"))
+
     # JSONB field
     additional_info = visa_data.get("additional_info")
     if additional_info:
@@ -278,7 +431,7 @@ def sanitize_visa_fields(visa_data):
             sanitized["additional_info"] = {"info": additional_info}
     else:
         sanitized["additional_info"] = None
-        
+
     return sanitized
 
 def sanitize_country_fields(country_data):
@@ -295,6 +448,11 @@ def sanitize_country_fields(country_data):
         if field in country_data:
             val = country_data[field]
             sanitized[field] = str(val).strip() if val is not None else None
+
+    # Array fields (pros/cons)
+    for field in ["pros_for_expats", "cons_for_expats"]:
+        if field in country_data:
+            sanitized[field] = parse_string_list(country_data[field]) or None
             
     # JSONB fields
     citizenship_requirements = country_data.get("citizenship_requirements")
@@ -352,7 +510,7 @@ def update_visa_db(visa_id, data):
         print(f"  ❌ Visa update failed (HTTP {e.response.status_code}): {e.response.text}")
         raise
 
-def update_single_country(country, dry_run=False):
+def update_single_country(country, dry_run=False, force=False):
     """Updates profile information and all visas for a single country."""
     country_id = country["id"]
     country_name = country["name"]
@@ -372,6 +530,8 @@ def update_single_country(country, dry_run=False):
         "  \"longdescription\": \"string, a detailed 1-2 paragraph narrative covering expat life, culture, economy, and society. Clean text, no markdown headers.\",\n"
         "  \"tax_advice\": \"string, markdown bullet points detailing standard tax policies (corporate tax, personal income tax, VAT, etc.)\",\n"
         "  \"local_tips\": \"string, markdown bullet points listing practical tips (cost of living, language, safety, registration)\",\n"
+        "  \"pros_for_expats\": [\"array of 3-5 strings, top reasons expats choose this country. Each a concise sentence starting with a noun or verb.\"],\n"
+        "  \"cons_for_expats\": [\"array of 3-5 strings, top challenges for expats. Each a concise sentence.\"],\n"
         "  \"citizenship_requirements\": {\n"
         "    \"Citizenship by Descent\": { \"icon\": \"👨‍👩‍👧\", \"desc\": \"markdown string detailing descent rules\" },\n"
         "    \"Naturalization\": { \"icon\": \"📋\", \"desc\": \"markdown string detailing naturalization years/rules\" },\n"
@@ -396,90 +556,114 @@ def update_single_country(country, dry_run=False):
         print(f"  ❌ Failed to generate country details for {country_name}: {e}")
         return False
 
-    # 2. Update Visas
-    print("  📋 Fetching visas from database...")
-    visas = fetch_visas(country_id)
-    print(f"  ℹ️ Found {len(visas)} visa(s) in database.")
-    
-    updated_visas = []
-    for visa in visas:
-        visa_id = visa["id"]
-        visa_name = visa["name"]
-        print(f"    ➡️ Visa program: '{visa_name}'")
-        
-        visa_sys_prompt = (
-            "You are an expert immigration researcher. Your task is to find the latest official requirements for the specified visa program. "
-            "Check official migration agency portals or embassy directories for current fees, processing times, and income/savings requirements.\n"
-            "You must return ONLY a valid JSON object matching the detailed schema described below. "
-            "Do NOT include any markdown code blocks, do NOT wrap your response in ```json ... ```, and do NOT include any preamble or postamble text. Return pure JSON only.\n"
-            "JSON SCHEMA:\n"
-            "{\n"
-            "  \"description\": \"string, short description of the visa program and eligibility\",\n"
-            "  \"benefits\": [\"array of strings, key benefits/advantages (max 5 items)\"],\n"
-            "  \"min_income\": number or null (monthly income required in currency below, e.g. 2000),\n"
-            "  \"min_income_currency\": \"string or null, ISO 4217 code (e.g. EUR, USD, SEK)\",\n"
-            "  \"min_savings\": number or null (lump sum savings required, e.g. 50000),\n"
-            "  \"min_savings_currency\": \"string or null, ISO 4217 code (e.g. EUR, USD, SEK)\",\n"
-            "  \"requires_health_insurance\": boolean,\n"
-            "  \"requires_clean_criminal_record\": boolean,\n"
-            "  \"processing_time_days\": integer or null,\n"
-            "  \"validity_months\": integer or null,\n"
-            "  \"renewable\": boolean,\n"
-            "  \"has_path_to_residency\": boolean,\n"
-            "  \"path_to_residency_description\": \"string or null\",\n"
-            "  \"application_fee_usd\": number or null (fee in USD, or converted value if applicable),\n"
-            "  \"application_fee_currency\": \"string or null, currency of the fee (e.g. USD, EUR, SEK)\",\n"
-            "  \"required_documents\": [\"array of strings, required documents list\"],\n"
-            "  \"official_link\": \"string, official govt application or info page URL\"\n"
-            "}"
-        )
-        visa_user_prompt = f"Fetch current requirements and details for the '{visa_name}' program in {country_name}."
-        
+    # 2. Discover visa programs for this country via AI search
+    print("  🔍 Discovering visa programs via AI search...")
+    discovered = discover_visa_types(country_name, iso_code)
+    print(f"  ℹ️ Discovered {len(discovered)} visa program(s) from search.")
+
+    # 3. Fetch existing visas from DB to decide create vs update
+    print("  📋 Fetching existing visas from database...")
+    existing_visas = fetch_visas(country_id)
+    existing_by_name = {v["name"].strip().lower(): v for v in existing_visas}
+    print(f"  ℹ️ {len(existing_visas)} visa(s) already in database.")
+
+    # Collect full visa details for each discovered program
+    visa_updates = []  # {action, data, id (update only)}
+    for visa_info in discovered:
+        visa_name = visa_info.get("name", "").strip()
+        visa_type = visa_info.get("visa_type", "other")
+        if not visa_name:
+            continue
+
+        print(f"    ➡️ Fetching details for: '{visa_name}'")
         try:
-            print(f"      🔍 Grounding search for visa '{visa_name}'...")
-            raw_visa_fields = generate_structured_json(
-                visa_sys_prompt,
-                visa_user_prompt,
-                enable_search_grounding=True
-            )
-            raw_visa_fields["name"] = visa_name
-            updated_visa_fields = sanitize_visa_fields(raw_visa_fields)
-            updated_visas.append(updated_visa_fields)
-            print(f"      ✅ Visa requirements generated and sanitized successfully.")
-            
-            # Rate limiting delay between visa queries to respect Gemini RPM limits
+            print(f"      🔍 Grounding search...")
+            raw = fetch_visa_details(country_name, visa_name)
+            raw["name"] = visa_name
+            raw["visa_type"] = visa_type
+            sanitized = sanitize_visa_fields(raw)
+            sanitized["name"] = visa_name
+
+            existing = existing_by_name.get(visa_name.lower())
+            if existing:
+                suspicious = _visa_numeric_diff(existing, sanitized)
+                visa_updates.append({
+                    "action": "update",
+                    "id": existing["id"],
+                    "name": visa_name,
+                    "data": sanitized,
+                    "suspicious": suspicious,
+                })
+                print(f"      ✅ Update queued (existing visa ID {existing['id']})")
+            else:
+                visa_updates.append({
+                    "action": "create",
+                    "name": visa_name,
+                    "data": sanitized,
+                })
+                print(f"      ✅ Create queued (new visa)")
+
+            # Rate limit between Gemini calls
             time.sleep(4)
         except Exception as e:
-            print(f"      ⚠️ Failed to update visa '{visa_name}': {e}. Skipping this visa.")
-            # Keep original values if update failed so we don't clear database entries
-            updated_visas.append(visa)
-            
-    # 3. Apply changes (Database & Local files)
+            print(f"      ⚠️ Failed for '{visa_name}': {e}. Skipping.")
+
+    # 4. Apply changes (Database & Local files)
+    updated_visa_records = []  # collect for local JSON sync
+
     if dry_run:
         print("\n  [DRY RUN] Country Updates:")
         print(json.dumps(updated_country_fields, indent=2))
-        print("  [DRY RUN] Visa Updates:")
-        for uv in updated_visas:
-            print(f"    - {uv.get('name')}: Fee: {uv.get('application_fee_usd')} USD, Income: {uv.get('min_income')} {uv.get('min_income_currency')}")
+        print("  [DRY RUN] Visa Operations:")
+        for op in visa_updates:
+            d = op["data"]
+            print(f"    [{op['action'].upper()}] {op['name']}: "
+                  f"fee={d.get('application_fee_amount')} {d.get('application_fee_currency')}, "
+                  f"income={d.get('min_income')} {d.get('min_income_currency')}")
     else:
         print("\n  💾 Writing updates to database...")
         try:
             update_country_db(country_id, updated_country_fields)
-            for uv in updated_visas:
-                # Find matching db visa ID
-                db_v = next((v for v in visas if v["name"].lower() == uv["name"].lower()), None)
-                if db_v:
-                    # Remove "name" field to avoid upserting key constraints if name is static
-                    db_payload = {k: v for k, v in uv.items() if k != "name"}
-                    update_visa_db(db_v["id"], db_payload)
+
+            skipped_count = 0
+            for op in visa_updates:
+                name = op["name"]
+                data = op["data"]
+
+                if op["action"] == "update":
+                    suspicious = op.get("suspicious", [])
+                    if suspicious and not force:
+                        print(f"    ⚠️  SUSPICIOUS CHANGES in '{name}' — skipping (use --force to override):")
+                        for s in suspicious:
+                            print(f"       {s}")
+                        skipped_count += 1
+                        # Keep existing record for local JSON sync
+                        existing = existing_by_name.get(name.lower(), {})
+                        updated_visa_records.append({**existing, **{"name": name}})
+                        continue
+                    if suspicious:
+                        print(f"    ⚠️  Forcing write despite suspicious changes in '{name}'.")
+                    db_payload = {k: v for k, v in data.items() if k != "name"}
+                    update_visa_db(op["id"], db_payload)
+                    updated_visa_records.append({**data, "id": op["id"]})
+                    print(f"    ✅ Updated: '{name}'")
+                else:
+                    # Create new visa — name IS required for INSERT
+                    created = create_visa_db(country_id, data)
+                    if created:
+                        updated_visa_records.append({**data, "id": created.get("id")})
+                    print(f"    ✅ Created: '{name}'")
+
+            if skipped_count:
+                print(f"  ⚠️  {skipped_count} visa(s) skipped due to suspicious changes. Re-run with --force.")
             print("  ✅ Database records updated successfully.")
-            
+
             # Sync local static JSON file
-            update_local_json(iso_code, country_name, updated_country_fields, updated_visas)
+            update_local_json(iso_code, country_name, updated_country_fields, updated_visa_records)
         except Exception as e:
             print(f"  ❌ Database write failed: {e}")
             return False
-            
+
     return True
 
 def main():
@@ -490,13 +674,14 @@ def main():
         except Exception:
             pass
             
-    parser = argparse.ArgumentParser(description="Monthly automated country and visa data update pipeline.")
+    parser = argparse.ArgumentParser(description="Weekly automated country and visa data update pipeline.")
     parser.add_argument("--country", type=str, help="ISO code or name of a specific country to update (e.g. 'SE' or 'sweden')")
     parser.add_argument("--dry-run", action="store_true", help="Print updates without writing to DB or local JSON files")
+    parser.add_argument("--force", action="store_true", help="Write all changes even if numeric fields changed by more than 50%%")
     args = parser.parse_args()
     
     print("═" * 60)
-    print("🌍 MYFUTUREABROAD — MONTHLY AUTOMATED COUNTRY UPDATE PIPELINE")
+    print("🌍 MYFUTUREABROAD — WEEKLY AUTOMATED COUNTRY UPDATE PIPELINE")
     print(f"⏰ Start Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     if args.dry_run:
         print("🧪 Mode: DRY RUN (No writes will be committed)")
@@ -526,7 +711,7 @@ def main():
     
     for c in countries:
         try:
-            success = update_single_country(c, dry_run=args.dry_run)
+            success = update_single_country(c, dry_run=args.dry_run, force=args.force)
             if success:
                 success_count += 1
             else:

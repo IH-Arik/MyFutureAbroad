@@ -1,7 +1,7 @@
 import type React from "react";
 import VisaCard from "@/components/visa/VisaCard";
 
-const ResultsSection: React.FC<any> = ({ translatedResults, results, t, updateProfile, reset, renderIcon }) => {
+const ResultsSection: React.FC<any> = ({ translatedResults, results, t, updateProfile, reset, renderIcon, onAskAI }) => {
   const excellent = (translatedResults || []).filter((r: any) => r.tier === "excellent");
   const good = (translatedResults || []).filter((r: any) => r.tier === "good");
   const matches = (translatedResults || []).filter((r: any) => r.tier === "match");
@@ -47,6 +47,14 @@ const ResultsSection: React.FC<any> = ({ translatedResults, results, t, updatePr
           <button onClick={reset} className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border bg-card text-sm font-medium hover:bg-muted transition-colors text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-900/20">
             {renderIcon("refresh", "w-4 h-4")} {t("visa_finder.results_update")}
           </button>
+          {onAskAI && (
+            <button
+              onClick={onAskAI}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#8B6949] to-[#D4C2A1] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+            >
+              {renderIcon("globe", "w-4 h-4")} Ask AI instead
+            </button>
+          )}
         </div>
       </div>
 

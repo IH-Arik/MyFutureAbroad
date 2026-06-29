@@ -7,6 +7,8 @@ ExpatCommunitySize = Literal["large", "moderate", "small", "minimal"]
 HealthcareQuality = Literal["excellent", "good", "adequate", "limited"]
 TaxSystemType = Literal["territorial", "worldwide", "remittance", "flat", "exempt"]
 BankingEase = Literal["easy", "moderate", "difficult"]
+LanguageDifficulty = Literal["very_easy", "easy", "moderate", "difficult", "very_difficult"]
+DigitalNomadSuitability = Literal["excellent", "good", "moderate", "limited"]
 
 
 class CountryDetailResponse(BaseModel):
@@ -48,12 +50,31 @@ class CountryDetailResponse(BaseModel):
     visa_on_arrival_for_uk_citizens: Optional[bool] = Field(None, description="Visa on arrival / short stay for UK citizens.")
     banking_ease_for_expats: BankingEase = Field(description="Ease of opening bank accounts classification.")
     internet_speed_mbps_average: Optional[float] = Field(None, description="Average fixed broadband speed.")
+    monthly_groceries_amount: Optional[float] = Field(None, description="Estimated monthly grocery cost for one person in local currency.")
+    monthly_groceries_currency: Optional[str] = Field(None, description="ISO 4217 currency code for monthly groceries.")
+    monthly_utilities_amount: Optional[float] = Field(None, description="Average monthly utility costs for a 1-bedroom apartment in local currency.")
+    monthly_utilities_currency: Optional[str] = Field(None, description="ISO 4217 currency code for monthly utilities.")
+    popular_expat_cities: List[str] = Field(default_factory=list, description="Expat-friendly cities/regions, each as a single descriptive line.")
+    language_difficulty_for_english_speakers: Optional[LanguageDifficulty] = Field(None, description="How difficult the local language is for English speakers to learn.")
+    digital_nomad_suitability: Optional[DigitalNomadSuitability] = Field(None, description="Overall suitability for remote workers and digital nomads.")
+    coworking_spaces_available: Optional[bool] = Field(None, description="True if established coworking spaces exist in main cities.")
+    pros_for_expats: List[str] = Field(default_factory=list, description="Top 3-5 reasons expats choose this country.")
+    cons_for_expats: List[str] = Field(default_factory=list, description="Top 3-5 common challenges or drawbacks for expats.")
+    average_property_price_city_centre_per_sqm_amount: Optional[float] = Field(None, description="Average property purchase price per square metre in a city centre in local currency.")
+    average_property_price_city_centre_per_sqm_currency: Optional[str] = Field(None, description="ISO 4217 currency code for the property price figure.")
+    public_transport_description: Optional[str] = Field(None, description="Plain-English description of the public transport quality, network, and options for expats.")
+    international_schools_available: Optional[bool] = Field(None, description="True if established international schools are available in main cities.")
+    school_fees_description: Optional[str] = Field(None, description="Description of international school options and typical annual fee ranges in local currency.")
     source_urls: List[str] = Field(default_factory=list, description="URLs of sources used.")
     data_confidence: str = Field(description="Either 'full' or 'partial'.")
     generated_at: str = Field(description="ISO 8601 UTC datetime of generation.")
-    
+    partial_data_warning: Optional[bool] = Field(None, description="True if data_confidence is 'partial' — some fields could not be verified from official sources.")
+
     # Currency conversion fields (present only when conversion requested)
     converted_rent_amount: Optional[float] = Field(None, description="Converted monthly rent amount.")
+    converted_groceries_amount: Optional[float] = Field(None, description="Converted monthly groceries amount.")
+    converted_utilities_amount: Optional[float] = Field(None, description="Converted monthly utilities amount.")
+    converted_property_price_amount: Optional[float] = Field(None, description="Converted property price per sqm.")
     converted_currency: Optional[str] = Field(None, description="ISO 4217 code of converted currency.")
     currency_conversion_error: Optional[bool] = Field(None, description="True if conversion was requested but failed.")
 

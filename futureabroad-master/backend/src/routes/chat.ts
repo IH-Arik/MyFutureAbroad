@@ -380,6 +380,47 @@ router.get("/sessions/:id", async (req, res) => {
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
+// GET /api/chat/country-enrichment/:slug — AI-generated country enrichment data
+// No auth required — cached public data, served from FastAPI with 24h TTL
+// ─────────────────────────────────────────────────────────────────────────────
+router.get("/country-enrichment/:slug", async (req, res) => {
+  const { slug } = req.params;
+  const { currency } = req.query as { currency?: string };
+
+  if (!slug || !/^[a-z0-9-]+$/.test(slug)) {
+    return res.status(400).json({ error: "Invalid country slug" });
+  }
+
+  try {
+    const fastapiUrl = process.env.FASTAPI_BASE_URL || "http://localhost:8000";
+    const url = currency
+      ? `${fastapiUrl}/countries/${encodeURIComponent(slug)}?currency=${encodeURIComponent(currency)}`
+      : `${fastapiUrl}/countries/${encodeURIComponent(slug)}`;
+
+    const fastapiRes = await fetch(url, {
+      signal: AbortSignal.timeout(90000),
+    });
+
+    if (!fastapiRes.ok) {
+      const errDetail = await fastapiRes.text();
+      console.error(`[gateway] FastAPI country enrichment error for ${slug}:`, errDetail);
+      return res.status(fastapiRes.status).json({ error: "Country enrichment unavailable" });
+    }
+
+    const data = await fastapiRes.json();
+    // Cache at the Express layer for 1 hour (FastAPI already caches for 24h)
+    res.set("Cache-Control", "public, max-age=3600");
+    return res.json(data);
+  } catch (err: any) {
+    if (err.name === "TimeoutError" || err.name === "AbortError") {
+      return res.status(504).json({ error: "Country enrichment request timed out" });
+    }
+    console.error("[gateway] Express country-enrichment handler error:", err);
+    return res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
 // POST /api/chat/budget — Express-to-FastAPI Gateway for Budget Chat
 // Body: { sessionId?: string, message: string }
 // Headers: x-user-id, x-user-token
@@ -752,14 +793,19 @@ router.post("/visa-finder", async (req, res) => {
     let finalAssistantMessage = data.message || "";
 
     if (data.stage === "results" && Array.isArray(data.visas)) {
-      let text = "Based on your details, here are the visas you qualify for:\n\n";
-      for (const v of data.visas) {
-        text += `- **${v.visa_name}** (${v.country}) - **Match Rating: ${v.match_rating.toUpperCase()}**\n`;
-        text += `  *Reasoning*: ${v.match_reasoning}\n`;
-        if (v.key_requirements?.length) {
-          text += `  *Key Requirements*: ${v.key_requirements.join(", ")}\n`;
-        }
-        text += `\n`;
+      const cards = data.visas.map((v: any, i: number) => ({
+        id: i + 1,
+        name: v.visa_name,
+        visa_type: (v.match_rating as string).charAt(0).toUpperCase() + (v.match_rating as string).slice(1) + " Match",
+        country: v.country,
+      }));
+      let text = `Based on your profile, here are **${data.visas.length}** visa${data.visas.length !== 1 ? "s" : ""} you may qualify for:\n\n`;
+      text += "```visa-cards\n" + JSON.stringify(cards) + "\n```";
+      const topVisa = data.visas[0];
+      if (topVisa?.match_reasoning) {
+        text += `\n\n${topVisa.visa_name} is your top match — ${topVisa.match_reasoning} Ask me about any visa above for full requirements, fees, and application tips.`;
+      } else {
+        text += "\n\nAsk me about any visa above for full requirements, fees, and application tips.";
       }
       finalAssistantMessage = text;
     }
@@ -808,7 +854,12 @@ router.post("/chatbot", async (req, res) => {
   const userToken = req.headers["x-user-token"] as string;
   if (!userId || !userToken) return res.status(401).json({ error: "Unauthorised" });
 
-  const { sessionId, message } = req.body as { sessionId?: string; message: string };
+  const { sessionId, message, placement, current_page } = req.body as {
+    sessionId?: string;
+    message: string;
+    placement?: string;
+    current_page?: string;
+  };
   if (!message?.trim()) return res.status(400).json({ error: "message is required" });
 
   try {
@@ -822,6 +873,8 @@ router.post("/chatbot", async (req, res) => {
         session_id: sessionId || null,
         message: message,
         feature: "chatbot",
+        placement: placement || null,
+        current_page: current_page || null,
       }),
     });
 
@@ -905,6 +958,249 @@ router.post("/chatbot", async (req, res) => {
   }
 });
 
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POST /api/chat/budget/update — AI instruction-based budget edit
+// Body: { sessionId: string, instruction: string, current_budget: object, supabaseBudgetId?: string }
+// ─────────────────────────────────────────────────────────────────────────────
+router.post("/budget/update", async (req, res) => {
+  const userId = req.headers["x-user-id"] as string;
+  const userToken = req.headers["x-user-token"] as string;
+  if (!userId || !userToken) return res.status(401).json({ error: "Unauthorised" });
+
+  const { sessionId, instruction, current_budget, supabaseBudgetId } = req.body as {
+    sessionId: string;
+    instruction: string;
+    current_budget: any;
+    supabaseBudgetId?: string;
+  };
+  if (!sessionId) return res.status(400).json({ error: "sessionId is required" });
+  if (!instruction?.trim()) return res.status(400).json({ error: "instruction is required" });
+  if (!current_budget) return res.status(400).json({ error: "current_budget is required" });
+
+  try {
+    const fastapiUrl = process.env.FASTAPI_BASE_URL || "http://localhost:8000";
+    const fastapiRes = await fetch(`${fastapiUrl}/budget/update`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session_id: sessionId, instruction, current_budget }),
+    });
+
+    if (!fastapiRes.ok) {
+      const errDetail = await fastapiRes.text();
+      console.error("[gateway] FastAPI budget/update error:", errDetail);
+      return res.status(fastapiRes.status).json({ error: "Failed to communicate with AI backend service" });
+    }
+
+    const data = await fastapiRes.json() as { session_id: string; budget: any };
+
+    // Sync updated budget back to Supabase if the caller knows the Supabase ID
+    if (supabaseBudgetId && data.budget) {
+      const budgetData = data.budget;
+      const newTotal = (budgetData.total_one_time_costs || 0) + (budgetData.total_monthly_ongoing_costs || 0);
+      await adminSupabase
+        .from("budgets")
+        .update({ total_amount: newTotal, notes: `${budgetData.visa_type || "Visa"} Relocation Budget (AI updated).` })
+        .eq("id", supabaseBudgetId)
+        .eq("user_id", userId);
+
+      // Replace all budget items
+      await adminSupabase.from("budget_items").delete().eq("budget_id", supabaseBudgetId);
+      const itemsToInsert: any[] = [];
+      for (const cat of budgetData.categories || []) {
+        for (const item of cat.line_items || []) {
+          itemsToInsert.push({
+            budget_id: supabaseBudgetId,
+            name: item.label,
+            cost: item.amount,
+            category: cat.category_name,
+            currency: budgetData.currency_code || "USD",
+            status: false,
+          });
+        }
+      }
+      if (itemsToInsert.length > 0) {
+        const { error: itemsErr } = await adminSupabase.from("budget_items").insert(itemsToInsert);
+        if (itemsErr) console.error("[gateway] Failed to sync updated budget items:", itemsErr);
+      }
+    }
+
+    await adminSupabase
+      .from("ai_chat_sessions")
+      .update({ updated_at: new Date().toISOString() })
+      .eq("id", sessionId);
+
+    return res.json({ sessionId: data.session_id, budget: data.budget });
+  } catch (err) {
+    console.error("[gateway] Express budget/update handler error:", err);
+    return res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POST /api/chat/budget/update-item — direct line-item edit
+// Body: { sessionId: string, item_id: string, label?: string, amount?: number, notes?: string }
+// ─────────────────────────────────────────────────────────────────────────────
+router.post("/budget/update-item", async (req, res) => {
+  const userId = req.headers["x-user-id"] as string;
+  const userToken = req.headers["x-user-token"] as string;
+  if (!userId || !userToken) return res.status(401).json({ error: "Unauthorised" });
+
+  const { sessionId, item_id, label, amount, notes } = req.body as {
+    sessionId: string;
+    item_id: string;
+    label?: string;
+    amount?: number;
+    notes?: string;
+  };
+  if (!sessionId) return res.status(400).json({ error: "sessionId is required" });
+  if (!item_id) return res.status(400).json({ error: "item_id is required" });
+
+  try {
+    const fastapiUrl = process.env.FASTAPI_BASE_URL || "http://localhost:8000";
+    const fastapiRes = await fetch(`${fastapiUrl}/budget/update-item`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session_id: sessionId, item_id, label, amount, notes }),
+    });
+
+    if (!fastapiRes.ok) {
+      const errDetail = await fastapiRes.text();
+      console.error("[gateway] FastAPI budget/update-item error:", errDetail);
+      return res.status(fastapiRes.status).json({ error: "Failed to communicate with AI backend service" });
+    }
+
+    const data = await fastapiRes.json() as { session_id: string; item_id: string; budget: any };
+
+    await adminSupabase
+      .from("ai_chat_sessions")
+      .update({ updated_at: new Date().toISOString() })
+      .eq("id", sessionId);
+
+    return res.json({ sessionId: data.session_id, item_id: data.item_id, budget: data.budget });
+  } catch (err) {
+    console.error("[gateway] Express budget/update-item handler error:", err);
+    return res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POST /api/chat/checklist/update — AI instruction-based checklist edit
+// Body: { sessionId: string, instruction: string, current_checklist: object, supabaseChecklistId?: string }
+// ─────────────────────────────────────────────────────────────────────────────
+router.post("/checklist/update", async (req, res) => {
+  const userId = req.headers["x-user-id"] as string;
+  const userToken = req.headers["x-user-token"] as string;
+  if (!userId || !userToken) return res.status(401).json({ error: "Unauthorised" });
+
+  const { sessionId, instruction, current_checklist, supabaseChecklistId } = req.body as {
+    sessionId: string;
+    instruction: string;
+    current_checklist: any;
+    supabaseChecklistId?: string;
+  };
+  if (!sessionId) return res.status(400).json({ error: "sessionId is required" });
+  if (!instruction?.trim()) return res.status(400).json({ error: "instruction is required" });
+  if (!current_checklist) return res.status(400).json({ error: "current_checklist is required" });
+
+  try {
+    const fastapiUrl = process.env.FASTAPI_BASE_URL || "http://localhost:8000";
+    const fastapiRes = await fetch(`${fastapiUrl}/checklist/update`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session_id: sessionId, instruction, current_checklist }),
+    });
+
+    if (!fastapiRes.ok) {
+      const errDetail = await fastapiRes.text();
+      console.error("[gateway] FastAPI checklist/update error:", errDetail);
+      return res.status(fastapiRes.status).json({ error: "Failed to communicate with AI backend service" });
+    }
+
+    const data = await fastapiRes.json() as { session_id: string; checklist: any };
+
+    // Sync updated checklist back to Supabase if the caller knows the Supabase ID
+    if (supabaseChecklistId && data.checklist) {
+      const checklistData = data.checklist;
+      await adminSupabase.from("checklist_items").delete().eq("checklist_id", supabaseChecklistId);
+      const itemsToInsert: any[] = [];
+      let sortOrder = 0;
+      for (const phase of checklistData.phases || []) {
+        for (const item of phase.items || []) {
+          itemsToInsert.push({
+            checklist_id: supabaseChecklistId,
+            name: `[${phase.phase_label || "Ongoing"}] ${item.title}${item.description ? ` - ${item.description}` : ""}`,
+            category: item.category || "general",
+            status: item.status === "done",
+            sort_order: sortOrder++,
+          });
+        }
+      }
+      if (itemsToInsert.length > 0) {
+        const { error: itemsErr } = await adminSupabase.from("checklist_items").insert(itemsToInsert);
+        if (itemsErr) console.error("[gateway] Failed to sync updated checklist items:", itemsErr);
+      }
+    }
+
+    await adminSupabase
+      .from("ai_chat_sessions")
+      .update({ updated_at: new Date().toISOString() })
+      .eq("id", sessionId);
+
+    return res.json({ sessionId: data.session_id, checklist: data.checklist });
+  } catch (err) {
+    console.error("[gateway] Express checklist/update handler error:", err);
+    return res.status(500).json({ error: (err as Error).message });
+  }
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PATCH /api/chat/checklist/item-status — mark a checklist item as done/in-progress/not-started
+// Body: { sessionId: string, item_id: string, status: "not_started"|"in_progress"|"done" }
+// ─────────────────────────────────────────────────────────────────────────────
+router.patch("/checklist/item-status", async (req, res) => {
+  const userId = req.headers["x-user-id"] as string;
+  const userToken = req.headers["x-user-token"] as string;
+  if (!userId || !userToken) return res.status(401).json({ error: "Unauthorised" });
+
+  const { sessionId, item_id, status } = req.body as {
+    sessionId: string;
+    item_id: string;
+    status: "not_started" | "in_progress" | "done";
+  };
+  if (!sessionId) return res.status(400).json({ error: "sessionId is required" });
+  if (!item_id) return res.status(400).json({ error: "item_id is required" });
+  if (!["not_started", "in_progress", "done"].includes(status)) {
+    return res.status(400).json({ error: "status must be not_started, in_progress, or done" });
+  }
+
+  try {
+    const fastapiUrl = process.env.FASTAPI_BASE_URL || "http://localhost:8000";
+    const fastapiRes = await fetch(`${fastapiUrl}/checklist/item-status`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ session_id: sessionId, item_id, status }),
+    });
+
+    if (!fastapiRes.ok) {
+      const errDetail = await fastapiRes.text();
+      console.error("[gateway] FastAPI checklist/item-status error:", errDetail);
+      return res.status(fastapiRes.status).json({ error: "Failed to communicate with AI backend service" });
+    }
+
+    const data = await fastapiRes.json() as { session_id: string; item_id: string; status: string; checklist: any };
+
+    await adminSupabase
+      .from("ai_chat_sessions")
+      .update({ updated_at: new Date().toISOString() })
+      .eq("id", sessionId);
+
+    return res.json({ sessionId: data.session_id, item_id: data.item_id, status: data.status, checklist: data.checklist });
+  } catch (err) {
+    console.error("[gateway] Express checklist/item-status handler error:", err);
+    return res.status(500).json({ error: (err as Error).message });
+  }
+});
 
 // ─────────────────────────────────────────────────────────────────────────────
 // DELETE /api/chat/sessions/:id
