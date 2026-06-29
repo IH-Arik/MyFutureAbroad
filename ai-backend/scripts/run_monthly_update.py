@@ -7,7 +7,7 @@ import httpx
 import argparse
 from datetime import datetime, timezone
 from pathlib import Path
-import dotenv
+from dotenv import load_dotenv
 
 # Load environment from parent directory or local .env
 scripts_dir = Path(__file__).resolve().parent
@@ -15,13 +15,13 @@ backend_env = scripts_dir.parent.parent / "futureabroad-master" / "backend" / ".
 ai_backend_env = scripts_dir.parent / ".env"
 
 if backend_env.exists():
-    dotenv.load_dotenv(backend_env)
+    load_dotenv(backend_env)
 if ai_backend_env.exists():
-    dotenv.load_dotenv(ai_backend_env)
+    load_dotenv(ai_backend_env)
 
 # Add app parent directory to sys.path to allow imports
 sys.path.append(str(scripts_dir.parent))
-from app.services.gemini import generate_structured_json, get_genai_client
+from app.services.gemini import generate_structured_json
 
 # Initialize Supabase REST HTTP Client
 SUPABASE_URL = os.getenv("VITE_SUPABASE_URL")
@@ -603,8 +603,8 @@ def update_single_country(country, dry_run=False, force=False):
                 })
                 print(f"      ✅ Create queued (new visa)")
 
-            # Rate limit between Gemini calls
-            time.sleep(4)
+            # Rate limit between Gemini calls — give the API time to breathe
+            time.sleep(6)
         except Exception as e:
             print(f"      ⚠️ Failed for '{visa_name}': {e}. Skipping.")
 
