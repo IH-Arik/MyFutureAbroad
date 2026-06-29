@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     CACHE_TTL_SECONDS: int = Field(default=86400)
     CURRENCY_API_BASE_URL: str = Field(default="")
     CURRENCY_API_KEY: Optional[str] = Field(default=None)
+    # Supabase REST API (used by pipeline and any direct Supabase calls)
+    VITE_SUPABASE_URL: str = Field(default="")
+    SUPABASE_SERVICE_ROLE_KEY: str = Field(default="")
 
     # Allow loading from a local .env file
     model_config = SettingsConfigDict(
