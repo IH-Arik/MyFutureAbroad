@@ -137,11 +137,39 @@ def generate_chat_stream(
         _raise_from_api_error(str(e))
 
 
+def _is_retryable(err_msg: str) -> bool:
+    """True for errors worth retrying (demand spikes, rate limits, transient unavailability)."""
+    low = err_msg.lower()
+    return any(k in low or k in err_msg for k in (
+        "503", "504", "429", "unavailable", "deadline_exceeded",
+        "deadline exceeded", "resource_exhausted", "rate_limit", "quota",
+        "overloaded", "high demand",
+    ))
+
+def _retry_delay(attempt: int, err_msg: str) -> float:
+    """
+    Returns how long to wait before the next retry.
+    Demand/rate-limit errors (503, 429) use a much longer linear backoff.
+    Other transient errors use exponential backoff.
+    """
+    low = err_msg.lower()
+    is_demand = any(k in low or k in err_msg for k in (
+        "503", "429", "resource_exhausted", "rate_limit", "quota", "overloaded", "high demand",
+    ))
+    if is_demand:
+        # 15s, 30s, 45s, 60s, 90s — give Gemini time to recover
+        delay = min(15 * attempt, 90)
+    else:
+        # 2s, 4s, 8s, 16s, 32s
+        delay = 2 ** attempt
+    return delay + random.uniform(0, 3)
+
+
 def generate_structured_json(
     system_prompt: str,
     user_prompt: str,
     enable_search_grounding: bool = False,
-    max_retries: int = 3
+    max_retries: int = 5
 ) -> Dict[str, Any]:
     """
     Sync function — calls Gemini for a structured JSON response with retry logic.
@@ -219,9 +247,8 @@ def generate_structured_json(
 
         except Exception as e:
             err_msg = str(e)
-            is_transient = any(k in err_msg for k in ("503", "504", "unavailable", "deadline_exceeded", "deadline exceeded"))
-            if is_transient and attempt < max_retries:
-                delay = (2 ** attempt) + random.uniform(0, 1)
+            if _is_retryable(err_msg) and attempt < max_retries:
+                delay = _retry_delay(attempt, err_msg)
                 logger.warning(
                     f"Transient Gemini error on attempt {attempt}/{max_retries} "
                     f"({err_msg[:120]}). Retrying in {delay:.1f}s..."
